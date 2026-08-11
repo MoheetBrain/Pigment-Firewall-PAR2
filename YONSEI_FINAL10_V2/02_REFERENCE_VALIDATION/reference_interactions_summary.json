@@ -1,0 +1,59 @@
+{
+  "prolif_version": "2.2.1",
+  "systems": {
+    "5NDD_AZ8838": {
+      "interaction_count": 10,
+      "interaction_type_counts": {
+        "Hydrophobic": 4,
+        "VdWContact": 6
+      },
+      "ligand_atom_count": 17,
+      "ligand_file": "/Users/moheet/Documents/ChatGPT/PAR2/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/ligands/5NDD_AZ8838_crystallographic_clean.sdf",
+      "protein_residue_pair_count": 9,
+      "receptor_atom_count": 4498,
+      "receptor_file": "/Users/moheet/Documents/ChatGPT/PAR2/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/receptors/5NDD_inactive_orthosteric_receptor_clean.pdb",
+      "reference_fingerprint_key_count": 10,
+      "reference_fingerprint_keys": [
+        "ASP:228:A|VdWContact",
+        "CYS:226:A|Hydrophobic",
+        "HIS:135:A|VdWContact",
+        "HIS:227:A|Hydrophobic",
+        "ILE:152:A|Hydrophobic",
+        "ILE:327:A|VdWContact",
+        "LYS:131:A|VdWContact",
+        "PHE:155:A|Hydrophobic",
+        "PHE:155:A|VdWContact",
+        "TYR:82:A|VdWContact"
+      ],
+      "status": "CRYSTAL_REFERENCE_FINGERPRINT_GENERATED",
+      "system": "5NDD_AZ8838"
+    },
+    "5NDZ_AZ3451": {
+      "interaction_count": 9,
+      "interaction_type_counts": {
+        "Hydrophobic": 4,
+        "VdWContact": 5
+      },
+      "ligand_atom_count": 38,
+      "ligand_file": "/Users/moheet/Documents/ChatGPT/PAR2/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/ligands/5NDZ_AZ3451_crystallographic_clean.sdf",
+      "protein_residue_pair_count": 7,
+      "receptor_atom_count": 4421,
+      "receptor_file": "/Users/moheet/Documents/ChatGPT/PAR2/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/receptors/5NDZ_inactive_allosteric_receptor_clean.pdb",
+      "reference_fingerprint_key_count": 9,
+      "reference_fingerprint_keys": [
+        "ALA:157:A|VdWContact",
+        "ILE:202:A|Hydrophobic",
+        "LEU:123:A|VdWContact",
+        "LEU:203:A|Hydrophobic",
+        "LEU:203:A|VdWContact",
+        "PHE:154:A|Hydrophobic",
+        "PHE:154:A|VdWContact",
+        "TRP:199:A|VdWContact",
+        "TYR:210:A|Hydrophobic"
+      ],
+      "status": "CRYSTAL_REFERENCE_FINGERPRINT_GENERATED",
+      "system": "5NDZ_AZ3451"
+    }
+  },
+  "tool": "ProLIF"
+}

@@ -1,0 +1,9 @@
+# Python 3.12 reference-analysis environment
+rdkit>=2025.9
+prolif>=2.2
+spyrmsd>=0.9
+biopython>=1.8
+plip>=3.0
+pandas>=2.2
+numpy>=2.0
+scipy>=1.14

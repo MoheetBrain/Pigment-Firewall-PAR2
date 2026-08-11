@@ -1,0 +1,9 @@
+file,bytes,suffix,line_count,sdf_record_count
+/Users/moheet/Documents/ChatGPT/PAR2/SCREENING/BLEACHING_APROVED_clean.csv,13325,.csv,293,
+/Users/moheet/Documents/ChatGPT/PAR2/SCREENING/CNN_CANDS.sdf,2014591,.sdf,56693,500
+/Users/moheet/Documents/ChatGPT/PAR2/SCREENING/COSING_BANNED.txt,650893,.txt,2488,
+/Users/moheet/Documents/ChatGPT/PAR2/SCREENING/COSING_RESTRICTED.txt,295383,.txt,1766,
+/Users/moheet/Documents/ChatGPT/PAR2/SCREENING/FDA_DRUGS.csv,583914,.csv,4488,
+/Users/moheet/Documents/ChatGPT/PAR2/SCREENING/LOTUS_2021_03.tsv,25345417,.tsv,276518,
+/Users/moheet/Documents/ChatGPT/PAR2/SCREENING/NPATLAS.tsv,33671731,.tsv,36455,
+/Users/moheet/Documents/ChatGPT/PAR2/SCREENING/elite_mitf_scaffolds_clean.csv,23500,.csv,201,

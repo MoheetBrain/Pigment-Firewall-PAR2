@@ -1,0 +1,52 @@
+{
+  "clean_ligand_pdb": "/Users/moheet/Documents/ChatGPT/PAR2/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/ligands/5NDZ_AZ3451_crystallographic_clean.pdb",
+  "clean_ligand_sdf": "/Users/moheet/Documents/ChatGPT/PAR2/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/ligands/5NDZ_AZ3451_crystallographic_clean.sdf",
+  "clean_receptor_atom_count": 4421,
+  "clean_receptor_pdb": "/Users/moheet/Documents/ChatGPT/PAR2/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/receptors/5NDZ_inactive_allosteric_receptor_clean.pdb",
+  "clean_receptor_pdbqt": "/Users/moheet/Documents/ChatGPT/PAR2/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/receptors/5NDZ_inactive_allosteric_receptor_clean.pdbqt",
+  "config": "/Users/moheet/Documents/ChatGPT/PAR2/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/configs/BoxB_allosteric_5NDZ_ligand_centered.conf",
+  "config_box": {
+    "padding_each_side_angstrom": 5.0,
+    "size_angstrom": {
+      "x": 20.701999999999998,
+      "y": 17.884999999999998,
+      "z": 25.525
+    }
+  },
+  "coordinate_frame_policy": "copy source coordinates unchanged; filter only by expected ligand residue and ATOM receptor records",
+  "expected_ligand_residue": "8UN",
+  "ligand_element_counts": {
+    "BR": 1,
+    "C": 30,
+    "N": 4,
+    "O": 3
+  },
+  "ligand_geometry_heavy_atom_frame": {
+    "atom_count": 38,
+    "centroid": {
+      "x": 1.3557105263157896,
+      "y": 12.419210526315789,
+      "z": 48.39978947368421
+    },
+    "max": {
+      "x": 7.55,
+      "y": 16.781,
+      "z": 58.463
+    },
+    "min": {
+      "x": -3.152,
+      "y": 8.896,
+      "z": 42.938
+    },
+    "span_angstrom": {
+      "x": 10.702,
+      "y": 7.884999999999998,
+      "z": 15.524999999999999
+    }
+  },
+  "pdb_id": "5NDZ",
+  "source_ligand": "/Users/moheet/Documents/ChatGPT/PAR2/BENCHMARK_LIGS/lig_AZ3451_allosteric_boxB.pdb",
+  "source_receptor": "/Users/moheet/Documents/ChatGPT/PAR2/PROTEINS/PAR2_inactive_allosteric_receptor.pdbqt",
+  "system": "5NDZ_AZ3451",
+  "validation_status": "STRUCTURE_AND_CONFIG_BUILT; GNINA_REDOCK_PENDING"
+}

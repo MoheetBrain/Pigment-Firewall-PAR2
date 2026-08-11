@@ -1,0 +1,7 @@
+source,path,present,row_count,column_count,smiles_column,smiles_column_present,nonempty_smiles_count
+FDA_DRUGS,/Users/moheet/Documents/ChatGPT/PAR2/SCREENING/FDA_DRUGS.csv,True,4487,10,SMILES,True,4487
+BLEACHING_APROVED,/Users/moheet/Documents/ChatGPT/PAR2/SCREENING/BLEACHING_APROVED_clean.csv,True,292,4,SMILES,False,0
+MITF_SCAFFOLDS,/Users/moheet/Documents/ChatGPT/PAR2/SCREENING/elite_mitf_scaffolds_clean.csv,True,200,6,Representative_SMILES,True,200
+NPATLAS,/Users/moheet/Documents/ChatGPT/PAR2/SCREENING/NPATLAS.tsv,True,36454,34,smiles,False,0
+LOTUS,/Users/moheet/Documents/ChatGPT/PAR2/SCREENING/LOTUS_2021_03.tsv,True,276517,2,smiles,False,0
+CHEMBL_PAR2_COMPOUNDS,/Users/moheet/Documents/ChatGPT/PAR2/XGBOOST_RANDOM_FORREST/chembl_par2_raw_compounds.csv,True,411,2,smiles,False,0

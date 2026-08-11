@@ -1,0 +1,52 @@
+{
+  "clean_ligand_pdb": "/Users/moheet/Documents/ChatGPT/PAR2/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/ligands/5NDD_AZ8838_crystallographic_clean.pdb",
+  "clean_ligand_sdf": "/Users/moheet/Documents/ChatGPT/PAR2/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/ligands/5NDD_AZ8838_crystallographic_clean.sdf",
+  "clean_receptor_atom_count": 4498,
+  "clean_receptor_pdb": "/Users/moheet/Documents/ChatGPT/PAR2/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/receptors/5NDD_inactive_orthosteric_receptor_clean.pdb",
+  "clean_receptor_pdbqt": "/Users/moheet/Documents/ChatGPT/PAR2/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/receptors/5NDD_inactive_orthosteric_receptor_clean.pdbqt",
+  "config": "/Users/moheet/Documents/ChatGPT/PAR2/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/configs/BoxA_orthosteric_5NDD_ligand_centered.conf",
+  "config_box": {
+    "padding_each_side_angstrom": 5.0,
+    "size_angstrom": {
+      "x": 17.332,
+      "y": 17.672,
+      "z": 13.643999999999998
+    }
+  },
+  "coordinate_frame_policy": "copy source coordinates unchanged; filter only by expected ligand residue and ATOM receptor records",
+  "expected_ligand_residue": "8TZ",
+  "ligand_element_counts": {
+    "C": 13,
+    "F": 1,
+    "N": 2,
+    "O": 1
+  },
+  "ligand_geometry_heavy_atom_frame": {
+    "atom_count": 17,
+    "centroid": {
+      "x": 16.97429411764706,
+      "y": 5.925529411764706,
+      "z": 55.82641176470588
+    },
+    "max": {
+      "x": 20.221,
+      "y": 10.379,
+      "z": 57.931
+    },
+    "min": {
+      "x": 12.889,
+      "y": 2.707,
+      "z": 54.287
+    },
+    "span_angstrom": {
+      "x": 7.332000000000001,
+      "y": 7.672,
+      "z": 3.6439999999999984
+    }
+  },
+  "pdb_id": "5NDD",
+  "source_ligand": "/Users/moheet/Documents/ChatGPT/PAR2/BENCHMARK_LIGS/lig_AZ8838_orthosteric_boxA.pdb",
+  "source_receptor": "/Users/moheet/Documents/ChatGPT/PAR2/PROTEINS/PAR2_inactive_orthosteric_receptor.pdbqt",
+  "system": "5NDD_AZ8838",
+  "validation_status": "STRUCTURE_AND_CONFIG_BUILT; GNINA_REDOCK_PENDING"
+}

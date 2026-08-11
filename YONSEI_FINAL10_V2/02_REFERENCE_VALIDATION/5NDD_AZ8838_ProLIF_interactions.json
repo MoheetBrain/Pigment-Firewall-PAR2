@@ -1,0 +1,141 @@
+{
+  "interactions": [
+    {
+      "distance_angstrom": 2.928672224746223,
+      "interaction_type": "VdWContact",
+      "ligand_atom_indices": "4",
+      "ligand_parent_atom_indices": "4",
+      "ligand_residue": "LIG:1:A",
+      "protein_atom_indices": "6",
+      "protein_parent_atom_indices": "1345",
+      "protein_residue": "ASP:228:A",
+      "system": "5NDD_AZ8838"
+    },
+    {
+      "distance_angstrom": 4.488566029368398,
+      "interaction_type": "Hydrophobic",
+      "ligand_atom_indices": "9",
+      "ligand_parent_atom_indices": "9",
+      "ligand_residue": "LIG:1:A",
+      "protein_atom_indices": "4",
+      "protein_parent_atom_indices": "1327",
+      "protein_residue": "CYS:226:A",
+      "system": "5NDD_AZ8838"
+    },
+    {
+      "distance_angstrom": 2.6304855065177586,
+      "interaction_type": "VdWContact",
+      "ligand_atom_indices": "2",
+      "ligand_parent_atom_indices": "2",
+      "ligand_residue": "LIG:1:A",
+      "protein_atom_indices": "9",
+      "protein_parent_atom_indices": "607",
+      "protein_residue": "HIS:135:A",
+      "system": "5NDD_AZ8838"
+    },
+    {
+      "distance_angstrom": 3.4995406841469925,
+      "interaction_type": "Hydrophobic",
+      "ligand_atom_indices": "0",
+      "ligand_parent_atom_indices": "0",
+      "ligand_residue": "LIG:1:A",
+      "protein_atom_indices": "4",
+      "protein_parent_atom_indices": "1333",
+      "protein_residue": "HIS:227:A",
+      "system": "5NDD_AZ8838"
+    },
+    {
+      "distance_angstrom": 4.015599830660421,
+      "interaction_type": "Hydrophobic",
+      "ligand_atom_indices": "0",
+      "ligand_parent_atom_indices": "0",
+      "ligand_residue": "LIG:1:A",
+      "protein_atom_indices": "5",
+      "protein_parent_atom_indices": "740",
+      "protein_residue": "ILE:152:A",
+      "system": "5NDD_AZ8838"
+    },
+    {
+      "distance_angstrom": 3.1292634916222712,
+      "interaction_type": "VdWContact",
+      "ligand_atom_indices": "13",
+      "ligand_parent_atom_indices": "13",
+      "ligand_residue": "LIG:1:A",
+      "protein_atom_indices": "3",
+      "protein_parent_atom_indices": "2084",
+      "protein_residue": "ILE:327:A",
+      "system": "5NDD_AZ8838"
+    },
+    {
+      "distance_angstrom": 3.0653888823442985,
+      "interaction_type": "VdWContact",
+      "ligand_atom_indices": "2",
+      "ligand_parent_atom_indices": "2",
+      "ligand_residue": "LIG:1:A",
+      "protein_atom_indices": "7",
+      "protein_parent_atom_indices": "571",
+      "protein_residue": "LYS:131:A",
+      "system": "5NDD_AZ8838"
+    },
+    {
+      "distance_angstrom": 4.39612420206709,
+      "interaction_type": "Hydrophobic",
+      "ligand_atom_indices": "5",
+      "ligand_parent_atom_indices": "5",
+      "ligand_residue": "LIG:1:A",
+      "protein_atom_indices": "4",
+      "protein_parent_atom_indices": "762",
+      "protein_residue": "PHE:155:A",
+      "system": "5NDD_AZ8838"
+    },
+    {
+      "distance_angstrom": 3.138044295417126,
+      "interaction_type": "VdWContact",
+      "ligand_atom_indices": "16",
+      "ligand_parent_atom_indices": "16",
+      "ligand_residue": "LIG:1:A",
+      "protein_atom_indices": "6",
+      "protein_parent_atom_indices": "764",
+      "protein_residue": "PHE:155:A",
+      "system": "5NDD_AZ8838"
+    },
+    {
+      "distance_angstrom": 2.474862622449983,
+      "interaction_type": "VdWContact",
+      "ligand_atom_indices": "1",
+      "ligand_parent_atom_indices": "1",
+      "ligand_residue": "LIG:1:A",
+      "protein_atom_indices": "11",
+      "protein_parent_atom_indices": "185",
+      "protein_residue": "TYR:82:A",
+      "system": "5NDD_AZ8838"
+    }
+  ],
+  "summary": {
+    "interaction_count": 10,
+    "interaction_type_counts": {
+      "Hydrophobic": 4,
+      "VdWContact": 6
+    },
+    "ligand_atom_count": 17,
+    "ligand_file": "/Users/moheet/Documents/ChatGPT/PAR2/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/ligands/5NDD_AZ8838_crystallographic_clean.sdf",
+    "protein_residue_pair_count": 9,
+    "receptor_atom_count": 4498,
+    "receptor_file": "/Users/moheet/Documents/ChatGPT/PAR2/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/receptors/5NDD_inactive_orthosteric_receptor_clean.pdb",
+    "reference_fingerprint_key_count": 10,
+    "reference_fingerprint_keys": [
+      "ASP:228:A|VdWContact",
+      "CYS:226:A|Hydrophobic",
+      "HIS:135:A|VdWContact",
+      "HIS:227:A|Hydrophobic",
+      "ILE:152:A|Hydrophobic",
+      "ILE:327:A|VdWContact",
+      "LYS:131:A|VdWContact",
+      "PHE:155:A|Hydrophobic",
+      "PHE:155:A|VdWContact",
+      "TYR:82:A|VdWContact"
+    ],
+    "status": "CRYSTAL_REFERENCE_FINGERPRINT_GENERATED",
+    "system": "5NDD_AZ8838"
+  }
+}

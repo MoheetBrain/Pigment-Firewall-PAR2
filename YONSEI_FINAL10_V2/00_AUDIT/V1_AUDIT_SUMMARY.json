@@ -1,0 +1,768 @@
+{
+  "audit_generated_utc": "2026-08-11T09:40:47.149165+00:00",
+  "benchmarks": {
+    "5NDD_AZ8838": {
+      "all_hetatm_atom_count": 33,
+      "all_hetatm_elements": {
+        "C": 13,
+        "F": 1,
+        "N": 2,
+        "NA": 1,
+        "O": 15,
+        "P": 1
+      },
+      "exists": true,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/BENCHMARK_LIGS/lig_AZ8838_orthosteric_boxA.pdb",
+      "ligand_atom_count": 17,
+      "ligand_elements": {
+        "C": 13,
+        "F": 1,
+        "N": 2,
+        "O": 1
+      },
+      "ligand_heavy_atom_count": 17,
+      "ligand_heavy_geometry": {
+        "atom_count": 17,
+        "centroid_x": 16.97429411764706,
+        "centroid_y": 5.925529411764706,
+        "centroid_z": 55.82641176470588,
+        "max_x": 20.221,
+        "max_y": 10.379,
+        "max_z": 57.931,
+        "min_x": 12.889,
+        "min_y": 2.707,
+        "min_z": 54.287,
+        "span_x": 7.332000000000001,
+        "span_y": 7.672,
+        "span_z": 3.6439999999999984
+      },
+      "ligand_residue": "8TZ",
+      "non_ligand_residues": {
+        "HOH": 10,
+        "NA": 1,
+        "PO4": 5
+      }
+    },
+    "5NDZ_AZ3451": {
+      "all_hetatm_atom_count": 41,
+      "all_hetatm_elements": {
+        "BR": 1,
+        "C": 30,
+        "N": 4,
+        "NA": 1,
+        "O": 5
+      },
+      "exists": true,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/BENCHMARK_LIGS/lig_AZ3451_allosteric_boxB.pdb",
+      "ligand_atom_count": 38,
+      "ligand_elements": {
+        "BR": 1,
+        "C": 30,
+        "N": 4,
+        "O": 3
+      },
+      "ligand_heavy_atom_count": 38,
+      "ligand_heavy_geometry": {
+        "atom_count": 38,
+        "centroid_x": 1.3557105263157896,
+        "centroid_y": 12.419210526315789,
+        "centroid_z": 48.39978947368421,
+        "max_x": 7.55,
+        "max_y": 16.781,
+        "max_z": 58.463,
+        "min_x": -3.152,
+        "min_y": 8.896,
+        "min_z": 42.938,
+        "span_x": 10.702,
+        "span_y": 7.884999999999998,
+        "span_z": 15.524999999999999
+      },
+      "ligand_residue": "8UN",
+      "non_ligand_residues": {
+        "HOH": 2,
+        "NA": 1
+      }
+    }
+  },
+  "configs": {
+    "BoxA_orthosteric": {
+      "box_padding_each_side_from_heavy_bounds": [
+        16.334,
+        16.164,
+        18.178
+      ],
+      "center_to_ligand_centroid_angstrom": 13.889114483096737,
+      "exists": true,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/PROTEINS/CONF/boxA_orthosteric_5NDD.conf",
+      "historical_box_is_40_angstrom_cube": true,
+      "issues": [
+        "configured receptor path does not exist",
+        "historical configuration requests CNN rescoring; CNN values are ranking features"
+      ],
+      "ligand_centroid_offset_config_minus_ligand": [
+        -12.72529411764706,
+        5.222470588235294,
+        1.923588235294119
+      ],
+      "receptor_path_exists": false,
+      "resolved_receptor_path": "/Users/moheet/Documents/ChatGPT/PAR2/PROTEINS/PAR2_inactive_orthosteric_receptor.pdb",
+      "values": {
+        "center_x": "4.249",
+        "center_y": "11.148",
+        "center_z": "57.750",
+        "cnn_scoring": "rescore",
+        "exhaustiveness": "32",
+        "num_modes": "9",
+        "receptor": "../PAR2_inactive_orthosteric_receptor.pdb",
+        "size_x": "40.0",
+        "size_y": "40.0",
+        "size_z": "40.0"
+      }
+    },
+    "BoxB_allosteric": {
+      "box_padding_each_side_from_heavy_bounds": [
+        10.599,
+        11.057500000000001,
+        12.087500000000002
+      ],
+      "center_to_ligand_centroid_angstrom": 6.001491802597766,
+      "exists": true,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/PROTEINS/CONF/boxB_allosteric_5NDZ.conf",
+      "historical_box_is_40_angstrom_cube": false,
+      "issues": [
+        "configured receptor path does not exist",
+        "historical configuration requests CNN rescoring; CNN values are ranking features"
+      ],
+      "ligand_centroid_offset_config_minus_ligand": [
+        3.4602894736842105,
+        -2.635210526315788,
+        4.135210526315788
+      ],
+      "receptor_path_exists": false,
+      "resolved_receptor_path": "/Users/moheet/Documents/ChatGPT/PAR2/PROTEINS/PAR2_inactive_allosteric_receptor.pdb",
+      "values": {
+        "center_x": "4.816",
+        "center_y": "9.784",
+        "center_z": "52.535",
+        "cnn_scoring": "rescore",
+        "exhaustiveness": "32",
+        "num_modes": "9",
+        "receptor": "../PAR2_inactive_allosteric_receptor.pdb",
+        "size_x": "31.9",
+        "size_y": "30.0",
+        "size_z": "39.7"
+      }
+    }
+  },
+  "final_v1_linkage": {
+    "linked_rows": 468,
+    "unlinked_rows": 32
+  },
+  "final_v1_missing_fields": {
+    "binding_site": 0,
+    "cnn_affinity": 0,
+    "cnn_score": 0,
+    "cnn_vs": 0,
+    "inchikey": 111,
+    "lotus_id": 111,
+    "mol_name": 0,
+    "rank": 0,
+    "receptor": 0,
+    "rmsd": 0,
+    "smiles": 0,
+    "source_library": 0,
+    "vina_affinity": 0,
+    "wikidata_id": 121
+  },
+  "final_v1_top_summaries": [
+    {
+      "binding_sites": {
+        "BoxB_allosteric": 10
+      },
+      "libraries": {
+        "COCONUT_3D": 1,
+        "LOTUS_3D": 9
+      },
+      "receptors": {
+        "PAR2_inactive_allosteric": 10
+      },
+      "rows": 10,
+      "top_n": 10
+    },
+    {
+      "binding_sites": {
+        "BoxA_orthosteric": 9,
+        "BoxB_allosteric": 41
+      },
+      "libraries": {
+        "COCONUT_3D": 5,
+        "LOTUS_3D": 42,
+        "NPATLAS_3D": 3
+      },
+      "receptors": {
+        "PAR2_inactive_allosteric": 41,
+        "PAR2_inactive_orthosteric": 9
+      },
+      "rows": 50,
+      "top_n": 50
+    },
+    {
+      "binding_sites": {
+        "BoxA_orthosteric": 32,
+        "BoxB_allosteric": 68
+      },
+      "libraries": {
+        "COCONUT_3D": 10,
+        "LOTUS_3D": 82,
+        "MITF_SCAFFOLDS_3D": 2,
+        "NPATLAS_3D": 6
+      },
+      "receptors": {
+        "PAR2_inactive_allosteric": 68,
+        "PAR2_inactive_orthosteric": 32
+      },
+      "rows": 100,
+      "top_n": 100
+    },
+    {
+      "binding_sites": {
+        "BoxA_orthosteric": 396,
+        "BoxB_allosteric": 104
+      },
+      "libraries": {
+        "COCONUT_3D": 32,
+        "LOTUS_3D": 389,
+        "MITF_SCAFFOLDS_3D": 2,
+        "NPATLAS_3D": 77
+      },
+      "receptors": {
+        "PAR2_inactive_allosteric": 104,
+        "PAR2_inactive_orthosteric": 396
+      },
+      "rows": 500,
+      "top_n": 500
+    }
+  ],
+  "findings": [
+    "Pass-1 contains 2,487 result rows and 1,255 unique row keys.",
+    "Pass-1 result rows by box: BoxA_orthosteric=1256, BoxB_allosteric=1231.",
+    "Pass-1 result rows by source library: COCONUT_3D=317, FDA_DRUGS_3D=8, LOTUS_3D=1798, MITF_SCAFFOLDS_3D=36, NPATLAS_3D=328.",
+    "The final V1 ranking contains COCONUT_3D=32, LOTUS_3D=389, MITF_SCAFFOLDS_3D=2, NPATLAS_3D=77.",
+    "The final V1 ranking contains BoxA_orthosteric=396, BoxB_allosteric=104.",
+    "Final V1 rows not linked by exact InChIKey/SMILES to Pass-1: 32.",
+    "Historical Pass-2 input files: 35; nonempty: 35; output files: 105; nonempty outputs: 0.",
+    "The clean historical 35-candidate Pass-2 shortlist exists: False.",
+    "5NDD benchmark contains non-ligand residues: {\"HOH\": 10, \"NA\": 1, \"PO4\": 5}.",
+    "5NDZ benchmark contains non-ligand residues: {\"HOH\": 2, \"NA\": 1}.",
+    "Historical Box A configured receptor exists: False; Box B configured receptor exists: False.",
+    "The historical GNINA driver hard-codes `/Users/mk/PycharmProjects/Pigment-Firewall-PAR2` rather than the checked-out repository path.",
+    "Historical GNINA driver referenced paths missing from this checkout: /Users/moheet/Documents/ChatGPT/PAR2/SCREENING/SAFE_coconut_3D.sdf, /Users/moheet/Documents/ChatGPT/PAR2/SCREENING/SAFE_coconut.csv, /Users/moheet/Documents/ChatGPT/PAR2/SCREENING/LOTUS_2021_03_simple.sdf, /Users/moheet/Documents/ChatGPT/PAR2/SCREENING/NPAtlas_download_2024_09.sdf, /Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/SDF_GENERATED/BLEACHING_3D.sdf.",
+    "GNINA log command stages/modes: {\"P1\": 208, \"P2\": 105} / {\"none\": 521, \"rescore\": 105}."
+  ],
+  "gnina_log_audit": {
+    "cnn_scoring_modes": {
+      "none": 521,
+      "rescore": 105
+    },
+    "commandline_count": 313,
+    "log_file_count": 313,
+    "logs_by_stage": {
+      "P1": 208,
+      "P2": 105
+    },
+    "min_rmsd_filter_values": {
+      "2.0": 313
+    },
+    "no_gpu_warning_count": 313
+  },
+  "historical_script_path_audit": {
+    "exists": true,
+    "hard_coded_base_path": "/Users/mk/PycharmProjects/Pigment-Firewall-PAR2",
+    "hard_coded_base_path_exists": false,
+    "referenced_library_paths": [
+      {
+        "exists": false,
+        "path": "/Users/moheet/Documents/ChatGPT/PAR2/SCREENING/SAFE_coconut_3D.sdf"
+      },
+      {
+        "exists": false,
+        "path": "/Users/moheet/Documents/ChatGPT/PAR2/SCREENING/SAFE_coconut.csv"
+      },
+      {
+        "exists": false,
+        "path": "/Users/moheet/Documents/ChatGPT/PAR2/SCREENING/LOTUS_2021_03_simple.sdf"
+      },
+      {
+        "exists": false,
+        "path": "/Users/moheet/Documents/ChatGPT/PAR2/SCREENING/NPAtlas_download_2024_09.sdf"
+      },
+      {
+        "exists": false,
+        "path": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/SDF_GENERATED/BLEACHING_3D.sdf"
+      }
+    ],
+    "script": "/Users/moheet/Documents/ChatGPT/PAR2/PYTHON/GNINA.py"
+  },
+  "historical_v1_inputs": {
+    "final_columns": [
+      "rank",
+      "mol_name",
+      "smiles",
+      "receptor",
+      "binding_site",
+      "source_library",
+      "vina_affinity",
+      "rmsd",
+      "cnn_score",
+      "cnn_affinity",
+      "cnn_vs",
+      "lotus_id",
+      "inchikey",
+      "wikidata_id"
+    ],
+    "final_file": "/Users/moheet/Documents/ChatGPT/PAR2/RESULTS/CNN_FINAL_SCORES.csv",
+    "final_rows": 500,
+    "pass1_columns": [
+      "mol_name",
+      "SMILES",
+      "box",
+      "library",
+      "chunk",
+      "minimizedAffinity",
+      "CNNscore",
+      "CNNaffinity",
+      "sdf_source",
+      "Name",
+      "ChEMBL_ID",
+      "MaxPhase",
+      "MW",
+      "ALogP",
+      "HBD",
+      "HBA",
+      "TPSA",
+      "RotBonds",
+      "wikidata_id",
+      "lotus_id",
+      "inchi",
+      "inchikey",
+      "name",
+      "Rank",
+      "Scaffold_SMARTS",
+      "Count",
+      "Consensus_Score",
+      "Chemical_Class",
+      "npaid",
+      "compound_id",
+      "compound_name",
+      "compound_molecular_formula",
+      "compound_molecular_weight",
+      "compound_accurate_mass",
+      "compound_m_plus_h",
+      "compound_m_plus_na",
+      "compound_inchi",
+      "compound_inchikey",
+      "compound_smiles",
+      "compound_cluster_id",
+      "compound_node_id",
+      "origin_type",
+      "genus",
+      "origin_species",
+      "original_reference_author_list",
+      "original_reference_year",
+      "original_reference_issue",
+      "original_reference_volume",
+      "original_reference_pages",
+      "original_reference_doi",
+      "original_reference_pmid",
+      "original_reference_title",
+      "original_reference_type",
+      "original_journal_title",
+      "synonyms_dois",
+      "reassignment_dois",
+      "synthesis_dois",
+      "mibig_ids",
+      "gnps_ids",
+      "cmmc_ids",
+      "npmrd_id",
+      "npatlas_url"
+    ],
+    "pass1_file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/pass1_all_hits.csv",
+    "pass1_rows": 2487,
+    "pass1_unique_candidates_by_available_identifier": 1255
+  },
+  "pass1_result_rows_by_box": {
+    "BoxA_orthosteric": 1256,
+    "BoxB_allosteric": 1231
+  },
+  "pass1_result_rows_by_library": {
+    "COCONUT_3D": 317,
+    "FDA_DRUGS_3D": 8,
+    "LOTUS_3D": 1798,
+    "MITF_SCAFFOLDS_3D": 36,
+    "NPATLAS_3D": 328
+  },
+  "pass1_unique_candidates_by_box": {
+    "BoxA_orthosteric": 1255,
+    "BoxB_allosteric": 1230
+  },
+  "pass1_unique_candidates_by_library": {
+    "COCONUT_3D": 159,
+    "FDA_DRUGS_3D": 4,
+    "LOTUS_3D": 910,
+    "MITF_SCAFFOLDS_3D": 17,
+    "NPATLAS_3D": 165
+  },
+  "pass2": {
+    "all_expected_outputs_present": true,
+    "all_input_files_have_nonempty_sdf": true,
+    "all_outputs_nonempty": false,
+    "clean_historical_35_candidate_pass2_shortlist_exists": false,
+    "expected_output_file_count_for_A_B_C": 105,
+    "input_file_count": 35,
+    "input_linkage": [
+      {
+        "bytes": 5063,
+        "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/0b9b48bc_NPA032183.sdf",
+        "pass1_rows_containing_identifier": 2
+      },
+      {
+        "bytes": 5739,
+        "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/0cb95689_NPA032871.sdf",
+        "pass1_rows_containing_identifier": 2
+      },
+      {
+        "bytes": 7134,
+        "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/11fc1355_NPA010084.sdf",
+        "pass1_rows_containing_identifier": 2
+      },
+      {
+        "bytes": 5461,
+        "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/149cd2a7_NPA007847.sdf",
+        "pass1_rows_containing_identifier": 2
+      },
+      {
+        "bytes": 4731,
+        "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/1583a31c_NPA032170.sdf",
+        "pass1_rows_containing_identifier": 2
+      },
+      {
+        "bytes": 7655,
+        "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/1e57c0ba_NPA010079.sdf",
+        "pass1_rows_containing_identifier": 2
+      },
+      {
+        "bytes": 5171,
+        "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/2b8e6342_NPA028357.sdf",
+        "pass1_rows_containing_identifier": 2
+      },
+      {
+        "bytes": 4905,
+        "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/34a87460_NPA007845.sdf",
+        "pass1_rows_containing_identifier": 2
+      },
+      {
+        "bytes": 5351,
+        "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/460b7ab5_NPA002149.sdf",
+        "pass1_rows_containing_identifier": 2
+      },
+      {
+        "bytes": 5181,
+        "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/52b2089e_NPA028356.sdf",
+        "pass1_rows_containing_identifier": 2
+      },
+      {
+        "bytes": 3652,
+        "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/55fee696_mol_276266.sdf",
+        "pass1_rows_containing_identifier": 2
+      },
+      {
+        "bytes": 4461,
+        "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/688f10ed_NPA032180.sdf",
+        "pass1_rows_containing_identifier": 2
+      },
+      {
+        "bytes": 4581,
+        "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/756a5ad3_NPA014212.sdf",
+        "pass1_rows_containing_identifier": 2
+      },
+      {
+        "bytes": 2051,
+        "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/78f39268_mol_93252.sdf",
+        "pass1_rows_containing_identifier": 2
+      },
+      {
+        "bytes": 2488,
+        "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/7b23525b_mol_263970.sdf",
+        "pass1_rows_containing_identifier": 2
+      },
+      {
+        "bytes": 5550,
+        "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/7e9ce8b2_NPA032872.sdf",
+        "pass1_rows_containing_identifier": 2
+      },
+      {
+        "bytes": 5325,
+        "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/832a5cf7_NPA032154.sdf",
+        "pass1_rows_containing_identifier": 2
+      },
+      {
+        "bytes": 4985,
+        "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/8710b315_NPA028359.sdf",
+        "pass1_rows_containing_identifier": 2
+      },
+      {
+        "bytes": 5042,
+        "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/8ab7f112_NPA002139.sdf",
+        "pass1_rows_containing_identifier": 2
+      },
+      {
+        "bytes": 5518,
+        "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/969841cc_NPA032870.sdf",
+        "pass1_rows_containing_identifier": 2
+      },
+      {
+        "bytes": 5405,
+        "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/9b34892f_NPA032157.sdf",
+        "pass1_rows_containing_identifier": 2
+      },
+      {
+        "bytes": 4671,
+        "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/b2a9ca2c_NPA014210.sdf",
+        "pass1_rows_containing_identifier": 2
+      },
+      {
+        "bytes": 5859,
+        "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/b90a26db_NPA002143.sdf",
+        "pass1_rows_containing_identifier": 2
+      },
+      {
+        "bytes": 6939,
+        "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/b9c922b1_NPA032155.sdf",
+        "pass1_rows_containing_identifier": 2
+      },
+      {
+        "bytes": 4805,
+        "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/bc091b21_NPA032172.sdf",
+        "pass1_rows_containing_identifier": 2
+      },
+      {
+        "bytes": 5058,
+        "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/cb02af20_NPA028358.sdf",
+        "pass1_rows_containing_identifier": 2
+      },
+      {
+        "bytes": 6176,
+        "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/d1bf90ee_NPA010088.sdf",
+        "pass1_rows_containing_identifier": 2
+      },
+      {
+        "bytes": 2385,
+        "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/d645920e_40.sdf",
+        "pass1_rows_containing_identifier": 0
+      },
+      {
+        "bytes": 3259,
+        "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/dc2f6ac3_NPA002147.sdf",
+        "pass1_rows_containing_identifier": 2
+      },
+      {
+        "bytes": 4729,
+        "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/e001fdfd_NPA014227.sdf",
+        "pass1_rows_containing_identifier": 2
+      },
+      {
+        "bytes": 2150,
+        "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/e51945eb_mol_342289.sdf",
+        "pass1_rows_containing_identifier": 2
+      },
+      {
+        "bytes": 5162,
+        "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/edef7ee7_NPA010086.sdf",
+        "pass1_rows_containing_identifier": 2
+      },
+      {
+        "bytes": 5276,
+        "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/f5eb57dd_NPA002148.sdf",
+        "pass1_rows_containing_identifier": 2
+      },
+      {
+        "bytes": 5408,
+        "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/f8391b0f_NPA032156.sdf",
+        "pass1_rows_containing_identifier": 2
+      },
+      {
+        "bytes": 3963,
+        "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/fdc2c3fa_NPA010096.sdf",
+        "pass1_rows_containing_identifier": 2
+      }
+    ],
+    "input_nonempty_file_count": 35,
+    "output_file_count": 105,
+    "output_files_by_box_prefix": {
+      "BoxA": 35,
+      "BoxB": 35,
+      "BoxC": 35
+    },
+    "output_nonempty_file_count": 0
+  },
+  "receptor_and_config_file_count": 7,
+  "repository_root": "/Users/moheet/Documents/ChatGPT/PAR2",
+  "screening_file_inventory": [
+    {
+      "bytes": 13325,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/SCREENING/BLEACHING_APROVED_clean.csv",
+      "line_count": 293,
+      "sdf_record_count": "",
+      "suffix": ".csv"
+    },
+    {
+      "bytes": 2014591,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/SCREENING/CNN_CANDS.sdf",
+      "line_count": 56693,
+      "sdf_record_count": 500,
+      "suffix": ".sdf"
+    },
+    {
+      "bytes": 650893,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/SCREENING/COSING_BANNED.txt",
+      "line_count": 2488,
+      "sdf_record_count": "",
+      "suffix": ".txt"
+    },
+    {
+      "bytes": 295383,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/SCREENING/COSING_RESTRICTED.txt",
+      "line_count": 1766,
+      "sdf_record_count": "",
+      "suffix": ".txt"
+    },
+    {
+      "bytes": 583914,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/SCREENING/FDA_DRUGS.csv",
+      "line_count": 4488,
+      "sdf_record_count": "",
+      "suffix": ".csv"
+    },
+    {
+      "bytes": 25345417,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/SCREENING/LOTUS_2021_03.tsv",
+      "line_count": 276518,
+      "sdf_record_count": "",
+      "suffix": ".tsv"
+    },
+    {
+      "bytes": 33671731,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/SCREENING/NPATLAS.tsv",
+      "line_count": 36455,
+      "sdf_record_count": "",
+      "suffix": ".tsv"
+    },
+    {
+      "bytes": 23500,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/SCREENING/elite_mitf_scaffolds_clean.csv",
+      "line_count": 201,
+      "sdf_record_count": "",
+      "suffix": ".csv"
+    }
+  ],
+  "screening_source_inventory": [
+    {
+      "column_count": 10,
+      "nonempty_smiles_count": 4487,
+      "path": "/Users/moheet/Documents/ChatGPT/PAR2/SCREENING/FDA_DRUGS.csv",
+      "present": true,
+      "row_count": 4487,
+      "smiles_column": "SMILES",
+      "smiles_column_present": true,
+      "source": "FDA_DRUGS"
+    },
+    {
+      "column_count": 4,
+      "nonempty_smiles_count": 0,
+      "path": "/Users/moheet/Documents/ChatGPT/PAR2/SCREENING/BLEACHING_APROVED_clean.csv",
+      "present": true,
+      "row_count": 292,
+      "smiles_column": "SMILES",
+      "smiles_column_present": false,
+      "source": "BLEACHING_APROVED"
+    },
+    {
+      "column_count": 6,
+      "nonempty_smiles_count": 200,
+      "path": "/Users/moheet/Documents/ChatGPT/PAR2/SCREENING/elite_mitf_scaffolds_clean.csv",
+      "present": true,
+      "row_count": 200,
+      "smiles_column": "Representative_SMILES",
+      "smiles_column_present": true,
+      "source": "MITF_SCAFFOLDS"
+    },
+    {
+      "column_count": 34,
+      "nonempty_smiles_count": 0,
+      "path": "/Users/moheet/Documents/ChatGPT/PAR2/SCREENING/NPATLAS.tsv",
+      "present": true,
+      "row_count": 36454,
+      "smiles_column": "smiles",
+      "smiles_column_present": false,
+      "source": "NPATLAS"
+    },
+    {
+      "column_count": 2,
+      "nonempty_smiles_count": 0,
+      "path": "/Users/moheet/Documents/ChatGPT/PAR2/SCREENING/LOTUS_2021_03.tsv",
+      "present": true,
+      "row_count": 276517,
+      "smiles_column": "smiles",
+      "smiles_column_present": false,
+      "source": "LOTUS"
+    },
+    {
+      "column_count": 2,
+      "nonempty_smiles_count": 0,
+      "path": "/Users/moheet/Documents/ChatGPT/PAR2/XGBOOST_RANDOM_FORREST/chembl_par2_raw_compounds.csv",
+      "present": true,
+      "row_count": 411,
+      "smiles_column": "smiles",
+      "smiles_column_present": false,
+      "source": "CHEMBL_PAR2_COMPOUNDS"
+    }
+  ],
+  "sdf_inventory": [
+    {
+      "directory": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/SDF_CHUNKS",
+      "files": 104,
+      "nonempty_files": 104,
+      "records": 506420
+    },
+    {
+      "directory": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS1/BoxA_orthosteric",
+      "files": 104,
+      "nonempty_files": 104,
+      "records": 11123
+    },
+    {
+      "directory": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS1/BoxB_allosteric",
+      "files": 104,
+      "nonempty_files": 104,
+      "records": 10894
+    },
+    {
+      "directory": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS",
+      "files": 35,
+      "nonempty_files": 35,
+      "records": 35
+    },
+    {
+      "directory": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2",
+      "files": 105,
+      "nonempty_files": 0,
+      "records": 0
+    },
+    {
+      "directory": "/Users/moheet/Documents/ChatGPT/PAR2/RESULTS",
+      "files": 0,
+      "nonempty_files": 0,
+      "records": 0
+    }
+  ]
+}

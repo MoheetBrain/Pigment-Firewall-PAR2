@@ -1,0 +1,193 @@
+{
+  "all_expected_outputs_present": true,
+  "all_input_files_have_nonempty_sdf": true,
+  "all_outputs_nonempty": false,
+  "clean_historical_35_candidate_pass2_shortlist_exists": false,
+  "expected_output_file_count_for_A_B_C": 105,
+  "input_file_count": 35,
+  "input_linkage": [
+    {
+      "bytes": 5063,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/0b9b48bc_NPA032183.sdf",
+      "pass1_rows_containing_identifier": 2
+    },
+    {
+      "bytes": 5739,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/0cb95689_NPA032871.sdf",
+      "pass1_rows_containing_identifier": 2
+    },
+    {
+      "bytes": 7134,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/11fc1355_NPA010084.sdf",
+      "pass1_rows_containing_identifier": 2
+    },
+    {
+      "bytes": 5461,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/149cd2a7_NPA007847.sdf",
+      "pass1_rows_containing_identifier": 2
+    },
+    {
+      "bytes": 4731,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/1583a31c_NPA032170.sdf",
+      "pass1_rows_containing_identifier": 2
+    },
+    {
+      "bytes": 7655,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/1e57c0ba_NPA010079.sdf",
+      "pass1_rows_containing_identifier": 2
+    },
+    {
+      "bytes": 5171,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/2b8e6342_NPA028357.sdf",
+      "pass1_rows_containing_identifier": 2
+    },
+    {
+      "bytes": 4905,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/34a87460_NPA007845.sdf",
+      "pass1_rows_containing_identifier": 2
+    },
+    {
+      "bytes": 5351,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/460b7ab5_NPA002149.sdf",
+      "pass1_rows_containing_identifier": 2
+    },
+    {
+      "bytes": 5181,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/52b2089e_NPA028356.sdf",
+      "pass1_rows_containing_identifier": 2
+    },
+    {
+      "bytes": 3652,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/55fee696_mol_276266.sdf",
+      "pass1_rows_containing_identifier": 2
+    },
+    {
+      "bytes": 4461,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/688f10ed_NPA032180.sdf",
+      "pass1_rows_containing_identifier": 2
+    },
+    {
+      "bytes": 4581,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/756a5ad3_NPA014212.sdf",
+      "pass1_rows_containing_identifier": 2
+    },
+    {
+      "bytes": 2051,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/78f39268_mol_93252.sdf",
+      "pass1_rows_containing_identifier": 2
+    },
+    {
+      "bytes": 2488,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/7b23525b_mol_263970.sdf",
+      "pass1_rows_containing_identifier": 2
+    },
+    {
+      "bytes": 5550,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/7e9ce8b2_NPA032872.sdf",
+      "pass1_rows_containing_identifier": 2
+    },
+    {
+      "bytes": 5325,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/832a5cf7_NPA032154.sdf",
+      "pass1_rows_containing_identifier": 2
+    },
+    {
+      "bytes": 4985,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/8710b315_NPA028359.sdf",
+      "pass1_rows_containing_identifier": 2
+    },
+    {
+      "bytes": 5042,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/8ab7f112_NPA002139.sdf",
+      "pass1_rows_containing_identifier": 2
+    },
+    {
+      "bytes": 5518,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/969841cc_NPA032870.sdf",
+      "pass1_rows_containing_identifier": 2
+    },
+    {
+      "bytes": 5405,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/9b34892f_NPA032157.sdf",
+      "pass1_rows_containing_identifier": 2
+    },
+    {
+      "bytes": 4671,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/b2a9ca2c_NPA014210.sdf",
+      "pass1_rows_containing_identifier": 2
+    },
+    {
+      "bytes": 5859,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/b90a26db_NPA002143.sdf",
+      "pass1_rows_containing_identifier": 2
+    },
+    {
+      "bytes": 6939,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/b9c922b1_NPA032155.sdf",
+      "pass1_rows_containing_identifier": 2
+    },
+    {
+      "bytes": 4805,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/bc091b21_NPA032172.sdf",
+      "pass1_rows_containing_identifier": 2
+    },
+    {
+      "bytes": 5058,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/cb02af20_NPA028358.sdf",
+      "pass1_rows_containing_identifier": 2
+    },
+    {
+      "bytes": 6176,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/d1bf90ee_NPA010088.sdf",
+      "pass1_rows_containing_identifier": 2
+    },
+    {
+      "bytes": 2385,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/d645920e_40.sdf",
+      "pass1_rows_containing_identifier": 0
+    },
+    {
+      "bytes": 3259,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/dc2f6ac3_NPA002147.sdf",
+      "pass1_rows_containing_identifier": 2
+    },
+    {
+      "bytes": 4729,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/e001fdfd_NPA014227.sdf",
+      "pass1_rows_containing_identifier": 2
+    },
+    {
+      "bytes": 2150,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/e51945eb_mol_342289.sdf",
+      "pass1_rows_containing_identifier": 2
+    },
+    {
+      "bytes": 5162,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/edef7ee7_NPA010086.sdf",
+      "pass1_rows_containing_identifier": 2
+    },
+    {
+      "bytes": 5276,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/f5eb57dd_NPA002148.sdf",
+      "pass1_rows_containing_identifier": 2
+    },
+    {
+      "bytes": 5408,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/f8391b0f_NPA032156.sdf",
+      "pass1_rows_containing_identifier": 2
+    },
+    {
+      "bytes": 3963,
+      "file": "/Users/moheet/Documents/ChatGPT/PAR2/GNINA_SCREEN_EX32/PASS2_MOLS/fdc2c3fa_NPA010096.sdf",
+      "pass1_rows_containing_identifier": 2
+    }
+  ],
+  "input_nonempty_file_count": 35,
+  "output_file_count": 105,
+  "output_files_by_box_prefix": {
+    "BoxA": 35,
+    "BoxB": 35,
+    "BoxC": 35
+  },
+  "output_nonempty_file_count": 0
+}

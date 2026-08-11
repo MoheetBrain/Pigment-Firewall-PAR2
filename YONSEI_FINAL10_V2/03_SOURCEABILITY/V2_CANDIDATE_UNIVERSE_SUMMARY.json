@@ -1,0 +1,61 @@
+{
+  "all_fda_library_rows_in_universe": 4487,
+  "approval_status_counts": {
+    "KNOWN_HUMAN_EXPOSURE_OR_APPROVAL_PENDING_VERIFICATION": 1258,
+    "NOT_ESTABLISHED": 1486,
+    "YES": 3229
+  },
+  "candidate_count": 5973,
+  "commercial_availability_status": "PENDING_LIVE_VENDOR_LOOKUP_FOR_ALL_ROWS",
+  "notes": [
+    "This file is a sourceability triage universe, not a biological ranking.",
+    "No candidate was redocked because the corrected GNINA reference benchmark is blocked.",
+    "Procurement fields are intentionally PENDING rather than inferred or invented."
+  ],
+  "original_v1_status_counts": {
+    "FDA_LIBRARY_NOT_IN_PASS1": 4481,
+    "IN_PASS1_ONLY": 992,
+    "IN_V1_FINAL500": 500
+  },
+  "other_identifiable_v1_hits_in_universe": 1075,
+  "rdkit_parse_status": {
+    "OK": 5973
+  },
+  "selected_binding_sites": {
+    "": 4481,
+    "BoxA_orthosteric": 1043,
+    "BoxB_allosteric": 449
+  },
+  "source_libraries": {
+    "COCONUT_3D": 32,
+    "COCONUT_3D;FDA_DRUGS": 1,
+    "FDA_DRUGS": 4481,
+    "FDA_DRUGS;FDA_DRUGS_3D": 2,
+    "FDA_DRUGS;LOTUS_3D": 2,
+    "FDA_DRUGS;MITF_SCAFFOLDS_3D": 1,
+    "FDA_DRUGS_3D": 2,
+    "LOTUS_3D": 1254,
+    "LOTUS_3D;MITF_SCAFFOLDS_3D": 1,
+    "MITF_SCAFFOLDS_3D": 2,
+    "NPATLAS_3D": 195
+  },
+  "triage_class_counts": {
+    "FDA_APPROVED_LIBRARY": 4483,
+    "FDA_APPROVED_LIBRARY;IDENTIFIABLE_OTHER_V1_HIT": 4,
+    "IDENTIFIABLE_OTHER_V1_HIT": 986,
+    "IDENTIFIABLE_OTHER_V1_HIT;V1_FINAL500": 85,
+    "V1_FINAL500": 415
+  },
+  "v1_final500_rows_in_universe": 500,
+  "v1_top100_sourceability": {
+    "known_human_exposure_or_approval_counts": {
+      "NOT_ESTABLISHED": 100
+    },
+    "procurement_status_counts": {
+      "PENDING_LIVE_VENDOR_LOOKUP": 100
+    },
+    "rows": 100,
+    "universe_matches": 100
+  },
+  "vendor_lookup_performed": false
+}

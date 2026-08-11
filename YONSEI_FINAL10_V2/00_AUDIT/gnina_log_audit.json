@@ -1,0 +1,16 @@
+{
+  "cnn_scoring_modes": {
+    "none": 521,
+    "rescore": 105
+  },
+  "commandline_count": 313,
+  "log_file_count": 313,
+  "logs_by_stage": {
+    "P1": 208,
+    "P2": 105
+  },
+  "min_rmsd_filter_values": {
+    "2.0": 313
+  },
+  "no_gpu_warning_count": 313
+}

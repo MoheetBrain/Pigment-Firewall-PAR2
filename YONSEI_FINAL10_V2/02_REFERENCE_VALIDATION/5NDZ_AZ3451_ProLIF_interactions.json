@@ -1,0 +1,129 @@
+{
+  "interactions": [
+    {
+      "distance_angstrom": 3.2432112172968326,
+      "interaction_type": "VdWContact",
+      "ligand_atom_indices": "26",
+      "ligand_parent_atom_indices": "26",
+      "ligand_residue": "LIG:1:A",
+      "protein_atom_indices": "4",
+      "protein_parent_atom_indices": "785",
+      "protein_residue": "ALA:157:A",
+      "system": "5NDZ_AZ3451"
+    },
+    {
+      "distance_angstrom": 4.2928551105295885,
+      "interaction_type": "Hydrophobic",
+      "ligand_atom_indices": "37",
+      "ligand_parent_atom_indices": "37",
+      "ligand_residue": "LIG:1:A",
+      "protein_atom_indices": "4",
+      "protein_parent_atom_indices": "1137",
+      "protein_residue": "ILE:202:A",
+      "system": "5NDZ_AZ3451"
+    },
+    {
+      "distance_angstrom": 3.1973867454532305,
+      "interaction_type": "VdWContact",
+      "ligand_atom_indices": "8",
+      "ligand_parent_atom_indices": "8",
+      "ligand_residue": "LIG:1:A",
+      "protein_atom_indices": "4",
+      "protein_parent_atom_indices": "499",
+      "protein_residue": "LEU:123:A",
+      "system": "5NDZ_AZ3451"
+    },
+    {
+      "distance_angstrom": 3.6014523459293475,
+      "interaction_type": "Hydrophobic",
+      "ligand_atom_indices": "37",
+      "ligand_parent_atom_indices": "37",
+      "ligand_residue": "LIG:1:A",
+      "protein_atom_indices": "4",
+      "protein_parent_atom_indices": "1145",
+      "protein_residue": "LEU:203:A",
+      "system": "5NDZ_AZ3451"
+    },
+    {
+      "distance_angstrom": 3.2771106176020375,
+      "interaction_type": "VdWContact",
+      "ligand_atom_indices": "11",
+      "ligand_parent_atom_indices": "11",
+      "ligand_residue": "LIG:1:A",
+      "protein_atom_indices": "6",
+      "protein_parent_atom_indices": "1147",
+      "protein_residue": "LEU:203:A",
+      "system": "5NDZ_AZ3451"
+    },
+    {
+      "distance_angstrom": 4.4912481561365585,
+      "interaction_type": "Hydrophobic",
+      "ligand_atom_indices": "24",
+      "ligand_parent_atom_indices": "24",
+      "ligand_residue": "LIG:1:A",
+      "protein_atom_indices": "5",
+      "protein_parent_atom_indices": "752",
+      "protein_residue": "PHE:154:A",
+      "system": "5NDZ_AZ3451"
+    },
+    {
+      "distance_angstrom": 3.2635675264961215,
+      "interaction_type": "VdWContact",
+      "ligand_atom_indices": "24",
+      "ligand_parent_atom_indices": "24",
+      "ligand_residue": "LIG:1:A",
+      "protein_atom_indices": "6",
+      "protein_parent_atom_indices": "753",
+      "protein_residue": "PHE:154:A",
+      "system": "5NDZ_AZ3451"
+    },
+    {
+      "distance_angstrom": 3.311555072771705,
+      "interaction_type": "VdWContact",
+      "ligand_atom_indices": "26",
+      "ligand_parent_atom_indices": "26",
+      "ligand_residue": "LIG:1:A",
+      "protein_atom_indices": "12",
+      "protein_parent_atom_indices": "1115",
+      "protein_residue": "TRP:199:A",
+      "system": "5NDZ_AZ3451"
+    },
+    {
+      "distance_angstrom": 4.290026806443055,
+      "interaction_type": "Hydrophobic",
+      "ligand_atom_indices": "21",
+      "ligand_parent_atom_indices": "21",
+      "ligand_residue": "LIG:1:A",
+      "protein_atom_indices": "4",
+      "protein_parent_atom_indices": "1198",
+      "protein_residue": "TYR:210:A",
+      "system": "5NDZ_AZ3451"
+    }
+  ],
+  "summary": {
+    "interaction_count": 9,
+    "interaction_type_counts": {
+      "Hydrophobic": 4,
+      "VdWContact": 5
+    },
+    "ligand_atom_count": 38,
+    "ligand_file": "/Users/moheet/Documents/ChatGPT/PAR2/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/ligands/5NDZ_AZ3451_crystallographic_clean.sdf",
+    "protein_residue_pair_count": 7,
+    "receptor_atom_count": 4421,
+    "receptor_file": "/Users/moheet/Documents/ChatGPT/PAR2/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/receptors/5NDZ_inactive_allosteric_receptor_clean.pdb",
+    "reference_fingerprint_key_count": 9,
+    "reference_fingerprint_keys": [
+      "ALA:157:A|VdWContact",
+      "ILE:202:A|Hydrophobic",
+      "LEU:123:A|VdWContact",
+      "LEU:203:A|Hydrophobic",
+      "LEU:203:A|VdWContact",
+      "PHE:154:A|Hydrophobic",
+      "PHE:154:A|VdWContact",
+      "TRP:199:A|VdWContact",
+      "TYR:210:A|Hydrophobic"
+    ],
+    "status": "CRYSTAL_REFERENCE_FINGERPRINT_GENERATED",
+    "system": "5NDZ_AZ3451"
+  }
+}

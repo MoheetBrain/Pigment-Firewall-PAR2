@@ -1,0 +1,501 @@
+rank,mol_name,current_source_library,current_binding_site,original_library_from_pass1,pass1_match_count,linked_to_pass1
+1,"1-[5-(2,5-dihydroxyphenyl)furan-3-yl]-4-methylpent-3-en-1-yl 3-methylbut-2-enoate",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+2,"(6e)-2,6,11,15-tetramethylhexadeca-2,6,9,14-tetraene-4,11-diol",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+3,"(4r,6e,8s,10s)-4,6,8,10-tetramethylpentadec-6-ene-3,5-dione",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+4,"(2s,3z)-1-(furan-2-yl)-4,8-dimethylnona-3,7-dien-2-yl acetate",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+5,mol_276266,COCONUT_3D,BoxB_allosteric,COCONUT_3D,2,True
+6,"(4s,6e,10r)-10-hydroxy-2,6,10-trimethyl-8-oxododeca-2,6,11-trien-4-yl acetate",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+7,"(2z,5e)-2-[(4z)-4-[(acetyloxy)methyl]-6-hydroxyhex-4-en-1-ylidene]-6-methyl-7-oxohept-5-en-1-yl acetate",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+8,"4-[(1e,3s,5e)-3-ethenyl-7-hydroxy-3,7-dimethylocta-1,5-dien-1-yl]phenol",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+9,"(2r,4r,5r,8r)-2-[(3z)-1-chlorohex-3-en-5-yn-1-yl]-8-ethyl-4-hydroxy-3,4,5,8-tetrahydro-2h-oxocin-5-yl acetate",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+10,"(4e,6s)-6-hydroxy-1,7-diphenylhept-4-en-3-one",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+11,5-(4-{5-[(3-ethyloxiran-2-yl)methylidene]-1-hydroxy-4-oxocyclopent-2-en-1-yl}butyl)oxolan-2-one,LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+12,"ethyl 2,4-dihydroxy-6-(8-hydroxynonyl)benzoate",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+13,"(5-hydroxy-7-isopropyl-1,4a-dimethyl-6-oxo-3,4-dihydro-2h-phenanthren-1-yl)methyl 3-methylbut-2-enoate",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+14,"(5e)-2,6-dimethyl-8-{[(2r,3r,4s,5s,6r)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}octa-2,5-dien-4-one",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+15,"2-[(2s,8s,8ar)-8,8a-dimethyl-4-oxo-1,2,3,6,7,8-hexahydronaphthalen-2-yl]prop-2-enoic acid",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+16,"(1r)-4-[(1e,3e,5e,7e,9e,11e,13e,15e,17e)-18-[(1s)-6,6-dimethyl-2-methylidenecyclohex-3-en-1-yl]-3,7,12,16-tetramethyloctadeca-1,3,5,7,9,11,13,15,17-nonaen-1-yl]-3,5,5-trimethylcyclohex-3-en-1-ol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,1,True
+17,NPA002150,NPATLAS_3D,BoxB_allosteric,NPATLAS_3D,2,True
+18,mol_168527,COCONUT_3D,BoxB_allosteric,COCONUT_3D,2,True
+19,"(2e,6z,8e,10r,11r)-10,11-dihydroxy-n-(2-hydroxy-2-methylpropyl)dodeca-2,6,8-trienimidic acid",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+20,NPA014216,NPATLAS_3D,BoxB_allosteric,,0,False
+21,mol_229567,COCONUT_3D,BoxB_allosteric,COCONUT_3D,2,True
+22,3-(3-methoxy-5-methylphenoxy)-5-methylphenol,LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+23,3-methyl-6-(6-methyl-4-oxohept-1-en-2-yl)cyclohex-2-en-1-one,LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+24,"(2e,6e,8e,10e)-n-(2-methylpropyl)dodeca-2,6,8,10-tetraenimidic acid",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+25,z-ligustilide,LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+26,"(2s)-2-{[(2s)-1-hydroxy-2-({hydroxy[(2s)-5-hydroxy-3,4-dihydro-2h-pyrrol-2-yl]methylidene}amino)-3-(c-hydroxycarbonimidoyl)propylidene]amino}-3-(1h-indol-3-yl)propanoic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+27,"2-methyl-5-[(2r)-6-methylhept-5-en-2-yl]benzene-1,4-diol",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+28,"7-isopropyl-2,10-dimethylspiro[4.5]dec-1-en-6-ol",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+29,"(1r,2s,3as,5ar,7r,8s,9ar,9br,11ar)-1-[(2r,3r)-2,3-dihydroxy-5,6-dimethylheptan-2-yl]-2,3a,7,8-tetrahydroxy-9a,11a-dimethyl-1h,2h,3h,5ah,6h,7h,8h,9h,9bh,10h,11h-cyclopenta[a]phenanthren-5-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+30,mol_263970,COCONUT_3D,BoxB_allosteric,COCONUT_3D,2,True
+31,"1-(2,5-dihydroxyphenyl)-3-(6,6-dimethyl-1,2-dioxan-3-yl)but-3-en-1-one",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+32,"1-(5,6-dimethylhept-3-en-2-yl)-3a,5a,7,9b-tetrahydroxy-9a,11a-dimethyl-1h,2h,3h,6h,7h,8h,9h,10h,11h-cyclopenta[a]phenanthren-5-one",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+33,"(3e)-4-[(1s,4s,6r)-4-hydroxy-2,2,6-trimethyl-7-oxabicyclo[4.1.0]heptan-1-yl]but-3-en-2-one",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+34,humulane,LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+35,"5,7-dihydroxy-2-(3-hydroxy-4-{[(2s,3s,4s,5s,6s)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}phenyl)-6-methoxychromen-4-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+36,"2-(3,8-dimethyl-1,2,3,3a,4,5,6,7-octahydroazulen-5-yl)propan-2-ol",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+37,calicoferol b,LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+38,NPA014215,NPATLAS_3D,BoxB_allosteric,NPATLAS_3D,2,True
+39,"(1r,3ar,7s,9as,11ar)-7-hydroxy-9a,11a-dimethyl-1-[(2s,3e,5s)-5-methylhept-3-en-2-yl]-1h,2h,3h,3ah,6h,7h,8h,9h,10h,11h-cyclopenta[a]phenanthren-4-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+40,3-hydroxy-4-(hydroxymethyl)-6-(3-methylbut-2-en-1-yl)cyclohex-3-en-1-one,LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+41,"(1r,2r,6r,7s,8r)-8-isopropyl-1,3-dimethyltricyclo[4.4.0.0²,⁷]dec-3-ene",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+42,"n-(2-{4-[(3,7-dimethylocta-2,6-dien-1-yl)oxy]phenyl}-2-hydroxyethyl)-3-methanesulfonylprop-2-enimidic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+43,"methyl (2r,5e)-6-(2,3-dihydroxy-4-methylphenyl)-2-methylhept-5-enoate",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+44,mol_168532,COCONUT_3D,BoxB_allosteric,COCONUT_3D,2,True
+45,"2,16-dimethyl-15-(6-methyl-5-methylideneheptan-2-yl)-8-oxapentacyclo[9.7.0.0²,⁷.0⁷,⁹.0¹²,¹⁶]octadecane-3,5,10-triol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+46,"(3as,4r,5r,9as,9br)-4-hydroxy-6,9-dimethyl-3-methylidene-2,7-dioxo-3ah,4h,5h,9ah,9bh-azuleno[4,5-b]furan-5-yl (2z)-2-methylbut-2-enoate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+47,"(1s,9s,10r)-9-[(2z)-hex-2-en-1-yl]-10-methyl-5,7-diazatricyclo[6.3.1.0⁴,¹²]dodeca-4(12),7-dien-6-imine",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+48,"1-[(6s,7s)-6,7-dihydroxy-3,6-dimethyl-5,7-dihydro-4h-1-benzofuran-2-yl]-3-methylbutan-1-one",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+49,"4-hexyl-5,9-dihydroxy-3,7-dioxatricyclo[6.4.0.0²,⁶]dodec-1(8)-en-12-one",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+50,"5,7-dihydroxy-8-(3-methylbut-2-en-1-yl)chromen-4-one",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+51,"1-[(9e,11e,13e,15e)-18-(4-hydroxy-2,6,6-trimethylcyclohex-1-en-1-yl)-3,7,12,16-tetramethyloctadeca-1,3,5,7,9,11,13,15-octaen-17-yn-1-yl]-2,6,6-trimethylcyclohexane-1,2,4-triol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+52,4-hydroxy-2-methoxy-6-(1-phenylprop-2-en-1-yl)cyclohexan-1-one,LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+53,"(2s,3s)-2-hydroxy-3-(3-methylbut-2-en-1-yl)-2,3-dihydronaphthalene-1,4-dione",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+54,"(9as)-1,1,7,9a-tetramethyl-3,5,6,9-tetrahydro-2h-benzo[7]annulene",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+55,"(2r,6r,7ar)-2-[(2e,4e,6e,8e,10e,12e,14e,16e)-17-[(1r,4r)-4-hydroxy-2,6,6-trimethylcyclohex-2-en-1-yl]-6,11,15-trimethylheptadeca-2,4,6,8,10,12,14,16-octaen-2-yl]-4,4,7a-trimethyl-2,5,6,7-tetrahydro-1-benzofuran-6-ol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+56,"(5z)-6-[(2s,5s)-5-(1-hydroxyethyl)-5-methyloxolan-2-yl]-2,4-dimethylhept-5-enoic acid",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+57,"(2r,4as,5s,8ar)-5-[(2r)-1-hydroxypropan-2-yl]-3,8-dimethyl-1,2,4a,5,6,8a-hexahydronaphthalen-2-ol",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+58,"6-(1-{1,3a-dihydroxy-9a,11a-dimethyl-9-oxo-2h,3h,3bh,4h,5h,9bh,10h,11h-cyclopenta[a]phenanthren-1-yl}-1-hydroxyethyl)-3,4-dimethyl-5,6-dihydropyran-2-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+59,"1-[(3r)-2,3-dihydroxy-5-(3-methylbut-2-en-1-yl)indol-3-yl]propan-2-one",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+60,"(1s,4s,6r,9s,10s,13r,14r)-14-hydroxy-5,5,9,14-tetramethyltetracyclo[11.2.1.0¹,¹⁰.0⁴,⁹]hexadecan-6-yl (2z)-2-methylbut-2-enoate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+61,"(3r,4s,8r,13r)-4-hydroxy-3,7,7-trimethyl-14-methylidenetetracyclo[11.2.1.0²,¹¹.0³,⁸]hexadec-2(11)-en-15-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+62,"[(1s,2r,6r,7s,9r)-2,6,8-trimethyltetracyclo[6.2.1.0¹,⁶.0⁷,⁹]undecan-2-yl]methanol",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+63,"1-{6,9-dihydroxy-6,10-dimethyl-9-phenyl-12-azatricyclo[6.3.1.0⁴,¹²]dodecan-5-yl}ethanone",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+64,"(1r,2r)-2-hydroxy-2-[(2r,3s)-3-hydroxy-6-oxo-2,3-dihydropyran-2-yl]-1-phenylethyl acetate",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+65,sargachromanol f,LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+66,"2,5-dihydroxy-3-(3-methylbut-2-en-1-yl)naphthalene-1,4-dione",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+67,mol_106604,COCONUT_3D,BoxB_allosteric,COCONUT_3D,2,True
+68,"4-{7-methoxy-9h-pyrido[3,4-b]indol-1-yl}quinoline",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,1,True
+69,"(2s,4r)-4-ethenyl-2-(2-hydroxypropan-2-yl)-7-methyl-3,4-dihydro-2h-1-benzopyran-6-ol",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+70,"3-{[6,7-bis(3-methylbut-2-en-1-yl)-2-(2-methylbut-3-en-2-yl)-1h-indol-3-yl]methyl}-6-methyl-3,6-dihydropyrazine-2,5-diol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+71,"5h,10h-indolo[3,2-b]quinolin-11-one",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+72,mol_290144,COCONUT_3D,BoxB_allosteric,COCONUT_3D,2,True
+73,"5-(3,5-dihydroxyphenyl)-6-(4-hydroxyphenyl)-3-[2-(4-hydroxyphenyl)ethenyl]cyclohept-2-en-1-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+74,"(1r,4as,10ar)-6-hydroxy-7-isopropyl-1,4a-dimethyl-9-oxo-3,4,10,10a-tetrahydro-2h-phenanthrene-1-carbaldehyde",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+75,"2-[2-(4-hydroxy-3-{4-[2-(3-hydroxyphenyl)ethyl]phenoxy}phenyl)ethyl]benzene-1,4-diol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+76,"1,9-dihydroxy-2,11-dimethyl-7-methylidene-5,14-dioxatricyclo[9.2.1.0⁴,⁸]tetradecan-6-one",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+77,"(1s,2r,4ar,5s,8as)-2-isopropyl-4a-methyl-8-methylidene-octahydronaphthalene-1,5-diol",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+78,"[(2r,4as,4bs,8r,8ar,10as)-2-(acetyloxy)-8-(2,4-dihydroxy-5-oxo-2h-furan-3-yl)-1-({[(2r,5r,6s)-5-methoxy-6-methyloxan-2-yl]oxy}methyl)-4a,7,8a-trimethyl-3,4,4b,5,8,9,10,10a-octahydro-2h-phenanthren-1-yl]methyl 5-methyl-1h-pyrrole-2-carboxylate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+79,"6,8-dihydroxy-3-methyl-3,4-dihydro-2h-tetraphene-1,7,12-trione",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+80,"(1r,2r,3ar,3br,7s,9ar,9bs,11s,11as)-9a,11a-dimethyl-1-[(1s)-1-[(2r,5s)-5-methylpiperidin-2-yl]ethyl]-1h,2h,3h,3ah,3bh,4h,6h,7h,8h,9h,9bh,10h,11h-cyclopenta[a]phenanthrene-2,7,11-triol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+81,"(1r,10s,11s,14r)-5-isopropyl-11-methyl-13-oxatetracyclo[9.3.3.0¹,¹⁰.0²,⁷]heptadeca-2(7),3,5-triene-4,14-diol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+82,NPA002147,NPATLAS_3D,BoxB_allosteric,NPATLAS_3D,2,True
+83,"(1as,4as,7r,7ar,7bs)-7-hydroxy-1,1,7-trimethyl-octahydrocyclopropa[e]azulen-4-one",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+84,40,MITF_SCAFFOLDS_3D,BoxB_allosteric,,0,False
+85,mol_342289,COCONUT_3D,BoxB_allosteric,COCONUT_3D,2,True
+86,"3-{3-[(2e)-3,7-dimethylocta-2,6-dien-1-yl]-4,5-dihydroxyphenyl}-5,7-dihydroxychromen-4-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+87,"(5r,6r)-4-hydroxy-3,5-dimethyl-6-[(2s,3e,5e,8s,9e,11e)-2,8,13-trihydroxy-5,11-dimethyltrideca-3,5,9,11-tetraen-1-yl]-5,6-dihydropyran-2-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+88,"(1s,3ar,3br,5ar,9ar,9br,11ar)-1-[(2s,5r)-5-hydroxy-5-(2-hydroxypropan-2-yl)-2-methyloxolan-2-yl]-3a,3b,6,6,9a-pentamethyl-dodecahydrocyclopenta[a]phenanthren-7-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+89,NPA002123,NPATLAS_3D,BoxB_allosteric,,0,False
+90,"methyl 7-hydroxy-9-oxo-1h,2h,3h-cyclopenta[b]chromene-3-carboxylate",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+91,mol_280200,COCONUT_3D,BoxB_allosteric,COCONUT_3D,2,True
+92,"(9s)-3-acetyl-5,9-dihydroxy-9h-naphtho[2,3-c]furan-4-one",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+93,mol_86007,COCONUT_3D,BoxB_allosteric,COCONUT_3D,2,True
+94,1-hydroxy-10-methylacridin-9-one,LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+95,"(1r,5as,9as,9br)-6,6,9a-trimethyl-1h,3h,5h,5ah,7h,8h,9h,9bh-naphtho[1,2-c]furan-1-ol",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+96,24,MITF_SCAFFOLDS_3D,BoxB_allosteric,,0,False
+97,"(1s,3as,5ar,7r,8s,9ar,9br,11ar)-1-[(2r,3r,5s)-2,3-dihydroxy-5,6-dimethylheptan-2-yl]-3a,7,8-trihydroxy-9a,11a-dimethyl-1h,2h,3h,5ah,6h,7h,8h,9h,9bh,10h,11h-cyclopenta[a]phenanthren-5-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+98,callicarpone,LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+99,NPA032187,NPATLAS_3D,BoxA_orthosteric,,0,False
+100,"(1s,2s,4r,5r,10r,11s,13s,16r,17r,20s)-16-[(2r)-4,5-dimethyl-6-oxo-2,3-dihydropyran-2-yl]-4,5,13,17-tetrahydroxy-10,20-dimethyl-14-oxapentacyclo[11.6.1.0²,¹¹.0⁵,¹⁰.0¹⁷,²⁰]icos-7-en-9-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+101,"(3as,5s,6ar,9s,9ar,9br)-5-hydroxy-9-methyl-3,6-dimethylidene-octahydroazuleno[4,5-b]furan-2,8-dione",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+102,NPA032858,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+103,"2-[3,5-dihydroxy-2,6-bis(3-methylbut-2-en-1-yl)phenyl]-7-(3-methylbut-3-en-2-yl)-1-benzofuran-4,6-diol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+104,"(1r,3as,3bs,9s,9as,11as)-1-[(2s,3r,5r)-5-ethyl-3-hydroxy-6-methylheptan-2-yl]-9-hydroxy-9a,11a-dimethyl-1h,2h,3h,3ah,3bh,4h,5h,8h,9h,11h-cyclopenta[a]phenanthren-7-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+105,"(5s,8s,10r)-5,8-dihydroxy-10-propyloxecane-2,7-dione",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+106,"(1s,2s,4s,6r,7s,8r,9s,12s,13s,14r,16s,18s)-7,9,13-trimethyl-6-[(3r)-3-methyl-4-{[(2r,3r,4s,5s,6r)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}butyl]-16-{[(2r,3r,4s,5s,6r)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}-5-oxapentacyclo[10.8.0.0²,⁹.0⁴,⁸.0¹³,¹⁸]icosane-6,14,18-triol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+107,"1,8,9-trihydroxy-3-{[3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}-10h-5,11-dioxatetraphen-12-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+108,"2-{5,7-dihydroxy-9a,11a-dimethyl-1h,2h,3h,3ah,3bh,4h,5h,5ah,6h,7h,8h,9h,11h-cyclopenta[a]phenanthren-1-yl}-6-methylheptan-4-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+109,"1,3,3'-trichloro-2,2',4,4',5,5'-hexahydroxy-7,7'-dimethyl-9h,9'h-[9,9'-bianthracene]-10,10'-dione",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+110,mol_71211,COCONUT_3D,BoxB_allosteric,COCONUT_3D,2,True
+111,"(2r,3s,4s,5r,6s)-5-{[(2s,3r,4r)-3,4-dihydroxy-4-(hydroxymethyl)oxolan-2-yl]oxy}-6-(2,6-dihydroxy-4-methoxyphenoxy)-2-(hydroxymethyl)oxane-3,4-diol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+112,"4-{3h,4h,9h-pyrido[3,4-b]indol-1-yl}quinoline",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+113,mol_338874,COCONUT_3D,BoxB_allosteric,COCONUT_3D,2,True
+114,"3,6-dimethyl-2-methylidene-1,5,5a,6,7,8,8a,8b-octahydroas-indacene-1,3,8-triol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+115,"3-hydroxy-4-(2,6,7-trihydroxy-6-methylheptan-2-yl)benzoic acid",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+116,"(1s,3s,6r,7s,9r,11s)-3,6,7-trihydroxy-7-(3-hydroxy-3-methylbutyl)-4,4,10,10-tetramethyl-11-(3-methylbut-2-en-1-yl)-9-(2-methylpropanoyl)-5-oxatricyclo[7.3.1.0¹,⁶]tridecane-8,13-dione",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+117,mol_225894,COCONUT_3D,BoxA_orthosteric,COCONUT_3D,2,True
+118,"(1r,3as,3bs,5ar,7s,9ar,9bs,10r,11ar)-3a,10-dihydroxy-11a-methyl-1-(5-oxo-2h-furan-3-yl)-7-{[(2r,3r,4r,5r,6r)-3,4,5-trihydroxy-6-methyloxan-2-yl]oxy}-tetradecahydrocyclopenta[a]phenanthrene-9a-carbaldehyde",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+119,"(21s)-10,21-diisopropyl-7,18-dimethylpentacyclo[12.8.0.0³,¹².0⁴,⁹.0¹⁵,²⁰]docosa-1,3(12),4(9),5,7,10,13,15,17,19-decaene-5,16-diol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+120,"(2s,4as,5r,6r)-5-(1h-indol-3-ylmethyl)-1,1,5,6-tetramethyl-2,3,4,4a,6,7-hexahydronaphthalen-2-ol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+121,"12,17,26-trihydroxy-3,8,12,17,21-pentamethyl-25-methylidene-6,23-dioxaheptacyclo[13.9.2.0¹,¹⁶.0²,¹⁴.0⁴,¹³.0⁵,⁹.0²⁰,²⁴]hexacos-3-ene-7,22-dione",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+122,"(1s,5s,6r,9r,10r)-10-hydroxy-5,10-dimethyl-5-[4-({[(2r,3r,4s,5s,6r)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}methyl)pent-4-en-1-yl]tricyclo[7.2.1.0¹,⁶]dodecan-4-one",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+123,"1-(7-hydroxy-6-methylheptan-2-yl)-9a,11a-dimethyl-tetradecahydrocyclopenta[a]phenanthrene-3,3b,5,6,7-pentol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+124,"2-(3-hydroxy-4a,8-dimethyl-2,3,4,5,6,7-hexahydro-1h-naphthalen-2-yl)prop-2-enoic acid",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+125,mol_290140,COCONUT_3D,BoxB_allosteric,COCONUT_3D,2,True
+126,"(3r)-5-{[(1r,3as,5ar,7r,8r,9as,11s,11ar)-7,11-dihydroxy-3a,6,6,9a,11a-pentamethyl-1-[(2r,5r)-1,5,6-trihydroxy-6-methylheptan-2-yl]-1h,2h,3h,4h,5h,5ah,7h,8h,9h,10h,11h-cyclopenta[a]phenanthren-8-yl]oxy}-3-hydroxy-n-(2-methoxy-2-oxoethyl)-3-methyl-5-oxopentanimidic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+127,"4,4,6a,6b,8a,11,11,14b-octamethyl-1,2,3,4a,5,6,7,8,9,10,12,12a,14,14a-tetradecahydropicene-1,2,3,14-tetrol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+128,"(2r)-5-hydroxy-2-(4-hydroxyphenyl)-8,8-dimethyl-2h,3h-pyrano[2,3-f]chromen-4-one",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+129,"(2r,6r)-6-[(1r,3as,4s,5as,6s,9as,11ar)-3a,4-dihydroxy-6,9a,11a-trimethyl-7,10-dioxo-1h,2h,3h,4h,5h,5ah,6h,8h,9h,11h-cyclopenta[a]phenanthren-1-yl]-2-methyl-3-methylideneheptanoic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+130,"(2e)-3-(4-{[(2s,4s,5s)-3-[(4,5-dihydroxy-6-methyl-3-{[(3s,4s,5s,6r)-3,4,5-trihydroxy-6-methyloxan-2-yl]oxy}oxan-2-yl)oxy]-4,5-dihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}-3,5-dimethoxyphenyl)prop-2-en-1-yl (2e)-3-(3,4-dihydroxyphenyl)prop-2-enoate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+131,"(5z)-5-[(2s,3r)-2,3-dihydroxybutylidene]-3-propylfuran-2-one",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+132,NPA002138,NPATLAS_3D,BoxA_orthosteric,,0,False
+133,"5,7-dihydroxy-6-(4-hydroxy-3-methylbutanoyl)-8-(3-methylbut-2-en-1-yl)-4-phenylchromen-2-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+134,"7-hydroxy-5,9,13-trimethyl-15-oxapentacyclo[11.3.1.0¹,¹⁰.0⁴,⁹.0¹⁴,¹⁶]heptadeca-4,7-dien-6-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+135,NPA032150,NPATLAS_3D,BoxB_allosteric,NPATLAS_3D,2,True
+136,NPA032861,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+137,"(1s,3s,4r,6s,8s,11r,14r,15s,16r,17s,18r,20r)-3,8,14-trihydroxy-18-[(1r,2r)-1-hydroxy-2,3-dimethylbutyl]-11,15,17-trimethyl-5,19-dioxahexacyclo[13.5.1.0²,¹².0⁴,⁶.0⁶,¹¹.0¹⁶,²⁰]henicos-2(12)-ene-13,21-dione",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+138,mol_338872,COCONUT_3D,BoxB_allosteric,COCONUT_3D,2,True
+139,"[(2r,3s,4s,5r,6s)-3,4,5-trihydroxy-6-{[(1s,2s,3r,5s,6r,8s)-6-hydroxy-2-(hydroxymethyl)-8-methyl-9,10-dioxatetracyclo[4.3.1.0²,⁵.0³,⁸]decan-3-yl]oxy}oxan-2-yl]methyl benzoate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+140,"(2z,4e,6e,8e,10e,12e,14e,16e,18e)-3-hydroxy-1-[(1r,4s)-4-hydroxy-1,2,2-trimethylcyclopentyl]-4,8,13,17-tetramethyl-19-(2,3,4-trimethylphenyl)nonadeca-2,4,6,8,10,12,14,16,18-nonaen-1-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+141,"1-{7-[(5-amino-4-methoxy-6-methyloxan-2-yl)oxy]-3a-hydroxy-9a,11a-dimethyl-tetradecahydrocyclopenta[a]phenanthren-1-yl}ethanone",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+142,NPA032178,NPATLAS_3D,BoxB_allosteric,NPATLAS_3D,2,True
+143,"(1r,2r,6s,7s,8r,10s,11s,12r,14r,16r,18r)-6,7-dihydroxy-8-(hydroxymethyl)-4,18-dimethyl-16-(prop-1-en-2-yl)-14-[(1e,3e)-trideca-1,3-dien-1-yl]-9,13,15,19-tetraoxahexacyclo[12.4.1.0¹,¹¹.0²,⁶.0⁸,¹⁰.0¹²,¹⁶]nonadec-3-en-5-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+144,"1-(2-phenylethyl)-6h,7h,8h-pyrrolo[1,2-a]pyrazin-4-one",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+145,NPA007845,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+146,mol_93252,COCONUT_3D,BoxB_allosteric,COCONUT_3D,2,True
+147,"24-{5-[2-(2,3-dimethyloxiran-2-yl)-1,3-thiazol-4-yl]-2-hydroxy-4-methylpent-3-en-2-yl}-8,16,17-trihydroxy-11-(hydroxymethyl)-18-methoxy-3,6,9,15,19,23-hexamethyl-2,10-dioxo-1-oxacyclotetracosa-12,19,21-trien-3-yl 3-hydroxy-2-methylbutanoate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+148,"(3r,3ar,3br,9ar,9br,10s)-1-(furan-3-yl)-3,5,10-trihydroxy-3a,3b,6,6,9a-pentamethyl-2h,3h,9bh,10h,11h-cyclopenta[a]phenanthrene-4,7-dione",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+149,"5-hydroxy-2,16-dimethyl-15-{1-methyl-8-methylidene-7-oxo-2,6-dioxabicyclo[3.3.1]nonan-4-yl}-8-oxapentacyclo[9.7.0.0²,⁷.0⁷,⁹.0¹²,¹⁶]octadecan-3-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+150,"(3ar,6s,6ar,10s,12r,13r,15as)-1,6,12,13-tetrahydroxy-3-(1h-indol-3-ylmethyl)-4,5,10-trimethyl-3h,3ah,6h,6ah,9h,10h,11h,12h,13h,14h-cycloundeca[d]isoindol-15-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+151,"3,5,7-trihydroxy-2-(4-hydroxy-3-{[(2s,3r,4r,5r,6s)-3,4,5-trihydroxy-6-methyloxan-2-yl]oxy}phenyl)chromen-4-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+152,"(3as,3bs,9ar,9br,11ar)-1-(5-ethyl-6-methylheptan-2-yl)-9a,11a-dimethyl-1h,2h,3h,3ah,3bh,4h,6h,7h,8h,9h,9bh,10h,11h-cyclopenta[a]phenanthrene-4,7-diol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+153,"(1s,2r,5s,6s,7r,9r,11s,12s,15s,16s)-15-[(1r)-1-[(2r,4s,5r)-4,5-dimethyl-6-oxooxan-2-yl]-1-hydroxyethyl]-6-hydroxy-5-methoxy-2,16-dimethyl-8-oxapentacyclo[9.7.0.0²,⁷.0⁷,⁹.0¹²,¹⁶]octadecan-3-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+154,"3-[5-(2,5,5,8a-tetramethyl-3,4,4a,6,7,8-hexahydronaphthalen-1-yl)-3-methylpent-2-en-1-yl]-4-hydroxybenzoic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+155,"(1r,5s,16r)-5-hydroxy-5-methyl-2,8-dioxa-13-azatricyclo[8.5.1.0¹³,¹⁶]hexadec-10-ene-3,7-dione",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+156,NPA014227,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+157,mol_170611,COCONUT_3D,BoxA_orthosteric,COCONUT_3D,2,True
+158,"(2s,3r,4s,5s,6r)-2-[(2-hydroxy-3-methoxy-8-methylnaphthalen-1-yl)oxy]-6-(hydroxymethyl)oxane-3,4,5-triol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+159,"2-hydroxy-3-[(2-hydroxyphenyl)amino]-6-imino-5-oxocyclohexa-1,3-diene-1-carboximidic acid",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+160,"[(1z)-2-(3,4-dihydroxyphenyl)ethenyl]oxysulfonic acid",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+161,"5-{5-hydroxy-7,8-dimethyl-3-oxo-1h,5h,6h,6ah,8h,9h,10h-naphtho[4,4a-c]furan-7-yl}-3-methylpentanoic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+162,"(2r,3s,4r,5r,6s)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl (2s)-2-(4-{[(2r,3s,4r,5r,6s)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}phenyl)propanoate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+163,NPA002127,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+164,mol_149077,COCONUT_3D,BoxA_orthosteric,COCONUT_3D,2,True
+165,"2-(3,5-dihydroxy-4-methoxyphenyl)-5,7-dihydroxy-3-{[(2s,3r,4s,5s,6r)-3,4,5-trihydroxy-6-({[(2r,3r,4r,5r,6s)-3,4,5-trihydroxy-6-methyloxan-2-yl]oxy}methyl)oxan-2-yl]oxy}chromen-4-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+166,"3,6-dihydroxy-1,4-dimethyl-12-(6-methylhepta-3,5-dien-2-yl)tricyclo[9.3.0.0³,⁷]tetradec-8-ene-8-carbaldehyde",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+167,NPA007854,NPATLAS_3D,BoxB_allosteric,NPATLAS_3D,2,True
+168,"7-[(4,5-dihydroxy-3-methoxyoxan-2-yl)oxy]-1-(7-hydroxy-5,6-dimethylhept-3-en-2-yl)-9a,11a-dimethyl-1h,2h,3h,3ah,4h,5h,7h,8h,9h,9bh,10h,11h-cyclopenta[a]phenanthrene-2,3,3b,5-tetrol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+169,"(6r,7s,10s,15r,16s,18s,19r,22s)-6,18-dimethyl-4-oxo-5-oxa-16-azahexacyclo[14.5.1.0¹,⁶.0⁷,¹⁵.0¹⁰,¹⁴.0¹⁹,²²]docos-13-en-16-ium-16-olate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+170,"(1s)-1-[(1s,3ar,3bs,5as,7s,9as,9bs,11r,11as)-11-(acetyloxy)-1,3a,3b,7-tetrahydroxy-9a-methyl-dodecahydro-2h-cyclopenta[a]phenanthren-1-yl]ethyl pyridine-2-carboxylate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+171,"(2s,6r)-2-{[(1r,3as,3br,7s,9ar,9bs,11as)-1-hydroxy-1-[(1s)-1-hydroxyethyl]-9a,11a-dimethyl-2h,3h,3ah,3bh,4h,6h,7h,8h,9h,9bh,10h,11h-cyclopenta[a]phenanthren-7-yl]oxy}-4-methoxy-6-methyl-2,6-dihydropyran-3-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+172,"2-{2,7-dihydroxy-3a,6,6,9a,11a-pentamethyl-1h,2h,3h,4h,5h,5ah,7h,8h,9h,10h,11h-cyclopenta[a]phenanthren-1-yl}-6-hydroxy-6-methyl-5-methylideneheptanoic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+173,"(1r,3ar,5as,7s,9as,9br,11ar)-1-[(2r,5z)-5-isopropylhept-5-en-2-yl]-9a,11a-dimethyl-1h,2h,3h,3ah,5h,5ah,6h,7h,8h,9h,9bh,10h,11h-cyclopenta[a]phenanthren-7-yl acetate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+174,"(4r,10e,13e,15s,19r)-7,18-dihydroxy-6,14,19-trimethyl-16-oxatricyclo[13.2.2.0⁴,⁸]nonadeca-1(18),5,7,10,13-pentaene-9,17-dione",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+175,mol_94053,COCONUT_3D,BoxA_orthosteric,COCONUT_3D,2,True
+176,"4-(2-hydroxypropan-2-yl)-1,3'a,3'b,6',6',9'a-hexamethyl-dodecahydro-3,7-dioxaspiro[bicyclo[2.2.1]heptane-2,1'-cyclopenta[a]phenanthren]-7'-ol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+177,"1-[(4ar,5r,7s,8as)-5-{[(1s,2s,5r,9s,11r,13s,17r)-2-hydroxy-11,14-dimethyl-6,14-diazatetracyclo[7.6.2.0²,⁷.0¹³,¹⁷]heptadec-6-en-5-yl]methyl}-7-methyl-octahydro-2h-quinolin-1-yl]ethanone",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+178,"7-{[(2s,3r,4s,5r,6s)-3,4-dihydroxy-6-methyl-5-{[(2s,3r,4s,5s,6r)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}oxan-2-yl]oxy}-2-(3,4-dihydroxyphenyl)-5-hydroxy-3-{[(2s,3r,4s,5s,6r)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}chromen-4-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+179,2-{[4-carboxy-4-({2-[(2-carboxyphenyl)-c-hydroxycarbonimidoyl]-1-hydroxyethylidene}amino)-1-hydroxybutylidene]amino}benzoic acid,LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+180,NPA014217,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+181,"methyl (1s,4s,12r,13r,18s,21r)-18-hydroxy-20-oxo-5,15-diazahexacyclo[11.5.2.1¹,¹².0⁴,¹².0⁶,¹¹.0¹⁵,²¹]henicosa-6,8,10-triene-4-carboxylate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+182,"4-(acetyloxy)-2,11-dihydroxy-1,5,9,12,12-pentamethyl-8-oxotetracyclo[7.6.0.0³,⁷.0¹⁰,¹³]pentadecan-7-yl benzoate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+183,"2-[7-(butanoyloxy)-8,8a-dimethyl-3-oxo-5,6,7,8-tetrahydronaphthalen-2-yl]propanoic acid",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+184,predurmillone,LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+185,"(3s,5ar,5br,7as,11as,11br,13ar,13br)-3-hydroxy-3-isopropyl-5a,5b,8,8,11a,13b-hexamethyl-1h,2h,6h,7h,7ah,9h,10h,11h,11bh,12h,13h,13ah-cyclopenta[a]chrysen-5-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+186,"(3r,5s,7r,9r,10s,12r,14r,15s,16s,18r,19r,22s,23r)-9,10,16,22-tetrahydroxy-7,14,18-trimethyl-19-(5-oxo-2h-furan-3-yl)-4,6,11-trioxahexacyclo[12.11.0.0³,¹².0⁵,¹⁰.0¹⁵,²³.0¹⁸,²²]pentacos-1-en-17-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+187,mol_6778,COCONUT_3D,BoxA_orthosteric,COCONUT_3D,2,True
+188,"(6s)-6-hydroxy-6-(hydroxymethyl)-1-methyl-7h,8h,9h-phenanthro[1,2-b]furan-10,11-dione",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+189,"1,6-dihydroxy-7-methyl-1h,4ah,5h,6h,7h,7ah-cyclopenta[c]pyran-4-carboxylic acid",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+190,NPA032875,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+191,"4',5,6,6-tetramethyl-8,9-dihydro-7h-spiro[naphtho[1,2-c]furan-3,2'-oxolan]-1-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+192,"(6r)-6-[(1r,3ar,5as,6s,9as,11ar)-6,9a,11a-trimethyl-7,10-dioxo-1h,2h,3h,3ah,4h,5h,5ah,6h,8h,9h,11h-cyclopenta[a]phenanthren-1-yl]-2-methyl-3-methylideneheptanoic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+193,"2-(3,4-dihydroxy-5-{[(2s,3r,4r,5r,6s)-3,4,5-trihydroxy-6-methyloxan-2-yl]oxy}phenyl)-3,5,7-trihydroxychromen-4-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+194,NPA032855,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+195,NPA010093,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+196,"n-{7-butyl-4,9-dimethyl-2,6-dioxo-8-[(2-phenylacetyl)oxy]-1,5-dioxonan-3-yl}-2-hydroxy-3-[(hydroxymethylidene)amino]benzenecarboximidic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+197,7-[(4-hydroxyphenyl)sulfanyl]-3-phenylcyclohepta[b]furan-2-one,LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+198,"(1r,3ar,5ar,7s,9as,11ar)-7-hydroxy-3a,6,6,9a,11a-pentamethyl-1-[(2s,5s,6s)-5,6,7-trihydroxy-6-methylheptan-2-yl]-1h,2h,3h,5h,5ah,7h,8h,9h,10h,11h-cyclopenta[a]phenanthren-4-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+199,NPA032170,NPATLAS_3D,BoxA_orthosteric,,0,False
+200,NPA032868,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+201,"3',6',10,11b-tetramethyl-11-oxo-1,2,3,3'a,4,4',5',6,6',6a,6b,7,7',7'a,8,11a-hexadecahydro-3'h-spiro[cyclohexa[a]fluorene-9,2'-furo[3,2-b]pyridin]-3-yl acetate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+202,"(3r,6s)-6,8-dihydroxy-4,9-dioxa-2-azatricyclo[8.4.0.0³,⁸]tetradeca-1(10),11,13-triene-14-carboxylic acid",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+203,NPA032853,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+204,"10-hydroxy-8,8,13,17-tetramethyl-16-[1-(5-methyl-6-oxo-2,3-dihydropyran-2-yl)ethyl]-7-oxapentacyclo[10.7.0.0¹,³.0³,⁹.0¹³,¹⁷]nonadec-4-en-6-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+205,NPA032862,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+206,NPA007855,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+207,"(1r,3ar,7s,9as,11ar)-1-[(2r,5z)-5-isopropylhept-5-en-2-yl]-9a,11a-dimethyl-1h,2h,3h,3ah,6h,7h,8h,9h,11h-cyclopenta[a]phenanthren-7-ol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+208,"(1r,2s,3as,3bs,4s,7s,9ar,9bs,11as)-1-[(2r,5r)-5-ethyl-6-methylheptan-2-yl]-9a,11a-dimethyl-1h,2h,3h,3ah,3bh,4h,6h,7h,8h,9h,9bh,10h,11h-cyclopenta[a]phenanthrene-2,4,7-triol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+209,"(1r,2s,9ar,11as)-1-[(2s,3r,6s)-3,7-dihydroxy-6-methylheptan-2-yl]-2-hydroxy-9a,11a-dimethyl-1h,2h,3h,3ah,3bh,4h,5h,8h,9h,9bh,10h,11h-cyclopenta[a]phenanthren-7-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+210,"2-(hydroxymethyl)-6-{[5-(hydroxymethyl)-5,8a-dimethyl-2-methylidene-hexahydro-1h-naphthalen-1-yl]methoxy}oxane-3,4,5-triol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+211,"1-[(1r,3ar,3bs,7s,9ar,9br,11r,11as)-7-{[(2r,4s,5s,6r)-5-{[(2s,4s,5r,6r)-5-{[(2s,4r,5r,6r)-5-{[(2s,3r,4s,5r,6r)-3,5-dihydroxy-4-methoxy-6-methyloxan-2-yl]oxy}-4-methoxy-6-methyloxan-2-yl]oxy}-4-methoxy-6-methyloxan-2-yl]oxy}-4-hydroxy-6-methyloxan-2-yl]oxy}-3a,3b,11-trihydroxy-9a,11a-dimethyl-1h,2h,3h,4h,6h,7h,8h,9h,9bh,10h,11h-cyclopenta[a]phenanthren-1-yl]ethanone",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+212,"(5ar,6r,7s,9ar)-6-{2-[(1r,3ar,5z,6r,8ar)-1,4,4,6-tetramethyl-1-{[(2s,3r,4r,5r,6s)-3,4,5-trihydroxy-6-methyloxan-2-yl]oxy}-hexahydro-2h-azulen-5-ylidene]ethyl}-7-hydroxy-2,2,5a,7-tetramethyl-hexahydro-1-benzoxepin-3-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+213,"1-(1,3a-dihydroxy-7-{[4-hydroxy-5-({5-[(5-hydroxy-4-methoxy-6-methyloxan-2-yl)oxy]-4-methoxy-6-methyloxan-2-yl}oxy)-6-methyloxan-2-yl]oxy}-9a,11a-dimethyl-2h,3h,3bh,4h,6h,7h,8h,9h,9bh,10h,11h-cyclopenta[a]phenanthren-1-yl)-2-methoxyethanone",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+214,"5-hydroxy-3-(4-hydroxy-3-methoxyphenyl)-6-methoxy-7-{[3,4,5-trihydroxy-6-({[3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}methyl)oxan-2-yl]oxy}chromen-4-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+215,"(1s,3r,6s,7e,9s,11e,13s,16s,17s,18s,20s,21r,22s)-9,27-dihydroxy-17-{[(2r,4s,5s,6r)-5-hydroxy-4-{[(4s,5r,6r)-4-hydroxy-5-{[(2r,4s,5r,6r)-4-hydroxy-5-methoxy-6-methyloxan-2-yl]oxy}-6-methyloxan-2-yl]oxy}-6-methyloxan-2-yl]oxy}-3,4,8,12,18,20,22-heptamethyl-26-oxapentacyclo[22.2.1.0¹,⁶.0¹³,²².0¹⁶,²¹]heptacosa-4,7,11,14,24(27)-pentaene-23,25-dione",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+216,"(1r,3ar,5ar,5br,7ar,9r,11as,11br,13as,13br)-3a,5a,5b,8,8,11a-hexamethyl-1-(prop-1-en-2-yl)-hexadecahydrocyclopenta[a]chrysen-9-ol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+217,"(2s,3r,4s,5s,6r)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl (1s,4s,8r,10s,11s,14s)-11-ethyl-12-oxo-7,9,13-trioxatetracyclo[6.5.1.0¹,¹⁰.0⁴,¹⁴]tetradeca-2,5-diene-5-carboxylate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+218,mol_125307,COCONUT_3D,BoxA_orthosteric,COCONUT_3D,2,True
+219,NPA032172,NPATLAS_3D,BoxA_orthosteric,,0,False
+220,"5-hydroxy-4,4,9,11b-tetramethyl-1h,2h-phenanthro[3,2-b]furan-3,6,7,11-tetrone",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+221,NPA028358,NPATLAS_3D,BoxA_orthosteric,,0,False
+222,"(1s,12r)-17-(3-methylbut-2-en-1-yl)-5,7,11,19-tetraoxapentacyclo[10.8.0.0²,¹⁰.0⁴,⁸.0¹³,¹⁸]icosa-2,4(8),9,13(18),14,16-hexaen-16-ol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,1,True
+223,"(1r,2s,3r,5r,6s,9r,10r,13r,15s)-6-[(2e,4s,5r)-4,5-dihydroxy-6-methoxy-6-methylhept-2-en-2-yl]-9,10,14,14-tetramethyl-16-oxapentacyclo[13.2.2.0¹,¹³.0²,¹⁰.0⁵,⁹]nonadecane-3,15-diol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+224,"(2z)-4-[(1s,2s,9r,17s,19r)-9,12-dihydroxy-8,8,21,21-tetramethyl-5-(3-methylbut-2-en-1-yl)-14,18-dioxo-3,7,20-trioxahexacyclo[15.4.1.0²,¹⁵.0²,¹⁹.0⁴,¹³.0⁶,¹¹]docosa-4(13),5,11,15-tetraen-19-yl]-2-methylbut-2-enoic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+225,"[(2r,3s,4s,5r,6s)-3,4,5-trihydroxy-6-(4-hydroxyphenoxy)oxan-2-yl]methyl (2r,3r)-2-(3,4-dihydroxyphenyl)-7-hydroxy-5-[(1e)-3-oxo-3-{[(2r,3s,4s,5r,6s)-3,4,5-trihydroxy-6-(4-hydroxyphenoxy)oxan-2-yl]methoxy}prop-1-en-1-yl]-2,3-dihydro-1-benzofuran-3-carboxylate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+226,NPA032154,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+227,NPA002149,NPATLAS_3D,BoxA_orthosteric,,0,False
+228,"(2s,3r,4r,5r,6s)-2-{[(2r,3r,4s,5r,6r)-5-hydroxy-2-{[(1s,2s,4s,6s,7s,8r,9s,12s,13r,16s)-6-hydroxy-7,9,13-trimethyl-6-[(2r,4r,5s)-4-methyl-5-{[(2s,3r,4s,5s,6r)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}oxolan-2-yl]-5-oxapentacyclo[10.8.0.0²,⁹.0⁴,⁸.0¹³,¹⁸]icos-18-en-16-yl]oxy}-6-(hydroxymethyl)-4-{[(2s,3r,4s,5r)-3,4,5-trihydroxyoxan-2-yl]oxy}oxan-3-yl]oxy}-6-methyloxane-3,4,5-triol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+229,"methyl 2-{7-hydroxy-3a,6,6,9a,11a-pentamethyl-1h,2h,3h,5h,5ah,7h,8h,9h,11h-cyclopenta[a]phenanthren-1-yl}-6-methylhept-5-enoate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+230,"(1s,4r,12r,16s)-8-hydroxy-9-{14-hydroxy-6-methyl-2-oxo-1,6-diazatetracyclo[7.6.1.0⁵,¹⁶.0¹⁰,¹⁵]hexadeca-5(16),10,12,14-tetraen-9-yl}-7-methoxy-5-propanoyl-17-oxa-5,15-diazahexacyclo[13.4.3.0¹,¹⁶.0⁴,¹².0⁶,¹¹.0¹²,¹⁶]docosa-2,6(11),7,9-tetraen-18-one",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+231,NPA032849,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+232,"1',5,9'a,11'a-tetramethyl-dodecahydrospiro[oxane-2,2'-phenanthro[1,2-b]furan]-7'-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+233,"7-hydroxy-2-phenyl-5-{[(2r,3r,4r,5r)-3,4,5-trihydroxyoxan-2-yl]oxy}chromen-4-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+234,"(2s,3e,6r,7s,10e,14s,21s,26z)-2,17,30,32,35-pentahydroxy-4,11,27-trimethyl-14-(prop-1-en-2-yl)pentacyclo[27.2.2.1⁶,²³.1¹⁵,¹⁹.0⁷,²¹]pentatriaconta-1(31),3,10,15(35),16,18,23(34),26,29,32-decaene-7-carbaldehyde",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+235,"(7s)-4,20-dihydroxy-6,6,7,17,17-pentamethyl-8,12,18-trioxapentacyclo[11.8.0.0³,¹¹.0⁵,⁹.0¹⁴,¹⁹]henicosa-1(21),3,5(9),10,13,15,19-heptaen-2-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+236,"(2s,3s,4s)-5-[(1s,2s,3r,4s,6r,9s,12e)-12-(chloromethylidene)-4-hydroxy-3,6,9-trimethyltetracyclo[6.6.1.0²,⁶.0¹¹,¹⁵]pentadeca-7,11(15)-dien-3-yl]-2-methylpentane-1,2,3,4-tetrol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+237,"(1r,2s,3as,3br,5ar,7s,9as,9bs,11ar)-7-{[(2r,3r,4s,5r,6s)-3,4-dihydroxy-6-methyl-5-{[(2s,3r,4s,5s,6r)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}oxan-2-yl]oxy}-3a-hydroxy-9a,11a-dimethyl-1-(5-oxo-2h-furan-3-yl)-tetradecahydrocyclopenta[a]phenanthren-2-yl acetate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+238,"4-[(3as,3br,5ar,7s,9as,9bs,11ar)-3a-hydroxy-7-{[(2r,3r,4r,5r,6r)-3-hydroxy-4-methoxy-6-methyl-5-{[(2s,3r,4s,5s,6r)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}oxan-2-yl]oxy}-9a,11a-dimethyl-3h,3bh,4h,5h,5ah,6h,7h,8h,9h,9bh,10h,11h-cyclopenta[a]phenanthren-1-yl]-5h-furan-2-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+239,"(1r,3as,3br,5as,7s,9as,9bs,11r,11as)-7-{[(2r,3r,4r,5r,6r)-4,5-dihydroxy-3-methoxy-6-methyloxan-2-yl]oxy}-3a,5a,11-trihydroxy-11a-methyl-1-(5-oxo-2h-furan-3-yl)-dodecahydro-1h-cyclopenta[a]phenanthrene-9a-carbaldehyde",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+240,"11-hydroxy-5-methoxy-2,2,9-trimethyl-1-oxatetraphene-7,12-dione",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+241,"16-hydroxy-13-(2-hydroxy-6-methyl-4-oxohept-5-en-2-yl)-2,5,5,9,10-pentamethyltetracyclo[7.7.0.0²,⁶.0¹⁰,¹⁴]hexadecan-4-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,1,True
+242,"(2r,3r,4s,5s,6r)-2-{[(1s,2r,3r,4s,6s)-2,3-dihydroxy-6-(hydroxymethyl)-4-{[(1s,4s,5r,6r)-4,5,6-trihydroxy-3-(hydroxymethyl)cyclohex-2-en-1-yl]amino}cyclohexyl]oxy}-6-({[(2r,3r,4s,5s,6r)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}methyl)oxane-3,4,5-triol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+243,"tsangibeilin b, rel-",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+244,"2-[(2-{[4,5-dihydroxy-2-(hydroxymethyl)-6-{7',9',13'-trimethyl-5-methylidene-5'-oxaspiro[oxane-2,6'-pentacyclo[10.8.0.0²,⁹.0⁴,⁸.0¹³,¹⁸]icosan]-15'-oloxy}oxan-3-yl]oxy}-5-hydroxy-6-(hydroxymethyl)-3-{[3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}oxan-4-yl)oxy]-6-(hydroxymethyl)oxane-3,4,5-triol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,1,True
+245,"(2s,3as,4s,4ar,5s,6s,8s,8as,9r,10r)-5-[(benzyloxy)methyl]-3a-(2-hydroxypropan-2-yl)-1,8a-dimethyl-2h,3h,4h,4ah,6h,7h,8h,9h,10h-cyclohexa[f]azulene-2,4,5,6,8,9,10-heptol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+246,"(2r,3r)-3,6,7,11-tetrahydroxy-2-(2-hydroxypropan-2-yl)-9-(2-methylbut-3-en-2-yl)-2h,3h-furo[3,2-b]xanthen-5-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+247,"17-(4,5-dimethyl-6-oxo-2,3-dihydropyran-2-yl)-14,18-dihydroxy-11,21-dimethyl-5,15-dioxahexacyclo[12.6.1.0²,¹².0⁴,⁶.0⁶,¹¹.0¹⁸,²¹]henicos-8-en-10-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+248,"7-[3-hydroxy-2a-(4-hydroxybutanoyl)-5-(1h-indol-3-ylmethyl)-6,6a-dimethyl-1ah,2h,5h,5ah,6h-oxireno[2,3-f]isoindol-2-yl]-2,4-dimethylhepta-2,6-dienal",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+249,"(1r,3as,3bs,5as,7s,9ar,9bs,11ar)-7-{[(2r,3r,4s,5r,6s)-3,4-dihydroxy-6-methyl-5-{[(2s,3r,4s,5s,6r)-3,4,5-trihydroxy-6-({[(2r,3r,4s,5s,6r)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}methyl)oxan-2-yl]oxy}oxan-2-yl]oxy}-3a-hydroxy-11a-methyl-1-(5-oxo-2h-furan-3-yl)-tetradecahydrocyclopenta[a]phenanthrene-9a-carbaldehyde",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+250,"(1s,4s,5r,8s,10s,13s,14r,16r,17s,18r,19s,20r)-10,16-dihydroxy-4,5,13,19,20-pentamethyl-24-oxahexacyclo[15.5.2.0¹,¹⁸.0⁴,¹⁷.0⁵,¹⁴.0⁸,¹³]tetracosan-23-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+251,NPA032155,NPATLAS_3D,BoxA_orthosteric,,0,False
+252,NPA014221,NPATLAS_3D,BoxA_orthosteric,,0,False
+253,"(1s,4r,10s,11s,13r,15s,16r,17s)-16-hydroxy-5,5,10,13,15-pentamethyl-6,19,22-trioxahexacyclo[13.7.1.0¹,¹¹.0⁴,¹⁰.0¹³,²¹.0¹⁷,²¹]tricos-8-ene-7,14,18-trione",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+254,NPA032852,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+255,"(2r,3r)-7-[(1e)-3-[(1r)-1-carboxy-2-(4-hydroxy-3-methoxyphenyl)ethoxy]-3-oxoprop-1-en-1-yl]-3-(3,4-dihydroxyphenyl)-2,3-dihydro-1,4-benzodioxine-2-carboxylic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+256,mol_180961,COCONUT_3D,BoxA_orthosteric,COCONUT_3D,2,True
+257,"3,5-dihydroxy-4-(3,4,5-trihydroxybenzoyloxy)-6-[(3,4,5-trihydroxybenzoyloxy)methyl]oxan-2-yl 3,4,5-trihydroxybenzoate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+258,"15-(5,6-dihydroxy-6-methylheptan-2-yl)-7,7,12,16-tetramethylpentacyclo[9.7.0.0¹,³.0³,⁸.0¹²,¹⁶]octadecan-6-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+259,3-[(1e)-3-hydroxy-3-methylbut-1-en-1-yl]-4-methoxy-5-(3-methylbut-2-en-1-yl)benzoic acid,LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+260,"5-{4-hydroxy-2',4'-dioxaspiro[cyclohexane-1,3'-tricyclo[7.3.1.0⁵,¹³]tridecane]-1'(13'),5',7',9',11'-pentaen-6-yl}oxolan-2-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+261,NPA002139,NPATLAS_3D,BoxA_orthosteric,,0,False
+262,uscharin,LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+263,NPA032850,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+264,"(1r,9s,10s)-4-hydroxy-5-isopropyl-3-methoxy-11,11-dimethyl-16-oxatetracyclo[7.5.2.0¹,¹⁰.0²,⁷]hexadeca-2(7),3,5-triene-8,15-dione",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+265,"5,7-dihydroxy-2-(4-hydroxy-3-methoxyphenyl)-3-{[(2s,3r,4s,5s,6r)-3,4,5-trihydroxy-6-({[(2r,3r,4s,5s,6r)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}methyl)oxan-2-yl]oxy}chromen-4-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+266,NPA002143,NPATLAS_3D,BoxA_orthosteric,,0,False
+267,"(1s,2s,4r,6s,8s,9r,10r,13r,14r)-16-{[(2s,3r,4s,5s,6r)-4,5-dihydroxy-6-(hydroxymethyl)-3-{[(2s,3r,4r,5r,6s)-3,4,5-trihydroxy-6-methyloxan-2-yl]oxy}oxan-2-yl]oxy}-8-hydroxy-2,8,10,13,18,18-hexamethyl-6-(2-methylprop-1-en-1-yl)-5-oxapentacyclo[11.8.0.0²,¹⁰.0⁴,⁹.0¹⁴,¹⁹]henicosa-15,19-diene-12,17-dione",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+268,"2,3,4-trihydroxyphenazine-1-carboxylic acid",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+269,"n-{6-[(17-{[5-({5-[(4,5-dihydroxy-6-methyloxan-2-yl)oxy]-4-hydroxy-6-methyloxan-2-yl}oxy)-6-methyloxan-2-yl]oxy}-3-ethyl-27-hydroxy-8,10,12,18,20,22-hexamethyl-23,25-dioxo-26-oxapentacyclo[22.2.1.0¹,⁶.0¹³,²².0¹⁶,²¹]heptacosa-4,7,11,14,24(27)-pentaen-9-yl)oxy]-4-hydroxy-2,4-dimethyloxan-3-yl}ethanimidic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,1,True
+270,"(6z)-n-[2-hydroxy-3-(hydroxymethyl)-6-{[3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}phenyl]-7-[(2r)-2-hydroxy-5-methylidenebicyclo[2.2.2]octan-1-yl]-4,4-dimethyl-5-oxohept-6-enimidic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+271,"9'-hydroxy-3,3',14'-trimethyl-5-(2-methylprop-1-en-1-yl)-12'-oxospiro[oxolane-2,6'-tricyclo[9.3.0.0³,⁷]tetradecane]-10',13'-diene-10'-carboxylic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+272,"(1r,12s,12as,12br)-1,4,9,12,12a-pentahydroxy-2,11,12,12b-tetrahydro-1h-perylene-3,10-dione",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+273,"(2r,3s,6r)-3-[(1r,2r,3br,4r,5ar,9as,9br,10r,11ar)-4,10-dihydroxy-2-methoxy-3b,6,6,9a,11a-pentamethyl-7-oxo-1h,2h,4h,5h,5ah,9bh,10h,11h-cyclopenta[a]phenanthren-1-yl]-6-hydroxy-7,7-dimethyl-5-oxooxepan-2-yl acetate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+274,mol_6777,COCONUT_3D,BoxB_allosteric,COCONUT_3D,2,True
+275,"5-[(1s,2r)-1,2-dihydroxy-4-oxocyclohexyl]-3-[(2s,5r,6r)-6-[(2z)-4,6-dimethyloct-2-en-2-yl]-5-methyloxan-2-yl]-4-hydroxy-1-methylpyridin-2-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+276,NPA032844,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+277,"9-hydroxy-7,13-diphenyl-4,14-dioxatricyclo[8.4.0.0³,⁸]tetradeca-1,3(8),9-triene-5,11-dione",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+278,zeinoxanthin,LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+279,"(4ar,6ar,6br,8as,12s,12ar,12br,14ar,14br)-4,4,6a,6b,8a,11,12,14b-octamethyl-1,2,4a,5,6,7,8,9,12,12a,12b,13,14,14a-tetradecahydropicen-3-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+280,mol_52686,COCONUT_3D,BoxA_orthosteric,COCONUT_3D,2,True
+281,mol_71209,COCONUT_3D,BoxA_orthosteric,COCONUT_3D,2,True
+282,"(2r,3r,4s,5s,6r)-2-[(2s)-4-[(1r,2s,4s,8s,9s,12s,13s,16s,18r)-16-{[(2r,3r,4s,5r,6r)-4,5-dihydroxy-6-(hydroxymethyl)-3-{[(2s,3r,4s,5s,6r)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}oxan-2-yl]oxy}-9,13-dimethyl-7-methylidene-5-oxapentacyclo[10.8.0.0²,⁹.0⁴,⁸.0¹³,¹⁸]icosan-6-yl]-2-methylbutoxy]-6-(hydroxymethyl)oxane-3,4,5-triol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+283,"6-(but-2-en-2-yl)-4,21',24'-trihydroxy-5,11',13',22'-tetramethyl-3',7',19'-trioxaspiro[oxane-2,6'-tetracyclo[15.6.1.1⁴,⁸.0²⁰,²⁴]pentacosane]-10',14',16',22'-tetraen-2'-one",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+284,"2-hydroxy-2-[(6e)-9-hydroxy-3,7,11-trimethyl-8-oxododeca-2,6,10-trien-1-yl]-4-methyl-1-benzofuran-3-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+285,"(1s,4r)-4-[(1e,3e,5e,7e)-8-[(2r,3s)-3-[(1e,3e,5e,7e)-8-[(4r)-4-hydroxy-2,6,6-trimethylcyclohex-1-en-1-yl]-2,6-dimethylocta-1,3,5,7-tetraen-1-yl]oxiran-2-yl]-3,7-dimethylocta-1,3,5,7-tetraen-1-yl]-3,5,5-trimethylcyclohex-2-en-1-ol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+286,demethoxyviridiol,LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+287,"9,13,14-trihydroxy-5-(4-hydroxyphenyl)-4,17-dioxatetracyclo[8.7.0.0³,⁸.0¹¹,¹⁶]heptadeca-1(10),2,8,11(16),12,14-hexaen-7-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+288,"1,3,6,7-tetrahydroxy-8-(3-hydroxy-3-methylbutyl)-2-(3-methylbut-2-en-1-yl)xanthen-9-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+289,NPA014218,NPATLAS_3D,BoxA_orthosteric,,0,False
+290,NPA032851,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+291,"4,4,6a,6b,8a,11,11,14b-octamethyl-2,4a,5,6,7,8,9,10,12,12a-decahydro-1h-picen-3-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+292,"4-[2-(5,5,8a-trimethyl-2-methylidene-hexahydro-1h-naphthalen-1-yl)ethyl]-2'-(acetyloxy)-5',9'-dimethyl-15'-oxospiro[cyclohexane-1,14'-tetracyclo[11.2.1.0¹,¹⁰.0⁴,⁹]hexadecan]-3-ene-5'-carboxylic acid",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+293,"(3e,5r,6s)-6-[(1r,3ar,5ar,7s,9as,11ar)-7-hydroxy-3a,6,6,9a,11a-pentamethyl-1h,2h,3h,5h,5ah,7h,8h,9h,11h-cyclopenta[a]phenanthren-1-yl]-2-methylhept-3-ene-2,5-diol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+294,"2-[(2s,3s)-3-ethenyl-2-methyloxiran-2-yl]-11-hydroxy-5-(hydroxymethyl)-1-oxatetraphene-4,7,12-trione",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+295,NPA002125,NPATLAS_3D,BoxA_orthosteric,,0,False
+296,"6-(4,5-dihydroxy-2-methyl-10-oxo-9h-anthracen-9-yl)-4,5-dihydroxyoxan-3-yl benzoate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+297,NPA032845,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+298,NPA032158,NPATLAS_3D,BoxB_allosteric,NPATLAS_3D,2,True
+299,"2-(hydroxymethyl)-6-{5,7',9',13'-tetramethyl-5'-oxaspiro[oxane-2,6'-pentacyclo[10.8.0.0²,⁹.0⁴,⁸.0¹³,¹⁸]icosan]-18'-eneoxy}oxane-3,4,5-triol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+300,NPA032180,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+301,"[13-benzyl-6-hydroxy-4,17-dimethyl-5-oxo-15-(prop-1-en-2-yl)-12,14,18-trioxapentacyclo[11.4.1.0¹,¹⁰.0²,⁶.0¹¹,¹⁵]octadeca-3,8-dien-8-yl]methyl 2-(3-hydroxy-5-methoxyphenyl)acetate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+302,"2-{[3-(acetyloxy)-4-hydroxy-6-(hydroxymethyl)-5-{[3-(4-hydroxyphenyl)prop-2-enoyl]oxy}oxan-2-yl]oxy}-4-hydroxy-2,5-bis(hydroxymethyl)oxolan-3-yl 3-(4-hydroxyphenyl)prop-2-enoate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+303,n-[(1e)-2-(6-bromo-1h-indol-3-yl)ethenyl]-2-(1h-indol-3-yl)-2-oxoacetamide,LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+304,NPA028356,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+305,"1,3,10-trihydroxy-9-(hydroxymethyl)-1,2,6a,6b,9,12a-hexamethyl-2,3,4,5,6,7,8,8a,10,11,12,12b,13,14b-tetradecahydropicene-4a-carboxylic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+306,"13-hydroxy-15-(6-hydroxy-6-methyl-4-oxoheptan-2-yl)-7,7,12,16-tetramethyl-6-[(3,4,5-trihydroxyoxan-2-yl)oxy]tetracyclo[9.7.0.0³,⁸.0¹²,¹⁶]octadeca-1(18),2-dien-14-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+307,"10,22-dihydroxy-7,7,18,18-tetramethyl-8,13,17-trioxapentacyclo[12.8.0.0³,¹².0⁴,⁹.0¹⁶,²¹]docosa-1(22),3,9,11,14,16(21),19-heptaen-2-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+308,"(2s,13s,15r,16r,19r,20r)-19-methyl-18-oxa-1,11-diazahexacyclo[11.8.0.0²,¹⁶.0⁴,¹².0⁵,¹⁰.0¹⁵,²⁰]henicosa-4(12),5,7,9-tetraen-19-ol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+309,NPA032865,NPATLAS_3D,BoxB_allosteric,NPATLAS_3D,2,True
+310,"(2r,4as,4br,6r,7r,10ar)-6-hydroxy-7-{[(2s,4s,5r,6r)-5-{[(2s,4s,5s,6r)-4-hydroxy-5-{[(2s,4r,5s,6s)-4-methoxy-6-methyl-5-{[(2s,3r,4s,5s,6r)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}oxan-2-yl]oxy}-6-methyloxan-2-yl]oxy}-4-methoxy-6-methyloxan-2-yl]oxy}-4b-methyl-2-(2-methylfuran-3-yl)-2,3,4,4a,5,6,7,8,10,10a-decahydrophenanthren-1-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+311,"15-[2-hydroxy-3-(2-hydroxypropan-2-yl)cyclopentyl]-7,7,12,16-tetramethylpentacyclo[9.7.0.0¹,³.0³,⁸.0¹²,¹⁶]octadecan-6-ol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+312,"(3s,4ar,6ar,6bs,8ar,12ar,14ar,14bs)-12a-hydroperoxy-4,4,6a,6b,8a,11,11,14b-octamethyl-14-oxo-1,2,3,4a,5,6,7,8,9,10,12,14a-dodecahydropicen-3-yl acetate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+313,mol_86010,COCONUT_3D,BoxA_orthosteric,COCONUT_3D,2,True
+314,"2,3-bis[(2e)-3-(3,4-dihydroxyphenyl)prop-2-enoyl]-2,3-dihydroxybutanedioic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+315,mol_236849,COCONUT_3D,BoxA_orthosteric,COCONUT_3D,2,True
+316,"2-(3,4-dihydroxyphenyl)-5,7-dihydroxy-3-{[(2r,3s,4r,5s,6s)-3,4,5-trihydroxy-6-({[(2s,3s,4r,5r,6s)-3,4,5-trihydroxy-6-({[(2s,3r,4r,5r,6s)-3,4,5-trihydroxy-6-methyloxan-2-yl]oxy}methyl)oxan-2-yl]oxy}methyl)oxan-2-yl]oxy}chromen-4-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+317,"butyl 6-{4,7-dihydroxy-3a,6,6,9a,11a-pentamethyl-3,10-dioxo-1h,2h,4h,5h,5ah,7h,8h,9h,11h-cyclopenta[a]phenanthren-1-yl}-2-methyl-4-oxoheptanoate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+318,"(2s,4as,6as,6br,8as,12as,12bs,14br)-12a-formyl-2,4a,6a,6b,9,9-hexamethyl-10-oxo-3,4,5,6,7,8,8a,11,12,12b,13,14b-dodecahydro-1h-picene-2-carboxylic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+319,"(10s)-5,8-dihydroxy-4-[(1r,2s)-2-hydroxy-1-[(5s,6r)-5-hydroxy-6-methyl-2-oxo-5,6-dihydropyran-3-yl]propoxy]-10-methyl-1,9,12-triazatetracyclo[9.8.0.0²,⁷.0¹³,¹⁸]nonadeca-2,4,6,8,11,13,15,17-octaen-19-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+320,"(2r,6r)-6-[(1r,3ar,4s,5ar,7s,9as,11s,11ar)-11-(acetyloxy)-4,7-dihydroxy-3a,6,6,9a,11a-pentamethyl-3,10-dioxo-1h,2h,4h,5h,5ah,7h,8h,9h,11h-cyclopenta[a]phenanthren-1-yl]-2-methyl-4-oxoheptanoic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+321,"methyl (4s,5z,6s)-5-ethylidene-4-{2-[2-(4-hydroxyphenyl)ethoxy]-2-oxoethyl}-6-{[(2r,3r,4s,5s,6r)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}-4,6-dihydropyran-3-carboxylate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+322,"(2s,3r,4s,5s,6r)-2-({2-[(1r,3s,4r,5s,7s,9s,12r,14s,17r,18s,19r,21r,22s)-5-hydroxy-3,8,8,17,19-pentamethyl-9-{[(2s,3r,4s,5r)-3,4,5-trihydroxyoxan-2-yl]oxy}-23,24-dioxaheptacyclo[19.2.1.0¹,¹⁸.0³,¹⁷.0⁴,¹⁴.0⁷,¹².0¹²,¹⁴]tetracosan-22-yl]propan-2-yl}oxy)-6-(hydroxymethyl)oxane-3,4,5-triol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+323,"6-({[3,4-dihydroxy-6-(hydroxymethyl)-5-[(3,4,5-trihydroxy-6-methyloxan-2-yl)oxy]oxan-2-yl]oxy}methyl)-3,4,5-trihydroxyoxan-2-yl 5-hydroxy-6-(3-methoxy-3-oxopropyl)-6,9a,9b-trimethyl-3,7-bis(prop-1-en-2-yl)-dodecahydro-1h-cyclopenta[a]phenanthrene-11a-carboxylate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+324,"3,6,9-trimethyl-4-(2-methylprop-1-en-1-yl)-2-[(3,4,5-trihydroxyoxan-2-yl)oxy]-5,6,6a,7,8,9-hexahydro-4h-phenalen-1-yl acetate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+325,"2-{[3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}butanedioic acid",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+326,"(2r)-2-{[(2e)-3-[(2r,3r)-3-{[(1r)-1-carboxy-2-(3,4-dihydroxyphenyl)ethoxy]carbonyl}-2-(3,4-dihydroxyphenyl)-7-hydroxy-2,3-dihydro-1-benzofuran-4-yl]prop-2-enoyl]oxy}-3-(3,4-dihydroxyphenyl)propanoic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+327,5-o-demethylpaxanthonin,LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+328,"(2e)-4-({2-[4-(11-ethyl-10,12-dihydroxy-3,17-dimethoxy-7,9,13,15-tetramethyl-18-oxo-1-oxacyclooctadeca-4,6,14,16-tetraen-2-yl)-3-hydroxypentan-2-yl]-2-hydroxy-5-methyl-6-[(1e)-prop-1-en-1-yl]oxan-4-yl}oxy)-n-(2-hydroxy-5-oxocyclopent-1-en-1-yl)-4-oxobut-2-enimidic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+329,"2-({5,19-dimethyl-15,18,20-trioxahexacyclo[14.5.1.0¹,¹⁴.0⁴,¹³.0⁵,¹⁰.0¹⁹,²²]docosa-10,13-dien-8-yl}oxy)-4-methoxy-6-methyloxane-3,5-diol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+330,8-benzoyl-7-hydroxy-5-methoxy-4-phenylchromen-2-one,LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+331,"(2r)-6-(2,2-dimethylchromen-6-yl)-4-hydroxy-2-(2-hydroxypropan-2-yl)-2h,3h-furo[3,2-g]chromen-5-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+332,NPA010085,NPATLAS_3D,BoxA_orthosteric,,0,False
+333,NPA014224,NPATLAS_3D,BoxA_orthosteric,,0,False
+334,7-{[4-(4-hydroxy-4-methyl-5-oxooxolan-2-yl)-3-methylbut-2-en-1-yl]oxy}chromen-2-one,LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+335,"(3z,5z,7z,9z,11z,14s,15s,16r,18r,20r,24s,26r,28r,29z,31s,32s)-32-[(2s)-butan-2-yl]-14,16,18,20,22,24,26,28-octahydroxy-15,31-dimethyl-1-oxacyclodotriaconta-3,5,7,9,11,29-hexaen-2-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+336,"6-{[10,21-bis(hydroxymethyl)-2,5,6,10,14-pentamethyl-22-oxo-23-oxahexacyclo[19.2.1.0²,¹⁹.0⁵,¹⁸.0⁶,¹⁵.0⁹,¹⁴]tetracos-17-en-11-yl]oxy}-5-{[4,5-dihydroxy-6-(hydroxymethyl)-3-[(3,4,5-trihydroxy-6-methyloxan-2-yl)oxy]oxan-2-yl]oxy}-3,4-dihydroxyoxane-2-carboxylic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+337,"(1s,3r,8s,11s,12s,15r,16r)-7,7,12,16-tetramethyl-15-[(2s)-6-methylhept-5-en-2-yl]pentacyclo[9.7.0.0¹,³.0³,⁸.0¹²,¹⁶]octadecan-6-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+338,"6,7,8,11,12,13,20,22-octahydroxy-3,16-dioxo-2,17,23-trioxatetracyclo[17.3.1.0⁴,⁹.0¹⁰,¹⁵]tricosa-4(9),5,7,10,12,14-hexaen-21-yl 3,4,5-trihydroxybenzoate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+339,"(2r,3r,4s,5s,6r)-2-[2-(3,4-dihydroxyphenyl)ethoxy]-4,5-dihydroxy-6-(hydroxymethyl)oxan-3-yl 4-hydroxybenzoate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+340,"6,10,10,14,15,20-hexamethyl-21-oxahexacyclo[17.3.2.0¹,¹⁸.0²,¹⁵.0⁵,¹⁴.0⁶,¹¹]tetracosan-20-ol",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+341,"15-(6-hydroperoxy-6-methylhept-4-en-2-yl)-7,7,16-trimethylpentacyclo[9.7.0.0¹,³.0³,⁸.0¹²,¹⁶]octadec-8-en-6-ol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+342,"(5-{[6-(3,4-dimethoxyphenoxy)-3,4,5-trihydroxyoxan-2-yl]methoxy}-3,4-dihydroxyoxolan-3-yl)methyl 4-methoxybenzoate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+343,"(2r,11r)-17,17-dimethyl-8-(3-methylbut-2-en-1-yl)-4,12,18-trioxapentacyclo[11.8.0.0²,¹¹.0⁵,¹⁰.0¹⁴,¹⁹]henicosa-1(21),5(10),6,8,13,15,19-heptaen-7-ol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+344,luteoskyrin,LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+345,"(4as,10as)-6-hydroxy-7-isopropyl-1,1,4a-trimethyl-10,10a-dihydro-2h-phenanthren-9-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+346,"(1s,3as,3bs,7s,9ar,9bs,11ar)-1-[(2s,3z,5s)-5-ethyl-6-methylhept-3-en-2-yl]-9a,11a-dimethyl-1h,2h,3h,3ah,3bh,4h,6h,7h,8h,9h,9bh,10h,11h-cyclopenta[a]phenanthren-7-ol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+347,"3-{[(2s,3s,4r,5r)-3,4-dihydroxy-5-({[(2r,3s,4r,5r,6r)-3,4,5-trihydroxy-6-methyloxan-2-yl]oxy}methyl)oxolan-2-yl]oxy}-5,7-dihydroxy-2-(4-hydroxy-3,5-dimethoxyphenyl)chromen-4-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+348,"5-(hydroxymethyl)-5,7',9',13'-tetramethyl-5'-oxaspiro[oxolane-2,6'-pentacyclo[10.8.0.0²,⁹.0⁴,⁸.0¹³,¹⁸]icosan]-18'-en-16'-ol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+349,"3a,6,6,9a,11a-pentamethyl-1-(4,5,5,6-tetramethylhept-6-en-2-yl)-1h,2h,3h,3bh,4h,5h,5ah,7h,8h,9h,11h-cyclopenta[a]phenanthren-7-ol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+350,"7-[(4,5-dihydroxy-3-{[3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}oxan-2-yl)oxy]-1-(5-hydroxy-6-methylhept-6-en-2-yl)-6,6,9a,11a-tetramethyl-1h,2h,3h,4h,5h,5ah,7h,8h,9h,10h,11h-cyclopenta[a]phenanthrene-3a-carboxylic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+351,"4-bromo-n-{3-[2-imino-5-(2-imino-5-oxo-4-{8-oxo-1h,5h,6h,7h-pyrrolo[2,3-c]azepin-4-ylidene}imidazolidin-1-yl)-1,3-dihydroimidazol-4-yl]prop-2-en-1-yl}-1h-pyrrole-2-carboxamide",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+352,"2,6,6,14,20-pentamethyl-7,16,18,21,24-pentaoxaspiro[heptacyclo[12.8.1.1³,¹⁹.0¹,¹⁹.0²,¹².0⁵,¹⁰.0¹⁷,²³]tetracosane-11,2'-oxirane]-4,9-diene-8,15,22-trione",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,1,True
+353,"(4r,7s)-1-[(2r,2's,5s,5'r,6r)-5'-bromo-5-hydroxy-2',5,6',6'-tetramethyl-[2,2'-bioxan]-6-yl]-4,7-dihydroxy-4-(hydroxymethyl)-7-[(2r,5r)-5-(2-hydroxypropan-2-yl)-2-methyloxolan-2-yl]heptan-3-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+354,NPA032149,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+355,NPA007847,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+356,"(1s,3r,8r,11s,12s,15r,16r)-15-[(2s,3r)-3-hydroxy-6-methylhept-5-en-2-yl]-7,7,12,16-tetramethylpentacyclo[9.7.0.0¹,³.0³,⁸.0¹²,¹⁶]octadecan-6-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+357,NPA014212,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+358,"2-{[4-hydroxy-2-(hydroxymethyl)-6-{5,7',9',13'-tetramethyl-5'-oxaspiro[oxane-2,6'-pentacyclo[10.8.0.0²,⁹.0⁴,⁸.0¹³,¹⁸]icosan]-18'-en-14'-oloxy}-5-[(3,4,5-trihydroxy-6-methyloxan-2-yl)oxy]oxan-3-yl]oxy}-6-methyloxane-3,4,5-triol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+359,"3,7-dihydroxy-2-[3-(2-hydroxy-3-methylbut-3-en-1-yl)-4-methoxyphenyl]-5,6-dimethoxychromen-4-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+360,NPA032156,NPATLAS_3D,BoxA_orthosteric,,0,False
+361,"(20e)-4,6,23-trichloropentacyclo[20.2.2.1¹⁰,¹⁴.1¹⁵,¹⁹.0²,⁷]octacosa-1(25),2(7),3,5,10,12,14(28),15(27),16,18,20,22(26),23-tridecaene-5,13,16,24-tetrol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+362,"(2s,3r,4s,5s,6r)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl (1r,2r,4as,6as,6br,8ar,9s,10r,11r,12ar,12br,14bs)-1,10,11-trihydroxy-9-(hydroxymethyl)-1,2,6a,6b,9,12a-hexamethyl-2,3,4,5,6,7,8,8a,10,11,12,12b,13,14b-tetradecahydropicene-4a-carboxylate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+363,NPA032871,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+364,"11-chloro-21,23-dihydroxy-12,20-dimethoxy-2,5,9,16-tetramethyl-8-oxo-4,24-dioxa-9,22-diazatetracyclo[19.3.1.1¹⁰,¹⁴.0³,⁵]hexacosa-10(26),11,13,16,18,22-hexaen-6-yl 2-(n-methylpropanamido)propanoate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+365,"[(2r,3s,4s,5r,6r)-6-{[(1s,3ar,3br,5as,7r,8r,9s,9ar,9bs,11ar)-1-[(2r,5s)-5-hydroperoxy-2-hydroxy-6-methylhept-6-en-2-yl]-8,9-dihydroxy-3a,3b,6,6,9a-pentamethyl-dodecahydro-1h-cyclopenta[a]phenanthren-7-yl]oxy}-3,4,5-trihydroxyoxan-2-yl]methyl acetate",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+366,"(2e)-4-{[(2r,4s,5r,6s)-4-hydroxy-2-[(2s,3r,4s)-3-hydroxy-4-[(3s,4e,6e,9s,10r,11r,12e,14e)-10-hydroxy-3,15-dimethoxy-7,9,11,13-tetramethyl-16-oxo-1-oxacyclohexadeca-4,6,12,14-tetraen-2-yl]pentan-2-yl]-6-isopropyl-5-methyloxan-2-yl]oxy}-n-(2-hydroxy-5-oxocyclopent-1-en-1-yl)-4-oxobut-2-enimidic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+367,"(4ar)-7-hydroxy-1,4,4a-trimethyl-2h,3h-cyclopenta[b]anthracene-5,10-dione",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+368,"(1s,13z,17s,19s)-6,9-dihydroxy-5-methoxy-16-oxa-24-azapentacyclo[15.7.1.1⁸,¹².0²,⁷.0¹⁹,²⁴]hexacosa-2,4,6,8(26),9,11,13-heptaen-15-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+369,"1,2,5,14,18,18-hexamethyl-6-(3-methylbut-2-en-1-yl)-3-{[3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}-17-[(3,4,5-trihydroxy-6-{[(3,4,5-trihydroxy-6-methyloxan-2-yl)oxy]methyl}oxan-2-yl)oxy]-4,7-dioxapentacyclo[11.8.0.0²,¹⁰.0⁵,⁹.0¹⁴,¹⁹]henicosan-8-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+370,"(2r,3r,4r,5r,6r)-6-[2-(3,4-dihydroxyphenyl)ethoxy]-5-hydroxy-2-({[(2r,3r,4s,5s,6r)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}methyl)-4-{[(2s,3r,4r,5r,6s)-3,4,5-trihydroxy-6-methyloxan-2-yl]oxy}oxan-3-yl (2z)-3-(4-hydroxyphenyl)prop-2-enoate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+371,"(2r)-8-hydroxy-10,15-dimethoxy-4-methyl-5-azapentacyclo[10.5.0.0²,⁵.0⁴,⁶.0⁶,¹¹]heptadeca-1(17),7,10,12,14-pentaene-9,16-dione",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+372,"(2s,3s,4s,5r,6r)-6-{[(2s,3r,4s,5s,6r)-4,5-dihydroxy-2-{[5-hydroxy-2-(4-hydroxy-3-methoxyphenyl)-4-oxochromen-7-yl]oxy}-6-(hydroxymethyl)oxan-3-yl]oxy}-3,4,5-trihydroxyoxane-2-carboxylic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+373,"(7r,12s,13r)-9-hydroxy-13-[(s)-hydroxy(phenyl)methyl]-7-phenyl-1,6,10-triazabicyclo[10.2.1]pentadec-9-en-14-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+374,"(2r,3s,4s,5r,6s)-5-{[(2s,3r,4r)-3,4-dihydroxy-4-(hydroxymethyl)oxolan-2-yl]oxy}-6-(4-{[(3r,4r,5s)-5-(4-hydroxy-3,5-dimethoxyphenyl)-4-(hydroxymethyl)oxolan-3-yl]methyl}-2,6-dimethoxyphenoxy)-2-(hydroxymethyl)oxane-3,4-diol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+375,"2-({15-hydroxy-8-methoxy-4,6,12,17,17-pentamethyl-9-oxahexacyclo[11.9.0.0¹,²¹.0⁴,¹².0⁵,¹⁰.0¹⁶,²¹]docosan-18-yl}oxy)oxane-3,4,5-triol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+376,NPA014203,NPATLAS_3D,BoxA_orthosteric,,0,False
+377,"(2s,3r)-2-(3,4-dihydroxyphenyl)-5,7-dihydroxy-3-{[(2s,3s,4r,5r,6s)-3,4,5-trihydroxy-6-methyloxan-2-yl]oxy}-2,3-dihydro-1-benzopyran-4-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+378,"5-{[(2s,3r,4r,5s,6r)-3,4-dihydroxy-6-(hydroxymethyl)-5-{[(2s,3r,4r,5r,6s)-3,4,5-trihydroxy-6-methyloxan-2-yl]oxy}oxan-2-yl]oxy}-7-hydroxy-2-(4-hydroxyphenyl)chromen-4-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+379,"5-hydroxy-2-(4-hydroxyphenyl)-8-methoxy-3-{[(2s,3r,4s,5s,6r)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}-7-{[(2r,3s,4s,5s,6r)-3,4,5-trihydroxy-6-methyloxan-2-yl]oxy}chromen-4-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+380,"2,2',8,8'-tetrahydroxy-6,6'-dimethoxy-3,3'-dimethyl-[1,1'-bianthracene]-9,9',10,10'-tetrone",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+381,mol_308914,COCONUT_3D,BoxA_orthosteric,COCONUT_3D,2,True
+382,NPA032870,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+383,"2-(3,4-dihydroxyphenyl)-5,7-dihydroxy-3-[(2,3,5-trihydroxyoxan-4-yl)oxy]chromen-4-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+384,"(3r,9s,12s,18s)-5,8,11,14,17-pentahydroxy-9-[(4-hydroxyphenyl)methyl]-12-isopropyl-3,18-bis(2-methylpropyl)-1-oxa-4,7,10,13,16-pentaazacyclooctadeca-4,7,10,13,16-pentaen-2-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+385,"(s)-{[(2r,3r,4s,5s,6s)-2-{[(3s,4ar,6ar,6bs,8as,12as,14ar,14br)-4,4,6a,6b,11,11,14b-heptamethyl-8a-({[(2s,3r,4s,5s,6r)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}carbonyl)-1,2,3,4a,5,6,7,8,9,10,12,12a,14,14a-tetradecahydropicen-3-yl]oxy}-6-(butoxycarbonyl)-3,5-dihydroxyoxan-4-yl]oxy}(2-methoxy-2-oxoethoxy)acetic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+386,"(2s,3r,4s,5s,6r)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl (1r,2r,4as,6as,6br,8ar,10s,12ar,12br,14bs)-10-{[(2s,3r,4s,5s)-3,5-dihydroxy-4-{[(2s,3r,4s,5r,6r)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}oxan-2-yl]oxy}-1-hydroxy-1,2,6a,6b,9,9,12a-heptamethyl-2,3,4,5,6,7,8,8a,10,11,12,12b,13,14b-tetradecahydropicene-4a-carboxylate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+387,"(2s,3r,4s,5s,6r)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl (4as,6as,6br,8ar,10s,12ar,12br,14bs)-10-{[(2r,3r,4s,5r,6r)-4,5-dihydroxy-6-(hydroxymethyl)-3-{[(2s,3r,4s,5s,6r)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}oxan-2-yl]oxy}-2,2,6a,6b,9,9,12a-heptamethyl-1,3,4,5,6,7,8,8a,10,11,12,12b,13,14b-tetradecahydropicene-4a-carboxylate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+388,NPA010096,NPATLAS_3D,BoxA_orthosteric,,0,False
+389,NPA010086,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+390,"(2s)-5,7-dihydroxy-2-(4-hydroxy-4-methylpentyl)-2,9-dimethyl-1-oxatetracene-6,11-dione",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+391,"2,2,6a,6b,9,9,12a-heptamethyl-5,6,7,8,8a,11,12,12b-octahydro-1h-picene-3,10-dione",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+392,"2-{[2-(3,4-dihydroxyphenyl)-5,7-dihydroxy-4-oxochromen-3-yl]oxy}-3,5-dihydroxy-6-({[3,4,5-tris(acetyloxy)-6-methyloxan-2-yl]oxy}methyl)oxan-4-yl acetate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+393,"methyl (2s,3s,4s,5r,6r)-6-{[(3s,4ar,6ar,6bs,8as,12ar,14ar,14br)-4,4,6a,6b,11,11,14b-heptamethyl-8a-({[(2s,3r,4s,5s,6r)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}carbonyl)-1,2,3,4a,5,6,7,8,9,10,12,12a,14,14a-tetradecahydropicen-3-yl]oxy}-3,5-dihydroxy-4-{[(2s,3r,4s,5s)-3,4,5-trihydroxyoxan-2-yl]oxy}oxane-2-carboxylate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+394,NPA032157,NPATLAS_3D,BoxA_orthosteric,,0,False
+395,"(13r)-5-[(1e)-2,3-dihydroxy-3-methylbut-1-en-1-yl]-6,8,17-trihydroxy-19-methoxy-14,14-dimethyl-3,15-dioxapentacyclo[11.6.1.0²,¹¹.0⁴,⁹.0¹⁶,²⁰]icosa-1(20),2(11),4,6,8,16,18-heptaen-10-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+396,"2-{[2-(5-{[4,5-dihydroxy-6-(hydroxymethyl)-3-{[3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}oxan-2-yl]oxy}-7,11-dihydroxy-3a,3b,6,6,9a-pentamethyl-dodecahydro-1h-cyclopenta[a]phenanthren-1-yl)-6-methylhept-5-en-2-yl]oxy}-6-(hydroxymethyl)oxane-3,4,5-triol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+397,"2,2,6a,6b,9,9,12a-heptamethyl-4-[(2-methylbut-2-enoyl)oxy]-10-oxo-3,4,5,6,7,8,8a,11,12,12b,13,14b-dodecahydro-1h-picene-4a-carboxylic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+398,"4,6,12-trihydroxy-8,16-bis(4-hydroxyphenyl)-15-oxatetracyclo[8.6.1.0²,⁷.0¹⁴,¹⁷]heptadeca-2,4,6,10,12,14(17)-hexaen-9-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+399,"(2s,3s,4s,5r,6r)-6-{[(3s,4ar,6ar,6bs,8s,8as,9s,12as,14ar,14br)-8,9-dihydroxy-8a-(hydroxymethyl)-4,4,6a,6b,11,11,14b-heptamethyl-1,2,3,4a,5,6,7,8,9,10,12,12a,14,14a-tetradecahydropicen-3-yl]oxy}-3,5-dihydroxy-4-{[(2s,3r,4s,5s,6r)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}oxane-2-carboxylic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+400,"(1s,3r,5s,7r,9r,10s,12r,14r,15s,18r,19r,21r,22s,23r)-9,10,21,22-tetrahydroxy-7,18-dimethyl-19-(5-oxo-2h-furan-3-yl)-4,6,11-trioxahexacyclo[12.11.0.0³,¹².0⁵,¹⁰.0¹⁵,²³.0¹⁸,²²]pentacosane-14-carbaldehyde",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+401,"3,4b,8,8-tetramethyl-10-oxo-6,7,8a,9-tetrahydro-5h-phenanthrene-2-carboxylic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+402,"(1r,2r,6s,7s,8r,10s,11s,12r,14s,16s,17r,18r)-6,7-dihydroxy-8-(hydroxymethyl)-4,18-dimethyl-5-oxo-14-phenyl-16-(prop-1-en-2-yl)-9,13,15,19-tetraoxahexacyclo[12.4.1.0¹,¹¹.0²,⁶.0⁸,¹⁰.0¹²,¹⁶]nonadec-3-en-17-yl (2e)-pent-2-enoate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+403,NPA007853,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+404,"3-(3,4-dihydroxyphenyl)-5-hydroxy-7-{[(2s,3r,4s,5s,6s)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}chromen-4-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+405,"(2s,3s,4s,5s,6r)-2-{[(3s,4r,4ar)-4-ethenyl-8-oxo-3h,4h,4ah,5h,6h-pyrano[3,4-c]pyran-3-yl]oxy}-4,5-dihydroxy-6-(hydroxymethyl)oxan-3-yl 3,3'-dihydroxy-[1,1'-biphenyl]-2-carboxylate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+406,"(2s,3r,4s,5s,6r)-3,4,5-trihydroxy-6-({[(2s,3r,4s,5s,6r)-3,4,5-trihydroxy-6-methyloxan-2-yl]oxy}methyl)oxan-2-yl (2e)-3-(4-hydroxyphenyl)prop-2-enoate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+407,NPA010091,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+408,NPA002136,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+409,"14'-hydroxy-8,10',15'-trimethoxy-14-methyl-6,12'-dioxa-4',14-diazaspiro[pentacyclo[9.5.1.0¹,⁵.0²,¹³.0⁷,¹⁷]heptadecane-4,3'-pentacyclo[9.7.2.0⁴,¹⁹.0⁷,²⁰.0¹³,¹⁸]icosane]-1'(19'),7(17),7'(20'),8,8',10,10',13',15',17'-decaen-2'-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+410,"(2r,3r,4r,5r,6r)-4-{[(2s,3r,4r,5r,6s)-4,5-dihydroxy-6-methyl-3-{[(2s,3r,4s,5s,6r)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}oxan-2-yl]oxy}-6-[2-(3,4-dihydroxyphenyl)ethoxy]-5-hydroxy-2-(hydroxymethyl)oxan-3-yl (2e)-3-(4-hydroxy-3-methoxyphenyl)prop-2-enoate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+411,mol_149074,COCONUT_3D,BoxA_orthosteric,COCONUT_3D,2,True
+412,"2-(hydroxymethyl)-6-[(3,5,6,7-tetramethoxy-9,10-dihydrophenanthren-2-yl)oxy]oxane-3,4,5-triol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+413,NPA032872,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+414,NPA032171,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+415,NPA032151,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+416,phytolaccoside b,LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+417,"methyl (2r,4as,6as,12br,14ar,14bs)-10-hydroxy-2,4a,6a,9,12b,14a-hexamethyl-11-oxo-1,3,4,5,6,13,14,14b-octahydropicene-2-carboxylate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+418,NPA010092,NPATLAS_3D,BoxA_orthosteric,,0,False
+419,rudolfomycin,LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+420,NPA014204,NPATLAS_3D,BoxA_orthosteric,,0,False
+421,NPA028359,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+422,"5,7-dihydroxy-3-[(4-hydroxy-3-{[3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}oxolan-2-yl)oxy]-2-(4-methoxyphenyl)chromen-4-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+423,NPA014210,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+424,"(1s,2r,4as,6as,6br,8ar,10s,12as,12br,14bs)-10-hydroxy-1,2,6a,6b,9,9,12a-heptamethyl-13-oxo-1,2,3,4,5,6,7,8,8a,10,11,12,12b,14b-tetradecahydropicene-4a-carboxylic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+425,"1-hydroxy-2,2,6a,6b,9,9,12a-heptamethyl-10-oxo-3,4,5,6,7,8,8a,11,12,12b,13,14b-dodecahydro-1h-picene-4a-carboxylic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+426,NPA007841,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+427,"10-({6-[({4,5-dihydroxy-3-[(3,4,5-trihydroxyoxan-2-yl)oxy]oxan-2-yl}oxy)methyl]-3,4,5-trihydroxyoxan-2-yl}oxy)-2-hydroxy-4,5,9,9,13,20,20-heptamethyl-22-oxahexacyclo[19.2.1.0¹,¹⁸.0⁴,¹⁷.0⁵,¹⁴.0⁸,¹³]tetracos-16-en-23-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+428,"2-[(4ar,5r,8ar)-5-{[(1r,3s,4as,8as)-3-hydroxy-5,5,8a-trimethyl-2-methylidene-hexahydro-1h-naphthalen-1-yl]methyl}-1-hydroxy-6-methyl-2-oxo-1,5,8,8a-tetrahydronaphthalen-4a-yl]-5,7-dihydroxychromen-4-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+429,"6-[7-(acetyloxy)-4-hydroxy-3a,6,6,9a,11a-pentamethyl-3,10-dioxo-1h,2h,4h,5h,5ah,7h,8h,9h,11h-cyclopenta[a]phenanthren-1-yl]-2-methyl-4-oxoheptanoic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+430,"(2s,3s,4s,5r,6r)-6-{[(3s,4r,4as,6ar,6bs,8ar,9r,12as,14ar,14br)-4-formyl-9-hydroxy-4,6a,6b,8a,11,11,14b-heptamethyl-1,2,3,4a,5,6,7,8,9,10,12,12a,14,14a-tetradecahydropicen-3-yl]oxy}-5-{[(2s,3r,4s,5r,6r)-4,5-dihydroxy-6-(hydroxymethyl)-3-{[(2s,3r,4r,5r,6s)-3,4,5-trihydroxy-6-methyloxan-2-yl]oxy}oxan-2-yl]oxy}-3,4-dihydroxyoxane-2-carboxylic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+431,"6-acetyl-4,5,7-trihydroxy-3-[1-(1-hydroxy-3,6-dimethoxy-5,8-dioxonaphthalen-2-yl)ethyl]naphthalene-1,2-dione",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+432,lespedezacoumestan,LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+433,"7a,11b-dihydroxy-3-(7-methoxy-2h-1,3-benzodioxol-5-yl)-5a,8,8,11a-tetramethyl-7,12-dihydro-6h-2,5-dioxatetraphene-1,11-dione",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+434,"2-(3,4-dihydroxyphenyl)-8-{[2-(3,4-dihydroxyphenyl)-5,7-dihydroxy-4-oxo-3-[(3,4,5-trihydroxy-6-methyloxan-2-yl)oxy]chromen-6-yl]methyl}-5,7-dihydroxy-6-methyl-3-[(3,4,5-trihydroxy-6-methyloxan-2-yl)oxy]chromen-4-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+435,sec-o-glucosylhamaudol,LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+436,NPA028357,NPATLAS_3D,BoxA_orthosteric,,0,False
+437,"methyl 10,11-dihydroxy-9-({[3-(4-methoxyphenyl)prop-2-enoyl]oxy}methyl)-2,2,6a,6b,9,12a-hexamethyl-1,3,4,5,6,7,8,8a,10,11,12,12b,13,14b-tetradecahydropicene-4a-carboxylate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+438,"(5r,11r)-2,7,11,13-tetrahydroxy-5-methyl-19-oxapentacyclo[8.8.1.0¹,¹⁰.0²,⁷.0¹²,¹⁷]nonadeca-12,14,16-triene-3,18-dione",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+439,mol_280203,COCONUT_3D,BoxA_orthosteric,COCONUT_3D,2,True
+440,"4-hydroxy-2,6,14,17-tetramethyl-3,11-dioxo-14-(5-oxooxolane-3-carbonyl)-10-oxatetracyclo[7.7.1.0²,⁷.0¹³,¹⁷]heptadecan-16-yl acetate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,1,True
+441,"10-({3-[(3,5-dihydroxy-6-methyl-4-{[3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}oxan-2-yl)oxy]-4,5-dihydroxyoxan-2-yl}oxy)-2,2,6a,6b,9,9,12a-heptamethyl-1,3,4,5,6,7,8,8a,10,11,12,12b,13,14b-tetradecahydropicene-4a-carboxylic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+442,"4-(dimethylamino)-6-[2-(2,3-dimethyloxiran-2-yl)-11-hydroxy-5-methyl-4,7,12-trioxo-1-oxatetraphen-10-yl]-2,4-dimethyloxan-3-yl acetate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+443,"(2s,3r,4r,5r,6s)-2-{[(2r,3s,4r,5r,6r)-4,5-dihydroxy-6-{[(1s,2s,4s,5r,8r,10s,13s,14r,17s,18r)-2-hydroxy-4,5,9,9,13,20,20-heptamethyl-24-oxahexacyclo[15.5.2.0¹,¹⁸.0⁴,¹⁷.0⁵,¹⁴.0⁸,¹³]tetracos-15-en-10-yl]oxy}-2-({[(2r,3r,4s,5s,6r)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}methyl)oxan-3-yl]oxy}-6-methyloxane-3,4,5-triol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+444,"(10s)-8-hydroxy-10-methyl-1,9,12-triazatetracyclo[9.8.0.0²,⁷.0¹³,¹⁸]nonadeca-2,4,6,8,11,13,15,17-octaen-19-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+445,"4-{[(5s)-8-{[(2s,4r,5r,6s)-4,5-dihydroxy-6-methyloxan-2-yl]oxy}-1,5-dihydroxy-3-methyl-7,12-dioxo-5h-6-azatetraphen-6-yl]methyl}benzoic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+446,NPA032183,NPATLAS_3D,BoxA_orthosteric,,0,False
+447,"(1r,7r,8s,26r,28s,29r,38r)-1,13,14,15,18,19,20,34,35,39,39-undecahydroxy-2,5,10,23,31-pentaoxo-6,9,24,27,30,40-hexaoxaoctacyclo[34.3.1.0⁴,³⁸.0⁷,²⁶.0⁸,²⁹.0¹¹,¹⁶.0¹⁷,²².0³²,³⁷]tetraconta-3,11,13,15,17(22),18,20,32,34,36-decaen-28-yl 3,4,5-trihydroxybenzoate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+448,NPA002124,NPATLAS_3D,BoxA_orthosteric,,0,False
+449,NPA002148,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+450,mol_257414,COCONUT_3D,BoxA_orthosteric,COCONUT_3D,2,True
+451,"2-(3,4-dihydroxy-5-methoxyphenyl)-3-{[(2s,5s)-6-({[(2r,4r,5r)-3,4-dihydroxy-5-{[3-(4-hydroxyphenyl)prop-2-enoyl]oxy}-6-methyloxan-2-yl]oxy}methyl)-3,4,5-trihydroxyoxan-2-yl]oxy}-7-hydroxy-5-{[(2s,4s,5s)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}-1λ⁴-chromen-1-ylium",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+452,"[(2r,3s,4s,5r,6s)-6-{[5,6-dihydroxy-2-(4-hydroxyphenyl)-4-oxochromen-7-yl]oxy}-3,4,5-trihydroxyoxan-2-yl]methyl (2e)-3-(4-hydroxy-3-methoxyphenyl)prop-2-enoate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+453,"9,10-bis(4-hydroxy-2-methoxyphenyl)-7-methyl-8,9,9a,10-tetrahydro-5bh-1,11-dioxatetraphen-2-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+454,"4-hydroxy-2,15-dioxapentacyclo[22.2.2.1³,⁷.1¹⁰,¹⁴.0¹⁶,²¹]triaconta-1(26),3(30),4,6,10,12,14(29),16(21),18,24,27-undecaene-17,20-dione",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+455,NPA032863,NPATLAS_3D,BoxA_orthosteric,,0,False
+456,"(11s,14s)-10,13-dihydroxy-11-methyl-14-nitro-1,9,12-triazatetracyclo[14.6.1.0³,⁸.0¹⁷,²²]tricosa-3,5,7,9,12,16(23),17,19,21-nonaen-2-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+457,NPA010084,NPATLAS_3D,BoxA_orthosteric,,0,False
+458,"(1s,2s,5r,7r,8s,9s,10s,11r,12r,13s,15r)-12-methyl-6-methylidene-12-({[(2r,3r,4s,5s,6r)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}methyl)-17-oxapentacyclo[7.6.2.1⁵,⁸.0¹,¹¹.0²,⁸]octadecane-7,9,10,13,15-pentol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,1,True
+459,"(12r,15s,16r,17r)-16-[(1e)-3-hydroxy-3-methylbut-1-en-1-yl]-11,11,15-trimethyl-6,10,19-trioxapentacyclo[13.3.1.0²,⁷.0⁹,¹⁸.0¹²,¹⁷]nonadeca-1,3,7,9(18)-tetraen-5-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+460,"2-(2,4-dihydroxyphenyl)-8-[(1r,5r,6s)-6-(2,4-dihydroxyphenyl)-5-(5-hydroxy-2,2-dimethyl-3,4-dihydro-1-benzopyran-6-carbonyl)-3-methylcyclohex-2-en-1-yl]-5,7-dihydroxy-3-(3-methylbut-2-en-1-yl)chromen-4-one",LOTUS_3D,BoxB_allosteric,LOTUS_3D,2,True
+461,"methyl 6-{[4,4,6a,6b,11,11,14b-heptamethyl-8a-({[3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}carbonyl)-1,2,3,4a,5,6,7,8,9,10,12,12a,14,14a-tetradecahydropicen-3-yl]oxy}-3-hydroxy-4,5-bis({[3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy})oxane-2-carboxylate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+462,"2,4',5,10'-tetrahydroxy-4,6,6',11'-tetramethyl-8',10-dioxospiro[anthracene-9,14'-tetracyclo[7.7.1.0²,⁷.0¹³,¹⁷]heptadecane]-1'(16'),2',4',6',9',11',13'(17')-heptaene-3,5'-dicarboxylic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+463,"6-[(6-carboxy-4,5-dihydroxy-2-{[10-(hydroxymethyl)-2,5,6,10,14,21-hexamethyl-22-oxo-23-oxahexacyclo[19.2.1.0²,¹⁹.0⁵,¹⁸.0⁶,¹⁵.0⁹,¹⁴]tetracos-17-en-11-yl]oxy}oxan-3-yl)oxy]-3-hydroxy-5-[(3,4,5-trihydroxy-6-methyloxan-2-yl)oxy]-4-[(3,4,5-trihydroxyoxan-2-yl)oxy]oxane-2-carboxylic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+464,"2-(3,4-dihydroxyphenyl)-3,5-dihydroxy-7-[(3,4,5-trihydroxy-6-{[(3,4,5-trihydroxyoxan-2-yl)oxy]methyl}oxan-2-yl)oxy]chromen-4-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+465,"(1r,5r,6r,13s,21r)-5-(3,4-dihydroxyphenyl)-13-(3,4,5-trihydroxyphenyl)-4,12,14-trioxapentacyclo[11.7.1.0²,¹¹.0³,⁸.0¹⁵,²⁰]henicosa-2,8,10,15,17,19-hexaene-6,9,17,19,21-pentol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+466,"2-amino-n9-{11-hydroxy-6,13-diisopropyl-2,5,9-trimethyl-1,4,7,14-tetraoxo-3h,6h,9h,10h,13h,16h,17h,18h,18ah-pyrrolo[2,1-i]1-oxa-4,7,10,13-tetraazacyclohexadecan-10-yl}-n1-[11-hydroxy-6-isopropyl-2,5,9-trimethyl-1,4,7,14-tetraoxo-13-(sec-butyl)-3h,6h,9h,10h,13h,16h,17h,18h,18ah-pyrrolo[2,1-i]1-oxa-4,7,10,13-tetraazacyclohexadecan-10-yl]-4,6-dimethyl-3-oxophenoxazine-1,9-dicarboximidic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+467,"(4r,8r,18r,23s,27r)-12,14,23,31,33-pentahydroxy-4,8,18,27-tetramethyl-3,7,17,21,26-pentaoxatricyclo[27.4.0.0¹⁰,¹⁵]tritriaconta-1(33),10,12,14,29,31-hexaene-2,6,16,20,25-pentone",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+468,"[(2r,3r,4s,5r,6r)-6-{[(1s,3ar,3br,5as,7s,9ar,9br,11ar)-1-[(3s,5s)-3-hydroxy-5-(2-methylprop-1-en-1-yl)-2-oxooxolan-3-yl]-3a,3b,6,6,9a-pentamethyl-dodecahydro-1h-cyclopenta[a]phenanthren-7-yl]oxy}-3-hydroxy-5-{[(2s,3r,4r,5r,6s)-3,4,5-trihydroxy-6-methyloxan-2-yl]oxy}-4-{[(2s,3r,4s,5r)-3,4,5-trihydroxyoxan-2-yl]oxy}oxan-2-yl]methyl acetate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+469,"2-[(2z)-but-2-en-2-yl]-10-[(2s,4s,5s,6s)-4-(dimethylamino)-5-hydroxy-4,6-dimethyloxan-2-yl]-8-[(2r,4s,5s,6r)-4-(dimethylamino)-5-hydroxy-6-methyloxan-2-yl]-11-hydroxy-5-methyl-1-oxatetraphene-4,7,12-trione",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+470,"[(2r,3s,4s,5r,6s)-3,4,5-trihydroxy-6-{[(2s,4r)-4-methoxy-2-(4-methoxyphenyl)-6,8-dimethyl-7-{[(2s,3r,4s,5s,6r)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}-3,4-dihydro-2h-1-benzopyran-5-yl]oxy}oxan-2-yl]methyl acetate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+471,"6-[(8a-carboxy-4,4,6a,6b,11,11,14b-heptamethyl-1,2,3,4a,5,6,7,8,9,10,12,12a,14,14a-tetradecahydropicen-3-yl)oxy]-4-(acetyloxy)-3-{[3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}-5-[(3,4,5-trihydroxyoxan-2-yl)oxy]oxane-2-carboxylic acid",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+472,"(12s)-5,7,18,20-tetraoxa-24-azahexacyclo[11.11.0.0²,¹⁰.0⁴,⁸.0¹⁴,²².0¹⁷,²¹]tetracosa-1(13),2,4(8),9,14,16,21,23-octaen-12-ol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+473,NPA010079,NPATLAS_3D,BoxA_orthosteric,,0,False
+474,"6-({[3,4-dihydroxy-6-(hydroxymethyl)-5-[(3,4,5-trihydroxy-6-methyloxan-2-yl)oxy]oxan-2-yl]oxy}methyl)-3,4,5-trihydroxyoxan-2-yl 10-hydroxy-2,2,6a,6b,9,9,12a-heptamethyl-3-oxo-4,5,6,7,8,8a,10,11,12,12b,13,14b-dodecahydro-1h-picene-4a-carboxylate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+475,"8-[(r)-[(8s,8as,12ar)-8a,11-dimethyl-2-oxo-8h,9h,10h,12ah-chromeno[7,8-c]isochromen-8-yl](hydroxy)methyl]-7-hydroxychromen-2-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+476,"(3s,4s)-8-chloro-4,7,12-trihydroxy-3-methyl-3,4-dihydro-2h-tetracene-1,6,11-trione",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+477,"24,25-dihydroxy-4,20-bis(3-hydroxy-2-methylhex-4-en-2-yl)-12-methoxy-3,15,19,31-tetraoxa-33,34-diazatricyclo[28.2.1.1¹⁴,¹⁷]tetratriaconta-1(32),6,8,10,14(34),16,22,26,28,30(33)-decaene-2,18-dione",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+478,"(6s,12s,19s,22s,25s)-14,21,24-trihydroxy-22-isopropyl-19-methyl-12-(2-methylpropyl)-33-oxa-4,17-dithia-10,13,20,23,29,34,35,36-octaazahexacyclo[29.2.1.1²,⁵.1¹⁵,¹⁸.0⁶,¹⁰.0²⁵,²⁹]hexatriaconta-1(34),2,5(36),13,15,18(35),20,23,31-nonaene-11,30-dione",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+479,"7,15,18-trihydroxy-19-methoxy-2-methyl-9-phenyl-9h,10h,13h,14h,15h,16h,19h,20h,20ah-cyclopenta[i]azacyclononadecan-17-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+480,NPA010088,NPATLAS_3D,BoxA_orthosteric,,0,False
+481,"15-(3,7-dimethylocta-2,6-dien-1-yl)-6,7-dihydroxy-16,16-dimethyl-1,13-bis(3-methylbut-2-en-1-yl)-3-oxatetracyclo[11.3.1.0²,¹¹.0⁴,⁹]heptadeca-2(11),4,6,8-tetraene-10,12,17-trione",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+482,"(2s,5s,8s,14s,17s,20r)-14-benzyl-4,7,16,19-tetrahydroxy-2,17-diisopropyl-5-[(1r)-1-[(2-methylbut-3-en-2-yl)oxy]ethyl]-22-thia-3,6,12,15,18,23-hexaazatricyclo[18.2.1.0⁸,¹²]tricosa-1(23),3,6,15,18-pentaen-13-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+483,"4,5-dihydroxy-6-{[2-(hydroxymethyl)-10-{[3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}-3,9-dioxatricyclo[4.4.0.0²,⁴]dec-7-en-5-yl]oxy}-2-methyloxan-3-yl 3-(3,4-dimethoxyphenyl)prop-2-enoate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+484,"methyl 12,15,16-trihydroxy-9,13-dimethyl-3-[(3-methylbut-2-enoyl)oxy]-4-oxo-11-{[3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}-5,18-dioxapentacyclo[12.5.0.0¹,⁶.0²,¹⁷.0⁸,¹³]nonadec-9-ene-17-carboxylate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+485,"3,13,21-trihydroxy-5,7,29-trimethoxy-13,23-dimethyl-16-oxahexacyclo[15.12.0.0²,¹¹.0⁴,⁹.0¹⁸,²⁷.0²⁰,²⁵]nonacosa-1(29),2(11),3,5,7,9,17,20,22,24,27-undecaene-15,19,26-trione",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+486,NPA032184,NPATLAS_3D,BoxA_orthosteric,,0,False
+487,"5,6,7,8,9,10-hexahydroxy-2-methoxy-7-methyl-6,8-dihydro-5h-anthracene-1,4-dione",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+488,"8,16-dihydroxy-7,15-dimethoxy-6,14-bis[(2s,3r,4r,5s,6r)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]-2,10-dioxatricyclo[10.4.0.0⁴,⁹]hexadeca-1(16),4,6,8,12,14-hexaene-3,11-dione",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+489,"6-[(6-{[10-butyl-4,5,23-trihydroxy-24-(hydroxymethyl)-6-methyl-20-oxo-2,7,9,21,25-pentaoxatricyclo[20.3.1.0³,⁸]hexacosan-26-yl]oxy}-4-hydroxy-2-methyl-5-[(2-methylbut-2-enoyl)oxy]oxan-3-yl)oxy]-4,5-dihydroxy-2-methyloxan-3-yl 2-methylbut-2-enoate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+490,"3-{[(2r,3s,4r,5s,6s)-3-{[(2s,3r,4r)-3,4-dihydroxy-4-(hydroxymethyl)oxolan-2-yl]oxy}-4,5-dihydroxy-6-({[(2r,3r,4r,5r,6s)-3,4,5-trihydroxy-6-methyloxan-2-yl]oxy}methyl)oxan-2-yl]oxy}-5,7-dihydroxy-2-(4-hydroxyphenyl)chromen-4-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+491,"20,21,25-trimethoxy-15,30-dimethyl-8,23-dioxa-15,30-diazaheptacyclo[22.6.2.2⁹,¹².1³,⁷.1¹⁴,¹⁸.0²⁷,³¹.0²²,³³]hexatriaconta-3,5,7(36),9,11,18(33),19,21,24(32),25,27(31),34-dodecaen-6-ol",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,1,True
+492,"[(2r,3r,4s,5r,6r)-5-{[(2s,3r,4r)-3,4-dihydroxy-4-(hydroxymethyl)oxolan-2-yl]oxy}-3-hydroxy-6-[2-(3-hydroxy-4-methoxyphenyl)ethoxy]-4-{[(2s,3r,4r,5r,6s)-3,4,5-trihydroxy-6-methyloxan-2-yl]oxy}oxan-2-yl]methyl (2e)-3-(4-hydroxy-3-methoxyphenyl)prop-2-enoate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+493,"7-hydroxy-2-(4-hydroxy-3,5-dimethoxyphenyl)-5-{[(2s,3s,4s,5s,6s)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}-3-{[(2s,3s,4r,5r,6r)-3,4,5-trihydroxy-6-methyloxan-2-yl]oxy}-1λ⁴-chromen-1-ylium",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+494,mol_329495,COCONUT_3D,BoxA_orthosteric,COCONUT_3D,2,True
+495,"(1s,4r,9r,10r,13r,14r)-14-(hydroxymethyl)-5,5,9-trimethyltetracyclo[11.2.1.0¹,¹⁰.0⁴,⁹]hexadecan-14-yl 8-methoxy-6-nitro-2h-phenanthro[3,4-d][1,3]dioxole-5-carboxylate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+496,"(1s,2s,19r,41r,45s)-7,8,9,12,13,14,24,25,26,30,31,34,35,36,45-pentadecahydroxy-29-methyl-3,18,20,40,42-pentaoxanonacyclo[26.13.3.1³⁷,⁴¹.0²,¹⁹.0⁵,¹⁰.0¹¹,¹⁶.0²²,²⁷.0³²,⁴⁴.0³³,³⁸]pentatetraconta-5(10),6,8,11,13,15,22(27),23,25,28(44),29,31,33(38),34,36-pentadecaene-4,17,21,39,43-pentone",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+497,"(3s,3'r,4's,6's,9'r)-3',4',9'-trihydroxy-6-methoxy-1-(3-methylbut-2-en-1-yl)-6'-(2-methylprop-1-en-1-yl)-1',7'-diazaspiro[indole-3,5'-tricyclo[7.3.0.0³,⁷]dodecane]-2,2',8'-trione",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,1,True
+498,NPA032185,NPATLAS_3D,BoxA_orthosteric,NPATLAS_3D,2,True
+499,"(4r,8r,18r,23s,27r)-12,23,31,33-tetrakis(acetyloxy)-4,8,18,27-tetramethyl-2,6,16,20,25-pentaoxo-3,7,17,21,26-pentaoxatricyclo[27.4.0.0¹⁰,¹⁵]tritriaconta-1(33),10(15),11,13,29,31-hexaen-14-yl acetate",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
+500,"5-hydroxy-2-{3-[5-hydroxy-8-(4-hydroxyphenyl)-2,2-dimethyl-6-oxopyrano[3,2-g]chromen-10-yl]-4-methoxyphenyl}-7-methoxychromen-4-one",LOTUS_3D,BoxA_orthosteric,LOTUS_3D,2,True
