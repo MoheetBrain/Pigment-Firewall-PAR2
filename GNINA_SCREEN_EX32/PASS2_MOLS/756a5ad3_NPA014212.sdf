@@ -1,0 +1,176 @@
+NPA014212
+     RDKit          3D
+
+ 30 35  0  0  0  0  0  0  0  0999 V2000
+   -3.9409    1.9735    1.4155 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.0424    1.3794    2.4726 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.3273    1.5211    3.6687 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.8157    0.5524    2.0486 C   0  0  1  0  0  0  0  0  0  0  0  0
+   -1.1219    0.1500    3.2429 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.2616   -0.6674    1.2471 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.6954   -1.6830    1.7501 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.0753   -0.4442   -0.1189 N   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.7050   -1.5051   -1.0704 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.3398   -1.1919   -2.4438 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.1393   -2.9330   -0.6999 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.1705   -1.3093   -1.1504 C   0  0  2  0  0  0  0  0  0  0  0  0
+    0.6378   -2.1416   -0.1098 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0544   -1.6453   -0.0586 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.2091   -2.4233   -0.0535 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.4731   -1.8054   -0.1007 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.6048   -0.4067   -0.1915 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.4466    0.3425   -0.1894 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.2153   -0.2776   -0.0574 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.0974    0.7087   -0.0756 C   0  0  2  0  0  0  0  0  0  0  0  0
+    0.5290    0.8331    1.2338 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.8362    1.2375    1.0852 C   0  0  2  0  0  0  0  0  0  0  0  0
+   -0.8698    2.6472    1.1794 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.2593    0.7248   -0.2959 C   0  0  2  0  0  0  0  0  0  0  0  0
+   -1.9776    1.6679   -1.0559 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.0008    0.2545   -1.0134 C   0  0  2  0  0  0  0  0  0  0  0  0
+    1.8659    2.0057   -0.4771 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.3446    3.0768   -0.7621 O   0  0  0  0  0  0  0  0  0  0  0  0
+    3.2387    1.7125   -0.4073 N   0  0  0  0  0  0  0  0  0  0  0  0
+    4.2848    2.6622   -0.6825 C   0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0
+  2  3  2  0
+  2  4  1  0
+  4  5  1  1
+  4  6  1  0
+  6  7  2  0
+  6  8  1  0
+  8  9  1  0
+  9 10  1  0
+  9 11  1  0
+  9 12  1  0
+ 12 13  1  1
+ 13 14  1  0
+ 14 15  1  0
+ 15 16  2  0
+ 16 17  1  0
+ 17 18  2  0
+ 18 19  1  0
+ 19 20  1  0
+ 20 21  1  1
+ 21 22  1  0
+ 22 23  1  6
+ 22 24  1  0
+ 24 25  1  6
+ 24 26  1  0
+ 20 27  1  0
+ 27 28  2  0
+ 27 29  1  0
+ 29 30  1  0
+ 22  4  1  0
+ 24  8  1  0
+ 26 12  1  1
+ 19 14  2  0
+ 26 20  1  0
+ 29 18  1  0
+M  END
+>  <SMILES>  (1) 
+CC(=O)[C@@]1(O)C(=O)N2C(C)(C)[C@@H]3Cc4cccc5c4[C@@]4(O[C@@]1(O)[C@@]2(O)[C@H]34)C(=O)N5C
+
+>  <npaid>  (1) 
+NPA014212
+
+>  <compound_id>  (1) 
+14212
+
+>  <compound_name>  (1) 
+Penicamedine A
+
+>  <compound_molecular_formula>  (1) 
+C21H22N2O7
+
+>  <compound_molecular_weight>  (1) 
+414.414
+
+>  <compound_accurate_mass>  (1) 
+414.1427
+
+>  <compound_m_plus_h>  (1) 
+415.15
+
+>  <compound_m_plus_na>  (1) 
+437.1319
+
+>  <compound_inchi>  (1) 
+InChI=1S/C21H22N2O7/c1-9(24)19(27)16(26)23-17(2,3)11-8-10-6-5-7-12-13(10)18(15(25)22(12)4)14(11)20(23,28)21(19,29)30-18/h5-7,11,14,27-29H,8H2,1-4H3/t11-,14-,18+,19-,20+,21-/m1/s1
+
+>  <compound_inchikey>  (1) 
+QLOOWQVCXQPADP-UMHNQWNOSA-N
+
+>  <compound_smiles>  (1) 
+CC(=O)[C@]1(C(=O)N2[C@]3([C@@]1(O[C@]45[C@H]3[C@H](C2(C)C)CC6=C4C(=CC=C6)N(C5=O)C)O)O)O
+
+>  <compound_cluster_id>  (1) 
+1059
+
+>  <compound_node_id>  (1) 
+911
+
+>  <origin_type>  (1) 
+Fungus
+
+>  <genus>  (1) 
+Penicillium
+
+>  <origin_species>  (1) 
+camemberti
+
+>  <original_reference_author_list>  (1) 
+Zhu, Hucheng; Chen, Chunmei; Wang, Jianping; Li, Xiao-Nian; Wei, Guangzheng; Guo, Yi; Yao, Guangmin; Luo, Zengwei; Zhang, Jinwen; Xue, Yongbo; Zhang, Yonghui
+
+>  <original_reference_year>  (1) 
+2015
+
+>  <original_reference_issue>  (1) 
+10
+
+>  <original_reference_volume>  (1) 
+12
+
+>  <original_reference_pages>  (1) 
+1547-1553
+
+>  <original_reference_doi>  (1) 
+10.1002/cbdv.201400412
+
+>  <original_reference_pmid>  (1) 
+26460559
+
+>  <original_reference_title>  (1) 
+Penicamedine A, a Highly Oxygenated Hexacyclic Indole Alkaloid from Penicillium camemberti
+
+>  <original_reference_type>  (1) 
+article
+
+>  <original_journal_title>  (1) 
+Chemistry and Biodiversity
+
+>  <synonyms_dois>  (1) 
+
+
+>  <reassignment_dois>  (1) 
+
+
+>  <synthesis_dois>  (1) 
+
+
+>  <mibig_ids>  (1) 
+
+
+>  <gnps_ids>  (1) 
+
+
+>  <cmmc_ids>  (1) 
+
+
+>  <npmrd_id>  (1) 
+NP0014787
+
+>  <npatlas_url>  (1) 
+https://www.npatlas.org/explore/compounds/NPA014212
+
+$$$$

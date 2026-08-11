@@ -1,0 +1,165 @@
+NPA010096
+     RDKit          3D
+
+ 25 29  0  0  0  0  0  0  0  0999 V2000
+   -4.3090    0.2292    1.2253 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.9236    0.4185    0.9573 C   0  0  2  0  0  0  0  0  0  0  0  0
+   -2.5392    1.7447    1.5375 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.7278    2.6119    0.9108 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.0795    2.3365   -0.4135 C   0  0  2  0  0  0  0  0  0  0  0  0
+   -1.6870    3.2457   -1.3328 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.2716    0.8944   -0.9349 C   0  0  2  0  0  0  0  0  0  0  0  0
+   -2.6752    0.3606   -0.5663 C   0  0  1  0  0  0  0  0  0  0  0  0
+   -2.9331   -1.0195   -1.2168 C   0  0  2  0  0  0  0  0  0  0  0  0
+   -3.7375   -1.8363   -0.3654 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.6531   -1.7737   -1.5938 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.5551   -1.5472   -0.5619 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.1226   -0.0580   -0.4705 C   0  0  0  0  0  0  0  0  0  0  0  0
+    0.1837    0.2224    0.9075 O   0  0  0  0  0  0  0  0  0  0  0  0
+    1.4609   -0.0701    1.2807 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.7286   -0.1627    2.6439 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.0219   -0.4519    3.0777 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.0486   -0.6331    2.1470 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7906   -0.5203    0.7709 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.7953   -0.6631   -0.2000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.4962   -0.5123   -1.5569 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.1918   -0.2240   -1.9574 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.1859   -0.1000   -1.0022 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.4734   -0.2387    0.3480 C   0  0  0  0  0  0  0  0  0  0  0  0
+    0.9264    0.1810   -1.4433 O   0  0  0  0  0  0  0  0  0  0  0  0
+  2  1  1  6
+  2  3  1  0
+  3  4  2  0
+  4  5  1  0
+  5  6  1  6
+  5  7  1  0
+  7  8  1  0
+  8  9  1  1
+  9 10  1  1
+  9 11  1  0
+ 11 12  1  0
+ 12 13  1  0
+ 13 14  1  0
+ 14 15  1  0
+ 15 16  1  0
+ 16 17  2  0
+ 17 18  1  0
+ 18 19  2  0
+ 19 20  1  0
+ 20 21  2  0
+ 21 22  1  0
+ 22 23  2  0
+ 23 24  1  0
+ 23 25  1  0
+  8  2  1  0
+ 25 13  1  0
+  7 13  1  1
+ 24 15  2  0
+ 24 19  1  0
+M  END
+>  <SMILES>  (1) 
+OC1C=CC(O)C2C1C(O)CCC21Oc2cccc3cccc(c23)O1
+
+>  <npaid>  (1) 
+NPA010096
+
+>  <compound_id>  (1) 
+10096
+
+>  <compound_name>  (1) 
+Palmarumycin CR1
+
+>  <compound_molecular_formula>  (1) 
+C20H20O5
+
+>  <compound_molecular_weight>  (1) 
+340.375
+
+>  <compound_accurate_mass>  (1) 
+340.1311
+
+>  <compound_m_plus_h>  (1) 
+341.1384
+
+>  <compound_m_plus_na>  (1) 
+363.1203
+
+>  <compound_inchi>  (1) 
+InChI=1S/C20H20O5/c21-12-7-8-14(23)19-18(12)13(22)9-10-20(19)24-15-5-1-3-11-4-2-6-16(25-20)17(11)15/h1-8,12-14,18-19,21-23H,9-10H2
+
+>  <compound_inchikey>  (1) 
+MTHUNPKHURTKGB-UHFFFAOYSA-N
+
+>  <compound_smiles>  (1) 
+C1CC2(C3C(C=CC(C3C1O)O)O)OC4=CC=CC5=C4C(=CC=C5)O2
+
+>  <compound_cluster_id>  (1) 
+339
+
+>  <compound_node_id>  (1) 
+11
+
+>  <origin_type>  (1) 
+Fungus
+
+>  <genus>  (1) 
+Unknown-fungus
+
+>  <origin_species>  (1) 
+sp.
+
+>  <original_reference_author_list>  (1) 
+Wipf, Peter; Lynch, Stephen M; Birmingham, Anne; Tamayo, Giselle; Jiménez, Allan; Campos, Nefertiti; Powis, Garth
+
+>  <original_reference_year>  (1) 
+2004
+
+>  <original_reference_issue>  (1) 
+11
+
+>  <original_reference_volume>  (1) 
+2
+
+>  <original_reference_pages>  (1) 
+1651-1658
+
+>  <original_reference_doi>  (1) 
+10.1039/b402431a
+
+>  <original_reference_pmid>  (1) 
+15162219
+
+>  <original_reference_title>  (1) 
+Natural product based inhibitors of the thioredoxin-thioredoxin reductase system
+
+>  <original_reference_type>  (1) 
+article
+
+>  <original_journal_title>  (1) 
+Organic & Biomolecular Chemistry
+
+>  <synonyms_dois>  (1) 
+
+
+>  <reassignment_dois>  (1) 
+
+
+>  <synthesis_dois>  (1) 
+
+
+>  <mibig_ids>  (1) 
+
+
+>  <gnps_ids>  (1) 
+
+
+>  <cmmc_ids>  (1) 
+
+
+>  <npmrd_id>  (1) 
+NP0005341
+
+>  <npatlas_url>  (1) 
+https://www.npatlas.org/explore/compounds/NPA010096
+
+$$$$

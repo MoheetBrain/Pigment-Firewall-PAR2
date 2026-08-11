@@ -1,0 +1,193 @@
+NPA002148
+     RDKit          3D
+
+ 38 44  0  0  0  0  0  0  0  0999 V2000
+    4.2089   -2.8044   -1.3897 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.4011   -2.1022   -0.5818 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.5285   -0.5885   -0.5966 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.5991   -0.0021   -1.0307 N   0  0  0  0  0  0  0  0  0  0  0  0
+    4.7132    1.3808   -0.8637 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.8005    2.0473   -1.4317 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.9710    3.4211   -1.2387 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.0563    4.1382   -0.4673 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.9686    3.4822    0.1075 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.8051    2.1077   -0.0991 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.6484    1.3835    0.4556 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.9280    1.9511    1.2718 O   0  0  0  0  0  0  0  0  0  0  0  0
+    2.4698    0.0880   -0.0017 N   0  0  0  0  0  0  0  0  0  0  0  0
+    1.1970   -0.6455    0.1260 C   0  0  2  0  0  0  0  0  0  0  0  0
+   -0.0300    0.0978    0.6751 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.4082   -0.3337    0.1378 C   0  0  1  0  0  0  0  0  0  0  0  0
+   -1.4747    0.0393   -1.2495 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.8516   -1.7834    0.1854 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.2575   -2.9164   -0.3581 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.9476   -4.1347   -0.3322 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.2486   -4.2112    0.1800 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.8790   -3.0682    0.6653 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.1636   -1.8820    0.6665 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.6498   -0.6201    1.0133 N   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.8098   -0.1219    0.4549 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -5.8572   -0.6940    0.2029 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.5244    1.3174    0.0954 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -5.1240    1.8880   -1.1687 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -5.6549    2.3157    0.1728 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.1377    1.5987    0.4778 N   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.6251    2.8725    0.6133 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.4124    3.0867    1.4820 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.1089    3.8516    0.0421 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.5625    0.3473    0.9955 C   0  0  2  0  0  0  0  0  0  0  0  0
+    1.5288   -1.8987    0.9476 C   0  0  0  0  0  0  0  0  0  0  0  0
+    0.8735   -2.2552    1.9229 O   0  0  0  0  0  0  0  0  0  0  0  0
+    2.5370   -2.6719    0.3519 N   0  0  0  0  0  0  0  0  0  0  0  0
+    2.7103   -4.0474    0.7958 C   0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0
+  2  3  1  0
+  3  4  2  0
+  4  5  1  0
+  5  6  2  0
+  6  7  1  0
+  7  8  2  0
+  8  9  1  0
+  9 10  2  0
+ 10 11  1  0
+ 11 12  2  0
+ 11 13  1  0
+ 13 14  1  0
+ 14 15  1  1
+ 15 16  1  0
+ 16 17  1  6
+ 16 18  1  0
+ 18 19  2  0
+ 19 20  1  0
+ 20 21  2  0
+ 21 22  1  0
+ 22 23  2  0
+ 23 24  1  0
+ 24 25  1  0
+ 25 26  2  0
+ 25 27  1  0
+ 27 28  1  0
+ 28 29  1  0
+ 27 30  1  0
+ 30 31  1  0
+ 31 32  1  0
+ 31 33  2  0
+ 34 30  1  6
+ 14 35  1  0
+ 35 36  2  0
+ 35 37  1  0
+ 37 38  1  0
+ 37  2  1  0
+ 13  3  1  0
+ 34 16  1  0
+ 10  5  1  0
+ 23 18  1  0
+ 34 24  1  0
+ 29 27  1  0
+M  END
+>  <SMILES>  (1) 
+C=C1c2nc3ccccc3c(=O)n2[C@H](C[C@@]2(O)c3ccccc3N3C(=O)C4(CC4)N(C(C)=O)[C@@H]32)C(=O)N1C
+
+>  <npaid>  (1) 
+NPA002148
+
+>  <compound_id>  (1) 
+2148
+
+>  <compound_name>  (1) 
+Fumiquinazoline P
+
+>  <compound_molecular_formula>  (1) 
+C28H25N5O5
+
+>  <compound_molecular_weight>  (1) 
+511.538
+
+>  <compound_accurate_mass>  (1) 
+511.1856
+
+>  <compound_m_plus_h>  (1) 
+512.1929
+
+>  <compound_m_plus_na>  (1) 
+534.1748
+
+>  <compound_inchi>  (1) 
+InChI=1S/C28H25N5O5/c1-15-22-29-19-10-6-4-8-17(19)23(35)31(22)21(24(36)30(15)3)14-28(38)18-9-5-7-11-20(18)32-25(28)33(16(2)34)27(12-13-27)26(32)37/h4-11,21,25,38H,1,12-14H2,2-3H3/t21-,25-,28-/m1/s1
+
+>  <compound_inchikey>  (1) 
+RXZYKPMOYXVAFL-LFGPKHSOSA-N
+
+>  <compound_smiles>  (1) 
+CC(=O)N1[C@@H]2[C@](C3=CC=CC=C3N2C(=O)C14CC4)(C[C@@H]5C(=O)N(C(=C)C6=NC7=CC=CC=C7C(=O)N56)C)O
+
+>  <compound_cluster_id>  (1) 
+1307
+
+>  <compound_node_id>  (1) 
+1101
+
+>  <origin_type>  (1) 
+Fungus
+
+>  <genus>  (1) 
+Aspergillus
+
+>  <origin_species>  (1) 
+sp.
+
+>  <original_reference_author_list>  (1) 
+Zhou, Yaming; Debbab, Abdessamad; Mándi, Attila; Wray, Victor; Schulz, Barbara; Müller, Werner E. G.; Kassack, Matthias; Lin, WenHan; Kurtán, Tibor; Proksch, Peter; Aly, Amal H.
+
+>  <original_reference_year>  (1) 
+2013
+
+>  <original_reference_issue>  (1) 
+5
+
+>  <original_reference_volume>  (1) 
+2013
+
+>  <original_reference_pages>  (1) 
+894-906
+
+>  <original_reference_doi>  (1) 
+10.1002/ejoc.201201220
+
+>  <original_reference_pmid>  (1) 
+None
+
+>  <original_reference_title>  (1) 
+Alkaloids from the Sponge-Associated Fungus Aspergillus sp
+
+>  <original_reference_type>  (1) 
+article
+
+>  <original_journal_title>  (1) 
+European Journal of Organic Chemistry
+
+>  <synonyms_dois>  (1) 
+
+
+>  <reassignment_dois>  (1) 
+
+
+>  <synthesis_dois>  (1) 
+
+
+>  <mibig_ids>  (1) 
+
+
+>  <gnps_ids>  (1) 
+
+
+>  <cmmc_ids>  (1) 
+
+
+>  <npmrd_id>  (1) 
+NP0152325
+
+>  <npatlas_url>  (1) 
+https://www.npatlas.org/explore/compounds/NPA002148
+
+$$$$

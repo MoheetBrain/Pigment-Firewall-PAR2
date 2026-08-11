@@ -1,0 +1,192 @@
+NPA002149
+     RDKit          3D
+
+ 38 43  0  0  0  0  0  0  0  0999 V2000
+   -4.4258    2.9461    0.2486 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.0724    1.6914   -0.5004 C   0  0  1  0  0  0  0  0  0  0  0  0
+   -5.2120    1.0904   -1.3070 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.8703   -0.0901   -2.2214 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.3129   -1.1948   -1.4926 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -5.1959   -1.9434   -0.7921 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -6.4135   -1.8470   -0.8351 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.5202   -2.9213    0.0866 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.1921   -3.0109    0.2669 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.6059   -3.9749    1.1737 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.3114   -4.2049    1.4448 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.0705   -3.5793    0.9387 C   0  0  0  0  0  0  0  0  0  0  0  0
+    0.9875   -4.1849    0.9780 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.2763   -2.3239    0.5011 O   0  0  0  0  0  0  0  0  0  0  0  0
+    0.7724   -1.4745   -0.0211 C   0  0  2  0  0  0  0  0  0  0  0  0
+    1.7779   -2.1359   -0.9928 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.1398   -1.6403   -0.5026 C   0  0  1  0  0  0  0  0  0  0  0  0
+    3.4829   -0.3782   -1.0896 O   0  0  0  0  0  0  0  0  0  0  0  0
+    2.5363    0.6926   -0.9132 C   0  0  2  0  0  0  0  0  0  0  0  0
+    3.2649    1.9226   -1.3611 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.1281    2.5410   -0.5380 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.8618    3.7157   -1.0410 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.6427    4.3139   -2.0790 O   0  0  0  0  0  0  0  0  0  0  0  0
+    5.8505    4.0934   -0.2168 O   0  0  0  0  0  0  0  0  0  0  0  0
+    4.3452    1.9997    0.8399 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.0346    1.5391    1.4941 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.9833    0.8172    0.5547 C   0  0  1  0  0  0  0  0  0  0  0  0
+    0.7443    1.7794    0.5658 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.3810    1.2329   -0.1150 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.4443    2.0696   -0.2517 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.4538    3.2641    0.0025 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.6153    1.3219   -0.7530 C   0  0  1  0  0  0  0  0  0  0  0  0
+   -3.3898    0.7298    0.3139 O   0  0  0  0  0  0  0  0  0  0  0  0
+    1.6257   -0.6722    1.0663 C   0  0  1  0  0  0  0  0  0  0  0  0
+    0.9768   -0.6925    2.4505 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.9383   -1.4244    0.9584 C   0  0  2  0  0  0  0  0  0  0  0  0
+    4.0469   -1.5380    1.9878 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.0946   -2.5853    1.7794 O   0  0  0  0  0  0  0  0  0  0  0  0
+  2  1  1  1
+  2  3  1  0
+  3  4  1  0
+  4  5  1  0
+  5  6  1  0
+  6  7  2  0
+  6  8  1  0
+  8  9  2  0
+  9 10  1  0
+ 10 11  2  0
+ 11 12  1  0
+ 12 13  2  0
+ 12 14  1  0
+ 14 15  1  0
+ 15 16  1  1
+ 17 16  1  6
+ 17 18  1  0
+ 19 18  1  1
+ 19 20  1  0
+ 20 21  2  0
+ 21 22  1  0
+ 22 23  2  0
+ 22 24  1  0
+ 21 25  1  0
+ 25 26  1  0
+ 27 26  1  1
+ 27 28  1  0
+ 28 29  1  0
+ 29 30  1  0
+ 30 31  2  0
+ 30 32  1  0
+ 32 33  1  1
+ 27 34  1  0
+ 34 35  1  1
+ 34 36  1  0
+ 36 37  1  1
+ 37 38  1  0
+ 32  2  1  0
+ 38 36  1  0
+ 33  2  1  0
+ 34 15  1  0
+ 36 17  1  0
+ 27 19  1  0
+M  END
+>  <SMILES>  (1) 
+CC12CCOC(=O)/C=C/C=C\C(=O)O[C@@H]3C[C@H]4O[C@@H]5C=C(C(=O)O)CC[C@]5(COC(=O)C1O2)[C@]3(C)[C@]41CO1
+
+>  <npaid>  (1) 
+NPA002149
+
+>  <compound_id>  (1) 
+2149
+
+>  <compound_name>  (1) 
+Verrucarin Z
+
+>  <compound_molecular_formula>  (1) 
+C27H30O11
+
+>  <compound_molecular_weight>  (1) 
+530.526
+
+>  <compound_accurate_mass>  (1) 
+530.1788
+
+>  <compound_m_plus_h>  (1) 
+531.1861
+
+>  <compound_m_plus_na>  (1) 
+553.168
+
+>  <compound_inchi>  (1) 
+InChI=1S/C27H30O11/c1-24-9-10-33-19(28)5-3-4-6-20(29)37-16-12-18-27(14-35-27)25(16,2)26(13-34-23(32)21(24)38-24)8-7-15(22(30)31)11-17(26)36-18/h3-6,11,16-18,21H,7-10,12-14H2,1-2H3,(H,30,31)/b5-3+,6-4-/t16-,17-,18-,21?,24?,25-,26-,27+/m1/s1
+
+>  <compound_inchikey>  (1) 
+GRYXZQKYIKRQGU-QPOVBJHYSA-N
+
+>  <compound_smiles>  (1) 
+C[C@]12[C@H]3C[C@H]([C@@]14CO4)O[C@H]5[C@@]2(CCC(=C5)C(=O)O)COC(=O)C6C(O6)(CCOC(=O)/C=C/C=C\C(=O)O3)C
+
+>  <compound_cluster_id>  (1) 
+526
+
+>  <compound_node_id>  (1) 
+471
+
+>  <origin_type>  (1) 
+Fungus
+
+>  <genus>  (1) 
+Myrothecium
+
+>  <origin_species>  (1) 
+roridum M10
+
+>  <original_reference_author_list>  (1) 
+Mondol, Muhammad Abdul Mojid; Surovy, Musrat Zahan; Islam, M. Tofazzal; Schüffler, Anja; Laatsch, Hartmut
+
+>  <original_reference_year>  (1) 
+2015
+
+>  <original_reference_issue>  (1) 
+40
+
+>  <original_reference_volume>  (1) 
+63
+
+>  <original_reference_pages>  (1) 
+8777-8786
+
+>  <original_reference_doi>  (1) 
+10.1021/acs.jafc.5b02366
+
+>  <original_reference_pmid>  (1) 
+26320597
+
+>  <original_reference_title>  (1) 
+Macrocyclic Trichothecenes from Myrothecium roridum Strain M10 with Motility Inhibitory and Zoosporicidal Activities against Phytophthora nicotianae
+
+>  <original_reference_type>  (1) 
+article
+
+>  <original_journal_title>  (1) 
+Journal of Agricultural and Food Chemistry
+
+>  <synonyms_dois>  (1) 
+
+
+>  <reassignment_dois>  (1) 
+
+
+>  <synthesis_dois>  (1) 
+
+
+>  <mibig_ids>  (1) 
+
+
+>  <gnps_ids>  (1) 
+
+
+>  <cmmc_ids>  (1) 
+
+
+>  <npmrd_id>  (1) 
+NP0014680
+
+>  <npatlas_url>  (1) 
+https://www.npatlas.org/explore/compounds/NPA002149
+
+$$$$

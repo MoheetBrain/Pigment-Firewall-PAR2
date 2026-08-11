@@ -1,0 +1,147 @@
+NPA002147
+     RDKit          3D
+
+ 17 19  0  0  0  0  0  0  0  0999 V2000
+    3.2481   -0.0931    1.3279 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.5644    0.2294   -0.0054 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.6000    0.6927   -1.0322 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.4770    1.2573    0.1921 C   0  0  0  0  0  0  0  0  0  0  0  0
+    0.2644    0.6945    0.1808 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.0323    1.2828    0.2533 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.1480    0.5932    0.0138 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.3351    1.4510    0.1608 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.8000    2.7273    0.5293 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.4361    2.6577    0.5754 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.6984    3.5865    0.8513 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.1815   -0.8526   -0.3755 C   0  0  1  0  0  0  0  0  0  0  0  0
+   -2.6762   -1.7155    0.7891 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.1109   -0.9872   -1.4483 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.7860   -1.3226   -0.8748 C   0  0  0  0  0  0  0  0  0  0  0  0
+    0.3421   -0.8009    0.0235 C   0  0  1  0  0  0  0  0  0  0  0  0
+    1.7552   -0.9793   -0.5436 C   0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0
+  2  3  1  0
+  2  4  1  0
+  4  5  2  0
+  5  6  1  0
+  6  7  2  0
+  7  8  1  0
+  8  9  1  0
+  9 10  1  0
+ 10 11  2  0
+  7 12  1  0
+ 12 13  1  1
+ 12 14  1  0
+ 12 15  1  0
+ 16 15  1  6
+ 16 17  1  0
+ 17  2  1  0
+ 16  5  1  0
+ 10  6  1  0
+M  END
+>  <SMILES>  (1) 
+CC1(C)C=C2C3=C(COC3=O)[C@@](C)(O)C[C@H]2C1
+
+>  <npaid>  (1) 
+NPA002147
+
+>  <compound_id>  (1) 
+2147
+
+>  <compound_name>  (1) 
+Flammulinolide E
+
+>  <compound_molecular_formula>  (1) 
+C14H18O3
+
+>  <compound_molecular_weight>  (1) 
+234.295
+
+>  <compound_accurate_mass>  (1) 
+234.1256
+
+>  <compound_m_plus_h>  (1) 
+235.1329
+
+>  <compound_m_plus_na>  (1) 
+257.1148
+
+>  <compound_inchi>  (1) 
+InChI=1S/C14H18O3/c1-13(2)4-8-5-14(3,16)10-7-17-12(15)11(10)9(8)6-13/h6,8,16H,4-5,7H2,1-3H3/t8-,14+/m1/s1
+
+>  <compound_inchikey>  (1) 
+BKWDAGVLBIHJQD-CLAHSXSESA-N
+
+>  <compound_smiles>  (1) 
+C[C@@]1(C[C@H]2CC(C=C2C3=C1COC3=O)(C)C)O
+
+>  <compound_cluster_id>  (1) 
+1306
+
+>  <compound_node_id>  (1) 
+1100
+
+>  <origin_type>  (1) 
+Fungus
+
+>  <genus>  (1) 
+Flammulina
+
+>  <origin_species>  (1) 
+velutipes
+
+>  <original_reference_author_list>  (1) 
+Wang, Yaqi; Bao, Li; Liu, Dailin; Yang, Xiaoli; Li, Shaifei; Gao, Hao; Yao, Xinsheng; Wen, Huaan; Liu, Hongwei
+
+>  <original_reference_year>  (1) 
+2012
+
+>  <original_reference_issue>  (1) 
+14
+
+>  <original_reference_volume>  (1) 
+68
+
+>  <original_reference_pages>  (1) 
+3012-3018
+
+>  <original_reference_doi>  (1) 
+10.1016/j.tet.2012.02.021
+
+>  <original_reference_pmid>  (1) 
+None
+
+>  <original_reference_title>  (1) 
+Two new sesquiterpenes and six norsesquiterpenes from the solid culture of the edible mushroom Flammulina velutipes
+
+>  <original_reference_type>  (1) 
+article
+
+>  <original_journal_title>  (1) 
+Tetrahedron
+
+>  <synonyms_dois>  (1) 
+
+
+>  <reassignment_dois>  (1) 
+
+
+>  <synthesis_dois>  (1) 
+
+
+>  <mibig_ids>  (1) 
+
+
+>  <gnps_ids>  (1) 
+
+
+>  <cmmc_ids>  (1) 
+
+
+>  <npmrd_id>  (1) 
+NP0041221
+
+>  <npatlas_url>  (1) 
+https://www.npatlas.org/explore/compounds/NPA002147
+
+$$$$

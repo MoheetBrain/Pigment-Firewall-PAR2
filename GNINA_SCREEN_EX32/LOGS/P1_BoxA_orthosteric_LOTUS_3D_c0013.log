@@ -1,0 +1,130 @@
+              _             
+             (_)            
+   __ _ _ __  _ _ __   __ _ 
+  / _` | '_ \| | '_ \ / _` |
+ | (_| | | | | | | | | (_| |
+  \__, |_| |_|_|_| |_|\__,_|
+   __/ |                    
+  |___/                     
+
+gnina v1.1 master:e4cb380+   Built Dec 18 2023.
+gnina is based on smina and AutoDock Vina.
+Please cite appropriately.
+
+WARNING: No GPU detected. CNN scoring will be slow.
+Recommend running with single model (--cnn crossdock_default2018)
+or without cnn scoring (--cnn_scoring=none).
+
+Commandline: /usr/local/bin/gnina --receptor /home/azureuser/Pigment-Firewall-PAR2/PROTEINS/PAR2_inactive_orthosteric_receptor.pdbqt --ligand /home/azureuser/Pigment-Firewall-PAR2/GNINA_SCREEN_EX32/SDF_CHUNKS/LOTUS_3D/chunk_0013.sdf --config /home/azureuser/Pigment-Firewall-PAR2/PROTEINS/CONF/boxA_orthosteric_5NDD.conf --out /home/azureuser/Pigment-Firewall-PAR2/GNINA_SCREEN_EX32/PASS1/BoxA_orthosteric/LOTUS_3D_chunk0013.sdf --log /home/azureuser/Pigment-Firewall-PAR2/GNINA_SCREEN_EX32/LOGS/P1_BoxA_orthosteric_LOTUS_3D_c0013.log --exhaustiveness 16 --num_modes 9 --cnn_scoring none --min_rmsd_filter 2.0 --addH true --cpu 1
+Using random seed: 1165202439
+
+mode |  affinity  |  intramol  |    CNN     |   CNN
+     | (kcal/mol) | (kcal/mol) | pose score | affinity
+-----+------------+------------+------------+----------
+    1       -9.42        0.32      -1.0000      0.000
+    2       -9.22        0.33      -1.0000      0.000
+    3       -8.94        0.58      -1.0000      0.000
+    4       -8.91       -0.76      -1.0000      0.000
+    5       -8.88       -0.96      -1.0000      0.000
+    6       -8.84       -0.20      -1.0000      0.000
+    7       -8.84        0.83      -1.0000      0.000
+    8       -8.73       -0.42      -1.0000      0.000
+    9       -8.60       -0.48      -1.0000      0.000
+Using random seed: 1165202439
+
+mode |  affinity  |  intramol  |    CNN     |   CNN
+     | (kcal/mol) | (kcal/mol) | pose score | affinity
+-----+------------+------------+------------+----------
+    1       -7.40        0.60      -1.0000      0.000
+    2       -6.42        0.70      -1.0000      0.000
+    3       -5.86        0.20      -1.0000      0.000
+    4       -5.76        0.72      -1.0000      0.000
+    5       -5.75        0.87      -1.0000      0.000
+    6       -5.72        0.48      -1.0000      0.000
+    7       -5.63       -0.02      -1.0000      0.000
+    8       -5.52        0.67      -1.0000      0.000
+    9       -5.48       -0.13      -1.0000      0.000
+Using random seed: 1165202439
+
+mode |  affinity  |  intramol  |    CNN     |   CNN
+     | (kcal/mol) | (kcal/mol) | pose score | affinity
+-----+------------+------------+------------+----------
+    1       -8.98       -1.20      -1.0000      0.000
+    2       -8.70       -1.80      -1.0000      0.000
+    3       -8.66       -1.34      -1.0000      0.000
+    4       -8.63       -1.21      -1.0000      0.000
+    5       -8.61       -2.67      -1.0000      0.000
+    6       -8.60       -2.44      -1.0000      0.000
+    7       -8.56       -1.87      -1.0000      0.000
+    8       -8.49       -0.32      -1.0000      0.000
+    9       -8.49       -2.25      -1.0000      0.000
+Using random seed: 1165202439
+
+mode |  affinity  |  intramol  |    CNN     |   CNN
+     | (kcal/mol) | (kcal/mol) | pose score | affinity
+-----+------------+------------+------------+----------
+    1      -10.23       -3.55      -1.0000      0.000
+    2      -10.20       -2.07      -1.0000      0.000
+    3      -10.06       -1.86      -1.0000      0.000
+    4      -10.04       -3.01      -1.0000      0.000
+    5      -10.00       -2.62      -1.0000      0.000
+    6       -9.94       -2.50      -1.0000      0.000
+    7       -9.87       -2.36      -1.0000      0.000
+    8       -9.84       -2.83      -1.0000      0.000
+    9       -9.71       -2.28      -1.0000      0.000
+Using random seed: 1165202439
+
+mode |  affinity  |  intramol  |    CNN     |   CNN
+     | (kcal/mol) | (kcal/mol) | pose score | affinity
+-----+------------+------------+------------+----------
+    1       -9.76       -1.29      -1.0000      0.000
+    2       -9.20       -0.16      -1.0000      0.000
+    3       -8.64       -1.74      -1.0000      0.000
+    4       -8.61       -1.43      -1.0000      0.000
+    5       -8.51       -2.24      -1.0000      0.000
+    6       -8.44       -2.03      -1.0000      0.000
+    7       -8.38        0.02      -1.0000      0.000
+    8       -8.16       -2.32      -1.0000      0.000
+    9       -8.13        0.06      -1.0000      0.000
+Using random seed: 1165202439
+
+mode |  affinity  |  intramol  |    CNN     |   CNN
+     | (kcal/mol) | (kcal/mol) | pose score | affinity
+-----+------------+------------+------------+----------
+    1       -6.53       -0.22      -1.0000      0.000
+    2       -6.40       -1.25      -1.0000      0.000
+    3       -6.31       -1.28      -1.0000      0.000
+    4       -6.26       -0.49      -1.0000      0.000
+    5       -6.17        1.77      -1.0000      0.000
+    6       -6.17       -0.40      -1.0000      0.000
+    7       -6.17       -1.57      -1.0000      0.000
+    8       -6.15       -1.44      -1.0000      0.000
+    9       -6.08       -1.12      -1.0000      0.000
+Using random seed: 1165202439
+
+mode |  affinity  |  intramol  |    CNN     |   CNN
+     | (kcal/mol) | (kcal/mol) | pose score | affinity
+-----+------------+------------+------------+----------
+    1       -8.63        1.29      -1.0000      0.000
+    2       -8.24        0.80      -1.0000      0.000
+    3       -8.04       -0.36      -1.0000      0.000
+    4       -7.91       -0.02      -1.0000      0.000
+    5       -7.69       -0.39      -1.0000      0.000
+    6       -7.68       -0.20      -1.0000      0.000
+    7       -7.68       -0.29      -1.0000      0.000
+    8       -7.67       -0.20      -1.0000      0.000
+    9       -7.60       -0.30      -1.0000      0.000
+Using random seed: 1165202439
+
+mode |  affinity  |  intramol  |    CNN     |   CNN
+     | (kcal/mol) | (kcal/mol) | pose score | affinity
+-----+------------+------------+------------+----------
+    1       -8.03        0.25      -1.0000      0.000
+    2       -7.62        1.61      -1.0000      0.000
+    3       -7.34        0.51      -1.0000      0.000
+    4       -7.28       -0.07      -1.0000      0.000
+    5       -7.28        0.89      -1.0000      0.000
+    6       -7.28       -0.38      -1.0000      0.000
+    7       -7.22       -1.06      -1.0000      0.000
+    8       -7.05       -0.69      -1.0000      0.000
+    9       -6.91        0.06      -1.0000      0.000

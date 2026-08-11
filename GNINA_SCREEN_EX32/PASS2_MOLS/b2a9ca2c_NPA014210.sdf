@@ -1,0 +1,181 @@
+NPA014210
+     RDKit          3D
+
+ 33 37  0  0  0  0  0  0  0  0999 V2000
+    2.1727    1.4486    1.3499 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.9277    0.4896    0.2048 C   0  0  0  0  0  0  0  0  0  0  0  0
+    0.6158    0.0173   -0.0873 C   0  0  0  0  0  0  0  0  0  0  0  0
+    0.4016   -0.8013   -1.2034 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.4690   -1.1822   -2.0205 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.7562   -0.7585   -1.7190 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7350   -1.1853   -2.5748 O   0  0  0  0  0  0  0  0  0  0  0  0
+    3.0152    0.0506   -0.5995 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.4114    0.3868   -0.2710 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.0548   -0.1264    0.7872 C   0  0  0  0  0  0  0  0  0  0  0  0
+    6.4172    0.2613    1.0112 C   0  0  0  0  0  0  0  0  0  0  0  0
+    7.0632   -0.2605    2.1050 O   0  0  0  0  0  0  0  0  0  0  0  0
+    7.0368    1.1064    0.1860 C   0  0  0  0  0  0  0  0  0  0  0  0
+    6.3384    1.6483   -0.9895 C   0  0  0  0  0  0  0  0  0  0  0  0
+    6.9137    2.4066   -1.7626 O   0  0  0  0  0  0  0  0  0  0  0  0
+    5.0417    1.2542   -1.1888 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.9511   -1.2753   -1.5597 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.1164   -2.0366   -2.5058 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.1089   -0.8201   -0.7736 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.3989   -1.1910   -1.1765 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.5302   -0.7826   -0.4538 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -5.8146   -1.1645   -0.8809 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -6.9417   -0.7638   -0.1694 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -8.1963   -1.1214   -0.5652 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -6.8200    0.0151    0.9681 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -5.5523    0.3967    1.3976 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -5.5130    1.1689    2.5313 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.3731    0.0137    0.7071 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.0519    0.3685    1.0961 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.9180    1.1377    2.2365 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.9252   -0.0401    0.3578 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.5578    0.3341    0.7764 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.4332    0.8896    1.8645 O   0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0
+  2  3  1  0
+  3  4  2  0
+  4  5  1  0
+  5  6  2  0
+  6  7  1  0
+  6  8  1  0
+  8  9  1  0
+  9 10  2  0
+ 10 11  1  0
+ 11 12  1  0
+ 11 13  2  0
+ 13 14  1  0
+ 14 15  2  0
+ 14 16  1  0
+  4 17  1  0
+ 17 18  2  0
+ 17 19  1  0
+ 19 20  2  0
+ 20 21  1  0
+ 21 22  2  0
+ 22 23  1  0
+ 23 24  1  0
+ 23 25  2  0
+ 25 26  1  0
+ 26 27  1  0
+ 26 28  2  0
+ 28 29  1  0
+ 29 30  1  0
+ 29 31  2  0
+ 31 32  1  0
+ 32 33  2  0
+  8  2  2  0
+ 16  9  1  0
+ 31 19  1  0
+ 32  3  1  0
+ 28 21  1  0
+M  END
+>  <SMILES>  (1) 
+Cc1c2c(cc(O)c1-c1cc(O)cc(=O)o1)C(=O)c1cc3cc(O)cc(O)c3c(O)c1C2=O
+
+>  <npaid>  (1) 
+NPA014210
+
+>  <compound_id>  (1) 
+14210
+
+>  <compound_name>  (1) 
+Nocatrione A
+
+>  <compound_molecular_formula>  (1) 
+C24H14O9
+
+>  <compound_molecular_weight>  (1) 
+446.367
+
+>  <compound_accurate_mass>  (1) 
+446.0638
+
+>  <compound_m_plus_h>  (1) 
+447.0711
+
+>  <compound_m_plus_na>  (1) 
+469.053
+
+>  <compound_inchi>  (1) 
+InChI=1S/C24H14O9/c1-8-18-13(7-15(28)19(8)16-5-11(26)6-17(29)33-16)22(30)12-3-9-2-10(25)4-14(27)20(9)24(32)21(12)23(18)31/h2-7,25-28,32H,1H3
+
+>  <compound_inchikey>  (1) 
+YXJSJXZHFGDOKO-UHFFFAOYSA-N
+
+>  <compound_smiles>  (1) 
+CC1=C2C(=CC(=C1C3=CC(=CC(=O)O3)O)O)C(=O)C4=C(C2=O)C(=C5C(=C4)C=C(C=C5O)O)O
+
+>  <compound_cluster_id>  (1) 
+2391
+
+>  <compound_node_id>  (1) 
+11
+
+>  <origin_type>  (1) 
+Bacterium
+
+>  <genus>  (1) 
+Nocardiopsis
+
+>  <origin_species>  (1) 
+sp. KMF-002
+
+>  <original_reference_author_list>  (1) 
+Kim, Min Cheol; Hwang, Eunson; Kim, Taejung; Ham, Jungyeob; Kim, Sun Yeou; Kwon, Hak Cheol
+
+>  <original_reference_year>  (1) 
+2014
+
+>  <original_reference_issue>  (1) 
+10
+
+>  <original_reference_volume>  (1) 
+77
+
+>  <original_reference_pages>  (1) 
+2326-2330
+
+>  <original_reference_doi>  (1) 
+10.1021/np5006086
+
+>  <original_reference_pmid>  (1) 
+25317775
+
+>  <original_reference_title>  (1) 
+Nocatriones A and B, photoprotective tetracenediones from a marine-derived Nocardiopsis sp
+
+>  <original_reference_type>  (1) 
+article
+
+>  <original_journal_title>  (1) 
+Journal of Natural Products
+
+>  <synonyms_dois>  (1) 
+
+
+>  <reassignment_dois>  (1) 
+
+
+>  <synthesis_dois>  (1) 
+
+
+>  <mibig_ids>  (1) 
+
+
+>  <gnps_ids>  (1) 
+
+
+>  <cmmc_ids>  (1) 
+
+
+>  <npmrd_id>  (1) 
+NP0013399
+
+>  <npatlas_url>  (1) 
+https://www.npatlas.org/explore/compounds/NPA014210
+
+$$$$

@@ -1,0 +1,189 @@
+NPA032183
+     RDKit          3D
+
+ 36 42  0  0  0  0  0  0  0  0999 V2000
+   -3.8333    2.6397    0.8357 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.5463    1.2687    0.2868 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.3952    0.7639   -0.7125 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.1778   -0.4917   -1.2790 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -5.0586   -0.8621   -2.2601 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.1148   -1.2942   -0.8519 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.2636   -0.8163    0.1512 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.4674    0.4733    0.7179 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.4915    0.9333    1.7827 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.6534    1.9800    2.4007 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.3014    0.0246    2.0791 C   0  0  2  0  0  0  0  0  0  0  0  0
+    0.6724   -0.0456    0.9152 C   0  0  0  0  0  0  0  0  0  0  0  0
+    0.1998   -1.0555    0.0413 C   0  0  0  0  0  0  0  0  0  0  0  0
+    0.8469   -1.3107   -1.1452 C   0  0  0  0  0  0  0  0  0  0  0  0
+    0.3152   -2.2401   -1.9814 O   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0030   -0.5947   -1.4713 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.5141    0.3834   -0.5854 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7058    1.0429   -0.9340 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.2206    2.0596   -0.1269 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.3723    2.7489   -0.3977 O   0  0  0  0  0  0  0  0  0  0  0  0
+    3.5667    2.4197    1.0374 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.3906    1.7640    1.4403 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.7987    2.2331    2.7432 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.8372    0.7144    0.6347 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.4837    0.6210   -2.1244 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.5229    1.1953   -2.4314 O   0  0  0  0  0  0  0  0  0  0  0  0
+    4.0505   -0.4644   -2.7955 O   0  0  0  0  0  0  0  0  0  0  0  0
+    2.6568   -0.7180   -2.8235 C   0  0  1  0  0  0  0  0  0  0  0  0
+    2.4775   -2.0354   -3.3374 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.0850   -1.6669    0.5891 C   0  0  2  0  0  0  0  0  0  0  0  0
+   -1.3559   -3.1490    0.3417 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.9699   -3.4384   -0.9297 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.8861   -2.6161   -1.4842 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.5387   -2.9389   -2.4721 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.8619   -1.4053    2.1009 C   0  0  1  0  0  0  0  0  0  0  0  0
+    0.0428   -2.3400    2.6939 O   0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0
+  2  3  2  0
+  3  4  1  0
+  4  5  1  0
+  4  6  2  0
+  6  7  1  0
+  7  8  2  0
+  8  9  1  0
+  9 10  2  0
+ 11  9  1  6
+ 11 12  1  0
+ 12 13  2  0
+ 13 14  1  0
+ 14 15  1  0
+ 14 16  2  0
+ 16 17  1  0
+ 17 18  2  0
+ 18 19  1  0
+ 19 20  1  0
+ 19 21  2  0
+ 21 22  1  0
+ 22 23  1  0
+ 22 24  2  0
+ 18 25  1  0
+ 25 26  2  0
+ 25 27  1  0
+ 27 28  1  0
+ 28 29  1  1
+ 13 30  1  0
+ 30 31  1  1
+ 31 32  1  0
+ 32 33  1  0
+ 33 34  2  0
+ 30 35  1  0
+ 35 36  1  6
+  8  2  1  0
+ 35 11  1  0
+ 33  6  1  0
+ 30  7  1  0
+ 24 12  1  0
+ 28 16  1  0
+ 24 17  1  0
+M  END
+>  <SMILES>  (1) 
+Cc1cc(O)c2c3c1C(=O)[C@@H]1c4c(c(O)c5c6c(c(O)cc(C)c46)C(=O)OC5O)[C@@]3(COC2=O)[C@H]1O
+
+>  <npaid>  (1) 
+NPA032183
+
+>  <compound_id>  (1) 
+32183
+
+>  <compound_name>  (1) 
+Bacillisporin I
+
+>  <compound_molecular_formula>  (1) 
+C26H18O10
+
+>  <compound_molecular_weight>  (1) 
+490.42
+
+>  <compound_accurate_mass>  (1) 
+490.09
+
+>  <compound_m_plus_h>  (1) 
+491.0973
+
+>  <compound_m_plus_na>  (1) 
+513.0792
+
+>  <compound_inchi>  (1) 
+InChI=1S/C26H18O10/c1-6-3-8(27)12-14-10(6)15-16-20(29)11-7(2)4-9(28)13-18(11)26(22(16)31,5-35-23(13)32)19(15)21(30)17(14)25(34)36-24(12)33/h3-4,16,22,25,27-28,30-31,34H,5H2,1-2H3/t16-,22-,25?,26-/m0/s1
+
+>  <compound_inchikey>  (1) 
+KZQKDFIRYGFDRS-WSIOJEQCSA-N
+
+>  <compound_smiles>  (1) 
+CC1=CC(O)=C2C(=O)OC[C@]34C2=C1C(=O)[C@H](C1=C3C(O)=C2C3=C1C(C)=CC(O)=C3C(=O)OC2O)[C@@H]4O
+
+>  <compound_cluster_id>  (1) 
+73
+
+>  <compound_node_id>  (1) 
+68
+
+>  <origin_type>  (1) 
+Fungus
+
+>  <genus>  (1) 
+Talaromyces
+
+>  <origin_species>  (1) 
+bacillisporus BCC17645
+
+>  <original_reference_author_list>  (1) 
+Dramae, Aibrohim; Intaraudom, Chakapong; Bunbamrung, Nantiya; Saortep, Wacharee; Srichomthong, Kitlada; Pittayakhajonwut, Pattama
+
+>  <original_reference_year>  (1) 
+2020
+
+>  <original_reference_issue>  (1) 
+9
+
+>  <original_reference_volume>  (1) 
+76
+
+>  <original_reference_pages>  (1) 
+130980
+
+>  <original_reference_doi>  (1) 
+10.1016/j.tet.2020.130980
+
+>  <original_reference_pmid>  (1) 
+None
+
+>  <original_reference_title>  (1) 
+Heptacyclic oligophenalenones from the soil fungus Talaromyces bacillisporus BCC17645
+
+>  <original_reference_type>  (1) 
+article
+
+>  <original_journal_title>  (1) 
+Tetrahedron
+
+>  <synonyms_dois>  (1) 
+
+
+>  <reassignment_dois>  (1) 
+
+
+>  <synthesis_dois>  (1) 
+
+
+>  <mibig_ids>  (1) 
+
+
+>  <gnps_ids>  (1) 
+
+
+>  <cmmc_ids>  (1) 
+
+
+>  <npmrd_id>  (1) 
+None
+
+>  <npatlas_url>  (1) 
+https://www.npatlas.org/explore/compounds/NPA032183
+
+$$$$

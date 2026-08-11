@@ -1,0 +1,25 @@
+====================================================================
+PAR2 ENSEMBLE PHARMACOPHORE v2 — SUMMARY
+====================================================================
+Actives used for model:   244
+Inactives (neg. model):   39
+Consensus features:       0
+Exclusion volumes:        0
+Consensus threshold:      60% of actives
+Cluster distance:         2.0 Å
+Alignment:                CrippenO3A to highest-pIC50 active
+
+CONSENSUS FEATURES (ranked by frequency):
+
+EXCLUSION VOLUMES:
+
+TOP 3 ACTIVES BY pIC50:
+  CHEMBL5273903_0                           pIC50=9.15  matches=0/0
+  CHEMBL4470628_0                           pIC50=8.70  matches=0/0
+  CHEMBL3582250_0                           pIC50=8.70  matches=0/0
+
+PAR2 PHARMACOPHORE DEFINITION:
+  
+
+(Active pIC50≥5.0 | Cluster 2.0Å | Freq≥60%)
+====================================================================

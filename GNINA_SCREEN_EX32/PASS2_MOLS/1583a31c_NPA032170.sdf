@@ -1,0 +1,180 @@
+NPA032170
+     RDKit          3D
+
+ 33 36  0  0  0  0  0  0  0  0999 V2000
+    6.9201    1.8290    2.8161 C   0  0  0  0  0  0  0  0  0  0  0  0
+    6.2508    0.4879    2.6603 C   0  0  0  0  0  0  0  0  0  0  0  0
+    7.1100   -0.6787    3.0629 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.9934    0.3999    2.1829 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.1613   -0.8382    1.9718 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.9374   -1.1382    0.5060 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.9465   -0.4352   -0.2066 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.7147   -0.6623   -1.5765 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.6347    0.0639   -2.2486 C   0  0  0  0  0  0  0  0  0  0  0  0
+    0.3870    0.3077   -1.8485 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.2287   -0.1124   -0.7068 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.3190    1.0822   -2.8183 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.5689    1.5673   -2.8295 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.5782    1.4303   -1.7781 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.4664    2.1362   -0.5774 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.4500    2.0073    0.4046 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.5511    1.1776    0.1934 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.6902    0.4871   -1.0134 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.6920    0.6102   -1.9924 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -5.8712   -0.4030   -1.2587 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -6.9992   -0.0571   -0.2993 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -6.4760    0.1096    1.1353 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -5.9307   -1.2000    1.7260 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -7.6268    0.6032    2.0252 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -5.4549    1.1203    1.2186 O   0  0  0  0  0  0  0  0  0  0  0  0
+    0.5209    1.3042   -3.9080 O   0  0  0  0  0  0  0  0  0  0  0  0
+    1.6903    0.6698   -3.5899 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.6598    0.5845   -4.3330 O   0  0  0  0  0  0  0  0  0  0  0  0
+    3.5441   -1.5831   -2.2322 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.4513   -1.8516   -3.5711 O   0  0  0  0  0  0  0  0  0  0  0  0
+    4.5188   -2.3026   -1.5416 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.7104   -2.0774   -0.1813 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.6672   -2.7781    0.4959 O   0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0
+  2  3  1  0
+  2  4  2  3
+  4  5  1  0
+  5  6  1  0
+  6  7  2  0
+  7  8  1  0
+  8  9  1  0
+  9 10  2  0
+ 10 11  1  0
+ 10 12  1  0
+ 12 13  2  3
+ 13 14  1  0
+ 14 15  1  0
+ 15 16  2  0
+ 16 17  1  0
+ 17 18  2  0
+ 18 19  1  0
+ 18 20  1  0
+ 20 21  1  0
+ 21 22  1  0
+ 22 23  1  0
+ 22 24  1  0
+ 22 25  1  0
+ 12 26  1  0
+ 26 27  1  0
+ 27 28  2  0
+  8 29  2  0
+ 29 30  1  0
+ 29 31  1  0
+ 31 32  2  0
+ 32 33  1  0
+ 32  6  1  0
+ 27  9  1  0
+ 19 14  2  0
+ 25 17  1  0
+M  END
+>  <SMILES>  (1) 
+CC(C)=CCc1cc(C2=C(O)C(=Cc3ccc4c(c3)CCC(C)(C)O4)OC2=O)c(O)cc1O
+
+>  <npaid>  (1) 
+NPA032170
+
+>  <compound_id>  (1) 
+32170
+
+>  <compound_name>  (1) 
+Aspulvinone S
+
+>  <compound_molecular_formula>  (1) 
+C27H28O6
+
+>  <compound_molecular_weight>  (1) 
+448.515
+
+>  <compound_accurate_mass>  (1) 
+448.1886
+
+>  <compound_m_plus_h>  (1) 
+449.1959
+
+>  <compound_m_plus_na>  (1) 
+471.1778
+
+>  <compound_inchi>  (1) 
+InChI=1S/C27H28O6/c1-15(2)5-7-17-13-19(21(29)14-20(17)28)24-25(30)23(32-26(24)31)12-16-6-8-22-18(11-16)9-10-27(3,4)33-22/h5-6,8,11-14,28-30H,7,9-10H2,1-4H3
+
+>  <compound_inchikey>  (1) 
+WUYHTTLNJRCPHA-UHFFFAOYSA-N
+
+>  <compound_smiles>  (1) 
+CC(C)=CCC1=CC(C2=C(O)C(=CC3=CC4=C(C=C3)OC(C)(C)CC4)OC2=O)=C(O)C=C1O
+
+>  <compound_cluster_id>  (1) 
+2888
+
+>  <compound_node_id>  (1) 
+2219
+
+>  <origin_type>  (1) 
+Fungus
+
+>  <genus>  (1) 
+Aspergillus
+
+>  <origin_species>  (1) 
+terreus BCC51799
+
+>  <original_reference_author_list>  (1) 
+Bunbamrung, Nantiya; Intaraudom, Chakapong; Dramae, Aibrohim; Komwijit, Somjit; Laorob, Thanet; Khamsaeng, Salinee; Pittayakhajonwut, Pattama
+
+>  <original_reference_year>  (1) 
+2020
+
+>  <original_reference_issue>  (1) 
+41
+
+>  <original_reference_volume>  (1) 
+76
+
+>  <original_reference_pages>  (1) 
+131496
+
+>  <original_reference_doi>  (1) 
+10.1016/j.tet.2020.131496
+
+>  <original_reference_pmid>  (1) 
+None
+
+>  <original_reference_title>  (1) 
+Antimicrobial, antimalarial and anticholinesterase substances from the marine-derived fungus Aspergillus terreus BCC51799
+
+>  <original_reference_type>  (1) 
+article
+
+>  <original_journal_title>  (1) 
+Tetrahedron
+
+>  <synonyms_dois>  (1) 
+
+
+>  <reassignment_dois>  (1) 
+
+
+>  <synthesis_dois>  (1) 
+
+
+>  <mibig_ids>  (1) 
+
+
+>  <gnps_ids>  (1) 
+
+
+>  <cmmc_ids>  (1) 
+
+
+>  <npmrd_id>  (1) 
+None
+
+>  <npatlas_url>  (1) 
+https://www.npatlas.org/explore/compounds/NPA032170
+
+$$$$

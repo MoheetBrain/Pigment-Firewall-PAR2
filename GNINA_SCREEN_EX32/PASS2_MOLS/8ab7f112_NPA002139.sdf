@@ -1,0 +1,185 @@
+NPA002139
+     RDKit          3D
+
+ 35 39  0  0  0  0  0  0  0  0999 V2000
+    6.2297    2.9099    0.1604 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.3980    2.5694   -0.9528 O   0  0  0  0  0  0  0  0  0  0  0  0
+    4.0754    2.7017   -0.6255 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.5176    3.9815   -0.7159 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.1675    4.1689   -0.4413 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.3721    3.0705   -0.1072 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.9104    1.7674   -0.0595 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.2765    1.5892   -0.3041 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.8411    0.2264   -0.1933 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.0558    0.0246   -0.1738 O   0  0  0  0  0  0  0  0  0  0  0  0
+    2.9341   -0.9454   -0.0940 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.4807   -2.2270   -0.2114 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.8169   -2.4695   -0.4088 O   0  0  0  0  0  0  0  0  0  0  0  0
+    2.6717   -3.3492   -0.1325 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.2954   -3.2305    0.0746 C   0  0  0  0  0  0  0  0  0  0  0  0
+    0.5498   -4.4180    0.1639 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.8224   -4.4046    0.3943 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.5899   -5.6856    0.5492 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.4536   -3.1759    0.5460 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.7389   -1.9733    0.4104 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.4100   -0.7799    0.5762 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.6039   -0.6396   -0.2242 C   0  0  2  0  0  0  0  0  0  0  0  0
+   -2.5461    0.5877   -0.9843 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.7069    1.7591   -0.1715 C   0  0  1  0  0  0  0  0  0  0  0  0
+   -2.4722    2.9639   -1.0795 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.1154    1.8182    0.4588 C   0  0  2  0  0  0  0  0  0  0  0  0
+   -3.9794    2.1801    1.8359 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.8284    0.4677    0.3394 C   0  0  1  0  0  0  0  0  0  0  0  0
+   -5.3594    0.2752   -0.9855 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.8743   -0.6875    0.6672 C   0  0  1  0  0  0  0  0  0  0  0  0
+   -4.5900   -1.9221    0.4599 O   0  0  0  0  0  0  0  0  0  0  0  0
+    0.6818   -1.9517    0.2013 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.5464   -0.7851    0.1121 C   0  0  0  0  0  0  0  0  0  0  0  0
+    0.9963    0.6164    0.2688 C   0  0  1  0  0  0  0  0  0  0  0  0
+    0.5853    0.8146    1.6155 O   0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0
+  2  3  1  0
+  3  4  1  0
+  4  5  2  0
+  5  6  1  0
+  6  7  2  0
+  7  8  1  0
+  8  9  1  0
+  9 10  2  0
+  9 11  1  0
+ 11 12  1  0
+ 12 13  1  0
+ 12 14  2  0
+ 14 15  1  0
+ 15 16  2  0
+ 16 17  1  0
+ 17 18  1  0
+ 17 19  2  0
+ 19 20  1  0
+ 20 21  1  0
+ 22 21  1  1
+ 22 23  1  0
+ 23 24  1  0
+ 24 25  1  6
+ 24 26  1  0
+ 26 27  1  1
+ 26 28  1  0
+ 28 29  1  6
+ 28 30  1  0
+ 30 31  1  6
+ 20 32  2  0
+ 32 33  1  0
+ 33 34  1  0
+ 34 35  1  1
+  8  3  2  0
+ 33 11  2  0
+ 34  7  1  0
+ 32 15  1  0
+ 30 22  1  0
+M  END
+>  <SMILES>  (1) 
+COc1cccc2c1C(=O)c1c(O)cc3cc(C)cc(O[C@@H]4O[C@@H](C)[C@H](O)[C@@H](O)[C@H]4O)c3c1C2O
+
+>  <npaid>  (1) 
+NPA002139
+
+>  <compound_id>  (1) 
+2139
+
+>  <compound_name>  (1) 
+Not named
+
+>  <compound_molecular_formula>  (1) 
+C26H26O9
+
+>  <compound_molecular_weight>  (1) 
+482.485
+
+>  <compound_accurate_mass>  (1) 
+482.1577
+
+>  <compound_m_plus_h>  (1) 
+483.165
+
+>  <compound_m_plus_na>  (1) 
+505.1469
+
+>  <compound_inchi>  (1) 
+InChI=1S/C26H26O9/c1-10-7-12-9-14(27)19-20(22(29)13-5-4-6-15(33-3)18(13)23(19)30)17(12)16(8-10)35-26-25(32)24(31)21(28)11(2)34-26/h4-9,11,21-22,24-29,31-32H,1-3H3/t11-,21-,22?,24+,25+,26-/m0/s1
+
+>  <compound_inchikey>  (1) 
+RZMPVILSPGQMIZ-YYTCSLPCSA-N
+
+>  <compound_smiles>  (1) 
+C[C@H]1[C@@H]([C@H]([C@H]([C@@H](O1)OC2=C3C(=CC(=C2)C)C=C(C4=C3C(C5=C(C4=O)C(=CC=C5)OC)O)O)O)O)O
+
+>  <compound_cluster_id>  (1) 
+46
+
+>  <compound_node_id>  (1) 
+11
+
+>  <origin_type>  (1) 
+Bacterium
+
+>  <genus>  (1) 
+Streptomyces
+
+>  <origin_species>  (1) 
+sp. CB01913
+
+>  <original_reference_author_list>  (1) 
+Ma, Ming; Rateb, Mostafa E.; Teng, Qihui; Yang, Dong; Rudolf, Jeffrey D.; Zhu, Xiangcheng; Huang, Yong; Zhao, Li-Xing; Jiang, Yi; Li, Xiuling; Rader, Christoph; Duan, Yanwen; Shen, Ben
+
+>  <original_reference_year>  (1) 
+2015
+
+>  <original_reference_issue>  (1) 
+10
+
+>  <original_reference_volume>  (1) 
+78
+
+>  <original_reference_pages>  (1) 
+2471-2480
+
+>  <original_reference_doi>  (1) 
+10.1021/acs.jnatprod.5b00601
+
+>  <original_reference_pmid>  (1) 
+26335269
+
+>  <original_reference_title>  (1) 
+Angucyclines and Angucyclinones from Streptomyces sp. CB01913 Featuring C-Ring Cleavage and Expansion
+
+>  <original_reference_type>  (1) 
+article
+
+>  <original_journal_title>  (1) 
+Journal of Natural Products
+
+>  <synonyms_dois>  (1) 
+
+
+>  <reassignment_dois>  (1) 
+
+
+>  <synthesis_dois>  (1) 
+
+
+>  <mibig_ids>  (1) 
+
+
+>  <gnps_ids>  (1) 
+
+
+>  <cmmc_ids>  (1) 
+
+
+>  <npmrd_id>  (1) 
+NP0163611
+
+>  <npatlas_url>  (1) 
+https://www.npatlas.org/explore/compounds/NPA002139
+
+$$$$

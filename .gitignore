@@ -1,0 +1,19 @@
+# Private keys — never push
+KEYS/
+
+# macOS
+.DS_Store
+
+# JetBrains IDE
+.idea/
+
+# Large dataset files (>100MB) — too big for GitHub without LFS
+# SCREENING library source files
+SCREENING/LOTUS_2021_03_simple.sdf
+SCREENING/SAFE_coconut.csv
+SCREENING/SAFE_coconut_3D.sdf
+SCREENING/NPAtlas_download_2024_09.sdf
+
+# GNINA large source SDF files
+GNINA_SCREEN_EX32/SDF_PH74/LOTUS_3D_3d.sdf
+GNINA_SCREEN_EX32/SDF_PH74/NPATLAS_3D_3d.sdf
