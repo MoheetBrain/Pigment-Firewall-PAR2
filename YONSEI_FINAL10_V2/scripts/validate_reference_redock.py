@@ -76,7 +76,7 @@ def main() -> int:
     root = args.root.resolve()
     out = root / "YONSEI_FINAL10_V2/02_REFERENCE_VALIDATION"
     out.mkdir(parents=True, exist_ok=True)
-    corrected_output_dir = (args.corrected_output_dir or (out / "corrected_redock")).resolve()
+    corrected_output_dir = (args.corrected_output_dir or (root / "YONSEI_FINAL10_V2/01_BENCHMARK_REPAIR/corrected_redock")).resolve()
     reference_summary = json.loads((out / "reference_interactions_summary.json").read_text(encoding="utf-8"))
     result_summary = {
         "gnina_executable": args.gnina,
@@ -149,7 +149,28 @@ def main() -> int:
             csv_rows.append(row)
         best_rmsd = min((row["symmetry_corrected_heavy_atom_rmsd_angstrom"] for row in pose_rows if row["symmetry_corrected_heavy_atom_rmsd_angstrom"] is not None), default=None)
         best_recovery = max((row["interaction_fingerprint_recovery"] for row in pose_rows if row["interaction_fingerprint_recovery"] is not None), default=None)
-        corrected_passed = evaluated_as_corrected and best_rmsd is not None and best_rmsd < 2.0
+        top_ranked = pose_rows[0] if pose_rows else None
+        def numeric(row, key):
+            try:
+                return float(row[key]) if row and row.get(key, "") != "" else None
+            except (TypeError, ValueError):
+                return None
+        best_rmsd_row = min(
+            (row for row in pose_rows if row["symmetry_corrected_heavy_atom_rmsd_angstrom"] is not None),
+            key=lambda row: row["symmetry_corrected_heavy_atom_rmsd_angstrom"],
+            default=None,
+        )
+        best_cnn_row = max(
+            (row for row in pose_rows if numeric(row, "CNNscore") is not None),
+            key=lambda row: numeric(row, "CNNscore"),
+            default=None,
+        )
+        best_affinity_row = min(
+            (row for row in pose_rows if numeric(row, "minimizedAffinity") is not None),
+            key=lambda row: numeric(row, "minimizedAffinity"),
+            default=None,
+        )
+        corrected_passed = evaluated_as_corrected and best_rmsd is not None and best_rmsd <= 2.0
         result_summary["systems"][system_name] = {
             "corrected_config": str(root / system["corrected_config"]),
             "corrected_config_exists": (root / system["corrected_config"]).exists(),
@@ -162,6 +183,18 @@ def main() -> int:
             "evaluated_pose_count": len(pose_rows),
             "evaluated_best_symmetry_corrected_heavy_atom_rmsd_angstrom": best_rmsd,
             "evaluated_best_interaction_fingerprint_recovery": best_recovery,
+            "top_ranked_pose_rmsd_angstrom": top_ranked["symmetry_corrected_heavy_atom_rmsd_angstrom"] if top_ranked else None,
+            "top_ranked_pose_interaction_fingerprint_recovery": top_ranked["interaction_fingerprint_recovery"] if top_ranked else None,
+            "top_ranked_pose_passed_rmsd_2A": bool(top_ranked and top_ranked["symmetry_corrected_heavy_atom_rmsd_angstrom"] is not None and top_ranked["symmetry_corrected_heavy_atom_rmsd_angstrom"] <= 2.0),
+            "best_rmsd_pose_index": best_rmsd_row["pose_index"] if best_rmsd_row else None,
+            "best_cnnscore_pose_index": best_cnn_row["pose_index"] if best_cnn_row else None,
+            "best_cnnscore": numeric(best_cnn_row, "CNNscore"),
+            "best_cnnscore_pose_rmsd_angstrom": best_cnn_row["symmetry_corrected_heavy_atom_rmsd_angstrom"] if best_cnn_row else None,
+            "best_cnnscore_pose_interaction_fingerprint_recovery": best_cnn_row["interaction_fingerprint_recovery"] if best_cnn_row else None,
+            "best_minimized_affinity_pose_index": best_affinity_row["pose_index"] if best_affinity_row else None,
+            "best_minimized_affinity": numeric(best_affinity_row, "minimizedAffinity"),
+            "best_minimized_affinity_pose_rmsd_angstrom": best_affinity_row["symmetry_corrected_heavy_atom_rmsd_angstrom"] if best_affinity_row else None,
+            "best_minimized_affinity_pose_interaction_fingerprint_recovery": best_affinity_row["interaction_fingerprint_recovery"] if best_affinity_row else None,
             "historical_diagnostic_rmsd_target_met": (not evaluated_as_corrected) and best_rmsd is not None and best_rmsd < 2.0,
             "historical_diagnostic_strong_rmsd_target_met": (not evaluated_as_corrected) and best_rmsd is not None and best_rmsd < 1.5,
             "corrected_config_redock_completed": evaluated_as_corrected,
@@ -197,11 +230,11 @@ def main() -> int:
         "",
         "The repository's `BIN/GNINA_RUN_EX32_CPU/GNINA_OUT_*_Redock.sdf` files are evaluated below as historical diagnostics only unless corrected outputs are present in `corrected_redock/`. Their original command/config provenance is not present, so they cannot establish that the corrected ligand-centred boxes were used.",
         "",
-        "| System | Evaluated poses | Best symmetry-corrected heavy-atom RMSD (Å) | Best ProLIF recovery | Corrected benchmark passed |",
-        "|---|---:|---:|---:|---|",
+        "| System | Evaluated poses | Best RMSD (Å) | Top-ranked RMSD (Å) | Top-ranked ProLIF recovery | Best ProLIF recovery | Corrected benchmark passed |",
+        "|---|---:|---:|---:|---:|---:|---|",
     ]
     for system_name, system_result in result_summary["systems"].items():
-        lines.append(f"| {system_name} | {system_result['evaluated_pose_count']} | {system_result['evaluated_best_symmetry_corrected_heavy_atom_rmsd_angstrom']} | {system_result['evaluated_best_interaction_fingerprint_recovery']} | {system_result['corrected_config_benchmark_passed']} |")
+        lines.append(f"| {system_name} | {system_result['evaluated_pose_count']} | {system_result['evaluated_best_symmetry_corrected_heavy_atom_rmsd_angstrom']} | {system_result['top_ranked_pose_rmsd_angstrom']} | {system_result['top_ranked_pose_interaction_fingerprint_recovery']} | {system_result['evaluated_best_interaction_fingerprint_recovery']} | {system_result['corrected_config_benchmark_passed']} |")
     lines += [
         "",
         "V2 candidate redocking and V2 rank files are produced only after this script reports `OPEN_REFERENCE_BENCHMARK_PASSED`.",

@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "systems": {
+    "5NDD_AZ8838": {
+      "center_max_absolute_error_angstrom": 0.00047058823529422256,
+      "clean_ligand_atom_count": 17,
+      "clean_ligand_heavy_atom_count": 17,
+      "clean_ligand_only_expected_residue": true,
+      "config_center": {
+        "x": 16.974,
+        "y": 5.926,
+        "z": 55.826
+      },
+      "config_size": {
+        "x": 17.332,
+        "y": 17.672,
+        "z": 13.644
+      },
+      "coordinate_frame_and_box_check_passed": true,
+      "expected_ligand_residue": "8TZ",
+      "ligand_heavy_atom_centroid": {
+        "x": 16.97429411764706,
+        "y": 5.925529411764706,
+        "z": 55.82641176470588
+      },
+      "ligand_heavy_atom_span": {
+        "x": 7.332000000000001,
+        "y": 7.672,
+        "z": 3.6439999999999984
+      },
+      "receptor_atom_only_no_hetero_records": true,
+      "receptor_pdb_pdbqt_coordinate_frame_match": true,
+      "size_vs_span_plus_5A_each_side_max_absolute_error_angstrom": 1.7763568394002505e-15
+    },
+    "5NDZ_AZ3451": {
+      "center_max_absolute_error_angstrom": 0.0002894736842105061,
+      "clean_ligand_atom_count": 38,
+      "clean_ligand_heavy_atom_count": 38,
+      "clean_ligand_only_expected_residue": true,
+      "config_center": {
+        "x": 1.356,
+        "y": 12.419,
+        "z": 48.4
+      },
+      "config_size": {
+        "x": 20.702,
+        "y": 17.885,
+        "z": 25.525
+      },
+      "coordinate_frame_and_box_check_passed": true,
+      "expected_ligand_residue": "8UN",
+      "ligand_heavy_atom_centroid": {
+        "x": 1.3557105263157896,
+        "y": 12.419210526315789,
+        "z": 48.39978947368421
+      },
+      "ligand_heavy_atom_span": {
+        "x": 10.702,
+        "y": 7.884999999999998,
+        "z": 15.524999999999999
+      },
+      "receptor_atom_only_no_hetero_records": true,
+      "receptor_pdb_pdbqt_coordinate_frame_match": true,
+      "size_vs_span_plus_5A_each_side_max_absolute_error_angstrom": 3.552713678800501e-15
+    }
+  }
+}

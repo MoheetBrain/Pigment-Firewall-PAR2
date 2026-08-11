@@ -1,0 +1,28 @@
+              _             
+             (_)            
+   __ _ _ __  _ _ __   __ _ 
+  / _` | '_ \| | '_ \ / _` |
+ | (_| | | | | | | | | (_| |
+  \__, |_| |_|_|_| |_|\__,_|
+   __/ |                    
+  |___/                     
+
+gnina v1.3.3 master:6fe1ce2   Built Jun 30 2026.
+gnina is based on smina and AutoDock Vina.
+Please cite appropriately.
+
+Commandline: /home/moheet/bin/gnina.cuda12.8.static --receptor /home/moheet/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/receptors/5NDZ_inactive_allosteric_receptor_clean.pdbqt --ligand /home/moheet/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/ligands/5NDZ_AZ3451_crystallographic_clean.sdf --config /home/moheet/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/configs/BoxB_allosteric_5NDZ_ligand_centered.conf --out /home/moheet/YONSEI_FINAL10_V2/01_BENCHMARK_REPAIR/corrected_redock/5NDZ_AZ3451_corrected_gnina_redock.sdf --log /home/moheet/YONSEI_FINAL10_V2/01_BENCHMARK_REPAIR/corrected_redock/5NDZ_AZ3451_corrected_gnina_redock.log --exhaustiveness 32 --num_modes 9 --seed 20260811 --cnn_scoring rescore --no_gpu --min_rmsd_filter 2.0 --addH true --cpu 4
+Using random seed: 20260811
+
+mode |  affinity  |  intramol  |    CNN     |   CNN
+     | (kcal/mol) | (kcal/mol) | pose score | affinity
+-----+------------+------------+------------+----------
+    1       -8.08       -1.16       0.7755      8.056
+    2       -7.77       -1.73       0.7569      7.901
+    3       -7.49        0.24       0.7188      7.785
+    4       -6.39       -0.73       0.6064      7.766
+    5       -6.50        0.12       0.5277      7.051
+    6       -6.51       -1.38       0.5049      7.661
+    7       -6.67        0.42       0.5035      7.032
+    8       -6.98       -1.45       0.4973      7.002
+    9       -6.87       -1.20       0.4918      7.066
