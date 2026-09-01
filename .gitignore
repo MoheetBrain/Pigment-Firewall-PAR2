@@ -17,3 +17,8 @@ SCREENING/NPAtlas_download_2024_09.sdf
 # GNINA large source SDF files
 GNINA_SCREEN_EX32/SDF_PH74/LOTUS_3D_3d.sdf
 GNINA_SCREEN_EX32/SDF_PH74/NPATLAS_3D_3d.sdf
+
+# Local verification virtualenv and caches (V2 independent verification)
+.venv-v2/
+__pycache__/
+*.pyc
