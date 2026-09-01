@@ -1,0 +1,72 @@
+{
+  "requested_total": 15000,
+  "actual_total_after_cross_family_dedup": 15000,
+  "family_targets": {
+    "orthosteric": 10000,
+    "allosteric": 3500,
+    "exploratory": 1500
+  },
+  "raw_generated": {
+    "orthosteric": 72100,
+    "allosteric": 42230,
+    "exploratory": 6001
+  },
+  "filter_refill_history": [
+    {
+      "round": 1,
+      "deficits_before": {
+        "orthosteric": 3867,
+        "allosteric": 2111,
+        "exploratory": 1
+      },
+      "new_raw_unique": 50144,
+      "new_filtered": 6758
+    },
+    {
+      "round": 2,
+      "deficits_before": {
+        "orthosteric": 0,
+        "allosteric": 1038,
+        "exploratory": 0
+      },
+      "new_raw_unique": 8204,
+      "new_filtered": 526
+    },
+    {
+      "round": 3,
+      "deficits_before": {
+        "orthosteric": 0,
+        "allosteric": 512,
+        "exploratory": 0
+      },
+      "new_raw_unique": 4055,
+      "new_filtered": 769
+    }
+  ],
+  "filtered_by_family": {
+    "orthosteric": 11811,
+    "allosteric": 3757,
+    "exploratory": 1506
+  },
+  "selected_by_family": {
+    "exploratory": 1500,
+    "allosteric": 3500,
+    "orthosteric": 10000
+  },
+  "top_for_docking": 3000,
+  "workers": 20,
+  "detected_cpus": 24,
+  "seed": 20260812,
+  "oversample": 4.0,
+  "generation_shard_seconds": 20.0,
+  "max_filter_refill_rounds": 4,
+  "script": "/home/moheet/par2_denovo_cpu.py",
+  "script_sha256": "10f8e089d8163ed7c08db0983c105950987024398e22387efdab049e5735a60f",
+  "execution_optimizations": "Linux fork scoring pool; parallel deterministic BRICS shards; cached BRICS fragment/reaction matcher index; bounded refillable shard runtime.",
+  "donor_csv": "/home/moheet/YONSEI_FINAL10_V2/00_AUDIT/V1_TOP500.csv",
+  "orthosteric_seed_sdf": "/home/moheet/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/ligands/5NDD_AZ8838_crystallographic_clean.sdf",
+  "allosteric_seed_sdf": "/home/moheet/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/ligands/5NDZ_AZ3451_crystallographic_clean.sdf",
+  "fragment_pool_size": 903,
+  "scientific_guardrail": "No generated molecule is called an antagonist until corrected docking + pocket-specific IFP + wet lab.",
+  "next_step": "Dock orthosteric->5NDD, allosteric->5NDZ, exploratory->both; retain multiple poses; rank with GNINA + IFP; similarity-search purchasable analogues only for strongest inaccessible winners."
+}

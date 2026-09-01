@@ -1,0 +1,80 @@
+2026-08-12 09:25:03,300 | INFO | Detected 24 CPUs; using 20 workers
+2026-08-12 09:25:03,300 | INFO | Targets: {'orthosteric': 10000, 'allosteric': 3500, 'exploratory': 1500}
+2026-08-12 09:25:03,300 | INFO | Donor CSV: /home/moheet/YONSEI_FINAL10_V2/00_AUDIT/V1_TOP500.csv
+2026-08-12 09:25:03,300 | INFO | AZ8838 seed: /home/moheet/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/ligands/5NDD_AZ8838_crystallographic_clean.sdf
+2026-08-12 09:25:03,300 | INFO | AZ3451 seed: /home/moheet/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/ligands/5NDZ_AZ3451_crystallographic_clean.sdf
+2026-08-12 09:25:05,062 | INFO | Fragment pool=903; orth seed fragments=4; allo seed fragments=6
+2026-08-12 09:25:05,062 | INFO | Parallel BRICS generation workers=20 shards={'orthosteric': 160, 'allosteric': 56, 'exploratory': 24}
+2026-08-12 09:25:05,108 | INFO | BRICS round 1: 240 shard tasks
+2026-08-12 09:27:55,177 | INFO | BRICS round 1 totals: {'orthosteric': 50012, 'allosteric': 9933, 'exploratory': 6310}
+2026-08-12 09:27:55,177 | INFO | BRICS round 2: 240 shard tasks
+2026-08-12 09:29:40,163 | INFO | BRICS round 2 totals: {'orthosteric': 65864, 'allosteric': 18551, 'exploratory': 10525}
+2026-08-12 09:29:40,163 | INFO | BRICS round 3: 240 shard tasks
+2026-08-12 09:31:07,835 | INFO | BRICS round 3 totals: {'orthosteric': 69907, 'allosteric': 20446, 'exploratory': 11597}
+2026-08-12 09:31:07,835 | INFO | BRICS round 4: 240 shard tasks
+2026-08-12 09:32:17,912 | INFO | BRICS round 4 totals: {'orthosteric': 73514, 'allosteric': 22379, 'exploratory': 11936}
+2026-08-12 09:32:18,024 | WARNING | orthosteric raw generation supplied 73514/80000
+2026-08-12 09:32:18,032 | WARNING | allosteric raw generation supplied 22379/28000
+2026-08-12 09:32:18,034 | WARNING | exploratory raw generation supplied 11936/12000
+2026-08-12 09:32:18,036 | INFO | Scoring 107829 candidates
+2026-08-12 09:32:39,648 | WARNING | allosteric only supplied 2706/3500 unique filtered designs
+2026-08-12 09:35:00,182 | INFO | Detected 24 CPUs; using 20 workers
+2026-08-12 09:35:00,182 | INFO | Targets: {'orthosteric': 10000, 'allosteric': 3500, 'exploratory': 1500}
+2026-08-12 09:35:00,182 | INFO | Donor CSV: /home/moheet/YONSEI_FINAL10_V2/00_AUDIT/V1_TOP500.csv
+2026-08-12 09:35:00,182 | INFO | AZ8838 seed: /home/moheet/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/ligands/5NDD_AZ8838_crystallographic_clean.sdf
+2026-08-12 09:35:00,182 | INFO | AZ3451 seed: /home/moheet/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/ligands/5NDZ_AZ3451_crystallographic_clean.sdf
+2026-08-12 09:35:02,016 | INFO | Fragment pool=903; orth seed fragments=4; allo seed fragments=6
+2026-08-12 09:35:02,016 | INFO | Parallel BRICS generation workers=20 shards={'orthosteric': 80, 'allosteric': 28, 'exploratory': 12}
+2026-08-12 09:35:02,064 | INFO | BRICS round 1: 120 shard tasks
+2026-08-12 09:36:28,266 | INFO | BRICS round 1 totals: {'orthosteric': 28770, 'allosteric': 5696, 'exploratory': 3129}
+2026-08-12 09:36:28,267 | INFO | BRICS round 2: 120 shard tasks
+2026-08-12 09:37:29,438 | INFO | BRICS round 2 totals: {'orthosteric': 34059, 'allosteric': 9216, 'exploratory': 5192}
+2026-08-12 09:37:29,438 | INFO | BRICS round 3: 120 shard tasks
+2026-08-12 09:38:30,272 | INFO | BRICS round 3 totals: {'orthosteric': 36011, 'allosteric': 10285, 'exploratory': 5961}
+2026-08-12 09:38:30,272 | INFO | BRICS round 4: 120 shard tasks
+2026-08-12 09:39:10,927 | INFO | BRICS round 4 totals: {'orthosteric': 37521, 'allosteric': 10922, 'exploratory': 5991}
+2026-08-12 09:39:11,040 | WARNING | orthosteric raw generation supplied 37521/40000
+2026-08-12 09:39:11,044 | WARNING | allosteric raw generation supplied 10922/14000
+2026-08-12 09:39:11,045 | WARNING | exploratory raw generation supplied 5991/6000
+2026-08-12 09:39:11,046 | INFO | Scoring 54434 candidates
+2026-08-12 09:39:22,123 | INFO | Filtered quota refill 1 deficits={'orthosteric': 3867, 'allosteric': 2111, 'exploratory': 1}
+2026-08-12 09:39:22,124 | INFO | Parallel BRICS generation workers=20 shards={'orthosteric': 78, 'allosteric': 43, 'exploratory': 2}
+2026-08-12 09:39:22,167 | INFO | BRICS round 1: 123 shard tasks
+2026-08-12 09:40:53,774 | INFO | BRICS round 1 totals: {'orthosteric': 23676, 'allosteric': 9608, 'exploratory': 10}
+2026-08-12 09:40:53,774 | INFO | BRICS round 2: 121 shard tasks
+2026-08-12 09:41:59,764 | INFO | BRICS round 2 totals: {'orthosteric': 29831, 'allosteric': 15126, 'exploratory': 10}
+2026-08-12 09:41:59,764 | INFO | BRICS round 3: 121 shard tasks
+2026-08-12 09:43:01,830 | INFO | BRICS round 3 totals: {'orthosteric': 32809, 'allosteric': 16680, 'exploratory': 10}
+2026-08-12 09:43:01,830 | INFO | BRICS round 4: 121 shard tasks
+2026-08-12 09:43:44,685 | INFO | BRICS round 4 totals: {'orthosteric': 34579, 'allosteric': 17543, 'exploratory': 10}
+2026-08-12 09:43:44,795 | WARNING | orthosteric raw generation supplied 34579/38670
+2026-08-12 09:43:44,803 | WARNING | allosteric raw generation supplied 17543/21110
+2026-08-12 09:43:44,814 | INFO | Scoring 50144 candidates
+2026-08-12 09:43:55,187 | INFO | Filtered quota refill 2 deficits={'orthosteric': 0, 'allosteric': 1038, 'exploratory': 0}
+2026-08-12 09:43:55,187 | INFO | Parallel BRICS generation workers=20 shards={'orthosteric': 2, 'allosteric': 21, 'exploratory': 2}
+2026-08-12 09:43:55,233 | INFO | BRICS round 1: 21 shard tasks
+2026-08-12 09:44:15,941 | INFO | BRICS round 1 totals: {'orthosteric': 0, 'allosteric': 4795, 'exploratory': 0}
+2026-08-12 09:44:15,941 | INFO | BRICS round 2: 21 shard tasks
+2026-08-12 09:44:36,232 | INFO | BRICS round 2 totals: {'orthosteric': 0, 'allosteric': 8017, 'exploratory': 0}
+2026-08-12 09:44:36,232 | INFO | BRICS round 3: 21 shard tasks
+2026-08-12 09:44:56,415 | INFO | BRICS round 3 totals: {'orthosteric': 0, 'allosteric': 8697, 'exploratory': 0}
+2026-08-12 09:44:56,415 | INFO | BRICS round 4: 21 shard tasks
+2026-08-12 09:45:16,781 | INFO | BRICS round 4 totals: {'orthosteric': 0, 'allosteric': 8986, 'exploratory': 0}
+2026-08-12 09:45:16,870 | WARNING | allosteric raw generation supplied 8986/10380
+2026-08-12 09:45:16,875 | INFO | Scoring 8204 candidates
+2026-08-12 09:45:18,724 | INFO | Filtered quota refill 3 deficits={'orthosteric': 0, 'allosteric': 512, 'exploratory': 0}
+2026-08-12 09:45:18,724 | INFO | Parallel BRICS generation workers=15 shards={'orthosteric': 2, 'allosteric': 11, 'exploratory': 2}
+2026-08-12 09:45:18,756 | INFO | BRICS round 1: 11 shard tasks
+2026-08-12 09:45:39,076 | INFO | BRICS round 1 totals: {'orthosteric': 0, 'allosteric': 4112, 'exploratory': 0}
+2026-08-12 09:45:39,076 | INFO | BRICS round 2: 11 shard tasks
+2026-08-12 09:45:59,249 | INFO | BRICS round 2 totals: {'orthosteric': 0, 'allosteric': 4629, 'exploratory': 0}
+2026-08-12 09:45:59,249 | INFO | BRICS round 3: 11 shard tasks
+2026-08-12 09:46:19,555 | INFO | BRICS round 3 totals: {'orthosteric': 0, 'allosteric': 4737, 'exploratory': 0}
+2026-08-12 09:46:19,555 | INFO | BRICS round 4: 11 shard tasks
+2026-08-12 09:46:39,831 | INFO | BRICS round 4 totals: {'orthosteric': 0, 'allosteric': 4779, 'exploratory': 0}
+2026-08-12 09:46:39,889 | WARNING | allosteric raw generation supplied 4779/5120
+2026-08-12 09:46:39,892 | INFO | Scoring 4055 candidates
+2026-08-12 09:46:41,245 | INFO | DONE: 15000 final designs; 3000 queued for docking
+2026-08-12 09:46:41,245 | INFO | /home/moheet/YONSEI_FINAL10_V2/02_DENOVO_CPU/DENOVO_15000.csv
+2026-08-12 09:46:41,245 | INFO | /home/moheet/YONSEI_FINAL10_V2/02_DENOVO_CPU/DENOVO_TOP3000_FOR_DOCKING.csv
+2026-08-12 09:46:41,245 | INFO | /home/moheet/YONSEI_FINAL10_V2/02_DENOVO_CPU/GENERATION_MANIFEST.json
