@@ -186,3 +186,68 @@ machine with both Vina and CNN scoring live, and the full screen is under way.
 **Next intended step**
 Collect the EX8 results and report the required sanity review before any
 downstream ranking, clustering or similarity searching.
+
+---
+
+## 2026-09-04 · Real de novo EX8 screen completed on `h3`
+
+**Branch:** `yonsei-final10-v2`
+**Project stage:** V2 campaign, stage 5 — EX8 screen complete, sanity review done.
+
+**Objective of the change**
+Execute the validated de novo dual-pocket screen on all 88 cores and report the
+required sanity review before any downstream stage.
+
+**Files and systems changed**
+- Added `SCREEN_REAL/screen_ex8/` results: per-pose scores, per-ligand-per-pocket
+  aggregate, collection summary, run metadata and all 36 shard `.done` sentinels.
+- Added `SCREEN_REAL/PREFLIGHT_H3.json`.
+- Updated `docs/PROJECT_STATUS.md`.
+
+**What was completed**
+3,442 of 3,442 jobs succeeded, 0 failed. 30,978 poses parsed, exactly 9 per job.
+2,988 unique designs scored. 60.4 minutes wall clock, 70.9 core-hours, mean 18.5
+seconds per 4-CPU job. Every shard exited rc=0 at exhaustiveness 8, 9 modes,
+device cpu.
+
+**Decisions made and why**
+No parameter was changed mid-run and no fallback was taken; the runner has none.
+Results were collected but deliberately not ranked, fingerprinted or clustered,
+because the user required a sanity review first.
+
+**Tests and verification actually executed**
+- Job and pose accounting: 3,442 requested = 3,442 successful; 30,978 poses
+  expected = 30,978 parsed; 0 ligands with a pose count other than 9.
+- Routing preserved: orthosteric 1,863, allosteric 671, exploratory 454 designs;
+  2,317 5NDD jobs and 1,125 5NDZ jobs.
+- Score integrity over all 30,978 poses: no NaN, no zeros, none constant;
+  30,521 / 30,947 / 30,859 / 30,958 unique values for minimizedAffinity,
+  CNNscore, CNNaffinity and CNN_VS respectively.
+- Anomaly analysis: 8,444 of 30,978 poses (27.26%) have positive Vina affinity,
+  and 119 ligands have a positive best pose. All 119 are in the small 5NDD box
+  and are larger than average (median MW 360.5 vs 310.4, 26 vs 22 heavy atoms),
+  so this is a steric-fit result, not a scoring defect.
+- Pose ordering: only 672 of 3,442 ligands (19.5%) have their best Vina affinity
+  at pose 1, because `--cnn_scoring rescore` sorts GNINA output by CNNscore
+  rather than by Vina. Confirmed against the reference redock, whose CNNscore
+  decreases monotonically down the pose list.
+
+**Results**
+Median best affinity -6.134 (5NDD) and -6.579 (5NDZ) kcal/mol; best -9.696 and
+-8.715. Median best CNNscore 0.474 (5NDD) and 0.756 (5NDZ). 12 of the top 100
+designs by CNN_VS are tautomer-corrected designs, so the correction is
+materially represented in the leading chemistry.
+
+**Failures or unresolved uncertainty**
+- The reference interaction fingerprints still contain no hydrogen bonds and
+  must be repaired before IFP is weighted in ranking.
+- CNNscore and CNNaffinity remain uncalibrated ranking features.
+- EX8 is a screening-level search; finalists still need EX32 refinement.
+
+**Effect on the overall project**
+The campaign now has real, validated docking evidence for every de novo design
+in both intended pockets, replacing the synthetic plumbing data entirely.
+
+**Next intended step**
+Repair the reference fingerprints, then run ProLIF across poses, post-docking
+ranking, EX32 refinement, clustering and seed selection.

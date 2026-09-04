@@ -1,0 +1,220 @@
+{
+  "generated_utc": "2026-09-04T11:57:45.021143+00:00",
+  "verdict": "PASS",
+  "gates_total": 35,
+  "gates_passed": 35,
+  "fatal_failures": [],
+  "warnings": [],
+  "results": [
+    {
+      "gate": "P0 real and dry-run output roots are separate",
+      "passed": true,
+      "fatal": true,
+      "detail": "real = /home/moheet/PAR2/YONSEI_FINAL10_V2/SCREEN_REAL, dryrun = /home/moheet/PAR2/YONSEI_FINAL10_V2/SCREEN_DRYRUN"
+    },
+    {
+      "gate": "P0 no pre-existing score files under the real root",
+      "passed": true,
+      "fatal": true,
+      "detail": "0 stray score files: []"
+    },
+    {
+      "gate": "P3 5NDD_orthosteric config exists",
+      "passed": true,
+      "fatal": true,
+      "detail": "/home/moheet/PAR2/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/configs/BoxA_orthosteric_5NDD_ligand_centered.conf"
+    },
+    {
+      "gate": "P3 5NDD_orthosteric receptor_pdbqt exists",
+      "passed": true,
+      "fatal": true,
+      "detail": "/home/moheet/PAR2/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/receptors/5NDD_inactive_orthosteric_receptor_clean.pdbqt"
+    },
+    {
+      "gate": "P3 5NDD_orthosteric receptor_pdb exists",
+      "passed": true,
+      "fatal": true,
+      "detail": "/home/moheet/PAR2/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/receptors/5NDD_inactive_orthosteric_receptor_clean.pdb"
+    },
+    {
+      "gate": "P3 5NDD_orthosteric ligand exists",
+      "passed": true,
+      "fatal": true,
+      "detail": "/home/moheet/PAR2/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/ligands/5NDD_AZ8838_crystallographic_clean.sdf"
+    },
+    {
+      "gate": "P3 5NDD_orthosteric box matches corrected definition",
+      "passed": true,
+      "fatal": true,
+      "detail": "max |delta| = 0.000000 A over 6 fields; parsed = {'center_x': 16.974, 'center_y': 5.926, 'center_z': 55.826, 'size_x': 17.332, 'size_y': 17.672, 'size_z': 13.644}"
+    },
+    {
+      "gate": "P4 5NDD_orthosteric crystal ligand parses",
+      "passed": true,
+      "fatal": true,
+      "detail": "/home/moheet/PAR2/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/ligands/5NDD_AZ8838_crystallographic_clean.sdf"
+    },
+    {
+      "gate": "P4 5NDD_orthosteric ligand centroid at box centre",
+      "passed": true,
+      "fatal": true,
+      "detail": "centroid = (16.974, 5.926, 55.826), offset = 0.0007 A"
+    },
+    {
+      "gate": "P4 5NDD_orthosteric all crystal ligand atoms inside box",
+      "passed": true,
+      "fatal": true,
+      "detail": "17/17 heavy atoms inside; min margin to any face = 4.383 A (per-axis min: x 4.581, y 4.383, z 4.717)"
+    },
+    {
+      "gate": "P4 5NDD_orthosteric receptor heavy atoms loaded",
+      "passed": true,
+      "fatal": true,
+      "detail": "4498 atoms"
+    },
+    {
+      "gate": "P4 5NDD_orthosteric receptor/ligand frames aligned",
+      "passed": true,
+      "fatal": true,
+      "detail": "88 receptor heavy atoms within 5 A of the crystal ligand; 271 atom pairs in 2-5 A; closest contact 2.475 A"
+    },
+    {
+      "gate": "P4 5NDD_orthosteric box contains pocket geometry",
+      "passed": true,
+      "fatal": true,
+      "detail": "199 receptor heavy atoms inside the box (box volume 4179 A^3)"
+    },
+    {
+      "gate": "P4 5NDD_orthosteric expected pocket residues present",
+      "passed": true,
+      "fatal": false,
+      "detail": "8/8 within 5 A: found ['TYR:82', 'LYS:131', 'HIS:135', 'ILE:152', 'PHE:155', 'HIS:227', 'ASP:228', 'LEU:330']; missing []"
+    },
+    {
+      "gate": "P4 5NDD_orthosteric docking receptor free of its crystal ligand",
+      "passed": true,
+      "fatal": true,
+      "detail": "HETATM residues in receptor: none; looking for 8TZ"
+    },
+    {
+      "gate": "P3 5NDZ_allosteric config exists",
+      "passed": true,
+      "fatal": true,
+      "detail": "/home/moheet/PAR2/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/configs/BoxB_allosteric_5NDZ_ligand_centered.conf"
+    },
+    {
+      "gate": "P3 5NDZ_allosteric receptor_pdbqt exists",
+      "passed": true,
+      "fatal": true,
+      "detail": "/home/moheet/PAR2/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/receptors/5NDZ_inactive_allosteric_receptor_clean.pdbqt"
+    },
+    {
+      "gate": "P3 5NDZ_allosteric receptor_pdb exists",
+      "passed": true,
+      "fatal": true,
+      "detail": "/home/moheet/PAR2/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/receptors/5NDZ_inactive_allosteric_receptor_clean.pdb"
+    },
+    {
+      "gate": "P3 5NDZ_allosteric ligand exists",
+      "passed": true,
+      "fatal": true,
+      "detail": "/home/moheet/PAR2/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/ligands/5NDZ_AZ3451_crystallographic_clean.sdf"
+    },
+    {
+      "gate": "P3 5NDZ_allosteric box matches corrected definition",
+      "passed": true,
+      "fatal": true,
+      "detail": "max |delta| = 0.000000 A over 6 fields; parsed = {'center_x': 1.356, 'center_y': 12.419, 'center_z': 48.4, 'size_x': 20.702, 'size_y': 17.885, 'size_z': 25.525}"
+    },
+    {
+      "gate": "P4 5NDZ_allosteric crystal ligand parses",
+      "passed": true,
+      "fatal": true,
+      "detail": "/home/moheet/PAR2/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/ligands/5NDZ_AZ3451_crystallographic_clean.sdf"
+    },
+    {
+      "gate": "P4 5NDZ_allosteric ligand centroid at box centre",
+      "passed": true,
+      "fatal": true,
+      "detail": "centroid = (1.356, 12.419, 48.400), offset = 0.0004 A"
+    },
+    {
+      "gate": "P4 5NDZ_allosteric all crystal ligand atoms inside box",
+      "passed": true,
+      "fatal": true,
+      "detail": "38/38 heavy atoms inside; min margin to any face = 2.699 A (per-axis min: x 4.157, y 4.581, z 2.699)"
+    },
+    {
+      "gate": "P4 5NDZ_allosteric receptor heavy atoms loaded",
+      "passed": true,
+      "fatal": true,
+      "detail": "4421 atoms"
+    },
+    {
+      "gate": "P4 5NDZ_allosteric receptor/ligand frames aligned",
+      "passed": true,
+      "fatal": true,
+      "detail": "61 receptor heavy atoms within 5 A of the crystal ligand; 252 atom pairs in 2-5 A; closest contact 2.973 A"
+    },
+    {
+      "gate": "P4 5NDZ_allosteric box contains pocket geometry",
+      "passed": true,
+      "fatal": true,
+      "detail": "259 receptor heavy atoms inside the box (box volume 9451 A^3)"
+    },
+    {
+      "gate": "P4 5NDZ_allosteric expected pocket residues present",
+      "passed": true,
+      "fatal": false,
+      "detail": "10/11 within 5 A: found ['ALA:120', 'LEU:123', 'PHE:154', 'ASN:158', 'CYS:161', 'TRP:199', 'ILE:202', 'LEU:203', 'TYR:210', 'VAL:211']; missing ['GLY:157']"
+    },
+    {
+      "gate": "P4 5NDZ_allosteric docking receptor free of its crystal ligand",
+      "passed": true,
+      "fatal": true,
+      "detail": "HETATM residues in receptor: none; looking for 8UN"
+    },
+    {
+      "gate": "P7 input accounting balances",
+      "passed": true,
+      "fatal": true,
+      "detail": "3000 inputs = 2995 prepared + 5 failed; 2995 - 7 duplicate InChIKeys = 2988 unique ligands"
+    },
+    {
+      "gate": "P7 every failed design is itemised",
+      "passed": true,
+      "fatal": true,
+      "detail": "5 rows listed, reasons: {'EMBED_FAILED': 5}"
+    },
+    {
+      "gate": "P7 preparation preserves molecular skeleton",
+      "passed": true,
+      "fatal": true,
+      "detail": "25 sampled designs compared before/after; 0 problems: []"
+    },
+    {
+      "gate": "P7 prepared 3D geometry is valid",
+      "passed": true,
+      "fatal": true,
+      "detail": "0 geometry problems: []"
+    },
+    {
+      "gate": "P8 job count equals N_orth + N_allo + 2*N_expl",
+      "passed": true,
+      "fatal": true,
+      "detail": "orthosteric 1863 + allosteric 671 + 2 x exploratory 454 = 3442; shards contain 3442 jobs over 2988 ligands"
+    },
+    {
+      "gate": "P8 every ligand routed to exactly its intended pocket(s)",
+      "passed": true,
+      "fatal": true,
+      "detail": "2988 ligands audited; 0 misrouted: []"
+    },
+    {
+      "gate": "P8 no shard ligand is missing from the screen-set table",
+      "passed": true,
+      "fatal": true,
+      "detail": "0 unknown ids: []"
+    }
+  ]
+}

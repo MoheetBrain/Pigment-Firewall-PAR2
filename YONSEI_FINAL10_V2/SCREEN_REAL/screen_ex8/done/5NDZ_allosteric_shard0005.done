@@ -1,0 +1,1 @@
+{"shard":"5NDZ_allosteric_shard0005","pocket":"5NDZ_allosteric","rc":0,"seconds":1521,"input_sha256":"7348edee4747a327d49a7dc9b897cff93e66cedf48dc4132c9ee4ec02d75f48d","output_sha256":"cf0229c9f3ac13e9fbe1a2acaa6b2a5f0227fffdb428d7fa51ca3fdcf7ba052e","exhaustiveness":8,"num_modes":9,"stage":"fast","device":"cpu"}

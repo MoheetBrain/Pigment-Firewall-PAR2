@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-09-04 (screen running) · branch `yonsei-final10-v2`
+Last updated: 2026-09-04 (EX8 screen complete) · branch `yonsei-final10-v2`
 
 ## Project Objective
 
@@ -18,12 +18,13 @@ to bind or inhibit PAR2.
 
 ## Current Stage
 
-Stage 5 of the V2 campaign: **the real de novo GNINA screen is running on `h3`.**
+Stage 5 of the V2 campaign: **the real de novo EX8 GNINA screen is complete.**
 A 35-gate fail-closed pre-flight passed on that machine, both reference pockets
 re-recovered their crystal poses there, and a real 12-design dry run produced
 finite, varying Vina and CNN scores that the collector reproduces exactly.
-Screen scope is the de novo designs only: 2,988 designs, 3,442 jobs, EX8,
-9 modes, CPU-only, 22 processes x 4 CPU.
+All 3,442 jobs succeeded with zero failures, producing 30,978 poses in 60.4
+minutes of wall clock (70.9 core-hours). Nothing downstream has been run: no
+interaction fingerprints, no ranking, no clustering, no similarity searching.
 
 ## Current Branch
 
@@ -191,13 +192,10 @@ which points at a Workspace context-aware-access rule, not a missing role.
 
 ## Exact Next Actions
 
-1. Wait for the EX8 screen to finish and collect scores.
-2. Report the required sanity review before anything downstream: job success and
-   failure counts, family counts, pose totals, Vina/CNNscore/CNNaffinity
-   distributions, runtime, median seconds per job, any scoring anomaly.
-3. Repair the reference interaction fingerprints (protonate ligand and receptor,
+1. Repair the reference interaction fingerprints (protonate ligand and receptor,
    use the corrected AZ8838 tautomer) before IFP is weighted in ranking.
-4. Post-docking ranking, then EX32 refinement of the finalists.
-5. Butina clustering and 20-40 similarity-search seeds.
-6. Similarity search, then real analogue docking.
-7. Do not nominate a final ten before the analogue redocking gate.
+2. Run ProLIF across the preserved poses.
+3. Post-docking ranking, then EX32 refinement of the finalists.
+4. Butina clustering and 20-40 similarity-search seeds.
+5. Similarity search, then real analogue docking.
+6. Do not nominate a final ten before the analogue redocking gate.
