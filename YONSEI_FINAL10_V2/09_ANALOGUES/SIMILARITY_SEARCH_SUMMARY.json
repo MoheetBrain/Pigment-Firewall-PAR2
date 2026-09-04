@@ -1,0 +1,159 @@
+{
+  "generated_utc": "2026-09-04T14:31:37.796792+00:00",
+  "seeds_queried": 34,
+  "sources": [
+    "chembl",
+    "pubchem"
+  ],
+  "query_threshold_pct": 90,
+  "min_local_tanimoto": 0.3,
+  "hits_raw": 522,
+  "hits_unique": 521,
+  "hits_per_seed": {
+    "SEED01": {
+      "returned": 100,
+      "kept": 6
+    },
+    "SEED02": {
+      "returned": 0,
+      "kept": 0
+    },
+    "SEED03": {
+      "returned": 100,
+      "kept": 73
+    },
+    "SEED04": {
+      "returned": 11,
+      "kept": 0
+    },
+    "SEED05": {
+      "returned": 100,
+      "kept": 4
+    },
+    "SEED06": {
+      "returned": 2,
+      "kept": 0
+    },
+    "SEED07": {
+      "returned": 100,
+      "kept": 2
+    },
+    "SEED08": {
+      "returned": 82,
+      "kept": 2
+    },
+    "SEED09": {
+      "returned": 100,
+      "kept": 16
+    },
+    "SEED10": {
+      "returned": 6,
+      "kept": 4
+    },
+    "SEED11": {
+      "returned": 11,
+      "kept": 6
+    },
+    "SEED12": {
+      "returned": 100,
+      "kept": 4
+    },
+    "SEED13": {
+      "returned": 100,
+      "kept": 3
+    },
+    "SEED14": {
+      "returned": 46,
+      "kept": 4
+    },
+    "SEED15": {
+      "returned": 3,
+      "kept": 0
+    },
+    "SEED16": {
+      "returned": 66,
+      "kept": 4
+    },
+    "SEED17": {
+      "returned": 3,
+      "kept": 0
+    },
+    "SEED18": {
+      "returned": 100,
+      "kept": 41
+    },
+    "SEED19": {
+      "returned": 100,
+      "kept": 24
+    },
+    "SEED20": {
+      "returned": 100,
+      "kept": 2
+    },
+    "SEED21": {
+      "returned": 0,
+      "kept": 0
+    },
+    "SEED22": {
+      "returned": 100,
+      "kept": 40
+    },
+    "SEED23": {
+      "returned": 0,
+      "kept": 0
+    },
+    "SEED24": {
+      "returned": 100,
+      "kept": 22
+    },
+    "SEED25": {
+      "returned": 100,
+      "kept": 24
+    },
+    "SEED26": {
+      "returned": 54,
+      "kept": 27
+    },
+    "SEEDZ01": {
+      "returned": 100,
+      "kept": 69
+    },
+    "SEEDZ02": {
+      "returned": 100,
+      "kept": 18
+    },
+    "SEEDZ03": {
+      "returned": 25,
+      "kept": 9
+    },
+    "SEEDZ04": {
+      "returned": 12,
+      "kept": 1
+    },
+    "SEEDZ05": {
+      "returned": 11,
+      "kept": 9
+    },
+    "SEEDZ06": {
+      "returned": 100,
+      "kept": 46
+    },
+    "SEEDZ07": {
+      "returned": 76,
+      "kept": 10
+    },
+    "SEEDZ08": {
+      "returned": 100,
+      "kept": 52
+    }
+  },
+  "band_counts": {
+    "below_band": 510,
+    "broader_neighbour": 11,
+    "close_analogue": 1
+  },
+  "source_counts": {
+    "PubChem": 522
+  },
+  "caveat": "Structures retrieved from public databases. Vendor, catalogue ID, price and stock are PENDING and were not looked up. No PAR2 activity is implied."
+}

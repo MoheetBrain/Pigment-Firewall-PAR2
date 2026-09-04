@@ -1,0 +1,24 @@
+{
+  "generated_utc": "2026-09-04T14:25:21.145127+00:00",
+  "batch": "batch1",
+  "poses_total": 30978,
+  "poses_acceptable": 22534,
+  "poses_rejected_as_clashing": 8444,
+  "clash_rejection_rate": 0.2726,
+  "molecules": 3442,
+  "molecules_with_no_acceptable_pose": 119,
+  "pignet2_available": true,
+  "ifp_recovery_by_pocket": {
+    "5NDD_orthosteric": {
+      "median": 0.75,
+      "max": 1.0,
+      "with_hbond": 928
+    },
+    "5NDZ_allosteric": {
+      "median": 0.4167,
+      "max": 0.8333,
+      "with_hbond": 138
+    }
+  },
+  "note": "best-Vina, best-IFP and best-PIGNet2 poses are chosen among non-clashing poses only; molecules with no acceptable pose are flagged, not dropped."
+}

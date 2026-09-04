@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-09-04 (batch-2 EX8 screen running) · branch `yonsei-final10-v2`
+Last updated: 2026-09-04 (consensus + seeds + analogues delivered) · branch `yonsei-final10-v2`
 
 ## Project Objective
 
@@ -18,8 +18,9 @@ to bind or inhibit PAR2.
 
 ## Current Stage
 
-Stage 6 of the V2 campaign: **reference fingerprints repaired; batch-1 fully
-fingerprinted; the remaining 12k library is docking now.**
+Stage 7 of the V2 campaign: **batch-1 evidence complete through consensus
+ranking, chemotype clustering, seed selection and real-analogue retrieval.**
+Batch 2 is docking across six machines (512 cores).
 A 35-gate fail-closed pre-flight passed on that machine, both reference pockets
 re-recovered their crystal poses there, and a real 12-design dry run produced
 finite, varying Vina and CNN scores that the collector reproduces exactly.

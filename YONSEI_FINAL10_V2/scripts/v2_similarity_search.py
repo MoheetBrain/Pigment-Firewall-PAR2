@@ -92,7 +92,9 @@ def pubchem_similar(smiles: str, threshold_pct: int, max_records: int) -> list[d
         return []
     rows = []
     for record in properties:
-        structure = record.get("IsomericSMILES") or record.get("CanonicalSMILES")
+        structure = next((record[k] for k in ("IsomericSMILES", "SMILES",
+                                              "ConnectivitySMILES", "CanonicalSMILES")
+                          if record.get(k)), None)
         if not structure:
             continue
         rows.append(dict(source_database="PubChem", source_compound_id=f"CID{record['CID']}",

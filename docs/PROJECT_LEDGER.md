@@ -335,3 +335,82 @@ and the screen is being extended from 20% to 100% of the de novo library.
 **Next intended step**
 Finish batch 2, fingerprint it, merge into one full-library universe, add
 PIGNet2, then consensus-rank within pocket.
+
+---
+
+## 2026-09-04 · PIGNet2, clash filtering, consensus ranking, seeds and real analogues
+
+**Branch:** `yonsei-final10-v2`
+**Project stage:** V2 campaign, stage 7.
+
+**Objective of the change**
+Turn the batch-1 evidence into a ranked, clustered, seed-level deliverable and
+retrieve real purchasable analogues, while batch 2 continues docking.
+
+**Files and systems changed**
+- Added `scripts/v2_pose_evidence.py` (clash-filtered per-molecule evidence),
+  `scripts/v2_consensus_rank.py` (within-pocket consensus + PAR2 design profile).
+- Added `A100_TRACK/` PIGNet2 outputs, `07_CONSENSUS/`, `08_CLUSTERS/`,
+  `09_ANALOGUES/`.
+- Fixed a silent data-loss bug in `scripts/v2_similarity_search.py`.
+
+**What was completed**
+PIGNet2 scored all 30,978 batch-1 poses on the A100 in 9 min 09 s, 0 failures.
+Clash filtering, consensus ranking of 3,442 ligand-pocket rows, Butina
+clustering per pocket, 34 seeds, and 521 unique real analogues retrieved.
+
+**Decisions made and why**
+- Metric families were set from the MEASURED Spearman structure rather than
+  assumption: Vina/ligand-efficiency r = -0.958 and Vina/PIGNet2 r = 0.899 form
+  one physics family; CNNscore/CNN_VS r = 0.988 form one CNN family; IFP
+  recovery correlates |r| <= 0.19 with everything and is therefore the only
+  orthogonal evidence, so it gets its own family instead of being outvoted.
+- Poses with positive GNINA affinity are excluded before choosing the best-IFP
+  pose, because a clashing pose can accumulate contacts and fake a high
+  recovery. Molecules with no acceptable pose are flagged, not dropped.
+- Agonist-mimicry geometry is a FLAG, not a filter: static docking cannot
+  settle antagonist versus biased agonist.
+- Pockets were clustered separately so 5NDZ stays represented as a hedge.
+
+**Tests and verification actually executed**
+- PIGNet2: 30,978 poses, 3,442 molecules x 9 poses, 0 failures, no NaN.
+- Clash filter: 8,444 of 30,978 poses (27.26%) rejected; 119 molecules have no
+  acceptable pose. Independently corroborated - GNINA's own minimizedAffinity is
+  positive for the same poses.
+- Consensus over 3,442 rows: 250 5NDD designs hydrogen-bond to at least one
+  AZ8838 anchor, 12 to BOTH Asp228 and His135; 78 on the Pareto front;
+  0 flagged for agonist-mimicry geometry.
+- Clustering: 5NDD 267 clusters at 0.65 (172 at 0.55, 335 at 0.75), 5 convergent
+  chemotypes; 5NDZ 216 clusters at 0.65.
+- Seeds: 34 total (26 5NDD + 8 5NDZ), 34 distinct Murcko scaffolds, 34 distinct
+  clusters, novelty split 20 novel / 13 scaffold-hop / 1 close-to-reference.
+- Similarity search: 34 seeds queried, 522 raw hits, 521 unique after InChIKey
+  deduplication, 27 of 34 seeds returned at least one hit. Morgan ECFP4 bands:
+  1 hit in 0.70-0.80, 11 in 0.55-0.70, 20 in 0.50-0.55, 84 in 0.40-0.50.
+
+**Results**
+SEED03 retrieved genuine AZ8838-chemotype matter from PubChem, including
+(4-fluoro-2-prop-1-enylphenyl)-(1H-imidazol-2-yl)methanol and two further
+examples from patent US10550089 at Tanimoto 0.615, all sharing its Murcko
+scaffold. The pipeline independently recovered real PAR2-antagonist chemistry.
+
+**Failures or unresolved uncertainty**
+- A silent data-loss bug was found in the similarity search: PubChem renamed
+  `CanonicalSMILES` to `ConnectivitySMILES`, so every returned hit was being
+  discarded and the first run reported 12 hits across 29 seeds. After the fix
+  the same query returns 522. The code now accepts four SMILES spellings.
+- No hit reaches Tanimoto 0.80, so no seed has a very close purchasable
+  analogue; the designs are genuinely novel relative to public chemistry.
+- Vendor, catalogue ID, price and stock remain PENDING - not looked up.
+- Batch 2 was still docking when this entry was written, so the consensus,
+  clusters and seeds cover batch 1 only and will be refreshed.
+- EX32 refinement, Boltz-2 and MD were not started.
+
+**Effect on the overall project**
+There is now a complete, defensible chain from docking evidence to a diverse
+seed set and real purchasable analogues, with the orthogonality of each metric
+measured rather than assumed.
+
+**Next intended step**
+Merge batch 2 as it lands, refresh the consensus and seeds over the full
+library, then EX32 refinement and the functional-assay handover.

@@ -30,3 +30,8 @@ YONSEI_FINAL10_V2/04_V2_SCREEN/ligands/
 # Generated library-audit tables (reproducible from scripts/v2_full_library_audit.py)
 YONSEI_FINAL10_V2/02_DENOVO_CPU/DENOVO_FULL_LIBRARY_AUDIT.csv
 YONSEI_FINAL10_V2/02_DENOVO_CPU/DENOVO_REMAINING_TO_SCREEN.csv
+
+# Large regenerable per-pose tables (rebuild via v2_interactions.py / PIGNet2)
+YONSEI_FINAL10_V2/A100_TRACK/PIGNET2_EXISTING_ALL_POSES.csv
+YONSEI_FINAL10_V2/SCREEN_REAL/screen_ex8/V2_POSE_INTERACTIONS.csv
+YONSEI_FINAL10_V2/A100_TRACK/raw/
