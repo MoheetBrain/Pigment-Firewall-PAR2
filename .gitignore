@@ -26,3 +26,7 @@ __pycache__/
 # V2 screen: full prepared shard library (reproducible from v2_prepare_ligands.py)
 YONSEI_FINAL10_V2/04_V2_SCREEN/shards/
 YONSEI_FINAL10_V2/04_V2_SCREEN/ligands/
+
+# Generated library-audit tables (reproducible from scripts/v2_full_library_audit.py)
+YONSEI_FINAL10_V2/02_DENOVO_CPU/DENOVO_FULL_LIBRARY_AUDIT.csv
+YONSEI_FINAL10_V2/02_DENOVO_CPU/DENOVO_REMAINING_TO_SCREEN.csv

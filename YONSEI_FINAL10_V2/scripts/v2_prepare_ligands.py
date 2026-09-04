@@ -217,7 +217,7 @@ def sha256(path: Path) -> str:
 
 
 def load_inputs(root: Path, denovo_queue: Path | None = None,
-                sources: set[str] | None = None) -> pd.DataFrame:
+                sources: set[str] | None = None, id_prefix: str = "DN") -> pd.DataFrame:
     v2 = root / "YONSEI_FINAL10_V2"
     sources = sources or {"DENOVO", "SOURCEABLE"}
     queue_path = denovo_queue or (v2 / "02_DENOVO_CPU/DENOVO_TOP3000_FOR_DOCKING.csv")
@@ -236,7 +236,7 @@ def load_inputs(root: Path, denovo_queue: Path | None = None,
             pockets = [POCKET_5NDD]
         rows.append(
             dict(
-                cand_id=f"DN{int(r['dock_priority_rank']):05d}",
+                cand_id=f"{id_prefix}{int(r['dock_priority_rank']):05d}",
                 source="DENOVO",
                 smiles_input=r["smiles"],
                 pockets=";".join(pockets),
@@ -246,7 +246,8 @@ def load_inputs(root: Path, denovo_queue: Path | None = None,
                 ref_tanimoto=float(r["ref_tanimoto"]),
                 library="DE_NOVO_BRICS",
                 triage_class="DE_NOVO",
-                candidate_name=f"denovo_{int(r['dock_priority_rank']):05d}",
+                candidate_name=f"denovo_{id_prefix}_{int(r['dock_priority_rank']):05d}",
+                library_rank=int(getattr(r, "library_rank", r["dock_priority_rank"])),
                 v1_rank="",
                 sourceable_key="",
                 tautomer_corrected=bool(getattr(r, "tautomer_corrected", False)),
@@ -269,6 +270,7 @@ def load_inputs(root: Path, denovo_queue: Path | None = None,
                 v1_rank=r.get("original_v1_rank", ""),
                 sourceable_key=r.get("candidate_key", ""),
                 tautomer_corrected=False,
+                library_rank="",
             )
         )
     return pd.DataFrame(rows)
@@ -288,6 +290,8 @@ def main() -> int:
                         help="override the de novo docking queue CSV")
     parser.add_argument("--sources", default="DENOVO,SOURCEABLE",
                         help="which input sources to prepare")
+    parser.add_argument("--id-prefix", default="DN",
+                        help="cand_id prefix; use a distinct value per batch so ids never collide")
     args = parser.parse_args()
 
     root = args.root.resolve()
@@ -298,7 +302,8 @@ def main() -> int:
         d.mkdir(parents=True, exist_ok=True)
 
     table = load_inputs(root, args.denovo_queue,
-                        {x.strip().upper() for x in args.sources.split(",") if x.strip()})
+                        {x.strip().upper() for x in args.sources.split(",") if x.strip()},
+                        args.id_prefix)
     if args.limit:
         table = pd.concat([table[table.source == "DENOVO"].head(args.limit),
                            table[table.source == "SOURCEABLE"].head(args.limit)])
@@ -377,6 +382,7 @@ def main() -> int:
         protonation_model="approximate pH 7.4 SMARTS rule set (documented in script; not a pKa prediction)",
         denovo_queue=str(args.denovo_queue) if args.denovo_queue else "default",
         sources=args.sources,
+        id_prefix=args.id_prefix,
         tautomer_corrected_inputs=int(table.tautomer_corrected.sum())
         if "tautomer_corrected" in table else 0,
         input_rows=int(len(table)),

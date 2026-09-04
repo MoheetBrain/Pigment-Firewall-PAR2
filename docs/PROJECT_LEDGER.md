@@ -251,3 +251,87 @@ in both intended pockets, replacing the synthetic plumbing data entirely.
 **Next intended step**
 Repair the reference fingerprints, then run ProLIF across poses, post-docking
 ranking, EX32 refinement, clustering and seed selection.
+
+---
+
+## 2026-09-04 · Reference fingerprints repaired; batch-1 fingerprinted; batch-2 launched
+
+**Branch:** `yonsei-final10-v2`
+**Project stage:** V2 campaign, stage 6.
+
+**Objective of the change**
+Repair the reference interaction fingerprints before any ranking depends on them,
+fingerprint every batch-1 pose against the repaired reference, and extend the
+screen from the 3,000-design queue to the whole ~15,000-design de novo library.
+
+**Files and systems changed**
+- Added `scripts/v2_reference_ifp_repair.py`, `scripts/v2_merge_evidence.py`,
+  `scripts/v2_full_library_audit.py`.
+- Added `02_REFERENCE_VALIDATION_REPAIRED/` (protonated receptors, corrected
+  protonated ligands, `REFERENCE_IFP_REPAIRED.json`).
+- Added `SCREEN_REAL/EVIDENCE_batch1.csv` and its summary; batch-1
+  `V2_POSE_INTERACTIONS_SUMMARY.csv`.
+- Added `02_DENOVO_CPU/DENOVO_BATCH2_REMAINING12000_TAUTOMER_CORRECTED.csv`,
+  `DENOVO_FULL_LIBRARY_AUDIT.csv/.md`, `DENOVO_REMAINING_TO_SCREEN.csv`.
+- Added `PIPELINE_STATUS.md`.
+- Updated `scripts/v2_interactions.py` to use the protonated receptors and the
+  repaired reference keys, and to refuse to run against the unrepaired reference.
+- Updated `scripts/v2_prepare_ligands.py` with `--id-prefix`, `--denovo-queue`
+  and `--sources`; fixed two defects in `scripts/v2_preflight.py`.
+
+**What was completed**
+Reference repair passed. Batch-1 ProLIF over all 30,978 poses, 0 failures.
+Batch-1 evidence table built. Full-library audit completed. Batch-2 prepared
+(11,837 unique designs, 12,872 jobs, 130 shards) and its EX8 screen launched.
+
+**Decisions made and why**
+- A zero hydrogen-bond count for 5NDZ was reported as a finding rather than
+  forced to be non-zero. The gate now proves hydrogen-bond DETECTION works
+  (it fires twice in 5NDD through the identical code path) and reports the polar
+  contact geometry explaining the zero, instead of assuming a bond must exist.
+- Batch-2 ids use the `DL` prefix so they can never collide with batch-1 `DN`.
+- The completed batch-1 run was neither rerun nor overwritten.
+
+**Tests and verification actually executed**
+- Reference repair four-condition control: 5NDD 8/0 → 10/0 → 15/2 → 16/2
+  interactions/H-bonds across conditions A-D; 5NDZ 8/0 → 10/0 → 11/0 → 12/0.
+  Corrected 5NDD InChIKey `IDFPQEHZYBXIFO-LBPRGKRZSA-N` matches wwPDB; aromatic
+  bonds 6 → 11; max heavy-atom coordinate shift 0.000000 Å.
+- 5NDD H-bonds recovered: TYR:82 2.475 Å DHA 153.9°, HIS:135 2.63 Å DHA 138.9°.
+- 5NDZ polar diagnostic: 7 ligand polar atoms, 1 polar H, 1,541 receptor polar
+  atoms, 4,533 receptor H, closest polar contact 3.393 Å, 1 pair within 3.5 Å.
+- ProLIF over 30,978 batch-1 poses: 0 failures. Best-pose recovery 5NDD median
+  0.75 / max 1.00 with 968 of 2,317 ligands making a hydrogen bond; 5NDZ median
+  0.417 / max 0.833.
+- Pose disagreement: of 3,442 pairs the CNN-ranked pose is the best-Vina pose in
+  672 and the best-IFP pose in 441; best-Vina equals best-IFP in 684.
+- Batch-2 preparation: 12,000 = 11,854 prepared + 146 failed (all EMBED_FAILED);
+  11,854 - 17 duplicate InChIKeys = 11,837 unique.
+- Batch-2 routing: 8,014 + 2,788 + 2 x 1,035 = 12,872 jobs, 0 misrouted.
+- Pre-flight after the fixes: 36/36 gates on BOTH batches, with 25 molecules
+  actually compared before/after in each (prefixes `DN` and `DL`).
+
+**Results**
+The repaired reference is in use, batch 1 is fully fingerprinted, and batch 2 is
+docking.
+
+**Failures or unresolved uncertainty**
+- Two defects were found in my own pre-flight. One was cosmetic (completed runs
+  flagged as contamination). The other was serious: the preparation before/after
+  gate compared ZERO molecules for batch 2 and still reported PASS, because the
+  cand_id prefix was hard-coded. Both are fixed and the gate now fails if fewer
+  than 20 molecules are compared.
+- `V2_LIGAND_TABLE.csv`'s `denovo_rank` is the queue rank, not the library rank
+  (they agree in 52 of 2,988 rows). Joins must use `cand_id` or InChIKey.
+- 7 batch-1 and 17 batch-2 "duplicate InChIKey" collapses come from
+  `TautomerEnumerator().Canonicalize()` stripping stereo before the key is
+  computed; at least two batch-1 pairs are genuine R/S epimers.
+- The batch-2 screen had not finished when this entry was written.
+
+**Effect on the overall project**
+Interaction-fingerprint evidence is now chemically valid and usable in ranking,
+and the screen is being extended from 20% to 100% of the de novo library.
+
+**Next intended step**
+Finish batch 2, fingerprint it, merge into one full-library universe, add
+PIGNet2, then consensus-rank within pocket.

@@ -1,0 +1,36 @@
+{
+  "generated_utc": "2026-09-04T13:11:50.077267+00:00",
+  "batch": "batch1",
+  "rows": 3442,
+  "unique_ligands": 2988,
+  "by_pocket": {
+    "5NDD_orthosteric": 2317,
+    "5NDZ_allosteric": 1125
+  },
+  "by_family": {
+    "orthosteric": 1863,
+    "allosteric": 671,
+    "exploratory": 454
+  },
+  "ifp_recovery_by_pocket": {
+    "5NDD_orthosteric": {
+      "median": 0.75,
+      "p90": 0.875,
+      "max": 1.0,
+      "ligands_with_hbond": 968
+    },
+    "5NDZ_allosteric": {
+      "median": 0.4167,
+      "p90": 0.5833,
+      "max": 0.8333,
+      "ligands_with_hbond": 135
+    }
+  },
+  "pose_disagreement": {
+    "cnn_pose_is_best_vina": 672,
+    "cnn_pose_is_best_ifp": 441,
+    "best_vina_equals_best_ifp": 684,
+    "total": 3442
+  },
+  "note": "Ranks are computed within each pocket. 5NDD and 5NDZ are never pooled on raw scores. IFP recovery is geometric similarity to the repaired crystal reference, not evidence of activity."
+}

@@ -226,7 +226,13 @@ def phase7(v2: Path, library: Path, queue: Path) -> None:
         for row in failures.itertuples():
             print(f"         {row.cand_id}  {row.prep_reason}  {row.smiles_input}", flush=True)
 
-    smiles_in = dict(zip(("DN%05d" % r for r in source.iloc[:, 0].astype(int)),
+    # Derive the id prefix from the table itself. A hard-coded prefix silently
+    # matched nothing for batches that use a different one, and the gate then
+    # "passed" having compared zero molecules.
+    prefixes = {str(c)[:2] for c in table.cand_id.head(50)}
+    prefix = prefixes.pop() if len(prefixes) == 1 else "DN"
+    rank_col = "dock_priority_rank" if "dock_priority_rank" in source.columns else source.columns[0]
+    smiles_in = dict(zip((f"{prefix}%05d" % r for r in source[rank_col].astype(int)),
                          source.smiles))
     sample = table.sample(n=min(25, len(table)), random_state=7)
     problems = []
@@ -258,9 +264,12 @@ def phase7(v2: Path, library: Path, queue: Path) -> None:
                 issues.append(f"heavy-atom formula {b_formula} -> {a_formula}")
         if issues:
             problems.append((row.cand_id, "; ".join(issues)))
-    gate("P7 preparation preserves molecular skeleton", not problems,
-         f"{checked} sampled designs compared before/after; "
-         f"{len(problems)} problems: {problems[:5]}")
+    gate("P7 preparation preserves molecular skeleton",
+         not problems and checked >= 20,
+         f"{checked} sampled designs compared before/after (id prefix {prefix!r}); "
+         f"{len(problems)} problems: {problems[:5]}"
+         + ("" if checked >= 20 else "  -- TOO FEW COMPARED: the sample matched no "
+                                     "input rows, so this gate proved nothing"))
 
     bad_geometry = []
     for shard in sorted(p for p in (library / "shards").glob("*.sdf")
@@ -324,16 +333,37 @@ def phase8(library: Path, screen_set: Path) -> None:
          f"{len(unknown)} unknown ids: {unknown[:5]}")
 
 
-def phase0(real_root: Path, dryrun_root: Path) -> None:
+SCORE_FILES = {"V2_LIGAND_POCKET_SCORES.csv", "V2_POSE_SCORES.csv",
+               "V2_POSE_INTERACTIONS_SUMMARY.csv"}
+
+
+def phase0(real_root: Path, dryrun_root: Path, run_out: Path | None) -> None:
     gate("P0 real and dry-run output roots are separate",
          real_root.resolve() != dryrun_root.resolve()
-         and dryrun_root.resolve() not in real_root.resolve().parents,
+         and dryrun_root.resolve() not in real_root.resolve().parents
+         and real_root.resolve() not in dryrun_root.resolve().parents,
          f"real = {real_root}, dryrun = {dryrun_root}")
-    stray = [p for p in real_root.rglob("*") if p.is_file()
-             and p.name in {"V2_LIGAND_POCKET_SCORES.csv", "V2_POSE_SCORES.csv",
-                            "V2_POSE_INTERACTIONS_SUMMARY.csv"}]
-    gate("P0 no pre-existing score files under the real root", not stray,
-         f"{len(stray)} stray score files: {[str(p) for p in stray[:5]]}")
+
+    # Synthetic/dry-run material must never sit inside the real root.
+    contamination = [p for p in real_root.rglob("*") if p.is_file()
+                     and p.name in SCORE_FILES
+                     and dryrun_root.resolve() in p.resolve().parents]
+    gate("P0 no dry-run score files inside the real root", not contamination,
+         f"{len(contamination)} contaminating files: {[str(p) for p in contamination[:5]]}")
+
+    # Completed sibling runs are legitimate history, not contamination. What must
+    # be clean is the directory THIS run will write into.
+    completed = sorted({p.parent.name for p in real_root.rglob("*")
+                        if p.is_file() and p.name in SCORE_FILES})
+    if run_out is not None:
+        existing = [p for p in run_out.rglob("*") if p.is_file() and p.name in SCORE_FILES] \
+            if run_out.exists() else []
+        gate("P0 this run's output directory holds no previous scores", not existing,
+             f"target = {run_out}; {len(existing)} pre-existing score files; "
+             f"completed sibling runs (kept, not overwritten): {completed}")
+    else:
+        gate("P0 completed sibling runs recorded", True,
+             f"completed runs under the real root: {completed}", fatal=False)
 
 
 def main() -> int:
@@ -344,6 +374,8 @@ def main() -> int:
     parser.add_argument("--queue", type=Path, required=True)
     parser.add_argument("--real-root", type=Path, required=True)
     parser.add_argument("--dryrun-root", type=Path, required=True)
+    parser.add_argument("--run-out", type=Path, default=None,
+                        help="directory this screen will write into; must hold no prior scores")
     parser.add_argument("--out", type=Path, required=True)
     args = parser.parse_args()
 
@@ -354,7 +386,8 @@ def main() -> int:
     print("=" * 72)
     print("PHASE 0 — output separation")
     print("=" * 72)
-    phase0(args.real_root.resolve(), args.dryrun_root.resolve())
+    phase0(args.real_root.resolve(), args.dryrun_root.resolve(),
+           args.run_out.resolve() if args.run_out else None)
     print("=" * 72)
     print("PHASE 3/4 — receptor, box and geometric frame")
     print("=" * 72)

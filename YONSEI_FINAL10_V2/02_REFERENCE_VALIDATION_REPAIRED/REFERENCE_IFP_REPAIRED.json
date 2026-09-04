@@ -1,0 +1,363 @@
+{
+  "generated_utc": "2026-09-04T13:08:13.505910+00:00",
+  "prolif_version": "2.2.1",
+  "rdkit_version": "2026.03.6",
+  "systems": {
+    "5NDD_AZ8838": {
+      "pocket": "5NDD_orthosteric",
+      "ligand_code": "8TZ",
+      "receptor_protonation": {
+        "tool": "openbabel",
+        "ph": 7.4,
+        "heavy_atoms": 4498,
+        "hydrogens_added": 4599,
+        "stderr_tail": "==============================\n*** Open Babel Warning  in DoTransformations\n  Both -p and -h options are set. All implicit hydrogens (-h) will be added without considering pH.\n\n1 molecule converted"
+      },
+      "ligand_repair": {
+        "stored_inchikey": "BBGRVUDFEGKPGW-LBPRGKRZSA-N",
+        "corrected_inchikey": "IDFPQEHZYBXIFO-LBPRGKRZSA-N",
+        "aromatic_bonds_stored": 6,
+        "aromatic_bonds_corrected": 11,
+        "heavy_atoms": 17,
+        "hydrogens_added": 15,
+        "max_heavy_atom_coordinate_shift": 0.0
+      },
+      "expected_inchikey": "IDFPQEHZYBXIFO-LBPRGKRZSA-N",
+      "inchikey_matches_wwpdb": true,
+      "conditions": {
+        "A_as_committed": {
+          "interactions": 8,
+          "hydrogen_bonds": 0,
+          "types": {
+            "VdWContact": 6,
+            "Hydrophobic": 2
+          },
+          "keys": [
+            "ASP:228:A|VdWContact",
+            "CYS:226:A|Hydrophobic",
+            "HIS:135:A|VdWContact",
+            "HIS:227:A|Hydrophobic",
+            "ILE:327:A|VdWContact",
+            "LYS:131:A|VdWContact",
+            "PHE:155:A|VdWContact",
+            "TYR:82:A|VdWContact"
+          ]
+        },
+        "B_ligandH_storedTautomer": {
+          "interactions": 10,
+          "hydrogen_bonds": 0,
+          "types": {
+            "VdWContact": 8,
+            "Hydrophobic": 2
+          },
+          "keys": [
+            "ASP:228:A|VdWContact",
+            "CYS:226:A|Hydrophobic",
+            "CYS:226:A|VdWContact",
+            "HIS:135:A|VdWContact",
+            "HIS:227:A|Hydrophobic",
+            "ILE:327:A|VdWContact",
+            "LYS:131:A|VdWContact",
+            "PHE:155:A|VdWContact",
+            "TRP:141:A|VdWContact",
+            "TYR:82:A|VdWContact"
+          ]
+        },
+        "C_ligandH_correctedTautomer": {
+          "interactions": 15,
+          "hydrogen_bonds": 2,
+          "types": {
+            "Hydrophobic": 4,
+            "VdWContact": 9,
+            "HBDonor": 2
+          },
+          "keys": [
+            "ASP:228:A|VdWContact",
+            "CYS:226:A|Hydrophobic",
+            "CYS:226:A|VdWContact",
+            "HIS:135:A|HBDonor",
+            "HIS:135:A|VdWContact",
+            "HIS:227:A|Hydrophobic",
+            "ILE:152:A|Hydrophobic",
+            "ILE:327:A|VdWContact",
+            "LYS:131:A|VdWContact",
+            "PHE:155:A|Hydrophobic",
+            "PHE:155:A|VdWContact",
+            "TRP:141:A|VdWContact",
+            "TYR:134:A|VdWContact",
+            "TYR:82:A|HBDonor",
+            "TYR:82:A|VdWContact"
+          ]
+        },
+        "D_repaired_ligandH_receptorH": {
+          "interactions": 16,
+          "hydrogen_bonds": 2,
+          "types": {
+            "Hydrophobic": 4,
+            "VdWContact": 10,
+            "HBDonor": 2
+          },
+          "keys": [
+            "ASP:228:A|VdWContact",
+            "CYS:226:A|Hydrophobic",
+            "CYS:226:A|VdWContact",
+            "HIS:135:A|HBDonor",
+            "HIS:135:A|VdWContact",
+            "HIS:227:A|Hydrophobic",
+            "ILE:152:A|Hydrophobic",
+            "ILE:152:A|VdWContact",
+            "ILE:327:A|VdWContact",
+            "LYS:131:A|VdWContact",
+            "PHE:155:A|Hydrophobic",
+            "PHE:155:A|VdWContact",
+            "TRP:141:A|VdWContact",
+            "TYR:134:A|VdWContact",
+            "TYR:82:A|HBDonor",
+            "TYR:82:A|VdWContact"
+          ]
+        }
+      },
+      "reference_fingerprint_keys": [
+        "ASP:228:A|VdWContact",
+        "CYS:226:A|Hydrophobic",
+        "CYS:226:A|VdWContact",
+        "HIS:135:A|HBDonor",
+        "HIS:135:A|VdWContact",
+        "HIS:227:A|Hydrophobic",
+        "ILE:152:A|Hydrophobic",
+        "ILE:152:A|VdWContact",
+        "ILE:327:A|VdWContact",
+        "LYS:131:A|VdWContact",
+        "PHE:155:A|Hydrophobic",
+        "PHE:155:A|VdWContact",
+        "TRP:141:A|VdWContact",
+        "TYR:134:A|VdWContact",
+        "TYR:82:A|HBDonor",
+        "TYR:82:A|VdWContact"
+      ],
+      "reference_fingerprint_key_count": 16,
+      "polar_diagnostic": {
+        "ligand_polar_atoms": 3,
+        "ligand_hydrogens": 15,
+        "ligand_polar_hydrogens": 2,
+        "receptor_polar_atoms": 1571,
+        "receptor_hydrogens": 4599,
+        "min_polar_distance": 2.475,
+        "polar_pairs_within_3_5A": 3,
+        "closest_polar_contacts": [
+          {
+            "receptor_atom": "TYR:82.OH",
+            "ligand_atom_idx": 1,
+            "ligand_element": "N",
+            "distance": 2.475
+          },
+          {
+            "receptor_atom": "HIS:135.NE2",
+            "ligand_atom_idx": 2,
+            "ligand_element": "O",
+            "distance": 2.63
+          },
+          {
+            "receptor_atom": "ASP:228.OD1",
+            "ligand_atom_idx": 4,
+            "ligand_element": "N",
+            "distance": 2.929
+          },
+          {
+            "receptor_atom": "TYR:82.OH",
+            "ligand_atom_idx": 2,
+            "ligand_element": "O",
+            "distance": 3.529
+          },
+          {
+            "receptor_atom": "LYS:131.NZ",
+            "ligand_atom_idx": 2,
+            "ligand_element": "O",
+            "distance": 4.067
+          }
+        ]
+      },
+      "hydrogen_bond_detail": [
+        {
+          "residue": "TYR:82:A",
+          "interaction": "HBDonor",
+          "distance": 2.475,
+          "DHA_angle": 153.932
+        },
+        {
+          "residue": "HIS:135:A",
+          "interaction": "HBDonor",
+          "distance": 2.63,
+          "DHA_angle": 138.876
+        }
+      ],
+      "protonated_receptor": "/home/moheet/PAR2/YONSEI_FINAL10_V2/02_REFERENCE_VALIDATION_REPAIRED/5NDD_orthosteric_receptor_protonated_pH74.pdb"
+    },
+    "5NDZ_AZ3451": {
+      "pocket": "5NDZ_allosteric",
+      "ligand_code": "8UN",
+      "receptor_protonation": {
+        "tool": "openbabel",
+        "ph": 7.4,
+        "heavy_atoms": 4421,
+        "hydrogens_added": 4533,
+        "stderr_tail": "==============================\n*** Open Babel Warning  in DoTransformations\n  Both -p and -h options are set. All implicit hydrogens (-h) will be added without considering pH.\n\n1 molecule converted"
+      },
+      "ligand_repair": {
+        "stored_inchikey": "FJAOGFGHTPYADT-SFHVURJKSA-N",
+        "corrected_inchikey": "FJAOGFGHTPYADT-SFHVURJKSA-N",
+        "aromatic_bonds_stored": 22,
+        "aromatic_bonds_corrected": 22,
+        "heavy_atoms": 38,
+        "hydrogens_added": 27,
+        "max_heavy_atom_coordinate_shift": 0.0
+      },
+      "expected_inchikey": "FJAOGFGHTPYADT-SFHVURJKSA-N",
+      "inchikey_matches_wwpdb": true,
+      "conditions": {
+        "A_as_committed": {
+          "interactions": 8,
+          "hydrogen_bonds": 0,
+          "types": {
+            "Hydrophobic": 3,
+            "VdWContact": 5
+          },
+          "keys": [
+            "ALA:157:A|VdWContact",
+            "ILE:202:A|Hydrophobic",
+            "LEU:123:A|VdWContact",
+            "LEU:203:A|Hydrophobic",
+            "LEU:203:A|VdWContact",
+            "PHE:154:A|VdWContact",
+            "TRP:199:A|VdWContact",
+            "TYR:210:A|Hydrophobic"
+          ]
+        },
+        "B_ligandH_storedTautomer": {
+          "interactions": 10,
+          "hydrogen_bonds": 0,
+          "types": {
+            "Hydrophobic": 3,
+            "VdWContact": 7
+          },
+          "keys": [
+            "ALA:120:A|VdWContact",
+            "ALA:157:A|VdWContact",
+            "CYS:161:A|VdWContact",
+            "ILE:202:A|Hydrophobic",
+            "LEU:123:A|VdWContact",
+            "LEU:203:A|Hydrophobic",
+            "LEU:203:A|VdWContact",
+            "PHE:154:A|VdWContact",
+            "TRP:199:A|VdWContact",
+            "TYR:210:A|Hydrophobic"
+          ]
+        },
+        "C_ligandH_correctedTautomer": {
+          "interactions": 11,
+          "hydrogen_bonds": 0,
+          "types": {
+            "Hydrophobic": 4,
+            "VdWContact": 7
+          },
+          "keys": [
+            "ALA:120:A|VdWContact",
+            "ALA:157:A|VdWContact",
+            "CYS:161:A|VdWContact",
+            "ILE:202:A|Hydrophobic",
+            "LEU:123:A|VdWContact",
+            "LEU:203:A|Hydrophobic",
+            "LEU:203:A|VdWContact",
+            "PHE:154:A|Hydrophobic",
+            "PHE:154:A|VdWContact",
+            "TRP:199:A|VdWContact",
+            "TYR:210:A|Hydrophobic"
+          ]
+        },
+        "D_repaired_ligandH_receptorH": {
+          "interactions": 12,
+          "hydrogen_bonds": 0,
+          "types": {
+            "Hydrophobic": 4,
+            "VdWContact": 8
+          },
+          "keys": [
+            "ALA:120:A|VdWContact",
+            "ALA:157:A|VdWContact",
+            "CYS:161:A|VdWContact",
+            "ILE:202:A|Hydrophobic",
+            "LEU:123:A|VdWContact",
+            "LEU:203:A|Hydrophobic",
+            "LEU:203:A|VdWContact",
+            "PHE:154:A|Hydrophobic",
+            "PHE:154:A|VdWContact",
+            "TRP:199:A|VdWContact",
+            "TYR:210:A|Hydrophobic",
+            "VAL:211:A|VdWContact"
+          ]
+        }
+      },
+      "reference_fingerprint_keys": [
+        "ALA:120:A|VdWContact",
+        "ALA:157:A|VdWContact",
+        "CYS:161:A|VdWContact",
+        "ILE:202:A|Hydrophobic",
+        "LEU:123:A|VdWContact",
+        "LEU:203:A|Hydrophobic",
+        "LEU:203:A|VdWContact",
+        "PHE:154:A|Hydrophobic",
+        "PHE:154:A|VdWContact",
+        "TRP:199:A|VdWContact",
+        "TYR:210:A|Hydrophobic",
+        "VAL:211:A|VdWContact"
+      ],
+      "reference_fingerprint_key_count": 12,
+      "polar_diagnostic": {
+        "ligand_polar_atoms": 7,
+        "ligand_hydrogens": 27,
+        "ligand_polar_hydrogens": 1,
+        "receptor_polar_atoms": 1541,
+        "receptor_hydrogens": 4533,
+        "min_polar_distance": 3.393,
+        "polar_pairs_within_3_5A": 1,
+        "closest_polar_contacts": [
+          {
+            "receptor_atom": "TYR:210.OH",
+            "ligand_atom_idx": 1,
+            "ligand_element": "N",
+            "distance": 3.393
+          },
+          {
+            "receptor_atom": "ASN:158.N",
+            "ligand_atom_idx": 5,
+            "ligand_element": "O",
+            "distance": 3.515
+          },
+          {
+            "receptor_atom": "CYS:161.SG",
+            "ligand_atom_idx": 5,
+            "ligand_element": "O",
+            "distance": 3.773
+          },
+          {
+            "receptor_atom": "ALA:157.O",
+            "ligand_atom_idx": 5,
+            "ligand_element": "O",
+            "distance": 3.881
+          },
+          {
+            "receptor_atom": "ALA:120.O",
+            "ligand_atom_idx": 8,
+            "ligand_element": "O",
+            "distance": 4.12
+          }
+        ]
+      },
+      "hydrogen_bond_detail": [],
+      "protonated_receptor": "/home/moheet/PAR2/YONSEI_FINAL10_V2/02_REFERENCE_VALIDATION_REPAIRED/5NDZ_allosteric_receptor_protonated_pH74.pdb"
+    }
+  },
+  "hydrogen_bond_detection_proven": true,
+  "verdict": "PASS",
+  "failures": []
+}

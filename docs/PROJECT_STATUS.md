@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-09-04 (EX8 screen complete) · branch `yonsei-final10-v2`
+Last updated: 2026-09-04 (batch-2 EX8 screen running) · branch `yonsei-final10-v2`
 
 ## Project Objective
 
@@ -18,13 +18,16 @@ to bind or inhibit PAR2.
 
 ## Current Stage
 
-Stage 5 of the V2 campaign: **the real de novo EX8 GNINA screen is complete.**
+Stage 6 of the V2 campaign: **reference fingerprints repaired; batch-1 fully
+fingerprinted; the remaining 12k library is docking now.**
 A 35-gate fail-closed pre-flight passed on that machine, both reference pockets
 re-recovered their crystal poses there, and a real 12-design dry run produced
 finite, varying Vina and CNN scores that the collector reproduces exactly.
-All 3,442 jobs succeeded with zero failures, producing 30,978 poses in 60.4
-minutes of wall clock (70.9 core-hours). Nothing downstream has been run: no
-interaction fingerprints, no ranking, no clustering, no similarity searching.
+Batch 1: 3,442 jobs, 0 failures, 30,978 poses, 60.4 min wall (70.9 core-hours),
+all 30,978 poses fingerprinted against the repaired reference. Batch 2: 11,837
+designs, 12,872 jobs, 130 shards, running. No ranking, clustering or similarity
+searching has been performed and no candidate has been nominated.
+See YONSEI_FINAL10_V2/PIPELINE_STATUS.md for the live view.
 
 ## Current Branch
 
@@ -192,10 +195,11 @@ which points at a Workspace context-aware-access rule, not a missing role.
 
 ## Exact Next Actions
 
-1. Repair the reference interaction fingerprints (protonate ligand and receptor,
-   use the corrected AZ8838 tautomer) before IFP is weighted in ranking.
-2. Run ProLIF across the preserved poses.
-3. Post-docking ranking, then EX32 refinement of the finalists.
-4. Butina clustering and 20-40 similarity-search seeds.
-5. Similarity search, then real analogue docking.
-6. Do not nominate a final ten before the analogue redocking gate.
+1. Finish the batch-2 EX8 screen and fingerprint its poses.
+2. Merge batch 1 and batch 2 into one full-library EX8 universe.
+3. Add PIGNet2 rescoring from the A100, then consensus-rank within pocket.
+4. EX32 refinement of roughly the top 500-1,000, re-fingerprint.
+5. Butina clustering at 0.65 (with 0.55/0.75 sensitivity views), per pocket.
+6. Select 20-40 chemically distinct seeds, 5NDD-weighted.
+7. Similarity search against purchasable chemistry, then redock the analogues.
+8. Do not nominate a final ten before real-compound availability is checked.
