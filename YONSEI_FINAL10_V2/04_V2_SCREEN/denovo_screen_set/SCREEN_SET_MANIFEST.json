@@ -1,0 +1,39 @@
+{
+  "generated_utc": "2026-09-04T11:23:54.269603+00:00",
+  "source_library": "/Users/moheet/Documents/ChatGPT/PAR2/YONSEI_FINAL10_V2/04_V2_SCREEN",
+  "scope": "sources=['DENOVO']",
+  "ligands_selected": 2985,
+  "ligands_by_source": {
+    "DENOVO": 2985
+  },
+  "ligands_by_family": {
+    "orthosteric": 1863,
+    "allosteric": 671,
+    "exploratory": 451
+  },
+  "docking_jobs": 3436,
+  "docking_jobs_by_pocket": {
+    "5NDD_orthosteric": 2314,
+    "5NDZ_allosteric": 1122
+  },
+  "shard_count": 15,
+  "shard_size": 250,
+  "shard_sha256": {
+    "5NDD_orthosteric_shard0000.sdf": "7ae1191d662b4d23ffc325d11a2c0520220ddec68c47fc3c1fa27a6149a28ebd",
+    "5NDD_orthosteric_shard0001.sdf": "7b830ebef492a16e49baf5a8a4bc039fcd5aa3294de02fadcc519ef4eae9e680",
+    "5NDD_orthosteric_shard0002.sdf": "e8595959f28e7d7332df279bb0469a6f4c56615f83fcaa2302a5dfe05c9750b0",
+    "5NDD_orthosteric_shard0003.sdf": "495c7bcabafdadb1681a3a395e621fceaab051e6d4c68de291296d75b24be64c",
+    "5NDD_orthosteric_shard0004.sdf": "d9bb259dfe9f2c62e21a2a1f65f35cd13e45942f4d58c3d612cefbd443bc836c",
+    "5NDD_orthosteric_shard0005.sdf": "30cb4e9a329820e9d90614eefe70313de9bd3ae4811794c804ea6f4add3c63dc",
+    "5NDD_orthosteric_shard0006.sdf": "2d995b29052e9a287680e7ea2c5933ac72e5cce155f0439f59e7e5f99db4d23e",
+    "5NDD_orthosteric_shard0007.sdf": "177ffdbadc48746c28191f9406a81d00befdd58df004db26dced840673f6c7ca",
+    "5NDD_orthosteric_shard0008.sdf": "575f262504ce85ef81fb72881e0ff5dd8bbbfa2c1eb8601f30ebdca7e4a5dc9a",
+    "5NDZ_allosteric_shard0000.sdf": "49a39f757fda3a97cc3e1737a544f5cee2e187004bbc33bbb8c9bf1dfe1bf5fd",
+    "5NDZ_allosteric_shard0001.sdf": "5e07fe4505874e162d56f9853438853daeabc51d68d42202f4cce05d7b73c916",
+    "5NDZ_allosteric_shard0002.sdf": "d1475030729232cdfa434f59d2b28398fdeaad1369c707e7d59c1d65d129ae91",
+    "5NDZ_allosteric_shard0003.sdf": "09347d77fd9a53e0e529b725ea627d519a9457d4fff62d266bfe19305e49a449",
+    "5NDD_orthosteric_shard0009.sdf": "139e062142340ab16c203fd97d6baf2931f16b4b2234171e33ae9ce19b801c4f",
+    "5NDZ_allosteric_shard0004.sdf": "ed3d7121b8baaecce146934e7b349edc9832b5f3b07c5cc1ff967928e6a8367e"
+  },
+  "note": "Coordinates copied verbatim from the prepared library; nothing re-embedded."
+}
