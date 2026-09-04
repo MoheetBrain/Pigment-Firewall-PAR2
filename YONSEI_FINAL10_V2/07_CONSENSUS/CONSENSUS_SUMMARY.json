@@ -1,12 +1,13 @@
 {
-  "generated_utc": "2026-09-04T14:26:01.815331+00:00",
-  "rows": 3442,
-  "unique_designs": 2988,
+  "generated_utc": "2026-09-04T14:51:00.538965+00:00",
+  "rows": 12341,
+  "unique_designs": 11485,
   "by_pocket": {
-    "5NDD_orthosteric": 2317,
-    "5NDZ_allosteric": 1125
+    "5NDD_orthosteric": 9066,
+    "5NDZ_allosteric": 3275
   },
   "by_batch": {
+    "batch2": 8899,
     "batch1": 3442
   },
   "metrics_used": [
@@ -23,21 +24,21 @@
     "5NDD_orthosteric": {
       "best_vina_affinity": {
         "best_vina_affinity": 1.0,
-        "ligand_efficiency": -0.958,
+        "ligand_efficiency": -0.982,
         "pignet2_best": 0.899,
-        "best_CNNscore": -0.454,
-        "best_CNNaffinity": -0.235,
-        "best_CNN_VS": -0.439,
-        "max_ifp_recovery": -0.075
+        "best_CNNscore": -0.505,
+        "best_CNNaffinity": -0.112,
+        "best_CNN_VS": -0.475,
+        "max_ifp_recovery": 0.091
       },
       "ligand_efficiency": {
-        "best_vina_affinity": -0.958,
+        "best_vina_affinity": -0.982,
         "ligand_efficiency": 1.0,
         "pignet2_best": -0.883,
-        "best_CNNscore": 0.458,
-        "best_CNNaffinity": 0.135,
-        "best_CNN_VS": 0.423,
-        "max_ifp_recovery": -0.05
+        "best_CNNscore": 0.519,
+        "best_CNNaffinity": 0.066,
+        "best_CNN_VS": 0.48,
+        "max_ifp_recovery": -0.153
       },
       "pignet2_best": {
         "best_vina_affinity": 0.899,
@@ -49,60 +50,60 @@
         "max_ifp_recovery": -0.129
       },
       "best_CNNscore": {
-        "best_vina_affinity": -0.454,
-        "ligand_efficiency": 0.458,
+        "best_vina_affinity": -0.505,
+        "ligand_efficiency": 0.519,
         "pignet2_best": -0.442,
         "best_CNNscore": 1.0,
-        "best_CNNaffinity": 0.579,
-        "best_CNN_VS": 0.988,
-        "max_ifp_recovery": 0.147
+        "best_CNNaffinity": 0.522,
+        "best_CNN_VS": 0.989,
+        "max_ifp_recovery": 0.015
       },
       "best_CNNaffinity": {
-        "best_vina_affinity": -0.235,
-        "ligand_efficiency": 0.135,
+        "best_vina_affinity": -0.112,
+        "ligand_efficiency": 0.066,
         "pignet2_best": -0.198,
-        "best_CNNscore": 0.579,
+        "best_CNNscore": 0.522,
         "best_CNNaffinity": 1.0,
-        "best_CNN_VS": 0.685,
-        "max_ifp_recovery": 0.358
+        "best_CNN_VS": 0.626,
+        "max_ifp_recovery": 0.254
       },
       "best_CNN_VS": {
-        "best_vina_affinity": -0.439,
-        "ligand_efficiency": 0.423,
+        "best_vina_affinity": -0.475,
+        "ligand_efficiency": 0.48,
         "pignet2_best": -0.421,
-        "best_CNNscore": 0.988,
-        "best_CNNaffinity": 0.685,
+        "best_CNNscore": 0.989,
+        "best_CNNaffinity": 0.626,
         "best_CNN_VS": 1.0,
-        "max_ifp_recovery": 0.192
+        "max_ifp_recovery": 0.048
       },
       "max_ifp_recovery": {
-        "best_vina_affinity": -0.075,
-        "ligand_efficiency": -0.05,
+        "best_vina_affinity": 0.091,
+        "ligand_efficiency": -0.153,
         "pignet2_best": -0.129,
-        "best_CNNscore": 0.147,
-        "best_CNNaffinity": 0.358,
-        "best_CNN_VS": 0.192,
+        "best_CNNscore": 0.015,
+        "best_CNNaffinity": 0.254,
+        "best_CNN_VS": 0.048,
         "max_ifp_recovery": 1.0
       }
     },
     "5NDZ_allosteric": {
       "best_vina_affinity": {
         "best_vina_affinity": 1.0,
-        "ligand_efficiency": -0.142,
+        "ligand_efficiency": 0.015,
         "pignet2_best": 0.719,
-        "best_CNNscore": 0.1,
-        "best_CNNaffinity": -0.628,
-        "best_CNN_VS": -0.277,
-        "max_ifp_recovery": -0.345
+        "best_CNNscore": -0.012,
+        "best_CNNaffinity": -0.688,
+        "best_CNN_VS": -0.337,
+        "max_ifp_recovery": -0.331
       },
       "ligand_efficiency": {
-        "best_vina_affinity": -0.142,
+        "best_vina_affinity": 0.015,
         "ligand_efficiency": 1.0,
         "pignet2_best": 0.079,
-        "best_CNNscore": 0.181,
-        "best_CNNaffinity": -0.14,
-        "best_CNN_VS": 0.086,
-        "max_ifp_recovery": 0.056
+        "best_CNNscore": 0.256,
+        "best_CNNaffinity": -0.218,
+        "best_CNN_VS": 0.114,
+        "max_ifp_recovery": 0.009
       },
       "pignet2_best": {
         "best_vina_affinity": 0.719,
@@ -114,50 +115,50 @@
         "max_ifp_recovery": -0.362
       },
       "best_CNNscore": {
-        "best_vina_affinity": 0.1,
-        "ligand_efficiency": 0.181,
+        "best_vina_affinity": -0.012,
+        "ligand_efficiency": 0.256,
         "pignet2_best": 0.137,
         "best_CNNscore": 1.0,
-        "best_CNNaffinity": 0.127,
-        "best_CNN_VS": 0.8,
-        "max_ifp_recovery": -0.102
+        "best_CNNaffinity": 0.233,
+        "best_CNN_VS": 0.864,
+        "max_ifp_recovery": -0.026
       },
       "best_CNNaffinity": {
-        "best_vina_affinity": -0.628,
-        "ligand_efficiency": -0.14,
+        "best_vina_affinity": -0.688,
+        "ligand_efficiency": -0.218,
         "pignet2_best": -0.573,
-        "best_CNNscore": 0.127,
+        "best_CNNscore": 0.233,
         "best_CNNaffinity": 1.0,
-        "best_CNN_VS": 0.62,
-        "max_ifp_recovery": 0.237
+        "best_CNN_VS": 0.635,
+        "max_ifp_recovery": 0.284
       },
       "best_CNN_VS": {
-        "best_vina_affinity": -0.277,
-        "ligand_efficiency": 0.086,
+        "best_vina_affinity": -0.337,
+        "ligand_efficiency": 0.114,
         "pignet2_best": -0.216,
-        "best_CNNscore": 0.8,
-        "best_CNNaffinity": 0.62,
+        "best_CNNscore": 0.864,
+        "best_CNNaffinity": 0.635,
         "best_CNN_VS": 1.0,
-        "max_ifp_recovery": 0.059
+        "max_ifp_recovery": 0.124
       },
       "max_ifp_recovery": {
-        "best_vina_affinity": -0.345,
-        "ligand_efficiency": 0.056,
+        "best_vina_affinity": -0.331,
+        "ligand_efficiency": 0.009,
         "pignet2_best": -0.362,
-        "best_CNNscore": -0.102,
-        "best_CNNaffinity": 0.237,
-        "best_CNN_VS": 0.059,
+        "best_CNNscore": -0.026,
+        "best_CNNaffinity": 0.284,
+        "best_CNN_VS": 0.124,
         "max_ifp_recovery": 1.0
       }
     }
   },
-  "agonist_pattern_flagged": 0,
-  "pareto_front_size": 78,
-  "anchor_hbond_hits_5NDD": 250,
-  "both_anchors_5NDD": 12,
+  "agonist_pattern_flagged": 9,
+  "pareto_front_size": 130,
+  "anchor_hbond_hits_5NDD": 1298,
+  "both_anchors_5NDD": 62,
   "profile_fit_median": {
-    "5NDD_orthosteric": 0.7398,
-    "5NDZ_allosteric": 0.9475
+    "5NDD_orthosteric": 0.6968,
+    "5NDZ_allosteric": 0.875
   },
   "caveat": "Ranking evidence only. Static docking cannot distinguish an antagonist from a biased agonist; agonist_pattern_flag marks poses whose contacts resemble the tethered-ligand trajectory and must be tested functionally."
 }

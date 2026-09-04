@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-09-04 (consensus + seeds + analogues delivered) · branch `yonsei-final10-v2`
+Last updated: 2026-09-04 (full-library consensus, 11,485 designs) · branch `yonsei-final10-v2`
 
 ## Project Objective
 
@@ -18,9 +18,9 @@ to bind or inhibit PAR2.
 
 ## Current Stage
 
-Stage 7 of the V2 campaign: **batch-1 evidence complete through consensus
-ranking, chemotype clustering, seed selection and real-analogue retrieval.**
-Batch 2 is docking across six machines (512 cores).
+Stage 7 of the V2 campaign: **11,485 of ~15,000 de novo designs (76%) now carry
+real GNINA evidence, interaction fingerprints against the repaired reference,
+consensus ranking, chemotype clusters, 34 seeds and 521 real analogues.**
 A 35-gate fail-closed pre-flight passed on that machine, both reference pockets
 re-recovered their crystal poses there, and a real 12-design dry run produced
 finite, varying Vina and CNN scores that the collector reproduces exactly.

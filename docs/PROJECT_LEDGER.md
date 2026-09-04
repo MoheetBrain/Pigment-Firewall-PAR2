@@ -414,3 +414,72 @@ measured rather than assumed.
 **Next intended step**
 Merge batch 2 as it lands, refresh the consensus and seeds over the full
 library, then EX32 refinement and the functional-assay handover.
+
+---
+
+## 2026-09-04 · Full-library consensus over 11,485 designs on six machines
+
+**Branch:** `yonsei-final10-v2`
+**Project stage:** V2 campaign, stage 7 (extended).
+
+**Objective of the change**
+Extend the screen across the whole de novo library inside a hard 15:17 UTC
+deadline by adding compute, then refresh every downstream stage.
+
+**Files and systems changed**
+- Added `scripts/v2_final_report.py`; added `FINAL_CANDIDATES.md`.
+- Refreshed `SCREEN_REAL/EVIDENCE_batch2.csv`, `07_CONSENSUS/`, `08_CLUSTERS/`.
+- Added a pre-filter to `scripts/v2_interactions.py` so shortlist runs are cheap.
+
+**What was completed**
+Five additional workers were provisioned (c3-standard-88, n2-standard-80 x2,
+h3-standard-88, plus a second h3) giving 512 cores. Batch 2 reached 8,899 of
+12,872 jobs. Combined with batch 1 that is 12,341 of 16,314 jobs over 11,485
+unique designs (76% of the library).
+
+**Decisions made and why**
+- The H3 CPU family quota capped at 176 vCPU in europe-west4, so capacity was
+  spread across three machine families and two regions.
+- Shards were re-split from 100 to 25 ligands. At ~36 s per ligand a 100-ligand
+  shard needs ~60 minutes and only counts when complete, so nothing would have
+  landed before the deadline. Ligand counts were verified preserved through
+  every split (1900 -> 1900, 1723 -> 1723).
+- h3 was left running its in-flight wave and switched automatically to
+  fine-grained shards once that wave landed, rather than discarding work.
+
+**Tests and verification actually executed**
+- Every worker verified the GNINA binary SHA-256 as
+  3340c1f49cd3c7c84d8699182a1c6af13c7fa2a22448d1204640446106f72172 before
+  running, and each screen.log confirms exhaustiveness 8, num_modes 9,
+  cnn_scoring rescore, device cpu.
+- Batch-2 collection: 80,091 poses parsed over 8,899 ligand-pocket pairs.
+- Batch-2 ProLIF: 80,091 poses, 0 failures; 5NDD best-pose recovery median
+  0.8125, max 1.00; 3,391 5NDD ligands make at least one hydrogen bond.
+- Batch-2 clash filter: 32,864 of 80,091 poses (41.03%) rejected; 1,457
+  molecules have no acceptable pose and are flagged.
+- Combined consensus: 12,341 rows, 11,485 unique designs, 9,066 5NDD and
+  3,275 5NDZ. 1,298 5NDD designs hydrogen-bond at least one AZ8838 anchor and
+  62 bond BOTH Asp228 and His135. Pareto front 130. Agonist-mimicry geometry
+  flagged for 9 designs.
+- Seeds refreshed: 34 (26 5NDD + 8 5NDZ) across 34 distinct Murcko scaffolds.
+
+**Results**
+`FINAL_CANDIDATES.md` carries the dual-anchor table, the top 20 in the primary
+5NDD lane, the 34 seeds and the 521 retrieved real analogues.
+
+**Failures or unresolved uncertainty**
+- 24% of the library (3,973 jobs) had not finished docking at the deadline.
+- Batch 2 has no PIGNet2 scores, so within the physics metric family batch-2
+  rows are ranked on Vina and ligand efficiency only while batch-1 rows also
+  carry PIGNet2. Cross-batch comparison is therefore not perfectly like-for-like.
+- Batch-2 clash rate (41%) is much higher than batch-1 (27%), consistent with
+  lower-ranked designs being larger and fitting the small 5NDD box poorly.
+- EX32 refinement, Boltz-2 and MD were not started. No vendor check was done.
+
+**Effect on the overall project**
+Three quarters of the de novo library now has real, fingerprinted docking
+evidence and a defensible ranked short list exists.
+
+**Next intended step**
+Finish the remaining 24%, add PIGNet2 for batch 2, then EX32 refinement of the
+top 500-1,000 and the functional-assay handover.

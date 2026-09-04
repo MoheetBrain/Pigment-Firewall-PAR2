@@ -86,7 +86,7 @@ def pose_keys(ligand_mol: Chem.Mol, receptor) -> tuple[set[str], int, int]:
 
 
 def process_file(job: tuple) -> list[dict]:
-    path_str, pocket, root_str, which_pose, max_pose = job
+    path_str, pocket, root_str, which_pose, max_pose, wanted = job
     root = Path(root_str)
     receptor = load_receptor(root, pocket)
     refs = reference_keys(root)[pocket]
@@ -100,6 +100,10 @@ def process_file(job: tuple) -> list[dict]:
             cand_id = mol.GetProp("cand_id") if mol.HasProp("cand_id") else (
                 mol.GetProp("_Name") if mol.HasProp("_Name") else "")
             if not cand_id:
+                continue
+            # Pre-filter: skip molecules outside the requested set before doing
+            # any fingerprint work, so a shortlist run is genuinely cheap.
+            if wanted is not None and cand_id not in wanted:
                 continue
             seen[cand_id] += 1
             rank = seen[cand_id]
@@ -145,7 +149,12 @@ def main() -> int:
                         if not p.name.startswith("."))
     if not pose_files:
         raise SystemExit(f"no pose files under {screen / 'poses'}")
-    jobs = [(str(p), p.name.split("_shard")[0], str(root), args.pose, args.max_pose) for p in pose_files]
+    wanted = None
+    if args.only_cand_ids and args.only_cand_ids.exists():
+        wanted = set(pd.read_csv(args.only_cand_ids).cand_id)
+        print(f"[ifp] restricting to {len(wanted)} cand_ids", flush=True)
+    jobs = [(str(p), p.name.split("_shard")[0], str(root), args.pose, args.max_pose, wanted)
+            for p in pose_files]
 
     rows: list[dict] = []
     if args.workers > 1:
@@ -159,9 +168,6 @@ def main() -> int:
             print(f"[ifp] {n}/{len(jobs)} pose files", flush=True)
 
     frame = pd.DataFrame(rows)
-    if args.only_cand_ids and args.only_cand_ids.exists():
-        keep = set(pd.read_csv(args.only_cand_ids).cand_id)
-        frame = frame[frame.cand_id.isin(keep)]
     frame.to_csv(out / "V2_POSE_INTERACTIONS.csv", index=False)
 
     best = (frame[frame.ifp_recovery.notna()]

@@ -1,27 +1,27 @@
 {
-  "generated_utc": "2026-09-04T14:26:38.694980+00:00",
+  "generated_utc": "2026-09-04T14:51:12.813334+00:00",
   "designs_clustered": 300,
   "fingerprint": "Morgan/ECFP4 radius 2, 2048 bits",
   "clusters_by_threshold": {
-    "0.55": 150,
-    "0.65": 216,
-    "0.75": 269
+    "0.55": 126,
+    "0.65": 193,
+    "0.75": 255
   },
   "singletons_by_threshold": {
-    "0.55": 103,
-    "0.65": 175,
-    "0.75": 245
+    "0.55": 84,
+    "0.65": 156,
+    "0.75": 229
   },
   "primary_threshold": 0.65,
-  "largest_primary_cluster": 8,
+  "largest_primary_cluster": 18,
   "convergent_chemotypes": 5,
   "seeds_selected": 8,
   "seeds_by_pocket": {
     "5NDZ_allosteric": 8
   },
   "seeds_by_family": {
-    "allosteric": 6,
-    "exploratory": 2
+    "allosteric": 7,
+    "exploratory": 1
   },
   "seeds_by_selection_pass": {
     "rank": 6,
@@ -29,8 +29,8 @@
   },
   "min_pocket_fraction": 0.25,
   "seeds_by_novelty_band": {
-    "moderate_scaffold_hop": 4,
-    "novel_chemotype": 4
+    "moderate_scaffold_hop": 5,
+    "novel_chemotype": 3
   },
   "seed_distinct_clusters": 8,
   "seed_distinct_scaffolds": 8
