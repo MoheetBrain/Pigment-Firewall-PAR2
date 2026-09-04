@@ -216,10 +216,14 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
-def load_inputs(root: Path) -> pd.DataFrame:
+def load_inputs(root: Path, denovo_queue: Path | None = None,
+                sources: set[str] | None = None) -> pd.DataFrame:
     v2 = root / "YONSEI_FINAL10_V2"
-    denovo = pd.read_csv(v2 / "02_DENOVO_CPU/DENOVO_TOP3000_FOR_DOCKING.csv")
-    universe = pd.read_csv(v2 / "03_SOURCEABILITY/V2_CANDIDATE_UNIVERSE.csv")
+    sources = sources or {"DENOVO", "SOURCEABLE"}
+    queue_path = denovo_queue or (v2 / "02_DENOVO_CPU/DENOVO_TOP3000_FOR_DOCKING.csv")
+    denovo = pd.read_csv(queue_path) if "DENOVO" in sources else pd.DataFrame()
+    universe = (pd.read_csv(v2 / "03_SOURCEABILITY/V2_CANDIDATE_UNIVERSE.csv")
+                if "SOURCEABLE" in sources else pd.DataFrame())
 
     rows = []
     for _, r in denovo.iterrows():
@@ -245,6 +249,7 @@ def load_inputs(root: Path) -> pd.DataFrame:
                 candidate_name=f"denovo_{int(r['dock_priority_rank']):05d}",
                 v1_rank="",
                 sourceable_key="",
+                tautomer_corrected=bool(getattr(r, "tautomer_corrected", False)),
             )
         )
     for i, r in universe.iterrows():
@@ -263,6 +268,7 @@ def load_inputs(root: Path) -> pd.DataFrame:
                 candidate_name=r.get("candidate_name", ""),
                 v1_rank=r.get("original_v1_rank", ""),
                 sourceable_key=r.get("candidate_key", ""),
+                tautomer_corrected=False,
             )
         )
     return pd.DataFrame(rows)
@@ -278,6 +284,10 @@ def main() -> int:
     parser.add_argument("--max-heavy", type=int, default=60)
     parser.add_argument("--shard-size", type=int, default=250)
     parser.add_argument("--limit", type=int, default=0, help="debug: cap ligand count")
+    parser.add_argument("--denovo-queue", type=Path, default=None,
+                        help="override the de novo docking queue CSV")
+    parser.add_argument("--sources", default="DENOVO,SOURCEABLE",
+                        help="which input sources to prepare")
     args = parser.parse_args()
 
     root = args.root.resolve()
@@ -287,7 +297,8 @@ def main() -> int:
     for d in (out, lig_dir, shard_dir):
         d.mkdir(parents=True, exist_ok=True)
 
-    table = load_inputs(root)
+    table = load_inputs(root, args.denovo_queue,
+                        {x.strip().upper() for x in args.sources.split(",") if x.strip()})
     if args.limit:
         table = pd.concat([table[table.source == "DENOVO"].head(args.limit),
                            table[table.source == "SOURCEABLE"].head(args.limit)])
@@ -364,6 +375,10 @@ def main() -> int:
         n_confs_embedded=args.n_confs,
         conformers_written_per_ligand=1,
         protonation_model="approximate pH 7.4 SMARTS rule set (documented in script; not a pKa prediction)",
+        denovo_queue=str(args.denovo_queue) if args.denovo_queue else "default",
+        sources=args.sources,
+        tautomer_corrected_inputs=int(table.tautomer_corrected.sum())
+        if "tautomer_corrected" in table else 0,
         input_rows=int(len(table)),
         prepared_ok=int(table.prep_ok.sum()),
         prepared_failed=int((~table.prep_ok).sum()),

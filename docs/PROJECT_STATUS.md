@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-09-04 · branch `yonsei-final10-v2`
+Last updated: 2026-09-04 (screen running) · branch `yonsei-final10-v2`
 
 ## Project Objective
 
@@ -18,9 +18,12 @@ to bind or inhibit PAR2.
 
 ## Current Stage
 
-Stage 4 of the V2 campaign: **ligand preparation complete, GNINA screen not yet
-executed.** The full downstream pipeline is written and rehearsed end-to-end on
-synthetic scores, awaiting real docking output.
+Stage 5 of the V2 campaign: **the real de novo GNINA screen is running on `h3`.**
+A 35-gate fail-closed pre-flight passed on that machine, both reference pockets
+re-recovered their crystal poses there, and a real 12-design dry run produced
+finite, varying Vina and CNN scores that the collector reproduces exactly.
+Screen scope is the de novo designs only: 2,988 designs, 3,442 jobs, EX8,
+9 modes, CPU-only, 22 processes x 4 CPU.
 
 ## Current Branch
 
@@ -78,9 +81,13 @@ selection and belongs to the later analogue-nomination gate, not to this one.
   0.6747 Å, 5NDZ best-pose RMSD 0.8672 Å (5NDZ top-ranked pose 2.2274 Å).
 - 5,973-member sourceable candidate universe assembled (vendor data PENDING).
 - 15,000 de novo designs generated; 3,000-design docking queue prepared.
-- **New on 2026-09-04:** full V2 screen pipeline implemented; 8,973 input rows
-  prepared into 7,324 unique 3D ligands; de novo screen set of 2,985 designs and
-  3,436 docking jobs built and sharded.
+- **New on 2026-09-04:** full V2 screen pipeline implemented and hardened; the
+  394 wrong-tautomer designs reported by verification commit `e992aa7` were
+  corrected and the de novo library re-prepared (2,988 designs, 3,442 jobs, 36
+  shards); GCP access repaired; GNINA v1.3.3 deployed on `h3` with a SHA-256
+  matching the benchmarked binary; a 35-gate fail-closed pre-flight, both
+  reference redocks and a real 12-design dry run all passed on `h3`; the full
+  EX8 screen was launched.
 
 ## Important Files and Artifacts
 
@@ -175,19 +182,22 @@ rehearsal is randomly generated and carries no scientific meaning.
 
 ## Current Blockers
 
-**Remote access.** The authenticated gcloud account `cloud@hamiltonianlabs.co`
-cannot see project `project-08679972-d14a-4025-94f`; both `moheetc4` and `h3`
-return `Required 'compute.instances.get' permission`. A `gcloud auth login`
-flow with the account that owns the project is pending a verification code.
-Nothing can be run on `h3` until that completes.
+None. Remote access was resolved: `abdulmoheetahmed@gmail.com` was granted
+`roles/compute.instanceAdmin.v1` and `roles/iam.serviceAccountUser`, and a named
+gcloud configuration `par2` now pins that account, the project and zone
+`europe-west4-b` so the failure cannot recur silently. `cloud@hamiltonianlabs.co`
+holds `roles/owner` in IAM but its CLI token is still refused from this machine,
+which points at a Workspace context-aware-access rule, not a missing role.
 
 ## Exact Next Actions
 
-1. Complete `gcloud auth login` with the project-owning account.
-2. `gcloud compute ssh --zone europe-west4-b h3` and copy the repository over.
-3. Install GNINA v1.3.3 and verify its SHA-256.
-4. Re-run the corrected reference redock gate on `h3`; stop if it fails.
-5. Run the de novo screen: 22 jobs × 4 CPU, `--stage refine`.
-6. Collect scores, run ProLIF across poses, rank, cluster, select seeds.
-7. Run the analogue similarity search and report per-seed hit counts.
-8. Do not nominate a final ten before the analogue redocking gate.
+1. Wait for the EX8 screen to finish and collect scores.
+2. Report the required sanity review before anything downstream: job success and
+   failure counts, family counts, pose totals, Vina/CNNscore/CNNaffinity
+   distributions, runtime, median seconds per job, any scoring anomaly.
+3. Repair the reference interaction fingerprints (protonate ligand and receptor,
+   use the corrected AZ8838 tautomer) before IFP is weighted in ranking.
+4. Post-docking ranking, then EX32 refinement of the finalists.
+5. Butina clustering and 20-40 similarity-search seeds.
+6. Similarity search, then real analogue docking.
+7. Do not nominate a final ten before the analogue redocking gate.

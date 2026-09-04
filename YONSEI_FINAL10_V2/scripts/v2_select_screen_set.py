@@ -71,7 +71,8 @@ def main() -> int:
         buffers[pocket] = []
         counters[pocket] += 1
 
-    for shard in sorted((screen_dir / "shards").glob("*.sdf")):
+    for shard in sorted(p for p in (screen_dir / "shards").glob("*.sdf")
+                        if not p.name.startswith(".")):
         pocket = shard.name.split("_shard")[0]
         for record in shard.read_text().split("$$$$\n"):
             if not record.strip():

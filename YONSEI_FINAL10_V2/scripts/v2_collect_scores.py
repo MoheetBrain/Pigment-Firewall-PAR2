@@ -83,7 +83,7 @@ def main() -> int:
     out = (args.out or screen).resolve()
     out.mkdir(parents=True, exist_ok=True)
     poses_dir = screen / "poses"
-    pose_files = sorted(poses_dir.glob("*_out.sdf*"))
+    pose_files = sorted(p for p in poses_dir.glob("*_out.sdf*") if not p.name.startswith("."))
     if not pose_files:
         raise SystemExit(f"no pose files under {poses_dir}")
 

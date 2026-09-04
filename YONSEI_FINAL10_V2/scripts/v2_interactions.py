@@ -126,7 +126,8 @@ def main() -> int:
     out = (args.out or screen).resolve()
     out.mkdir(parents=True, exist_ok=True)
 
-    pose_files = sorted((screen / "poses").glob("*_out.sdf*"))
+    pose_files = sorted(p for p in (screen / "poses").glob("*_out.sdf*")
+                        if not p.name.startswith("."))
     if not pose_files:
         raise SystemExit(f"no pose files under {screen / 'poses'}")
     jobs = [(str(p), p.name.split("_shard")[0], str(root), args.pose, args.max_pose) for p in pose_files]

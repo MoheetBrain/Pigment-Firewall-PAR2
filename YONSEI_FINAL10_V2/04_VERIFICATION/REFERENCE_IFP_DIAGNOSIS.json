@@ -1,0 +1,74 @@
+{
+  "systems": {
+    "5NDD_AZ8838": {
+      "committed_interaction_rows": 10,
+      "conditions": {
+        "A_as_committed": {
+          "label": "A) as committed (stored tautomer, no explicit H)",
+          "failed": false,
+          "explicit_ligand_hydrogens": 0,
+          "total_interactions": 10,
+          "hydrogen_bonds": 0,
+          "breakdown": {
+            "VdWContact": 6,
+            "Hydrophobic": 4
+          },
+          "reproduces_committed_csv": true
+        },
+        "B_stored_plus_hydrogens": {
+          "label": "B) stored tautomer + AddHs (isolates the missing-hydrogen defect)",
+          "failed": false,
+          "explicit_ligand_hydrogens": 15,
+          "total_interactions": 14,
+          "hydrogen_bonds": 1,
+          "breakdown": {
+            "VdWContact": 9,
+            "Hydrophobic": 4,
+            "HBDonor": 1
+          }
+        },
+        "C_corrected_plus_hydrogens": {
+          "label": "C) corrected tautomer + AddHs (adds the azole N-H donor)",
+          "failed": false,
+          "explicit_ligand_hydrogens": 15,
+          "total_interactions": 15,
+          "hydrogen_bonds": 2,
+          "breakdown": {
+            "VdWContact": 9,
+            "HBDonor": 2,
+            "Hydrophobic": 4
+          }
+        }
+      },
+      "corrected_retains_conformer": true
+    },
+    "5NDZ_AZ3451": {
+      "committed_interaction_rows": 9,
+      "conditions": {
+        "A_as_committed": {
+          "label": "A) as committed (stored tautomer, no explicit H)",
+          "failed": false,
+          "explicit_ligand_hydrogens": 0,
+          "total_interactions": 9,
+          "hydrogen_bonds": 0,
+          "breakdown": {
+            "VdWContact": 5,
+            "Hydrophobic": 4
+          },
+          "reproduces_committed_csv": true
+        },
+        "B_stored_plus_hydrogens": {
+          "label": "B) stored tautomer + AddHs (isolates the missing-hydrogen defect)",
+          "failed": false,
+          "explicit_ligand_hydrogens": 27,
+          "total_interactions": 11,
+          "hydrogen_bonds": 0,
+          "breakdown": {
+            "Hydrophobic": 4,
+            "VdWContact": 7
+          }
+        }
+      }
+    }
+  }
+}

@@ -24,7 +24,7 @@ set -uo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 POCKETS_DIR="$ROOT/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS"
 GNINA_BIN="${GNINA_BIN:-gnina}"
-STAGE="fast"; EXH=""; MODES=""; JOBS=4; CPUJ=2; DEVICE="gpu"
+STAGE="fast"; EXH=""; MODES=""; JOBS=4; CPUJ=2; DEVICE="cpu"
 SHARDS=""; OUT=""; ONLY_POCKET=""; SEED=20260904; DRY=0
 
 while [[ $# -gt 0 ]]; do
@@ -48,16 +48,21 @@ done
 [[ -n "$SHARDS" && -n "$OUT" ]] || { echo "--shards and --out are required" >&2; exit 2; }
 
 case "$STAGE" in
-  fast)   : "${EXH:=8}";  : "${MODES:=5}";;
+  fast)   : "${EXH:=8}";  : "${MODES:=9}";;
   refine) : "${EXH:=32}"; : "${MODES:=9}";;
   *) echo "--stage must be fast or refine" >&2; exit 2;;
 esac
 
-DEVICE_FLAGS=()
+# Fail closed on device policy: CPU is the default and must be explicit.
 if [[ "$DEVICE" == "cpu" ]]; then
-  DEVICE_FLAGS+=(--no_gpu)
   export CUDA_VISIBLE_DEVICES=-1
+elif [[ "$DEVICE" != "gpu" ]]; then
+  echo "--device must be cpu or gpu" >&2; exit 2
 fi
+# One thread per BLAS/OpenMP worker: GNINA's own --cpu controls its parallelism,
+# and nested thread pools would oversubscribe the box under 22 concurrent jobs.
+export OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 \
+       NUMEXPR_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1
 
 mkdir -p "$OUT/poses" "$OUT/logs" "$OUT/done"
 
@@ -109,6 +114,7 @@ run_shard() {
   local cx cy cz sx sy sz
   local -a cmd dflags=()
   [[ "$DEVICE" == "cpu" ]] && dflags+=(--no_gpu)
+  [[ "$DEVICE" == "cpu" ]] && export CUDA_VISIBLE_DEVICES=-1
   cx=$(awk -F'= *' '/center_x/{print $2}' "$conf"); cy=$(awk -F'= *' '/center_y/{print $2}' "$conf")
   cz=$(awk -F'= *' '/center_z/{print $2}' "$conf"); sx=$(awk -F'= *' '/size_x/{print $2}' "$conf")
   sy=$(awk -F'= *' '/size_y/{print $2}' "$conf"); sz=$(awk -F'= *' '/size_z/{print $2}' "$conf")
@@ -118,14 +124,33 @@ run_shard() {
        --exhaustiveness "$EXH" --num_modes "$MODES" --cnn_scoring rescore
        --seed "$SEED" --cpu "$CPUJ" "${dflags[@]}")
   if [[ "$DRY" == "1" ]]; then printf '%q ' "${cmd[@]}"; echo; return 0; fi
-  local start rc
+  local start rc tmp_sdf
+  # GNINA picks its output format from the extension, so the temporary file
+  # must keep a real ".sdf.gz" suffix; a bare ".partial" makes it write nothing.
+  tmp_sdf="${out_sdf%.sdf.gz}.partial.sdf.gz"
+  rm -f "$tmp_sdf"
+  cmd=("${cmd[@]/--out $out_sdf/}")
   start=$(date +%s)
-  "${cmd[@]}" > "$log" 2>&1
+  "${GNINA_BIN}" --receptor "$receptor" --ligand "$sdf" --out "$tmp_sdf" \
+    --center_x "$cx" --center_y "$cy" --center_z "$cz" \
+    --size_x "$sx" --size_y "$sy" --size_z "$sz" \
+    --exhaustiveness "$EXH" --num_modes "$MODES" --cnn_scoring rescore \
+    --seed "$SEED" --cpu "$CPUJ" "${dflags[@]}" > "$log" 2>&1
   rc=$?
-  if [[ $rc -ne 0 || ! -s "$out_sdf" ]]; then
+  # Completion requires a non-zero exit code AND a readable, non-empty,
+  # properly terminated SDF. A truncated or empty file is never accepted, and
+  # there is deliberately no fallback to different scoring or settings.
+  if [[ $rc -ne 0 || ! -s "$tmp_sdf" ]]; then
     echo "FAIL $base rc=$rc (see $log)" >&2
+    rm -f "$tmp_sdf"
     return 1
   fi
+  if ! gzip -cd "$tmp_sdf" 2>/dev/null | tail -5 | grep -q '\$\$\$\$'; then
+    echo "FAIL $base output not a terminated SDF (see $log)" >&2
+    rm -f "$tmp_sdf"
+    return 1
+  fi
+  mv -f "$tmp_sdf" "$out_sdf"
   {
     printf '{"shard":"%s","pocket":"%s","rc":%d,"seconds":%d,' "$base" "$pocket" "$rc" "$(( $(date +%s) - start ))"
     printf '"input_sha256":"%s","output_sha256":"%s",' \
@@ -141,7 +166,9 @@ SHARD_LIST=()
 while IFS= read -r shard_path; do
   [[ -n "$ONLY_POCKET" && "$shard_path" != *"$ONLY_POCKET"* ]] && continue
   SHARD_LIST+=("$shard_path")
-done < <(ls "$SHARDS"/*.sdf | sort)
+# find, not ls: never let AppleDouble "._*" metadata files or other dotfiles
+# enter the job list as if they were ligand shards.
+done < <(find "$SHARDS" -maxdepth 1 -name '*.sdf' ! -name '.*' | sort)
 [[ ${#SHARD_LIST[@]} -gt 0 ]] || { echo "no shards found in $SHARDS" >&2; exit 2; }
 echo "shards to process: ${#SHARD_LIST[@]}"
 

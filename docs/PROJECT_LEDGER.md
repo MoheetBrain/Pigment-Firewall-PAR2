@@ -106,3 +106,83 @@ between here and a ranked chemotype map is compute access.
 **Next intended step**
 Authenticate, SSH to `h3`, install pinned GNINA, re-pass the reference gate on
 that machine, then run the 3,436-job de novo screen.
+
+---
+
+## 2026-09-04 · Pre-flight passed on `h3`; real de novo EX8 screen launched
+
+**Branch:** `yonsei-final10-v2`
+**Project stage:** V2 campaign, stage 5 — real GNINA screen running.
+
+**Objective of the change**
+Reach the execution gate: prove on the target machine that the engine docks into
+the real PAR2 pockets with both Vina and CNN scoring working, then use all 88
+cores. The user required a strict fail-closed pre-flight, CPU-only execution,
+and no fallback of any kind.
+
+**Files and systems changed**
+- Merged `origin/yonsei-final10-v2` commit `e992aa7` (independent verification).
+- Added `YONSEI_FINAL10_V2/scripts/v2_preflight.py` (35 gates, exits non-zero).
+- Added `02_DENOVO_CPU/DENOVO_TOP3000_FOR_DOCKING_TAUTOMER_CORRECTED.csv`.
+- Added `YONSEI_FINAL10_V2/SCREEN_REAL/` and `SCREEN_DRYRUN/`, including
+  `SCREEN_REAL/DRY_RUN_VALIDATION.md`.
+- Hardened `v2_run_screen.sh`; corrected the AZ8838 reference SMILES in
+  `v2_postdock_rank.py`; added `--denovo-queue`/`--sources` to the preparer;
+  made every shard and pose glob skip dotfiles.
+- Updated `docs/PROJECT_STATUS.md`.
+
+**What was completed**
+- GCP access repaired and pinned in a named `par2` gcloud configuration.
+- `h3` verified: x86_64, 88 physical cores, 346 GiB RAM, disk grown 10 to 60 GB.
+- GNINA v1.3.3 deployed, SHA-256 matching the benchmarked binary exactly.
+- 394 wrong-tautomer designs corrected; de novo library re-prepared to 2,988
+  designs, 3,442 jobs, 36 shards.
+- 35/35 pre-flight gates passed on `h3`.
+- Reference redock on `h3` reproduced the August benchmark to four decimals.
+- Real 12-design dry run passed all raw-score, pose-location and parser checks.
+- Full 3,442-job EX8 screen launched at 22 processes x 4 CPU.
+
+**Decisions made and why**
+- Corrected the 394 affected designs rather than screening known-wrong chemistry
+  or discarding them: molecular formula is preserved in all 394 and imidazole
+  aromaticity restored in every case.
+- Kept EX8 for the screen as instructed, retaining 9 modes, because the 5NDZ
+  reference recovers its crystal pose at mode 2 rather than mode 1.
+- Excluded IFP from the go decision because the reference fingerprints are known
+  to contain no hydrogen bonds.
+
+**Tests and verification actually executed**
+Recorded with numbers in `SCREEN_REAL/DRY_RUN_VALIDATION.md`: box values match
+the corrected definitions to 0.000000 A; crystal ligand centroids sit 0.0007 A
+and 0.0004 A from the box centres; 17/17 and 38/38 ligand heavy atoms inside the
+boxes; 88 and 61 receptor heavy atoms within 5 A of the crystal ligands; 199 and
+259 receptor heavy atoms inside the boxes; 8/8 and 10/11 expected pocket
+residues; no HETATM in either receptor; best-pose RMSD 0.6747 A (5NDD, pose 1)
+and 0.8672 A (5NDZ, pose 2), both under the 2.0 A gate; all four score fields
+present, finite and non-constant over 135 dry-run poses with 135 unique values
+each; 135/135 dry-run pose centroids inside the configured box; parser versus raw
+maximum absolute difference 0 for every score field; preparation accounting
+3,000 = 2,995 + 5 with all failures itemised; routing 1,863 + 671 + 2 x 454 =
+3,442 with 0 misrouted.
+
+**Results**
+Pre-flight verdict GO; the production screen is running.
+
+**Failures or unresolved uncertainty**
+- Three defects found and fixed during pre-flight: the wrong AZ8838 tautomer,
+  AppleDouble `._*` files entering shard globs, and a temporary filename that
+  made GNINA emit nothing while still exiting 0.
+- The reference interaction fingerprints still contain no hydrogen bonds and
+  must be repaired before IFP is weighted.
+- Docking-queue membership was selected with the defective reference; about 19%
+  of orthosteric slots would differ if reselected. Out of scope for this run.
+- 5NDD best IFP recovery measured 0.600 on `h3` against 0.700 in the handoff.
+- The screen had not finished when this entry was written.
+
+**Effect on the overall project**
+The engine is proven to dock into the real PAR2 pockets on the production
+machine with both Vina and CNN scoring live, and the full screen is under way.
+
+**Next intended step**
+Collect the EX8 results and report the required sanity review before any
+downstream ranking, clustering or similarity searching.

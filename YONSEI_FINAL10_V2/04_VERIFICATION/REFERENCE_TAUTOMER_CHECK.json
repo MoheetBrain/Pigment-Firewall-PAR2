@@ -1,0 +1,154 @@
+{
+  "reference_ligands": {
+    "orthosteric": {
+      "label": "5NDD / AZ8838 / 8TZ",
+      "path": "01_REFERENCE_POCKETS/ligands/5NDD_AZ8838_crystallographic_clean.sdf",
+      "stored": {
+        "smiles": "CCCc1cc(F)ccc1[C@H](O)C1N=CC=N1",
+        "formula": "C13H15FN2O",
+        "molecular_weight": 234.274,
+        "heavy_atoms": 17,
+        "aromatic_rings": 1,
+        "total_rings": 2,
+        "hbd": 1,
+        "hba": 3,
+        "tpsa": 44.95
+      },
+      "pdb_identity": {
+        "checked": true,
+        "comp_id": "8TZ",
+        "pdb_name": "(S)-(4-fluoranyl-2-propyl-phenyl)-(1H-imidazol-2-yl)methanol",
+        "expected_inchikey": "IDFPQEHZYBXIFO-LBPRGKRZSA-N",
+        "actual_inchikey": "BBGRVUDFEGKPGW-LBPRGKRZSA-N",
+        "inchikey_match": false,
+        "expected_aromatic_bonds": 11,
+        "actual_aromatic_bonds": 6,
+        "aromatic_bond_match": false,
+        "expected_smiles": "CCCc1cc(F)ccc1[C@H](O)c2[nH]ccn2"
+      },
+      "h_placement_artifacts": [
+        {
+          "ring_atom_indices": [
+            1,
+            13,
+            14,
+            4,
+            12
+          ],
+          "ring_size": 5,
+          "donor_carbon_idx": 12,
+          "acceptor_nitrogen_idx": 1,
+          "stored_smiles": "CCCc1cc(F)ccc1[C@H](O)C1N=CC=N1",
+          "corrected_smiles": "CCCc1cc(F)ccc1[C@H](O)c1ncc[nH]1",
+          "stored_aromatic_rings": 1,
+          "corrected_aromatic_rings": 2,
+          "stored_formula": "C13H15FN2O",
+          "corrected_formula": "C13H15FN2O",
+          "formula_unchanged": true,
+          "stored_hbd": 1,
+          "corrected_hbd": 2,
+          "stored_hba": 3,
+          "corrected_hba": 2
+        }
+      ],
+      "clean": false,
+      "corrected": {
+        "smiles": "CCCc1cc(F)ccc1[C@H](O)c1ncc[nH]1",
+        "formula": "C13H15FN2O",
+        "molecular_weight": 234.274,
+        "heavy_atoms": 17,
+        "aromatic_rings": 2,
+        "total_rings": 2,
+        "hbd": 2,
+        "hba": 2,
+        "tpsa": 48.91
+      },
+      "tanimoto_stored_vs_corrected": 0.5102040816326531
+    },
+    "allosteric": {
+      "label": "5NDZ / AZ3451 / 8UN",
+      "path": "01_REFERENCE_POCKETS/ligands/5NDZ_AZ3451_crystallographic_clean.sdf",
+      "stored": {
+        "smiles": "C[C@@H](C1CCCCC1)n1c(-c2cc3c(cc2Br)OCO3)nc2cc(C(=O)Nc3ccc(C#N)cc3)ccc21",
+        "formula": "C30H27BrN4O3",
+        "molecular_weight": 571.475,
+        "heavy_atoms": 38,
+        "aromatic_rings": 4,
+        "total_rings": 6,
+        "hbd": 1,
+        "hba": 5,
+        "tpsa": 89.17
+      },
+      "pdb_identity": {
+        "checked": true,
+        "comp_id": "8UN",
+        "pdb_name": "2-(6-bromanyl-1,3-benzodioxol-5-yl)-N-(4-cyanophenyl)-1-[(1S)-1-cyclohexylethyl]benzimidazole-5-carboxamide",
+        "expected_inchikey": "FJAOGFGHTPYADT-SFHVURJKSA-N",
+        "actual_inchikey": "FJAOGFGHTPYADT-SFHVURJKSA-N",
+        "inchikey_match": true,
+        "expected_aromatic_bonds": 22,
+        "actual_aromatic_bonds": 22,
+        "aromatic_bond_match": true,
+        "expected_smiles": "C[C@@H](C1CCCCC1)n1c(-c2cc3c(cc2Br)OCO3)nc2cc(C(=O)Nc3ccc(C#N)cc3)ccc21"
+      },
+      "h_placement_artifacts": [],
+      "clean": true
+    }
+  },
+  "artifacts_found": 1,
+  "identity_mismatches": 1,
+  "impact": {
+    "orthosteric": {
+      "family": "orthosteric",
+      "rows": 10000,
+      "ref_tanimoto_stored": {
+        "min": 0.0595238095238095,
+        "median": 0.1558441558441558,
+        "mean": 0.16024810770566422,
+        "max": 0.8461538461538461
+      },
+      "ref_tanimoto_corrected": {
+        "min": 0.03488372093023256,
+        "median": 0.12903225806451613,
+        "mean": 0.1334602616164737,
+        "max": 0.4339622641509434
+      },
+      "mean_abs_ref_tanimoto_change": 0.03101527876074753,
+      "design_score_mean_abs_change": 0.0172887380281701,
+      "design_score_max_abs_change": 0.17962653388978056,
+      "rows_changing_gt_0.01": 6840,
+      "rows_changing_gt_0.05": 231,
+      "spearman_old_vs_new_design_score": 0.9881600006273025,
+      "mean_abs_rank_shift": 299.9958,
+      "max_abs_rank_shift": 4655,
+      "docking_queue_slots": 1867,
+      "docking_queue_retained": 1509,
+      "docking_queue_changed": 358,
+      "docking_queue_retained_pct": 80.82,
+      "docking_queue_note": "Membership comparison by score only; it ignores the scaffold-cap-12 reselection, so it is an upper bound on real churn."
+    }
+  },
+  "design_scan": {
+    "DENOVO_15000": {
+      "rows": 15000,
+      "affected": 2131,
+      "affected_pct": 14.207,
+      "by_family": {
+        "orthosteric": 2100,
+        "exploratory": 6,
+        "allosteric": 25
+      }
+    },
+    "DENOVO_TOP3000_FOR_DOCKING": {
+      "rows": 3000,
+      "affected": 394,
+      "affected_pct": 13.133,
+      "by_family": {
+        "orthosteric": 388,
+        "exploratory": 2,
+        "allosteric": 4
+      }
+    },
+    "output_csv": "/home/user/pigment-firewall-par2/YONSEI_FINAL10_V2/04_VERIFICATION/affected_designs_wrong_tautomer.csv"
+  }
+}

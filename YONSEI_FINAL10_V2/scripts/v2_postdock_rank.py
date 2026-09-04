@@ -36,7 +36,10 @@ from rdkit.Chem.Scaffolds import MurckoScaffold
 RDLogger.DisableLog("rdApp.*")
 
 POCKET_REFERENCE_SMILES = {
-    "5NDD_orthosteric": ("AZ8838", "CCCc1cc(F)ccc1[C@H](O)C1N=CC=N1"),
+    # Correct AZ8838 (wwPDB 8TZ, InChIKey IDFPQEHZYBXIFO-LBPRGKRZSA-N). The
+# repository SDF stores a wrong 4H-imidazole tautomer; see
+# 04_VERIFICATION/REFERENCE_MODEL_DEFECTS.md defect 1.
+    "5NDD_orthosteric": ("AZ8838", "CCCc1cc(F)ccc1[C@H](O)c1[nH]ccn1"),
     "5NDZ_allosteric": ("AZ3451", "C[C@@H](C1CCCCC1)n1c(-c2cc3c(cc2Br)OCO3)nc2cc(C(=O)Nc3ccc(C#N)cc3)ccc21"),
 }
 FAMILY_INTENDED_POCKET = {

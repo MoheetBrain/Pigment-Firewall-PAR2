@@ -17,6 +17,34 @@ The corrected benchmark gate is now `OPEN_REFERENCE_BENCHMARK_PASSED`. The top-r
 
 After the reference benchmark passed, a later explicit request expanded the work to CPU de novo generation. The production run created exactly 15,000 unique filtered designs: 10,000 orthosteric-family, 3,500 allosteric-family, and 1,500 exploratory. A scaffold-capped 3,000-design subset is prepared for corrected pocket-specific docking. Generated molecules have not yet been docked and are not claimed to be PAR2 antagonists.
 
+## Verification status (added after independent review)
+
+An independent verification pass over commit `3a80c0b` confirmed that the de novo
+production artifacts are internally consistent: all six checksums match and every
+row of both design tables recomputes exactly. It also found **two defects in the
+reference models** those designs were built on. See
+[`04_VERIFICATION/REFERENCE_MODEL_DEFECTS.md`](04_VERIFICATION/REFERENCE_MODEL_DEFECTS.md).
+
+1. **The orthosteric reference ligand is the wrong tautomer.** The stored 8TZ is a
+   non-aromatic 4H-imidazole, not AZ8838 (wwPDB InChIKey mismatch; same formula and
+   mass, which is why earlier checks passed). It propagated into BRICS seeding:
+   **2,131 of the 15,000 designs - and 394 of the 3,000 in the docking queue -
+   carry the wrong motif structurally**, which rescoring cannot fix. The allosteric
+   reference (8UN / AZ3451) is clean.
+2. **The reference ProLIF fingerprints contain no hydrogen bonds**, because neither
+   ligand nor receptor was protonated before fingerprinting. The `0.700` and `0.889`
+   recovery figures in the gate table above are therefore measured against an
+   incomplete reference and should not be quoted as interaction-level validation
+   until regenerated.
+
+**The RMSD half of the benchmark gate is unaffected** - RMSD is purely geometric,
+so both systems still pass the primary <=2.0 A best-pose criterion, and the 5NDZ
+top-pose nuance stands as written.
+
+Recommended sequencing is in the defects report; in short, repair the reference
+ligand and the fingerprints before spending GNINA CPU time on the current docking
+queue. The sourceable V1/FDA route is not blocked by either defect.
+
 ## Re-run sequence
 
 ```text

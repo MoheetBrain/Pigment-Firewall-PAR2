@@ -18,10 +18,11 @@ SCREENING/NPAtlas_download_2024_09.sdf
 GNINA_SCREEN_EX32/SDF_PH74/LOTUS_3D_3d.sdf
 GNINA_SCREEN_EX32/SDF_PH74/NPATLAS_3D_3d.sdf
 
-# Local V2 python environment
+# Local V2 python environment and caches
 .venv-v2/
+__pycache__/
+*.pyc
 
 # V2 screen: full prepared shard library (reproducible from v2_prepare_ligands.py)
 YONSEI_FINAL10_V2/04_V2_SCREEN/shards/
 YONSEI_FINAL10_V2/04_V2_SCREEN/ligands/
-__pycache__/
