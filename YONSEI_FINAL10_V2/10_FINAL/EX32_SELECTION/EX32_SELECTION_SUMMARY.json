@@ -1,0 +1,70 @@
+{
+  "generated_utc": "2026-09-05T11:34:24.955471+00:00",
+  "universe": "YONSEI_FINAL10_V2/10_FINAL/COMPLETE_EX8_UNIVERSE_WITH_GAPFILL.csv",
+  "universe_rows": 16314,
+  "eligible_rows": 14224,
+  "clash_filtered_out": 2090,
+  "anchor_definition": {
+    "5NDD_orthosteric": [
+      "HIS:135:A",
+      "TYR:82:A"
+    ],
+    "5NDZ_allosteric": []
+  },
+  "anchor_note": "TYR:82 + HIS:135 read from the repaired crystal fingerprint; supersedes ASP:228 + HIS:135 in v2_consensus_rank.py",
+  "stereo_list_used": true,
+  "selected_jobs": 535,
+  "selected_molecules": 513,
+  "by_pocket": {
+    "5NDD_orthosteric": 420,
+    "5NDZ_allosteric": 115
+  },
+  "by_axis": {
+    "ifp_recovery": 80,
+    "physics": 62,
+    "design_score": 60,
+    "envelope": 57,
+    "ligand_eff": 48,
+    "fsp3": 43,
+    "dual_anchor": 40,
+    "az8838_adjacent": 38,
+    "cluster": 32,
+    "stereo_redock": 25,
+    "scaffold_hop": 25,
+    "anchor_protomer": 25
+  },
+  "unique_murcko_scaffolds": 353,
+  "scaffold_cap": 4,
+  "pct_5ndz": 21.5,
+  "carve_lists": {
+    "EX32_IDS_library_5NDD.csv": 155,
+    "EX32_IDS_library_batch2_5NDD.csv": 265,
+    "EX32_IDS_library_5NDZ.csv": 33,
+    "EX32_IDS_library_batch2_5NDZ.csv": 82
+  },
+  "by_batch": {
+    "batch2": 245,
+    "batch1": 188,
+    "gapfill": 70,
+    "recovered": 32
+  },
+  "envelope": {
+    "mw": [
+      350.0,
+      480.0
+    ],
+    "clogp": [
+      1.5,
+      3.0
+    ],
+    "tpsa": [
+      70.0,
+      95.0
+    ],
+    "hbd_max": 2,
+    "aromatic_rings_max": 2,
+    "fsp3_min": 0.35,
+    "rotb_max": 5
+  },
+  "note": "Diverse multi-axis selection. Ranking evidence only; no activity claim."
+}

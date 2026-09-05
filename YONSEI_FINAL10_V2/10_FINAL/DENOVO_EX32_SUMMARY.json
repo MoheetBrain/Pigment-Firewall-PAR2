@@ -1,0 +1,52 @@
+{
+  "generated_utc": "2026-09-05T11:53:09.113250+00:00",
+  "ex32_jobs": 535,
+  "ex32_molecules": 513,
+  "by_pocket": {
+    "5NDD_orthosteric": 420,
+    "5NDZ_allosteric": 115
+  },
+  "by_selection_axis": {
+    "ifp_recovery": 80,
+    "physics": 62,
+    "design_score": 60,
+    "envelope": 57,
+    "ligand_eff": 48,
+    "fsp3": 43,
+    "dual_anchor": 40,
+    "az8838_adjacent": 38,
+    "cluster": 32,
+    "stereo_redock": 25,
+    "scaffold_hop": 25,
+    "anchor_protomer": 25
+  },
+  "unique_murcko": 353,
+  "rank_axes_used": [
+    "max_ifp_recovery",
+    "best_vina_affinity",
+    "ligand_efficiency",
+    "best_CNN_VS",
+    "anchor_hbond_fraction_repaired"
+  ],
+  "all_poses_clashing_at_ex32": 7,
+  "median_ex32_minus_ex8_vina": 0.0,
+  "median_ex32_minus_ex8_ifp": 0.0,
+  "ex32_vina_improved": 194,
+  "ex32_vina_unchanged": 96,
+  "ex32_vina_worse": 245,
+  "ex32_ifp_improved": 99,
+  "ex32_ifp_worse": 145,
+  "anchor_definition_used": {
+    "5NDD_orthosteric": [
+      "HIS:135:A",
+      "TYR:82:A"
+    ],
+    "5NDZ_allosteric": []
+  },
+  "dual_anchor_at_ex32": 35,
+  "dual_anchor_at_ex8": 54,
+  "anchor_any_two_at_ex32": 54,
+  "full_crystal_ifp_recovery_at_ex32": 4,
+  "top_written": 500,
+  "note": "EX32 = exhaustiveness 32, --cnn_scoring rescore, --num_modes 9, CPU. Ranking evidence only; no activity claim. Missing values are missing."
+}

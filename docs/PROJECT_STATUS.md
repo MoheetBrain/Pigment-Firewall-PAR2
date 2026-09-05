@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-09-05 (sprint: EX32 running) · branch `yonsei-final10-v2`
+Last updated: 2026-09-05 (EX8 complete, EX32 done, autopilot running) · branch `yonsei-final10-v2`
 
 ## Project Objective
 
@@ -18,17 +18,17 @@ to bind or inhibit PAR2.
 
 ## Current Stage
 
-Stage 8 of the V2 campaign: **completion sprint in progress.** The de novo
-library is fully accounted for, the stereochemistry defect is measured and
-scoped, the interaction-geometry metric has been rebuilt on a
-preparation-independent basis, and EX32 precision docking is running.
+Stage 9: **the EX8 screen is complete at 16,314 of 16,314 routed jobs**, covering
+all 14,825 prepared molecules with nine poses each. EX32 precision docking has
+run on 535 jobs over 513 diverse molecules. The anchor definition, receptor
+protonation and stereochemistry defects are all corrected or scoped.
 
-Complete EX8 universe: 13,591 ligand-pocket rows over 12,544 designs, of which
-10,919 carry usable non-clashing evidence. 2,723 jobs have no result and that
-total cannot be split between never-dispatched and lost-with-pw-n2b.
+An autopilot systemd service on h3 is now running the remaining work without
+needing this session: the real-compound EX8 lane (4,838 approved drugs, natural
+products and retrieved analogues), robust polar-anchor scoring, and consensus
+ranking. It powers h3 off when finished.
 
-Real-compound lane prepared: 4,838 unique approved, natural-product and
-retrieved-analogue structures awaiting EX8. No final panel exists yet.
+The final diverse panel has not been produced yet.
 
 ## Current Branch
 

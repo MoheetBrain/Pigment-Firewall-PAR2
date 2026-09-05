@@ -721,3 +721,87 @@ measured cause, scope and remediation list.
 **Next intended step**
 EX32 precision docking including the flagged stereoisomers, then the
 real-compound lane and the final panel.
+
+---
+
+## 2026-09-05 · EX8 completed to 100%, EX32 precision screen, anchors corrected in the ranker
+
+**Branch:** `yonsei-final10-v2`
+**Project stage:** V2 completion sprint, checkpoints 3-4.
+
+**Objective of the change**
+Close the remaining EX8 gap, run precision EX32 on a diverse selection, correct
+the anchor definition inside the consensus ranker, and hand the rest of the
+pipeline to a self-contained autopilot on h3.
+
+**Files and systems changed**
+- Added `10_FINAL/DENOVO_EX32_ALL.csv`, `DENOVO_EX32_TOP500.csv`,
+  `DENOVO_EX32_SUMMARY.json`, `EX32_RUN_PROVENANCE.json`, `EX32_SELECTION/`,
+  `EX8_TRUE_MISSING_JOBS.csv`.
+- Added `scripts/v2_select_ex32_diverse.py`, `v2_ex32_report.py`.
+- Corrected the anchor, contact and switch residue sets in
+  `scripts/v2_consensus_rank.py` and retired the agonist-mimicry proxy.
+- Installed the `par2autopilot` systemd service on h3.
+
+**What was completed**
+The EX8 universe reached 16,314 of 16,314 jobs. EX32 ran on 535 jobs over 513
+molecules. The ranker now uses evidence-backed residues.
+
+**Decisions made and why**
+- The 5NDD anchor set is now the protomer-robust triple TYR:82, HIS:135,
+  ASP:228, scored by count satisfied rather than as a fixed pair, because which
+  of them ProLIF calls a hydrogen bond depends on the ligand protomer and the
+  receptor histidine tautomer while the geometry does not.
+- TYR:311 and LEU:230 were removed from the contact and agonist definitions
+  (8.7 A and 10.6 A from the ligand), TYR:323 removed as a switch residue
+  (6.7 A), and 5NDZ's GLY:157 corrected to ALA:157.
+- The agonist-mimicry flag was retired rather than repaired: it measured nothing
+  and static docking cannot settle antagonist versus biased agonist regardless.
+- EX32 selection used quota allocation across 12 independent axes with a
+  per-scaffold cap, not a composite score.
+
+**Tests and verification actually executed**
+- Gap-fill: 2,723 genuinely missing jobs identified (1,725 5NDD, 998 5NDZ), of
+  which 2,281 molecules had no evidence in any pocket. 109 shards, 109/109
+  complete, all rc=0, 47.7 min. Output verified at 24,507 pose records =
+  exactly 2,723 x 9. ProLIF: 2,723 pairs, 0 failures.
+- EX32: 70 shards, 70/70 complete, all rc=0, 16.8 min. 4,815 pose records =
+  exactly 535 x 9. 535 pairs fingerprinted, 0 ProLIF failures. 7 of 535
+  molecules have no acceptable pose.
+- GNINA SHA-256 3340c1f4...72172 checked before each of the three launches;
+  boxes confirmed by --dry-run; parameters unchanged throughout.
+- Selection diversity: 353 unique Murcko scaffolds, 5NDZ hedge 21.5%, and only
+  35% of the selected molecules would have been picked by a naive
+  top-510-by-affinity ranking.
+- Cross-agent agreement: an independent recomputation of all three anchor
+  definitions from ifp_keys reproduced Agent 2's counts at 100% agreement over
+  9,066 rows.
+- Both pose archives transferred with matching SHA-256.
+
+**Results**
+The de novo structural screen is complete and precision-refined.
+
+**Failures or unresolved uncertainty**
+- Of 54 EX8 dual-anchor calls in the EX32 selection, only 30 survive at EX32:
+  24 lost and 5 newly gained. Roughly 44% of EX8 dual-anchor assignments are
+  sampling artefacts, so anchor evidence should be taken from EX32 where it
+  exists and the criterion should not carry decisive weight on EX8 alone.
+- EX32 did not uniformly improve docking: 194 molecules improved on Vina, 245
+  got worse, 96 unchanged; median change 0.0. Same pattern for IFP (99 better,
+  145 worse). EX32 is a resampling, not an upgrade.
+- PIGNet2 exists only for batch-1 rows; batch-2, gap-fill and EX32 rows have
+  none, so the physics family is not like-for-like across the universe.
+- A `pkill -f v2_run_screen.sh` matched the agent's own SSH command string and
+  killed its session, orphaning xargs which kept spawning workers. Recovered by
+  killing by PID and relaunching under setsid.
+- Vendor, price and stock data remain unavailable: web search and agent
+  spawning are blocked in this session.
+
+**Effect on the overall project**
+Every prepared molecule now has real docking evidence, the highest-weighted
+ranking family rests on verified residues, and the remaining compute no longer
+depends on an interactive session.
+
+**Next intended step**
+Let the autopilot finish the real-compound lane and consensus ranking, then
+produce the diverse final panel and IDEAL_DE_NOVO_TOP5.

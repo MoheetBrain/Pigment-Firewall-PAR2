@@ -47,23 +47,36 @@ PROFILE = {
         clogp=(1.5, 3.0), tpsa=(70, 95),
         hbd_max=2, hba_max=5, aromatic_rings_max=2,
         fsp3_min=0.35, rotb_max=5,
-        # Polar anchors: hydrogen bonds to these carry the largest modelled
-        # electrostatic terms for AZ8838.
-        anchor_residues=["ASP:228", "HIS:135"],
-        # Aromatic / hydrophobic contacts lining the occluded subpocket.
-        contact_residues=["TYR:82", "LYS:131", "ILE:152", "PHE:155",
-                          "HIS:227", "LEU:330", "TYR:311"],
-        # TM7 activation switch: an antagonist should sit against these and
-        # keep them upright rather than pushing them down.
-        switch_residues=["TYR:323", "TYR:326"],
+        # Protomer- and tautomer-robust anchor set. Exactly these three residues
+        # place a polar atom within hydrogen-bonding distance of the
+        # crystallographic ligand (2.475, 2.630, 2.929 A); the next nearest polar
+        # contact is 4.067 A. WHICH of them ProLIF calls a hydrogen bond depends
+        # on the ligand imidazole protomer and the receptor histidine tautomer,
+        # so they are scored by count satisfied, not as a fixed pair. The former
+        # ["ASP:228","HIS:135"] pair is retired: it omitted TYR:82, the shortest
+        # polar contact in the pocket, and its population was 95% disjoint from
+        # the crystallographic one (Jaccard 0.051).
+        anchor_residues=["TYR:82", "HIS:135", "ASP:228"],
+        # Pocket lining verified by heavy-atom distance to the crystal ligand.
+        # TYR:311 (8.7 A) and LEU:230 (10.6 A) were removed: they do not line
+        # this pocket and were never satisfiable.
+        contact_residues=["LYS:131", "ILE:327", "PHE:155", "CYS:226", "ILE:152",
+                          "HIS:227", "TRP:141", "TYR:134", "TYR:156", "LEU:330",
+                          "LEU:78"],
+        # TYR:323 removed at 6.7 A; TYR:326 retained at 4.81 A.
+        switch_residues=["TYR:326"],
     ),
     "5NDZ_allosteric": dict(
         mw=(300, 460), mw_ideal=(320, 400),
         clogp=(3.0, 5.0), tpsa=(40, 75),
         hbd_max=2, hba_max=6, aromatic_rings_max=4,
         fsp3_min=0.15, rotb_max=6,
-        anchor_residues=[],           # the pocket has no characterised polar anchor
-        contact_residues=["PHE:154", "GLY:157", "ALA:120", "LEU:123",
+        # This site forms no hydrogen bond to its own crystallographic ligand,
+        # so it has no anchor set. Closest polar approach is TYR:210 at 3.393 A.
+        anchor_residues=[],
+        # GLY:157 removed: residue 157 is ALA, so that key matched 0 of 3,275
+        # designs and silently capped this pocket's contact fraction at 0.8.
+        contact_residues=["PHE:154", "ALA:157", "ALA:120", "LEU:123",
                           "CYS:161", "TRP:199", "ILE:202", "LEU:203",
                           "TYR:210", "VAL:211"],
         switch_residues=[],
@@ -71,18 +84,14 @@ PROFILE = {
 }
 POCKET_WEIGHT = {"5NDD_orthosteric": 1.00, "5NDZ_allosteric": 0.80}
 
-# Agonist-mimicry proxy. Small-molecule agonists reproduce the tethered-ligand
-# trajectory: a parallel beta-sheet against ECL2 engaging LEU:230 alongside
-# TYR:311/ASP:228, driving TM7 down. A pose showing that pattern is FLAGGED for
-# functional testing, never silently removed - static docking cannot decide this.
-AGONIST_PATTERN = {"LEU:230", "TYR:311", "ASP:228"}
+# The agonist-mimicry proxy has been RETIRED. It required LEU:230 and TYR:311,
+# which sit 10.6 A and 8.7 A from the crystallographic ligand and therefore do
+# not line this pocket at all. It fired on 9 of 12,341 rows because it was very
+# nearly unsatisfiable, so it measured nothing. Antagonist versus biased agonist
+# cannot be settled by static docking; it needs the functional assays, above all
+# G12/13 -> RhoA.
+AGONIST_PATTERN: set[str] = set()
 
-# Families are set from the MEASURED Spearman structure of this dataset, not
-# from assumption. Within 5NDD: Vina/ligand-efficiency r = -0.958, Vina/PIGNet2
-# r = 0.899 - all three are one physics family. CNNscore/CNN_VS r = 0.988 - one
-# CNN family. Interaction-fingerprint recovery correlates |r| <= 0.19 with
-# everything else, so it is the only genuinely orthogonal evidence and is given
-# its own family rather than being outvoted by five correlated views.
 METRICS = [
     ("best_vina_affinity", False, "physics"),
     ("ligand_efficiency", True, "physics"),
@@ -156,7 +165,7 @@ def contact_scores(keys: str, pocket: str) -> dict:
         contact_fraction=(len([r for r in contacts if r in present]) / len(contacts))
         if contacts else np.nan,
         switch_contact=bool([r for r in switches if r in present]),
-        agonist_pattern_flag=AGONIST_PATTERN.issubset(present),
+        agonist_pattern_flag=bool(AGONIST_PATTERN) and AGONIST_PATTERN.issubset(present),
     )
 
 
