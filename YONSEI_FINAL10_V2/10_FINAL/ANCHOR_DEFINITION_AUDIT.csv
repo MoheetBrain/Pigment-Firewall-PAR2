@@ -1,0 +1,14 @@
+definition,kind,residues,n_designs,n_evaluated,fraction,median_consensus_rank,best_consensus_rank,n_in_consensus_top500,n_in_consensus_top1000,median_crystal_ifp_recovery,description,overlap_with_OLD_definition,n_missed_by_OLD_definition,jaccard_vs_OLD_definition
+OLD_ASP228_AND_HIS135_hbond,hbond_all,ASP:228;HIS:135,62,9066,0.006839,2775,15,8,13,0.8125,the definition used by v2_consensus_rank.py and quoted in FINAL_CANDIDATES.md as '62 dual-anchor designs',62,0,1.0
+CRYSTAL_TYR82_AND_HIS135_hbond,hbond_all,TYR:82;HIS:135,81,9066,0.008934,2351,47,11,24,0.875,the two hydrogen bonds actually observed in the repaired crystal complex,7,74,0.0515
+ANY_TWO_OF_TYR82_HIS135_ASP228_hbond,hbond_atleast,TYR:82;HIS:135;ASP:228,171,9066,0.018862,2662,15,23,41,0.8125,protomer-robust: any two of the three polar anchor positions,62,109,0.3626
+ALL_THREE_TYR82_HIS135_ASP228_hbond,hbond_atleast,TYR:82;HIS:135;ASP:228,7,9066,0.000772,2541,136,1,3,0.9375,"all three polar positions hydrogen-bonded, as in the imidazolium protomer T3",7,0,0.1129
+HIS135_hbond_only,hbond_all,HIS:135,759,9066,0.083719,2988,1,77,153,0.8125,the single protomer-robust requirement,62,697,0.0817
+TYR82_hbond_only,hbond_all,TYR:82,965,9066,0.106442,3255,3,106,184,0.8125,single anchor,7,958,0.0069
+ASP228_hbond_only,hbond_all,ASP:228,601,9066,0.066292,4430,9,51,85,0.75,single anchor,62,539,0.1032
+ANY_ONE_OF_TYR82_HIS135_ASP228_hbond,hbond_atleast,TYR:82;HIS:135;ASP:228,2147,9066,0.236819,3469,1,210,378,0.8125,the 'at least one anchor' population,62,2085,0.0289
+CRYSTAL_IFP_RECOVERY_ge_0.5,recovery_threshold,,8859,9066,0.977167,4702,1,500,1000,0.75,pose reproduces >= 0.5 of the 16 observed crystal fingerprint keys,62,8797,0.007
+CRYSTAL_IFP_RECOVERY_ge_0.625,recovery_threshold,,8145,9066,0.898412,4355,1,500,1000,0.75,pose reproduces >= 0.625 of the 16 observed crystal fingerprint keys,61,8084,0.0075
+CRYSTAL_IFP_RECOVERY_ge_0.75,recovery_threshold,,5701,9066,0.628833,3482,1,498,975,0.8125,pose reproduces >= 0.75 of the 16 observed crystal fingerprint keys,49,5652,0.0086
+CRYSTAL_IFP_RECOVERY_ge_0.875,recovery_threshold,,1607,9066,0.177256,2608,1,272,431,0.875,pose reproduces >= 0.875 of the 16 observed crystal fingerprint keys,28,1579,0.0171
+CRYSTAL_IFP_RECOVERY_ge_1,recovery_threshold,,10,9066,0.001103,1488,48,3,4,1.0,pose reproduces >= 1 of the 16 observed crystal fingerprint keys,0,10,0.0

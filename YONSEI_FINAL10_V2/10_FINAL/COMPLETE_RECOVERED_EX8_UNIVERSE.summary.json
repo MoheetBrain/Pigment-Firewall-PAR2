@@ -1,0 +1,47 @@
+{
+  "generated_utc": "2026-09-05T10:41:19.887356+00:00",
+  "inputs": [
+    "SCREEN_REAL/EVIDENCE_batch1.csv",
+    "SCREEN_REAL/EVIDENCE_batch2.csv",
+    "SCREEN_REAL/EVIDENCE_recovered.csv"
+  ],
+  "per_input": {
+    "EVIDENCE_batch1.csv": {
+      "rows": 3442,
+      "unique_cand_ids": 2988,
+      "pairs": 3442
+    },
+    "EVIDENCE_batch2.csv": {
+      "rows": 8899,
+      "unique_cand_ids": 8497,
+      "pairs": 8899
+    },
+    "EVIDENCE_recovered.csv": {
+      "rows": 1250,
+      "unique_cand_ids": 1250,
+      "pairs": 1250
+    }
+  },
+  "rows_before_dedup": 13591,
+  "rows_after_dedup": 13591,
+  "duplicate_rows_dropped": 0,
+  "duplicate_keys": 0,
+  "duplicate_keys_with_numeric_disagreement": 0,
+  "duplicate_detail": [],
+  "unique_cand_ids": 12544,
+  "pairs_by_pocket": {
+    "5NDD_orthosteric": 9641,
+    "5NDZ_allosteric": 3950
+  },
+  "cand_ids_by_pocket": {
+    "5NDD_orthosteric": 9641,
+    "5NDZ_allosteric": 3950
+  },
+  "rows_by_source": {
+    "EVIDENCE_batch2.csv": 8899,
+    "EVIDENCE_batch1.csv": 3442,
+    "EVIDENCE_recovered.csv": 1250
+  },
+  "molecules_with_no_acceptable_pose": 1690,
+  "note": "One row per ligand per pocket. Docking and fingerprint evidence only; no activity claim. Missing values are missing, not zero."
+}

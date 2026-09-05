@@ -550,3 +550,90 @@ ended. The committed science is unchanged.
 **Next intended step**
 None scheduled. If the campaign resumes, merge the 50 recovered shards and rerun
 ProLIF, clash filtering and consensus before quoting new numbers.
+
+---
+
+## 2026-09-05 · Sprint checkpoint: recovered data, stereo audit, receptor and anchor corrections
+
+**Branch:** `yonsei-final10-v2`
+**Project stage:** V2 completion sprint, checkpoints 1-2.
+
+**Objective of the change**
+Reconcile the recovered worker data, audit stereochemistry, and resolve a
+contradiction in the 5NDD anchor definition before any final ranking is built.
+
+**Files and systems changed**
+- Added `scripts/v2_anchor_metrics.py`, `v2_fix_receptor_protonation.py`,
+  `v2_robust_anchors.py`.
+- Added `10_FINAL/` with the complete EX8 universe, stereochemistry audit,
+  AZ8838 reference interaction tables and the anchor definition audit.
+- Added corrected receptors `*_receptor_pH74_FIXED.pdb`.
+
+**What was completed**
+The recovered shards were processed through the validated pipeline, the full
+library was audited for stereochemistry, the 5NDD anchor definition was
+re-derived from the structures, and two preparation defects were fixed.
+
+**Decisions made and why**
+- Anchors are now scored by heavy-atom polar distance rather than by ProLIF's
+  hydrogen-bond call, because the hydrogen-bond assignment proved to be an
+  artefact of preparation choices while the geometry is invariant.
+- The previous `["ASP:228","HIS:135"]` anchor pair is retired.
+- The agonist-mimicry flag is retired: two of its three residues (TYR:311 at
+  8.7 A and LEU:230 at 10.6 A) do not line the pocket, so it measured nothing.
+
+**Tests and verification actually executed**
+- Complete EX8 universe: 13,591 ligand-pocket rows over 12,544 unique designs
+  (9,641 5NDD, 3,950 5NDZ); 0 duplicate keys; 1,690 molecules have no
+  acceptable pose. The recovered shards contributed 1,250 new rows.
+- Stereochemistry: 15,000 designs audited, 0 parse failures. 8,581 PRESERVED,
+  3,910 NEVER_PRESENT, 2,504 LOST, 5 ALTERED; 3,042 stereocentres lost.
+  4,901 designs carry an unassigned stereocentre from the generator. The 24
+  collapsed "duplicates" are 17 specified-vs-unspecified, 6 genuine epimeric
+  pairs and 1 tautomer merge. 643 ranked designs need redocking: 201 were
+  docked as the WRONG stereoisomer and 442 are ambiguous. A replication check
+  reproduced the shipped InChIKey and prepared SMILES for all 14,825 rows.
+- Receptor protonation: the campaign receptor was built with `obabel -h -p 7.4`,
+  where `-h` overrides the pH model. Verified geometrically: all 39 lysines
+  neutral (2 H on NZ), 17 of 29 aspartates and 10 of 23 glutamates protonated as
+  neutral acids. No salt bridge was detectable anywhere in the campaign.
+  Rebuilt with `-p 7.4` alone, which corrects the chemistry (39/39 Lys+, 0
+  protonated acids) but renumbers every residue (PHE 59 -> PHE 167). Original
+  numbering was transplanted by exact heavy-atom coordinate match, max shift
+  0.000000 A.
+- Reference fingerprint under the corrected receptor: 5NDD keeps 16 keys but
+  LOSES `HIS:135|HBDonor` and GAINS `HIS:227|PiCation`, because Open Babel
+  reassigned the histidine tautomers. 5NDZ is unchanged at 12 keys, still zero
+  hydrogen bonds.
+- Anchor recount (9,066 5NDD rows): old ASP228+HIS135 = 62; crystal
+  TYR82+HIS135 = 81; the two sets are 95% disjoint (Jaccard 0.051, only 7 in
+  common); any two of the three = 171; all three = 7.
+- Robust anchor metric validated on the crystal reference: recovers 3/3 anchors
+  at 2.475, 2.630 and 2.929 A, reproducing the crystallographic distances.
+
+**Results**
+The interaction-geometry evidence family, which carries the highest weight, has
+been rebuilt on a preparation-independent basis.
+
+**Failures or unresolved uncertainty**
+- The published "62 dual-anchor designs" figure is wrong: only 7 of those 62
+  reproduce the crystallographic hydrogen-bond signature. `FINAL_CANDIDATES.md`
+  and `v2_final_report.py` still carry the old claim and must be corrected.
+- ASP:228 was declared an anchor in `v2_consensus_rank.py` on the basis of a
+  code comment citing "largest modelled electrostatic terms". There is no
+  mutagenesis or FMO data in this repository to support it. That justification
+  was unfounded.
+- Which residues form hydrogen bonds depends on the ligand protomer AND the
+  receptor histidine tautomer; all three ligand protomers share one InChIKey, so
+  no integrity check catches the swap.
+- The EX8 universe retains fingerprints computed against the old, incorrectly
+  protonated receptor. Only the final selection pool will be re-fingerprinted.
+- Web search and agent spawning are blocked in this session by a safety
+  classifier, so live vendor, price and stock data cannot be obtained.
+
+**Effect on the overall project**
+The ranking is being rebuilt on evidence that survives preparation choices,
+rather than on an anchor definition that did not match the crystal structure.
+
+**Next intended step**
+EX32 precision docking, the real-compound lane, then the final diverse panel.

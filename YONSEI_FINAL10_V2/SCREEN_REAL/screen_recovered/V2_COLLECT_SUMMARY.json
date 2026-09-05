@@ -1,0 +1,24 @@
+{
+  "collected_utc": "2026-09-05T10:38:39.665117+00:00",
+  "pose_files": 282,
+  "poses_parsed": 63441,
+  "ligand_pocket_pairs": 7049,
+  "unique_ligands_scored": 6898,
+  "pairs_by_pocket": {
+    "5NDD_orthosteric": 5224,
+    "5NDZ_allosteric": 1825
+  },
+  "affinity_summary": {
+    "5NDD_orthosteric": {
+      "min": -9.69538,
+      "median": -4.125735,
+      "max": 25.35126
+    },
+    "5NDZ_allosteric": {
+      "min": -9.55132,
+      "median": -6.76678,
+      "max": -3.75858
+    }
+  },
+  "note": "Docking scores only. Not a measure of biological activity."
+}
