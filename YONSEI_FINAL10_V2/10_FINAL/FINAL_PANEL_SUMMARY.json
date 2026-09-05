@@ -1,11 +1,11 @@
 {
-  "generated_utc": "2026-09-05T19:47:21.726068+00:00",
-  "rows_considered": 16314,
+  "generated_utc": "2026-09-05T21:45:25.800235+00:00",
+  "rows_considered": 21149,
   "gates": {
-    "parseable": 16314,
-    "has_non_clashing_pose": 14217,
-    "real_negative_affinity": 14217,
-    "stereo_not_known_wrong": 13989
+    "parseable": 21149,
+    "has_non_clashing_pose": 17431,
+    "real_negative_affinity": 17312,
+    "stereo_not_known_wrong": 17084
   },
   "panel_size": 20,
   "unique_murcko_scaffolds": 20,
@@ -17,24 +17,29 @@
     "high_sp3_wedge": 4,
     "reference_adjacent": 3,
     "allosteric_hedge": 2,
-    "compact_efficient": 1
+    "general_binder": 1
   },
   "by_pocket": {
     "5NDD_orthosteric": 17,
     "5NDZ_allosteric": 3
   },
   "by_evidence_level": {
-    "EX32": 20
+    "EX32": 15,
+    "EX8": 5
   },
   "by_source_lane": {
-    "DE_NOVO_EX32_REFINED": 20
+    "DE_NOVO_EX32_REFINED": 15,
+    "NATURAL_PRODUCT_OR_V1_HIT": 3,
+    "REAL_ANALOGUE_PUBCHEM": 1,
+    "APPROVED_REPURPOSING": 1
   },
   "stereo_flags": {
-    "OK": 12,
-    "AMBIGUOUS": 8
+    "OK": 14,
+    "AMBIGUOUS": 6
   },
-  "requiring_synthesis": 20,
-  "sourceable_now": 0,
+  "requiring_synthesis": 15,
+  "real_registered_compounds": 5,
+  "approved_or_clinical": 1,
   "ideal_top5": [
     "DL13973",
     "DL13271",

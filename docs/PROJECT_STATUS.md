@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-09-05 (FINAL_TOP20 produced) · branch `yonsei-final10-v2`
+Last updated: 2026-09-05 (sprint complete, all compute off) · branch `yonsei-final10-v2`
 
 ## Project Objective
 
@@ -18,17 +18,21 @@ to bind or inhibit PAR2.
 
 ## Current Stage
 
-Stage 10: **the final de novo panel exists.** `FINAL_TOP20_DIVERSE_PAR2_CANDIDATES.csv`
-and `IDEAL_DE_NOVO_TOP5.csv` are built from the complete 16,314-job EX8 universe
-with EX32 precision evidence on every selected molecule.
+**Sprint complete. All compute is stopped.** The campaign has a final,
+evidence-backed candidate panel.
 
-All 20 candidates are de novo designs requiring synthesis. None is confirmed
-purchasable: live vendor lookups could not run, and no retrieved analogue
-exceeded Tanimoto 0.80 to any seed.
+Screened universe: 16,314 of 16,314 de novo EX8 jobs over 14,825 molecules,
+535 EX32 precision jobs over 513 molecules, and 4,835 real compounds (approved
+drugs, natural products and retrieved analogues) at EX8. Combined ranked
+universe: 21,149 ligand-pocket rows over 19,660 molecules.
 
-The real-compound lane (4,838 approved drugs, natural products and retrieved
-analogues) is docking under an autopilot service on h3 and will refresh the
-panel's repurposing lane when it completes.
+Deliverables: `FINAL_TOP20_DIVERSE_PAR2_CANDIDATES.{csv,md}` spanning four
+provenance lanes with 20 unique Murcko scaffolds, and `IDEAL_DE_NOVO_TOP5.csv`.
+
+Not achieved: vendor, catalogue, price and stock data (web access blocked all
+session), Boltz-2 co-folding and MD. The target-validity question - whether
+selective PAR2 antagonism reduces melanocore uptake - remains open and is the
+largest uncertainty in the project.
 
 ## Current Branch
 

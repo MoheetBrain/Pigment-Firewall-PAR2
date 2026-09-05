@@ -104,10 +104,14 @@ def main() -> int:
     gates = {}
     g = d.copy()
     g = g[g.smiles_prepared.notna()];                        gates["parseable"] = len(g)
-    g = g[~g.get("all_poses_clashing", False).fillna(False)]; gates["has_non_clashing_pose"] = len(g)
+    # Coerce explicitly: after merging lanes this column can arrive as object
+    # dtype, where `~` performs integer inversion instead of logical negation.
+    clash = (g["all_poses_clashing"].fillna(False).astype(bool)
+             if "all_poses_clashing" in g.columns else pd.Series(False, index=g.index))
+    g = g[~clash]; gates["has_non_clashing_pose"] = len(g)
     g = g[g.best_vina_affinity.notna() & (g.best_vina_affinity < 0)]; gates["real_negative_affinity"] = len(g)
     if "pains_flag" in g:
-        g = g[~g.pains_flag.fillna(False)];                   gates["no_PAINS"] = len(g)
+        g = g[~g.pains_flag.fillna(False).astype(bool)];      gates["no_PAINS"] = len(g)
     if "reactive_groups" in g:
         g = g[g.reactive_groups.fillna("") == ""];            gates["no_reactive_group"] = len(g)
     g = g[g.stereo_flag != "WRONG_STEREOISOMER_DOCKED"];      gates["stereo_not_known_wrong"] = len(g)
@@ -115,7 +119,11 @@ def main() -> int:
 
     g["interaction_archetype"] = [archetype(r._asdict()) for r in g.itertuples()]
     g["primary_archetype"] = g.interaction_archetype.str.split(";").str[0]
-    g["source_lane"] = np.where(g.batch == "ex32", "DE_NOVO_EX32_REFINED", "DE_NOVO_EX8")
+    # Real compounds carry their own provenance lane; de novo designs do not.
+    lane = np.where(g.batch == "ex32", "DE_NOVO_EX32_REFINED", "DE_NOVO_EX8")
+    if "source_lane_prov" in g.columns:
+        lane = np.where(g.source_lane_prov.notna(), g.source_lane_prov, lane)
+    g["source_lane"] = lane
     g["evidence_level"] = np.where(g.batch == "ex32", "EX32", "EX8")
 
     g = g.sort_values(["evidence_level", "consensus_score"], ascending=[True, False])
@@ -156,6 +164,19 @@ def main() -> int:
         if scaf:
             per_scaffold[scaf] = per_scaffold.get(scaf, 0) + 1
 
+    # Pass 0: RESERVE slots for real, already-existing chemistry. De novo rows
+    # carry EX32 evidence and therefore sort ahead of every real compound, which
+    # only has EX8. Without a reservation the panel fills entirely with molecules
+    # that must be synthesised, and the repurposing hypothesis - the lane most
+    # likely to yield something testable soon - never appears at all.
+    real_quota = max(4, args.n_final // 4)
+    real_rows = g[~g.source_lane.str.startswith("DE_NOVO")]
+    for idx, row in real_rows.iterrows():
+        if sum(1 for j in selected if not g.loc[j, "source_lane"].startswith("DE_NOVO")) >= real_quota:
+            break
+        if admissible(idx, row):
+            take(idx, row)
+
     # Pass 1: RESERVE slots for the 5NDZ allosteric hedge so the orthosteric lane,
     # which dominates on score, cannot crowd the second mechanism out entirely.
     for idx, row in g[g.pocket == "5NDZ_allosteric"].iterrows():
@@ -181,7 +202,14 @@ def main() -> int:
     for col, val in (("vendor", "PENDING"), ("catalogue_ID", "PENDING"),
                      ("approximate_price", "PENDING"), ("stock_status", "PENDING")):
         panel[col] = val
-    panel["human_exposure_note"] = "de novo design - no human exposure; requires synthesis"
+    panel["human_exposure_note"] = np.where(
+        panel.source_lane == "APPROVED_REPURPOSING",
+        "approved drug - established human exposure; sourceable in principle",
+        np.where(panel.source_lane == "REAL_ANALOGUE_PUBCHEM",
+                 "registered compound - human exposure not established",
+                 np.where(panel.source_lane == "NATURAL_PRODUCT_OR_V1_HIT",
+                          "natural product - human exposure not established",
+                          "de novo design - no human exposure; requires synthesis")))
     panel["mechanism_hypothesis"] = np.where(
         panel.pocket == "5NDD_orthosteric",
         "competitive orthosteric wedge; blocks tethered-ligand docking",
@@ -238,8 +266,9 @@ def main() -> int:
         by_evidence_level=panel.evidence_level.value_counts().to_dict(),
         by_source_lane=panel.source_lane.value_counts().to_dict(),
         stereo_flags=panel.stereo_flag.value_counts().to_dict(),
-        requiring_synthesis=int(len(panel)),
-        sourceable_now=0,
+        requiring_synthesis=int((panel.source_lane.str.startswith("DE_NOVO")).sum()),
+        real_registered_compounds=int((~panel.source_lane.str.startswith("DE_NOVO")).sum()),
+        approved_or_clinical=int((panel.source_lane == "APPROVED_REPURPOSING").sum()),
         ideal_top5=ideal.cand_id.tolist(),
         caveat=("Computationally prioritised PAR2 candidates, not demonstrated "
                 "antagonists. Static docking cannot separate an antagonist from a "

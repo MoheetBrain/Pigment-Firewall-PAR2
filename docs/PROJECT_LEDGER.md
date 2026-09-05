@@ -880,3 +880,83 @@ explicit statement of what it does and does not establish.
 **Next intended step**
 Let the real-compound lane finish, then refresh the panel with any approved or
 sourceable molecules that outrank the de novo designs.
+
+---
+
+## 2026-09-05 · Sprint complete: real-compound lane merged, final panel rebuilt, all compute stopped
+
+**Branch:** `yonsei-final10-v2`
+**Project stage:** V2 completion sprint finished.
+
+**Objective of the change**
+Recover the real-compound lane from h3, merge it into the ranking, rebuild the
+final panel across all provenance lanes, and shut every machine down.
+
+**Files and systems changed**
+- Added `10_FINAL/EVIDENCE_real.csv`, `ROBUST_ANCHORS*.csv`,
+  `REAL_COMPOUND_PROVENANCE.csv`, `CONSENSUS_FINAL/`,
+  `CLUSTERS_FINAL_5NDD/`, `CLUSTERS_FINAL_5NDZ/`.
+- Rebuilt `FINAL_TOP20_DIVERSE_PAR2_CANDIDATES.{csv,md}` and
+  `IDEAL_DE_NOVO_TOP5.csv`.
+- `v2_final_panel.py`: added a reserved quota for real compounds, lane-aware
+  provenance, and an explicit boolean coercion on the clash gate.
+- Raw real-compound poses stored outside the repository in
+  `PAR2_REAL_POSES_2026-09-05/`.
+
+**What was completed**
+The real-compound EX8 lane finished on h3 (194/194 shards) under the repaired
+autopilot, which then powered the machine off by itself. Results were pulled,
+verified and merged, and the panel rebuilt.
+
+**Decisions made and why**
+- Real compounds were given a reserved quota. De novo rows carry EX32 evidence
+  and sort ahead of every real compound, which only has EX8, so without a
+  reservation the panel filled entirely with molecules requiring synthesis and
+  the repurposing hypothesis never appeared.
+- The two lanes are explicitly NOT strictly comparable, and the report says so.
+
+**Tests and verification actually executed**
+- Real-compound EX8: 194/194 shards complete, 194 pose files.
+- Transfer integrity: `AUTOPILOT2_RESULTS.tgz` sha256
+  26f2b399b57b0129b9d6b19c292a390c448580de96df1963af019bbe0d511ff5 and
+  `REAL_POSES.tgz` sha256
+  2107e1aa1500d94341f73feea338f172a02ed26bdcb04c73a76355d84bdee810 both match
+  between h3 and this Mac.
+- Real-compound evidence: 4,835 rows, 4,835 unique compounds; 1,740 have no
+  non-clashing pose in the small 5NDD box.
+- Combined consensus: 21,684 rows from 6 tables -> 21,149 unique ligand-pocket
+  rows over 19,660 molecules, all 535 EX32 rows retained.
+- Final gates: 21,149 rows -> 17,084 after the non-clashing, real-affinity and
+  known-wrong-stereoisomer gates.
+- Final panel: 20 candidates, 20 unique Murcko scaffolds, 19 clusters, 6
+  interaction archetypes, 17 5NDD and 3 5NDZ, 15 de novo and 5 real (1 approved).
+- Clustering: 5NDD 430 clusters at 0.65 with 3 convergent chemotypes; 5NDZ 179
+  clusters with 6 convergent.
+- All instances confirmed TERMINATED; running instance count 0.
+
+**Results**
+A 20-molecule panel spanning four provenance lanes, each candidate carrying its
+full evidence trail, archetype, uncertainty and what it would teach.
+
+**Failures or unresolved uncertainty**
+- No vendor, catalogue, price or stock data was obtainable: web search and agent
+  spawning were blocked by a safety classifier for the whole session. Every
+  vendor field reads PENDING.
+- The one approved drug in the panel (RESATORVID / TAK-242) is a TLR4 inhibitor
+  with no prior PAR2 evidence; it is there because it scored. Propranolol scored
+  strongly (IFP 0.938, two of three anchors, ligand efficiency 0.448) but lost
+  its slot to scaffold diversity and is worth separate consideration as a cheap,
+  topically formulated, human-exposed probe.
+- Real compounds carry EX8 evidence only while de novo carry EX32, so the lanes
+  are not strictly comparable.
+- 6 of 20 candidates have unassigned stereocentres.
+- Boltz-2 co-folding and MD were not run.
+- The target-validity question is untouched and remains the dominant uncertainty.
+
+**Effect on the overall project**
+The computational campaign is complete and self-consistent, with every headline
+number traceable to a verified artefact.
+
+**Next intended step**
+Source and test the PAR2 reference panel to settle target validity before
+committing to synthesis of any de novo design.
