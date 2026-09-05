@@ -48,6 +48,14 @@ from v2_prepare_ligands import protonate_ph74  # noqa: E402
 SUPPORTED_ELEMENTS = {"C", "N", "O", "S", "P", "F", "Cl", "Br", "I", "H", "B", "Se"}
 MISSING = ""  # a value that could not be determined stays empty, never zero
 
+# A double bond whose geometry is actually fixed. STEREOANY means "either",
+# which is the state the tautomer canonicaliser leaves a defined bond in, so it
+# must not be counted as defined stereochemistry.
+DEFINED_BOND_STEREO = {
+    Chem.BondStereo.STEREOE, Chem.BondStereo.STEREOZ,
+    Chem.BondStereo.STEREOCIS, Chem.BondStereo.STEREOTRANS,
+}
+
 
 def stereo_profile(mol: Chem.Mol) -> dict:
     """Stereocentre and stereo-bond counts for one molecule."""
@@ -55,14 +63,16 @@ def stereo_profile(mol: Chem.Mol) -> dict:
                                         useLegacyImplementation=False)
     assigned = [(i, tag) for i, tag in centres if tag in ("R", "S")]
     unassigned = [(i, tag) for i, tag in centres if tag not in ("R", "S")]
-    stereo_bonds = sum(1 for b in mol.GetBonds()
-                       if b.GetStereo() != Chem.BondStereo.STEREONONE)
+    defined_bonds = sum(1 for b in mol.GetBonds() if b.GetStereo() in DEFINED_BOND_STEREO)
+    any_bonds = sum(1 for b in mol.GetBonds()
+                    if b.GetStereo() == Chem.BondStereo.STEREOANY)
     return dict(
         n_stereocentres=len(centres),
         n_stereocentres_assigned=len(assigned),
         n_stereocentres_unassigned=len(unassigned),
         assignments=";".join(f"{i}{tag}" for i, tag in sorted(assigned)),
-        n_stereo_bonds=stereo_bonds,
+        n_stereo_bonds=defined_bonds,
+        n_stereo_bonds_undefined=any_bonds,
     )
 
 
@@ -88,14 +98,19 @@ def standardise(mol: Chem.Mol) -> tuple[Chem.Mol | None, str, dict]:
     Also records the assigned-stereocentre count after each individual step, so
     the stage that destroys stereochemistry can be named rather than guessed.
     """
-    stages: dict[str, int | str] = {}
+    stages: dict[str, int] = {}
+
+    def record(name: str, m: Chem.Mol) -> None:
+        p = stereo_profile(m)
+        stages[name] = p["n_stereocentres_assigned"] + p["n_stereo_bonds"]
+
     try:
         work = rdMolStandardize.Cleanup(mol)
-        stages["after_cleanup"] = stereo_profile(work)["n_stereocentres_assigned"]
+        record("after_cleanup", work)
         work = rdMolStandardize.FragmentParent(work)
-        stages["after_fragment_parent"] = stereo_profile(work)["n_stereocentres_assigned"]
+        record("after_fragment_parent", work)
         work = rdMolStandardize.TautomerEnumerator().Canonicalize(work)
-        stages["after_tautomer_canonicalize"] = stereo_profile(work)["n_stereocentres_assigned"]
+        record("after_tautomer_canonicalize", work)
     except Exception as exc:  # noqa: BLE001
         return None, f"STANDARDISE_FAILED:{type(exc).__name__}", stages
     if work is None or work.GetNumAtoms() == 0:
@@ -153,13 +168,15 @@ def audit_one(cand_id: str, batch: str, smiles_input: str) -> dict:
     row["n_stereocentres_lost"] = lost
     row["n_stereo_bonds_lost"] = bond_lost
 
-    # Name the step that destroyed the stereocentres, rather than assuming it.
-    if lost > 0:
-        counts = [("input", before["n_stereocentres_assigned"]),
+    # Name the step that destroyed the stereochemistry, rather than assuming it.
+    # Counts are centres plus defined double bonds, so both kinds are covered.
+    if lost > 0 or bond_lost > 0:
+        counts = [("input", before["n_stereocentres_assigned"] + before["n_stereo_bonds"]),
                   ("cleanup", stages.get("after_cleanup")),
                   ("fragment_parent", stages.get("after_fragment_parent")),
                   ("tautomer_canonicalize", stages.get("after_tautomer_canonicalize")),
-                  ("protonate_ph74", prepared_profile["n_stereocentres_assigned"])]
+                  ("protonate_ph74", prepared_profile["n_stereocentres_assigned"]
+                   + prepared_profile["n_stereo_bonds"])]
         culprits = [name for (_, prev), (name, now) in zip(counts, counts[1:])
                     if prev is not None and now is not None and now < prev]
         row["stereo_lost_at_stage"] = ";".join(culprits) if culprits else "UNKNOWN"
@@ -326,11 +343,37 @@ def main() -> int:
             stereo_ids=sorted(set(members.STEREO_ID)),
         ))
 
+    # Preparation de-duplicated within a batch only, so the same prepared
+    # structure can still have been docked twice under two cand_ids.
+    audit["docked_duplicate_group"] = MISSING
+    audit["docked_duplicate_partners"] = MISSING
+    docked_duplicates = []
+    docked = audit[audit.library_fate == "PREPARED_AND_DOCKED"]
+    for key, members in docked.groupby("prepared_inchikey_stereo_recomputed", sort=False):
+        if key in ("", None) or len(members) < 2:
+            continue
+        audit.loc[members.index, "docked_duplicate_group"] = key
+        audit.loc[members.index, "docked_duplicate_partners"] = ";".join(sorted(members.cand_id))
+        docked_duplicates.append(dict(
+            prepared_inchikey=key, cand_ids=sorted(members.cand_id),
+            batches=sorted(set(members.batch)),
+            spans_batches=bool(members.batch.nunique() > 1),
+            classification=classify_group(members),
+            input_stereo_inchikeys=sorted(set(members.input_inchikey_stereo)),
+            input_smiles=list(members.smiles)))
+
     audit.to_csv(args.out, index=False)
 
     # Affected finalists: the docked stereoisomer is ambiguous or wrong.
+    # Ranking files do not share a rank scale: the pooled consensus table is
+    # ranked 1..N over the whole universe while a per-pocket table restarts at
+    # 1. Positions are therefore taken from the FIRST file (in the order given)
+    # that lists a molecule, never minimised across files, and the file is named
+    # alongside the number. Membership in the other files is recorded separately.
     rank_map: dict[str, float] = {}
     rank_sources: dict[str, str] = {}
+    membership: dict[str, list[str]] = defaultdict(list)
+    primary_ranking = ""
     for path in (args.ranking or []):
         if not path.exists():
             print(f"[stereo] ranking file not found, skipped: {path}", file=sys.stderr)
@@ -343,11 +386,13 @@ def main() -> int:
         if column:
             frame = frame.sort_values(column)
         frame = frame.head(args.top_n).drop_duplicates("cand_id")
+        primary_ranking = primary_ranking or path.name
         for i, r in enumerate(frame.itertuples(), 1):
-            position = float(getattr(r, column)) if column else float(i)
-            if r.cand_id not in rank_map or position < rank_map[r.cand_id]:
-                rank_map[r.cand_id] = position
-                rank_sources[r.cand_id] = path.name
+            membership[r.cand_id].append(path.name)
+            if r.cand_id in rank_map:
+                continue
+            rank_map[r.cand_id] = float(getattr(r, column)) if column else float(i)
+            rank_sources[r.cand_id] = path.name
 
     reasons: dict[str, list[str]] = defaultdict(list)
     for r in audit.itertuples():
@@ -364,12 +409,15 @@ def main() -> int:
         if r.collapse_class in ("EPIMERIC_PAIR", "SPECIFIED_VS_UNSPECIFIED",
                                 "TAUTOMER_MERGE"):
             reasons[r.cand_id].append("STANDS_IN_FOR_COLLAPSED_DESIGN")
+        if r.docked_duplicate_group:
+            reasons[r.cand_id].append("SAME_PREPARED_STRUCTURE_DOCKED_UNDER_ANOTHER_CAND_ID")
 
     def severity(why: set[str]) -> str:
         """WRONG: the docked structure differs from the declared design.
         AMBIGUOUS: the design itself never fixed the configuration."""
         if {"STEREO_LOST_IN_PREPARATION", "STEREO_ALTERED_IN_PREPARATION",
                 "STANDS_IN_FOR_COLLAPSED_DESIGN",
+                "SAME_PREPARED_STRUCTURE_DOCKED_UNDER_ANOTHER_CAND_ID",
                 "NEW_UNASSIGNED_STEREOCENTRE_FROM_STANDARDISATION"} & why:
             return "WRONG_STEREOISOMER_DOCKED"
         return "AMBIGUOUS_STEREOCHEMISTRY"
@@ -393,16 +441,18 @@ def main() -> int:
             STEREO_ID=a.STEREO_ID, CONNECTIVITY_ID=a.CONNECTIVITY_ID,
             collapse_group=a.collapse_group, collapse_class=a.collapse_class,
             collapse_members=a.collapse_members,
+            docked_duplicate_partners=a.docked_duplicate_partners,
             ranking_position=rank_map.get(cand_id),
             ranking_source=rank_sources.get(cand_id, MISSING),
+            ranking_files_listing_it=";".join(membership.get(cand_id, [])),
         ))
     redock = pd.DataFrame(redock_rows)
     redock["is_finalist"] = redock.ranking_position.notna()
     affected_all = int(len(redock))
     if args.redock_scope == "ranked":
         redock = redock[redock.is_finalist]
-    redock = redock.sort_values(["severity", "ranking_position", "cand_id"],
-                                na_position="last")
+    redock = redock.sort_values(["severity", "ranking_source", "ranking_position",
+                                 "cand_id"], na_position="last")
 
     args.out_redock.parent.mkdir(parents=True, exist_ok=True)
     redock.to_csv(args.out_redock, index=False)
@@ -422,6 +472,11 @@ def main() -> int:
             k: int(v) for k, v in audit[prepared_mask].stereo_status.value_counts().items()},
         stereocentres_lost_total=int(pd.to_numeric(
             audit.n_stereocentres_lost, errors="coerce").clip(lower=0).sum()),
+        stereo_double_bonds_lost_total=int(pd.to_numeric(
+            audit.n_stereo_bonds_lost, errors="coerce").clip(lower=0).sum()),
+        designs_losing_only_double_bond_stereo=int(
+            ((pd.to_numeric(audit.n_stereocentres_lost, errors="coerce").fillna(0) <= 0)
+             & (pd.to_numeric(audit.n_stereo_bonds_lost, errors="coerce").fillna(0) > 0)).sum()),
         designs_with_constitution_changed=int(audit.constitution_changed.fillna(False).sum()),
         designs_with_new_unassigned_stereocentre=int(
             (pd.to_numeric(audit.n_new_unassigned_stereocentres, errors="coerce")
@@ -443,6 +498,11 @@ def main() -> int:
             k: int(v) for k, v in
             audit[audit.library_fate == "COLLAPSED_AS_DUPLICATE_INCHIKEY"]
             .batch.value_counts().items()},
+        docked_duplicate_groups=len(docked_duplicates),
+        docked_duplicate_groups_spanning_batches=sum(
+            1 for d in docked_duplicates if d["spans_batches"]),
+        docked_duplicate_molecules=int((audit.docked_duplicate_group != MISSING).sum()),
+        docked_duplicate_detail=docked_duplicates,
         affected_designs_total=affected_all,
         redock_rows_written=int(len(redock)),
         redock_scope=args.redock_scope,
@@ -452,6 +512,14 @@ def main() -> int:
                               redock.reasons.value_counts().items()} if len(redock) else {},
         finalists_considered=len(rank_map),
         finalists_affected=int(redock.is_finalist.sum()) if len(redock) else 0,
+        finalists_affected_by_ranking_source={
+            k: int(v) for k, v in redock.ranking_source.value_counts().items()}
+        if len(redock) else {},
+        primary_ranking=primary_ranking,
+        affected_in_top_n_of_primary_ranking={
+            str(n): int(((redock.ranking_source == primary_ranking)
+                         & (redock.ranking_position <= n)).sum())
+            for n in (10, 50, 100, 500, 1000)} if (len(redock) and primary_ranking) else {},
         ranking_used=[str(p) for p in (args.ranking or [])],
         ranking_top_n=args.top_n,
         stereo_lost_at_stage_counts={

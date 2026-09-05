@@ -1,0 +1,102 @@
+section,metric,value,status,alternative_value,source,alternative_source,method
+1_generation,scored_candidate_pool_rows,17074,COMPUTED,,02_DENOVO_CPU/SCORED_CANDIDATES.csv,,row count
+1_generation,scored_candidate_pool_unique_smiles,17011,DISCREPANCY,17074,02_DENOVO_CPU/SCORED_CANDIDATES.csv,row count of same file,nunique of smiles column
+1_generation,raw_structures_enumerated_reported,182734,REPORTED_NOT_RECOMPUTABLE,,02_DENOVO_CPU/GENERATION_MANIFEST.json,,"raw_generated totals plus filter_refill_history new_raw_unique; the raw molecules were not retained, so this cannot be recomputed"
+1_generation,original_generated_structures_selected,15000,COMPUTED,15000,02_DENOVO_CPU/DENOVO_15000.csv,GENERATION_MANIFEST.json requested_total,row count
+1_generation,library_unique_denovo_rank,15000,COMPUTED,,02_DENOVO_CPU/DENOVO_15000.csv,,nunique of denovo_rank
+1_generation,library_unique_raw_smiles_strings,15000,COMPUTED,,02_DENOVO_CPU/DENOVO_15000.csv,,nunique of smiles column
+1_generation,unique_parent_molecules_by_STEREO_ID,15000,COMPUTED,,02_DENOVO_CPU/DENOVO_15000.csv,,RDKit canonical isomeric SMILES of the as-generated structure
+1_generation,unique_parent_molecules_by_CONNECTIVITY_ID,14081,COMPUTED,,02_DENOVO_CPU/DENOVO_15000.csv,,"RDKit canonical SMILES, isomericSmiles=False"
+1_generation,unique_parent_molecules_by_stereo_InChIKey,15000,COMPUTED,,02_DENOVO_CPU/DENOVO_15000.csv,,MolToInchiKey of the as-generated structure
+1_generation,unique_parent_molecules_by_flat_InChIKey,14081,COMPUTED,,02_DENOVO_CPU/DENOVO_15000.csv,,MolToInchiKey after RemoveStereochemistry
+1_generation,library_smiles_unparseable,0,COMPUTED,,02_DENOVO_CPU/DENOVO_15000.csv,,MolFromSmiles returned None
+1_generation,library_designs_beyond_one_per_flat_skeleton,919,COMPUTED,,02_DENOVO_CPU/DENOVO_15000.csv,,designs minus distinct flat skeletons: the library holds this many extra stereoisomers of skeletons it already contains
+2_queue,batch1_docking_queue_rows,3000,COMPUTED,,02_DENOVO_CPU/DENOVO_TOP3000_FOR_DOCKING_TAUTOMER_CORRECTED.csv,,row count
+2_queue,batch2_remainder_queue_rows,12000,COMPUTED,,02_DENOVO_CPU/DENOVO_BATCH2_REMAINING12000_TAUTOMER_CORRECTED.csv,,row count
+2_queue,queue_rows_total,15000,COMPUTED,15000,both queue CSVs,02_DENOVO_CPU/DENOVO_15000.csv,sum of queue row counts
+2_queue,queue_overlap_by_original_smiles,0,COMPUTED,,both queue CSVs,,set intersection of smiles_original
+2_queue,library_designs_absent_from_both_queues,0,COMPUTED,,DENOVO_15000.csv vs both queue CSVs,,set difference on original SMILES
+2_queue,batch1_tautomer_corrected_inputs,394,COMPUTED,,batch1 queue CSV,,sum of tautomer_corrected
+2_queue,batch2_tautomer_corrected_inputs,1737,COMPUTED,,batch2 queue CSV,,sum of tautomer_corrected
+2_queue,batch1_queue_rank_equals_library_rank,52,COMPUTED,,batch1 queue CSV joined to DENOVO_15000.csv on original SMILES,,"dock_priority_rank compared with the library denovo_rank; V2_LIGAND_TABLE's denovo_rank column carries the queue rank, not this one"
+3_preparation,batch1_prep_failed,5,COMPUTED,5,batch1 V2_PREP_FAILURES.csv,batch1 V2_PREP_MANIFEST.json,row count
+3_preparation,batch1_prepared_ok,2995,COMPUTED,2995,queue rows minus failure rows,batch1 V2_PREP_MANIFEST.json,arithmetic on primary tables
+3_preparation,batch1_unique_ligands_after_dedup,2988,COMPUTED,2988,batch1 V2_LIGAND_TABLE.csv,batch1 V2_PREP_MANIFEST.json,row count
+3_preparation,batch1_collapsed_duplicate_inchikey,7,COMPUTED,7,prepared_ok minus surviving ligands,batch1 V2_PREP_MANIFEST.json,arithmetic on primary tables
+3_preparation,batch1_prep_failure_reason::EMBED_FAILED,5,COMPUTED,,batch1 V2_PREP_FAILURES.csv,,value_counts of prep_reason
+3_preparation,batch1_ligand_table_prep_ok_false,0,COMPUTED,,batch1 V2_LIGAND_TABLE.csv,,rows in the shipped table that are not prep_ok
+3_preparation,batch2_prep_failed,146,COMPUTED,146,batch2 V2_PREP_FAILURES.csv,batch2 V2_PREP_MANIFEST.json,row count
+3_preparation,batch2_prepared_ok,11854,COMPUTED,11854,queue rows minus failure rows,batch2 V2_PREP_MANIFEST.json,arithmetic on primary tables
+3_preparation,batch2_unique_ligands_after_dedup,11837,COMPUTED,11837,batch2 V2_LIGAND_TABLE.csv,batch2 V2_PREP_MANIFEST.json,row count
+3_preparation,batch2_collapsed_duplicate_inchikey,17,COMPUTED,17,prepared_ok minus surviving ligands,batch2 V2_PREP_MANIFEST.json,arithmetic on primary tables
+3_preparation,batch2_prep_failure_reason::EMBED_FAILED,146,COMPUTED,,batch2 V2_PREP_FAILURES.csv,,value_counts of prep_reason
+3_preparation,batch2_ligand_table_prep_ok_false,0,COMPUTED,,batch2 V2_LIGAND_TABLE.csv,,rows in the shipped table that are not prep_ok
+3_preparation,prep_failed_total,151,COMPUTED,,both V2_PREP_FAILURES.csv,,sum
+3_preparation,collapsed_duplicate_inchikey_total,24,COMPUTED,,"15,000 minus failures minus surviving ligands",,arithmetic
+3_preparation,unique_prepared_ligands_total,14825,COMPUTED,,both V2_LIGAND_TABLE.csv,,sum of row counts
+3_preparation,cand_id_collisions_between_batches,0,COMPUTED,,both V2_LIGAND_TABLE.csv,,set intersection of cand_id
+3_preparation,dock_priority_rank_values_shared_between_batches,487,COMPUTED,,both V2_LIGAND_TABLE.csv,,cand_id numeric suffix is the dock_priority_rank; set intersection
+3_preparation,dock_priority_rank_collisions_naming_different_molecules,487,COMPUTED,,both V2_LIGAND_TABLE.csv,,shared dock_priority_rank values whose smiles_input differ
+3_preparation,prepared_structures_docked_under_more_than_one_cand_id,1,COMPUTED,,both V2_LIGAND_TABLE.csv,,prepared InChIKeys appearing in more than one row of the combined library; de-duplication was applied within a batch only
+3_preparation,cand_ids_sharing_a_prepared_structure,2,COMPUTED,,both V2_LIGAND_TABLE.csv,,rows involved in those groups
+4_docking_jobs,batch1_jobs_queued,3442,COMPUTED,3442,batch1 V2_LIGAND_TABLE.csv pockets column,batch1 V2_PREP_MANIFEST.json,expanded ligand x pocket routing
+4_docking_jobs,batch2_jobs_queued,12872,COMPUTED,12872,batch2 V2_LIGAND_TABLE.csv pockets column,batch2 V2_PREP_MANIFEST.json,expanded ligand x pocket routing
+4_docking_jobs,jobs_queued_total,16314,COMPUTED,,both V2_LIGAND_TABLE.csv,,sum
+4_docking_jobs,batch1_jobs_queued::5NDD_orthosteric,2317,COMPUTED,2317,batch1 V2_LIGAND_TABLE.csv pockets column,batch1 V2_PREP_MANIFEST.json,routing expanded per pocket
+4_docking_jobs,batch1_jobs_queued::5NDZ_allosteric,1125,COMPUTED,1125,batch1 V2_LIGAND_TABLE.csv pockets column,batch1 V2_PREP_MANIFEST.json,routing expanded per pocket
+4_docking_jobs,batch2_jobs_queued::5NDD_orthosteric,9049,COMPUTED,9049,batch2 V2_LIGAND_TABLE.csv pockets column,batch2 V2_PREP_MANIFEST.json,routing expanded per pocket
+4_docking_jobs,batch2_jobs_queued::5NDZ_allosteric,3823,COMPUTED,3823,batch2 V2_LIGAND_TABLE.csv pockets column,batch2 V2_PREP_MANIFEST.json,routing expanded per pocket
+4_docking_jobs,jobs_queued_total::5NDD_orthosteric,11366,COMPUTED,,both V2_LIGAND_TABLE.csv,,routing expanded per pocket
+4_docking_jobs,jobs_queued_total::5NDZ_allosteric,4948,COMPUTED,,both V2_LIGAND_TABLE.csv,,routing expanded per pocket
+5_results_2026_09_04,batch1_ligand_pocket_results,3442,COMPUTED,,SCREEN_REAL/EVIDENCE_batch1.csv,,"unique (cand_id, pocket)"
+5_results_2026_09_04,batch1_molecules,2988,COMPUTED,,SCREEN_REAL/EVIDENCE_batch1.csv,,nunique cand_id
+5_results_2026_09_04,batch2_ligand_pocket_results,8899,COMPUTED,,SCREEN_REAL/EVIDENCE_batch2.csv,,"unique (cand_id, pocket)"
+5_results_2026_09_04,batch2_molecules,8497,COMPUTED,,SCREEN_REAL/EVIDENCE_batch2.csv,,nunique cand_id
+5_results_2026_09_04,analysed_ligand_pocket_results_total,12341,COMPUTED,,both 2026-09-04 evidence tables,,"union of (cand_id, pocket)"
+5_results_2026_09_04,analysed_molecules_total,11485,COMPUTED,,both 2026-09-04 evidence tables,,union of cand_id
+5_results_2026_09_04,batch1_jobs_queued_without_result,0,COMPUTED,,queued jobs vs EVIDENCE_batch1.csv,,set difference
+5_results_2026_09_04,batch2_jobs_queued_without_result_before_recovery,3973,COMPUTED,,queued jobs vs EVIDENCE_batch2.csv,,set difference
+6_recovery,recovered_pose_shards,282,COMPUTED,,/Users/moheet/Documents/ChatGPT/PAR2_WORKER_RECOVERY_2026-09-05/ALL_UNIQUE_POSES,,file count
+6_recovery,recovered_shard_sentinels,282,COMPUTED,282,RECOVERED_WORKERS/recovered_shard_sentinels.jsonl,ALL_UNIQUE_POSES file count,line count
+6_recovery,recovered_sentinels_with_nonzero_return_code,0,COMPUTED,,recovered_shard_sentinels.jsonl,,count of rc != 0
+6_recovery,recovered_shards_matching_sentinel_sha256,282,COMPUTED,,ALL_UNIQUE_POSES vs recovered_shard_sentinels.jsonl,,sha256 recomputed here
+6_recovery,recovered_shards_failing_sentinel_sha256,0,COMPUTED,,ALL_UNIQUE_POSES vs recovered_shard_sentinels.jsonl,,sha256 recomputed here
+6_recovery,recovered_shards_with_no_sentinel,0,COMPUTED,,ALL_UNIQUE_POSES vs recovered_shard_sentinels.jsonl,,name lookup
+6_recovery,recovered_shard_ligand_pocket_results,7049,COMPUTED,,SCREEN_REAL/screen_recovered/V2_LIGAND_POCKET_SCORES.csv,,v2_collect_scores.py over all recovered shards
+6_recovery,recovered_results_duplicating_2026_09_04,5799,COMPUTED,,recovered collect table vs the 2026-09-04 evidence tables,,set intersection
+6_recovery,recovered_results_new,1250,COMPUTED,,recovered collect table vs the 2026-09-04 evidence tables,,set difference
+6_recovery,recovered_new_results_carried_into_evidence,1250,COMPUTED,1250,SCREEN_REAL/EVIDENCE_recovered.csv,set difference computed above,"unique (cand_id, pocket)"
+6_recovery,recovered_new_molecules,1250,COMPUTED,,SCREEN_REAL/EVIDENCE_recovered.csv,,unique cand_id among new results
+6_recovery,recovered_new_molecules_not_seen_at_all_before,1059,COMPUTED,,recovered new results vs both 2026-09-04 evidence tables,,cand_ids with no prior result in either pocket
+6_recovery,recovered_new_molecules_already_had_other_pocket,191,COMPUTED,,recovered new results vs both 2026-09-04 evidence tables,,cand_ids that already had a result in the other pocket
+7_universe,complete_universe_ligand_pocket_rows,13591,COMPUTED,13591,10_FINAL/COMPLETE_RECOVERED_EX8_UNIVERSE.csv,"unique (cand_id, pocket) in the same file",row count
+7_universe,complete_universe_rows_vs_sum_of_inputs,13591,COMPUTED,13591,10_FINAL/COMPLETE_RECOVERED_EX8_UNIVERSE.csv,union of the three evidence tables,set union
+7_universe,complete_universe_unique_molecules,12544,COMPUTED,,10_FINAL/COMPLETE_RECOVERED_EX8_UNIVERSE.csv,,nunique cand_id
+7_universe,complete_universe_rows::5NDD_orthosteric,9641,COMPUTED,,10_FINAL/COMPLETE_RECOVERED_EX8_UNIVERSE.csv,,row count per pocket
+7_universe,complete_universe_rows::5NDZ_allosteric,3950,COMPUTED,,10_FINAL/COMPLETE_RECOVERED_EX8_UNIVERSE.csv,,row count per pocket
+7_universe,molecules_with_at_least_one_non_clashing_pose,10919,COMPUTED,,10_FINAL/COMPLETE_RECOVERED_EX8_UNIVERSE.csv,,cand_ids with all_poses_clashing False in any pocket
+7_universe,ligand_pocket_rows_with_no_acceptable_pose,1690,COMPUTED,,10_FINAL/COMPLETE_RECOVERED_EX8_UNIVERSE.csv,,rows where every GNINA pose has minimizedAffinity >= 0
+7_universe,final_unique_cand_ids_with_usable_evidence,10919,COMPUTED,,10_FINAL/COMPLETE_RECOVERED_EX8_UNIVERSE.csv,,unique cand_ids holding at least one clash-filtered pose in at least one pocket
+7_universe,final_unique_structures_with_usable_evidence,10918,COMPUTED,,10_FINAL/COMPLETE_RECOVERED_EX8_UNIVERSE.csv joined to both V2_LIGAND_TABLE.csv,,"distinct prepared InChIKeys among those cand_ids, so a structure docked under two cand_ids is counted once"
+7_universe,complete_universe_unique_structures,12543,COMPUTED,,10_FINAL/COMPLETE_RECOVERED_EX8_UNIVERSE.csv joined to both V2_LIGAND_TABLE.csv,,distinct prepared InChIKeys over the whole universe
+8_missing,jobs_queued_with_no_surviving_result,2723,COMPUTED,,queued jobs vs the complete universe,,set difference
+8_missing,molecules_prepared_but_with_no_result_in_any_pocket,2281,COMPUTED,,prepared ligand tables vs the complete universe,,arithmetic on cand_id sets
+8_missing,batch1_molecules_prepared_but_with_no_result,0,COMPUTED,,batch1 V2_LIGAND_TABLE.csv vs the complete universe,,set intersection
+8_missing,batch2_molecules_prepared_but_with_no_result,2281,COMPUTED,,batch2 V2_LIGAND_TABLE.csv vs the complete universe,,set intersection
+8_missing,jobs_with_no_surviving_result::5NDD_orthosteric,1725,COMPUTED,,queued jobs vs the complete universe,,set difference per pocket
+8_missing,jobs_with_no_surviving_result::5NDZ_allosteric,998,COMPUTED,,queued jobs vs the complete universe,,set difference per pocket
+8_missing,batch2_dispatch_partitions,515,COMPUTED,,/Users/moheet/Documents/ChatGPT/PAR2_WORKER_RECOVERY_2026-09-05/par2w3/extracted/PAR2/YONSEI_FINAL10_V2/SCREEN_REAL/screen_set_batch2/shards,,screen-set shards split into 25-ligand `_pN` partitions
+8_missing,batch2_partitions_fully_recovered,406,COMPUTED,,/Users/moheet/Documents/ChatGPT/PAR2_WORKER_RECOVERY_2026-09-05/par2w3/extracted/PAR2/YONSEI_FINAL10_V2/SCREEN_REAL/screen_set_batch2/shards,,every ligand in the partition has a result
+8_missing,batch2_partitions_with_no_result_at_all,109,COMPUTED,,/Users/moheet/Documents/ChatGPT/PAR2_WORKER_RECOVERY_2026-09-05/par2w3/extracted/PAR2/YONSEI_FINAL10_V2/SCREEN_REAL/screen_set_batch2/shards,,no ligand in the partition has a result
+8_missing,batch2_partitions_partially_recovered,0,COMPUTED,,/Users/moheet/Documents/ChatGPT/PAR2_WORKER_RECOVERY_2026-09-05/par2w3/extracted/PAR2/YONSEI_FINAL10_V2/SCREEN_REAL/screen_set_batch2/shards,,some but not all ligands have a result
+8_missing,batch2_jobs_missing_inside_empty_partitions,2723,COMPUTED,,/Users/moheet/Documents/ChatGPT/PAR2_WORKER_RECOVERY_2026-09-05/par2w3/extracted/PAR2/YONSEI_FINAL10_V2/SCREEN_REAL/screen_set_batch2/shards,,ligand count of partitions that produced nothing
+9_loss,results_lost_with_pw_n2b,UNKNOWN,UNKNOWN,,RECOVERED_WORKERS/PAR2_RECOVERY_COMPLETE.md,,"pw-n2b and its boot disk were deleted before the export; no surviving record enumerates the shards it was assigned or completed after 14:45, so the number of docked-then-lost results cannot be separated from never-dispatched ones"
+9_loss,jobs_never_docked_or_docked_then_lost,2723,COMPUTED,,queued jobs vs the complete universe,,upper bound on both categories jointly; the split is UNKNOWN for the reason above
+10_stereo,designs_audited,15000,COMPUTED,,10_FINAL/STEREOCHEMISTRY_AUDIT.csv,,row count
+10_stereo,designs_declaring_stereochemistry,11090,COMPUTED,,10_FINAL/STEREOCHEMISTRY_AUDIT.csv,,assigned stereocentre or defined stereo bond in input
+10_stereo,stereo_status::PRESERVED,8556,COMPUTED,,10_FINAL/STEREOCHEMISTRY_AUDIT.csv,,value_counts of stereo_status
+10_stereo,stereo_status::NEVER_PRESENT,3910,COMPUTED,,10_FINAL/STEREOCHEMISTRY_AUDIT.csv,,value_counts of stereo_status
+10_stereo,stereo_status::LOST,2534,COMPUTED,,10_FINAL/STEREOCHEMISTRY_AUDIT.csv,,value_counts of stereo_status
+10_stereo,unique_TAUTOMER_PARENT_ID,14975,COMPUTED,,10_FINAL/STEREOCHEMISTRY_AUDIT.csv,,nunique of the tautomer-canonical parent SMILES
+10_stereo,unique_CONNECTIVITY_ID,14081,COMPUTED,,10_FINAL/STEREOCHEMISTRY_AUDIT.csv,,nunique of the flat canonical SMILES of the queue input
+10_stereo,unique_STEREO_ID,15000,COMPUTED,,10_FINAL/STEREOCHEMISTRY_AUDIT.csv,,nunique of the isomeric canonical SMILES

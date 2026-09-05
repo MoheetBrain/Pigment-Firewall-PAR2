@@ -637,3 +637,87 @@ rather than on an anchor definition that did not match the crystal structure.
 
 **Next intended step**
 EX32 precision docking, the real-compound lane, then the final diverse panel.
+
+---
+
+## 2026-09-05 · Corrected stereochemistry audit and full library accounting
+
+**Branch:** `yonsei-final10-v2`
+**Project stage:** V2 completion sprint, checkpoint 1 finalised.
+
+**Objective of the change**
+Replace the intermediate stereochemistry artefacts committed in `5ed4448` with
+the corrected finals, and add the exact full-library accounting.
+
+**Files and systems changed**
+- Corrected `10_FINAL/STEREO_REDOCK_LIST.csv`, `STEREOCHEMISTRY_AUDIT.summary.json`
+  and `scripts/v2_stereo_audit.py` (bond-stereo counting and rank-scale fixes).
+- Added `10_FINAL/FULL_LIBRARY_ACCOUNTING.{csv,md,summary.json}`,
+  `MISSING_BATCH2_PARTITIONS.csv`, `STEREOCHEMISTRY_AUDIT.md`,
+  `scripts/v2_full_accounting.py`, `scripts/v2_merge_universe.py`.
+
+**What was completed**
+The recovered shards were verified, merged and reconciled; the library was
+accounted for exactly; and the stereochemistry defect was traced to its source.
+
+**Decisions made and why**
+- Irrecoverable loss is recorded as UNKNOWN rather than estimated. No surviving
+  artefact records which partitions `pw-n2b` held, so the 2,723 jobs without a
+  result are a joint total of "never dispatched" and "lost with pw-n2b", and
+  splitting them would be invention.
+- The de-duplication defect is documented but NOT fixed in place, because
+  changing it would invalidate every committed identifier mid-sprint.
+
+**Tests and verification actually executed**
+- All 282 recovered shards re-hashed: 282/282 match their sentinel
+  `output_sha256`; 0 non-zero GNINA return codes.
+- 5,799 recovered results duplicate the 2026-09-04 analysis and were compared
+  like-for-like: n_poses, top-pose affinity, best affinity, acceptable-pose
+  count and clash flag agree to max absolute difference 0.0.
+- 1,250 results are genuinely new, inside exactly 50 shards; 1,059 of those
+  molecules had no prior result. ProLIF on 11,250 poses: 0 failures.
+- Complete universe: 13,591 rows, 12,544 cand_ids, 12,543 distinct structures,
+  0 duplicate keys, 0 numeric disagreements on merge.
+- Accounting: 15,000 generated - 151 preparation failures - 24 InChIKey
+  collapses = 14,825 ligands -> 16,314 jobs; 13,591 have a result, 2,723 do
+  not; 10,919 cand_ids carry usable non-clashing evidence.
+- Unique parents by identity: 15,000 by stereo InChIKey, 14,081 by connectivity
+  (the library holds 919 extra stereoisomers of skeletons it already contains),
+  14,975 by tautomer parent.
+- Both join landmines measured, not assumed: batch-1 `denovo_rank` equals the
+  true library rank in 52 of 3,000 rows; 487 `dock_priority_rank` values occur
+  in both batches and all 487 name different molecules; `cand_id` never collides.
+- Partition reconstruction: 515 partitions, 406 complete, 109 empty, 0 partial,
+  so no truncated result entered the universe.
+- Independent corroboration: Agent 3's `EX8_TRUE_MISSING_JOBS.csv` contains an
+  identical 2,723-row (cand_id, pocket) set with the same 1,725/998 split.
+- Stereo self-check: for all 14,825 docked designs the recomputed prepared
+  InChIKey and SMILES match the shipped `V2_LIGAND_TABLE.csv` exactly.
+
+**Results**
+2,534 designs lost stereochemistry (3,042 centres, 36 double bonds), ALL of it
+attributable to `TautomerEnumerator().Canonicalize()` measured per step -
+`Cleanup`, `FragmentParent` and `protonate_ph74` destroyed none. The same call
+also changed the CONSTITUTION of 1,199 designs (mostly enol to keto) and gave
+2,241 designs a new unassigned stereocentre they never had.
+
+**Failures or unresolved uncertainty**
+- The 24 collapsed "duplicate InChIKeys" contain ZERO true duplicates: 6 genuine
+  R/S epimeric pairs, 17 specified-vs-unspecified pairs, 1 tautomer merge.
+- One structure was docked twice: de-duplication ran per batch, so DN00314 (R)
+  and DL03110 (S) collapsed to the same prepared structure across batches and
+  both were docked. DN00314 currently sits at consensus rank 240.
+- 646 ranked finalists are affected - 207 WRONG_STEREOISOMER_DOCKED and 439
+  AMBIGUOUS - including 7 of the current top 10, 27 of the top 50, 48 of the
+  top 100, 15 of the 34 similarity seeds and 23 of the 56 ids named in
+  FINAL_CANDIDATES.md.
+- `SCORED_CANDIDATES.csv` holds 17,074 rows but 17,011 unique SMILES; both are
+  reported. It is a pre-selection pool, so nothing downstream inherits it.
+
+**Effect on the overall project**
+The library is now accounted for exactly, and the stereochemistry defect has a
+measured cause, scope and remediation list.
+
+**Next intended step**
+EX32 precision docking including the flagged stereoisomers, then the
+real-compound lane and the final panel.

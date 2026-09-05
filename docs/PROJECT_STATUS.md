@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-09-05 (completion sprint) · branch `yonsei-final10-v2`
+Last updated: 2026-09-05 (sprint: EX32 running) · branch `yonsei-final10-v2`
 
 ## Project Objective
 
@@ -18,17 +18,17 @@ to bind or inhibit PAR2.
 
 ## Current Stage
 
-Stage 7 of the V2 campaign: **11,485 of ~15,000 de novo designs (76%) now carry
-real GNINA evidence, interaction fingerprints against the repaired reference,
-consensus ranking, chemotype clusters, 34 seeds and 521 real analogues.**
-A 35-gate fail-closed pre-flight passed on that machine, both reference pockets
-re-recovered their crystal poses there, and a real 12-design dry run produced
-finite, varying Vina and CNN scores that the collector reproduces exactly.
-Batch 1: 3,442 jobs, 0 failures, 30,978 poses, 60.4 min wall (70.9 core-hours),
-all 30,978 poses fingerprinted against the repaired reference. Batch 2: 11,837
-designs, 12,872 jobs, 130 shards, running. No ranking, clustering or similarity
-searching has been performed and no candidate has been nominated.
-See YONSEI_FINAL10_V2/PIPELINE_STATUS.md for the live view.
+Stage 8 of the V2 campaign: **completion sprint in progress.** The de novo
+library is fully accounted for, the stereochemistry defect is measured and
+scoped, the interaction-geometry metric has been rebuilt on a
+preparation-independent basis, and EX32 precision docking is running.
+
+Complete EX8 universe: 13,591 ligand-pocket rows over 12,544 designs, of which
+10,919 carry usable non-clashing evidence. 2,723 jobs have no result and that
+total cannot be split between never-dispatched and lost-with-pw-n2b.
+
+Real-compound lane prepared: 4,838 unique approved, natural-product and
+retrieved-analogue structures awaiting EX8. No final panel exists yet.
 
 ## Current Branch
 

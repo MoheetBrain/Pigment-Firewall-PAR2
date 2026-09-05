@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-05T10:59:10.293444+00:00",
+  "generated_utc": "2026-09-05T11:17:46.042867+00:00",
   "rdkit_version": "2026.03.6",
   "designs_audited": 15000,
   "designs_by_batch": {
@@ -10,18 +10,18 @@
   "designs_declaring_stereo": 11090,
   "designs_with_unassigned_stereocentre": 4901,
   "stereo_status_counts": {
-    "PRESERVED": 8580,
+    "PRESERVED": 8556,
     "NEVER_PRESENT": 3910,
-    "LOST": 2504,
-    "ALTERED": 6
+    "LOST": 2534
   },
   "stereo_status_counts_prepared_only": {
-    "PRESERVED": 8434,
+    "PRESERVED": 8410,
     "NEVER_PRESENT": 3904,
-    "LOST": 2481,
-    "ALTERED": 6
+    "LOST": 2511
   },
   "stereocentres_lost_total": 3042,
+  "stereo_double_bonds_lost_total": 36,
+  "designs_losing_only_double_bond_stereo": 30,
   "designs_with_constitution_changed": 1199,
   "designs_with_new_unassigned_stereocentre": 2241,
   "library_fate_counts": {
@@ -46,24 +46,63 @@
     "batch2": 17,
     "batch1": 7
   },
-  "affected_designs_total": 6674,
-  "redock_rows_written": 643,
+  "docked_duplicate_groups": 1,
+  "docked_duplicate_groups_spanning_batches": 1,
+  "docked_duplicate_molecules": 2,
+  "docked_duplicate_detail": [
+    {
+      "prepared_inchikey": "YUIAMUUFZPWUAJ-UHFFFAOYSA-N",
+      "cand_ids": [
+        "DL03110",
+        "DN00314"
+      ],
+      "batches": [
+        "batch1",
+        "batch2"
+      ],
+      "spans_batches": true,
+      "classification": "EPIMERIC_PAIR",
+      "input_stereo_inchikeys": [
+        "YUIAMUUFZPWUAJ-JTQLQIEISA-N",
+        "YUIAMUUFZPWUAJ-SNVBAGLBSA-N"
+      ],
+      "input_smiles": [
+        "COc1c(O)cc([C@@H](C)C2CCCCC2)cc1O",
+        "COc1c(O)cc([C@H](C)C2CCCCC2)cc1O"
+      ]
+    }
+  ],
+  "affected_designs_total": 6692,
+  "redock_rows_written": 646,
   "redock_scope": "ranked",
   "redock_severity_counts": {
-    "AMBIGUOUS_STEREOCHEMISTRY": 441,
-    "WRONG_STEREOISOMER_DOCKED": 202
+    "AMBIGUOUS_STEREOCHEMISTRY": 439,
+    "WRONG_STEREOISOMER_DOCKED": 207
   },
   "redock_reason_counts": {
-    "UNASSIGNED_STEREOCENTRE_IN_DESIGN": 441,
-    "NEW_UNASSIGNED_STEREOCENTRE_FROM_STANDARDISATION;STEREO_LOST_IN_PREPARATION": 151,
+    "UNASSIGNED_STEREOCENTRE_IN_DESIGN": 439,
+    "NEW_UNASSIGNED_STEREOCENTRE_FROM_STANDARDISATION;STEREO_LOST_IN_PREPARATION": 150,
     "NEW_UNASSIGNED_STEREOCENTRE_FROM_STANDARDISATION;STEREO_LOST_IN_PREPARATION;UNASSIGNED_STEREOCENTRE_IN_DESIGN": 33,
-    "STEREO_LOST_IN_PREPARATION": 10,
-    "STEREO_LOST_IN_PREPARATION;UNASSIGNED_STEREOCENTRE_IN_DESIGN": 6,
+    "STEREO_LOST_IN_PREPARATION": 13,
+    "STEREO_LOST_IN_PREPARATION;UNASSIGNED_STEREOCENTRE_IN_DESIGN": 8,
+    "NEW_UNASSIGNED_STEREOCENTRE_FROM_STANDARDISATION;SAME_PREPARED_STRUCTURE_DOCKED_UNDER_ANOTHER_CAND_ID;STEREO_LOST_IN_PREPARATION": 1,
     "NEW_UNASSIGNED_STEREOCENTRE_FROM_STANDARDISATION;STANDS_IN_FOR_COLLAPSED_DESIGN;STEREO_LOST_IN_PREPARATION": 1,
     "NEW_UNASSIGNED_STEREOCENTRE_FROM_STANDARDISATION;UNASSIGNED_STEREOCENTRE_IN_DESIGN": 1
   },
   "finalists_considered": 1492,
-  "finalists_affected": 643,
+  "finalists_affected": 646,
+  "finalists_affected_by_ranking_source": {
+    "DENOVO_EX8_CONSENSUS_TOP1000.csv": 500,
+    "CONSENSUS_TOP500_5NDZ_allosteric.csv": 146
+  },
+  "primary_ranking": "DENOVO_EX8_CONSENSUS_TOP1000.csv",
+  "affected_in_top_n_of_primary_ranking": {
+    "10": 7,
+    "50": 27,
+    "100": 48,
+    "500": 254,
+    "1000": 500
+  },
   "ranking_used": [
     "07_CONSENSUS/DENOVO_EX8_CONSENSUS_TOP1000.csv",
     "07_CONSENSUS/CONSENSUS_TOP500_5NDD_orthosteric.csv",
@@ -72,7 +111,7 @@
   ],
   "ranking_top_n": 1000,
   "stereo_lost_at_stage_counts": {
-    "tautomer_canonicalize": 2504
+    "tautomer_canonicalize": 2534
   },
   "groups": [
     {
