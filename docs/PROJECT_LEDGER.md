@@ -805,3 +805,78 @@ depends on an interactive session.
 **Next intended step**
 Let the autopilot finish the real-compound lane and consensus ranking, then
 produce the diverse final panel and IDEAL_DE_NOVO_TOP5.
+
+---
+
+## 2026-09-05 · FINAL_TOP20 panel produced; autopilot v1 defect found and fixed
+
+**Branch:** `yonsei-final10-v2`
+**Project stage:** V2 completion sprint, checkpoint 7.
+
+**Objective of the change**
+Produce the diverse final candidate panel and the ideal de novo short list from
+the completed screen, and repair the autopilot so the real-compound lane runs.
+
+**Files and systems changed**
+- Added `scripts/v2_final_panel.py`.
+- Added `10_FINAL/FINAL_TOP20_DIVERSE_PAR2_CANDIDATES.{csv,md}`,
+  `IDEAL_DE_NOVO_TOP5.csv`, `FINAL_PANEL_SUMMARY.json`,
+  `CONSENSUS_CORRECTED/`, `CLUSTERS_5NDD/`, `CLUSTERS_5NDZ/`.
+- Replaced the stalled autopilot with `autopilot2.sh` on h3.
+
+**What was completed**
+Consensus ranking over the complete universe, per-pocket clustering, the final
+20-candidate panel, and the ideal de novo top five.
+
+**Decisions made and why**
+- EX32 evidence is ordered FIRST in the merge so it wins de-duplication. In the
+  first attempt EX8 rows were kept and all 535 EX32 rows were silently dropped.
+- The 5NDZ hedge now RESERVES slots rather than capping them. The first version
+  capped 5NDZ at the floor, which let the orthosteric lane take all 20 places.
+- Molecules known to have been docked as the wrong stereoisomer are excluded by
+  gate; molecules with merely ambiguous stereochemistry are kept and flagged,
+  because excluding them would discard most of the library.
+
+**Tests and verification actually executed**
+- Autopilot v1 defect reproduced ON h3: `pgrep -c gnina` prints "0" and exits 1
+  on Linux, so `n=$(pgrep -c gnina || echo 0)` yields the two-line value "0\\n0",
+  the numeric test errors, `idle` never increments and the wait loop never exits.
+  The service ran for eight hours and completed no work. Confirmed by direct
+  test on the machine, not inferred.
+- No data was lost: all five evidence tables were already on the Mac.
+- Consensus merge: 16,849 rows from 5 tables -> 16,314 unique ligand-pocket rows
+  over 14,825 designs, with all 535 EX32 rows retained and 38 of them in the
+  top 200.
+- Validity gates: 16,314 parseable -> 14,217 with a non-clashing pose ->
+  14,217 with a real negative affinity -> 13,989 after excluding known-wrong
+  stereoisomers.
+- Panel: 20 candidates, 20 unique Murcko scaffolds, 19 clusters, 6 interaction
+  archetypes, 17 5NDD and 3 5NDZ, all 20 carrying EX32 evidence, 12 stereo-OK
+  and 8 ambiguous.
+- Clustering: 5NDD 321 clusters at 0.65 (204 at 0.55, 410 at 0.75), 5 convergent
+  chemotypes; 5NDZ 193 clusters at 0.65, 6 convergent.
+
+**Results**
+`FINAL_TOP20_DIVERSE_PAR2_CANDIDATES.csv` and `IDEAL_DE_NOVO_TOP5.csv` exist,
+each candidate carrying its full evidence trail and stated uncertainty.
+
+**Failures or unresolved uncertainty**
+- My autopilot v1 wasted roughly eight hours of h3 billing doing nothing.
+- All 20 candidates require synthesis; none is confirmed purchasable. Vendor,
+  catalogue, price and stock are PENDING because web access is blocked here.
+- Rank 9 (DN01844) has Vina -2.478 and ligand efficiency 0.099; it entered on
+  interaction geometry alone and should be treated as an archetype probe.
+- 8 of the 20 have unassigned stereocentres, so the docked isomer is one of
+  several possibilities.
+- The real-compound lane had not finished when this entry was written, so the
+  panel currently contains no approved or repurposing candidates.
+- The target-validity question is untouched: no experiment yet shows that
+  selective PAR2 antagonism reduces melanocore uptake.
+
+**Effect on the overall project**
+There is now a defensible, diverse, fully evidenced candidate panel and an
+explicit statement of what it does and does not establish.
+
+**Next intended step**
+Let the real-compound lane finish, then refresh the panel with any approved or
+sourceable molecules that outrank the de novo designs.

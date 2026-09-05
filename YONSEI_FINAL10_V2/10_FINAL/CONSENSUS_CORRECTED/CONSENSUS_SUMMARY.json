@@ -1,0 +1,167 @@
+{
+  "generated_utc": "2026-09-05T19:45:29.334354+00:00",
+  "rows": 16314,
+  "unique_designs": 14825,
+  "by_pocket": {
+    "5NDD_orthosteric": 11366,
+    "5NDZ_allosteric": 4948
+  },
+  "by_batch": {
+    "batch2": 8654,
+    "batch1": 3254,
+    "gapfill": 2653,
+    "recovered": 1218,
+    "ex32": 535
+  },
+  "metrics_used": [
+    "best_vina_affinity",
+    "ligand_efficiency",
+    "pignet2_best",
+    "best_CNNscore",
+    "best_CNNaffinity",
+    "best_CNN_VS",
+    "max_ifp_recovery"
+  ],
+  "pignet2_available": true,
+  "spearman_within_pocket": {
+    "5NDD_orthosteric": {
+      "best_vina_affinity": {
+        "best_vina_affinity": 1.0,
+        "ligand_efficiency": -0.983,
+        "pignet2_best": 0.901,
+        "best_CNNscore": -0.502,
+        "best_CNNaffinity": -0.104,
+        "best_CNN_VS": -0.471,
+        "max_ifp_recovery": 0.099
+      },
+      "ligand_efficiency": {
+        "best_vina_affinity": -0.983,
+        "ligand_efficiency": 1.0,
+        "pignet2_best": -0.888,
+        "best_CNNscore": 0.515,
+        "best_CNNaffinity": 0.062,
+        "best_CNN_VS": 0.476,
+        "max_ifp_recovery": -0.158
+      },
+      "pignet2_best": {
+        "best_vina_affinity": 0.901,
+        "ligand_efficiency": -0.888,
+        "pignet2_best": 1.0,
+        "best_CNNscore": -0.427,
+        "best_CNNaffinity": -0.186,
+        "best_CNN_VS": -0.408,
+        "max_ifp_recovery": -0.123
+      },
+      "best_CNNscore": {
+        "best_vina_affinity": -0.502,
+        "ligand_efficiency": 0.515,
+        "pignet2_best": -0.427,
+        "best_CNNscore": 1.0,
+        "best_CNNaffinity": 0.525,
+        "best_CNN_VS": 0.989,
+        "max_ifp_recovery": 0.01
+      },
+      "best_CNNaffinity": {
+        "best_vina_affinity": -0.104,
+        "ligand_efficiency": 0.062,
+        "pignet2_best": -0.186,
+        "best_CNNscore": 0.525,
+        "best_CNNaffinity": 1.0,
+        "best_CNN_VS": 0.628,
+        "max_ifp_recovery": 0.25
+      },
+      "best_CNN_VS": {
+        "best_vina_affinity": -0.471,
+        "ligand_efficiency": 0.476,
+        "pignet2_best": -0.408,
+        "best_CNNscore": 0.989,
+        "best_CNNaffinity": 0.628,
+        "best_CNN_VS": 1.0,
+        "max_ifp_recovery": 0.043
+      },
+      "max_ifp_recovery": {
+        "best_vina_affinity": 0.099,
+        "ligand_efficiency": -0.158,
+        "pignet2_best": -0.123,
+        "best_CNNscore": 0.01,
+        "best_CNNaffinity": 0.25,
+        "best_CNN_VS": 0.043,
+        "max_ifp_recovery": 1.0
+      }
+    },
+    "5NDZ_allosteric": {
+      "best_vina_affinity": {
+        "best_vina_affinity": 1.0,
+        "ligand_efficiency": 0.02,
+        "pignet2_best": 0.72,
+        "best_CNNscore": -0.029,
+        "best_CNNaffinity": -0.684,
+        "best_CNN_VS": -0.335,
+        "max_ifp_recovery": -0.341
+      },
+      "ligand_efficiency": {
+        "best_vina_affinity": 0.02,
+        "ligand_efficiency": 1.0,
+        "pignet2_best": 0.088,
+        "best_CNNscore": 0.232,
+        "best_CNNaffinity": -0.243,
+        "best_CNN_VS": 0.086,
+        "max_ifp_recovery": -0.004
+      },
+      "pignet2_best": {
+        "best_vina_affinity": 0.72,
+        "ligand_efficiency": 0.088,
+        "pignet2_best": 1.0,
+        "best_CNNscore": 0.141,
+        "best_CNNaffinity": -0.574,
+        "best_CNN_VS": -0.215,
+        "max_ifp_recovery": -0.358
+      },
+      "best_CNNscore": {
+        "best_vina_affinity": -0.029,
+        "ligand_efficiency": 0.232,
+        "pignet2_best": 0.141,
+        "best_CNNscore": 1.0,
+        "best_CNNaffinity": 0.254,
+        "best_CNN_VS": 0.874,
+        "max_ifp_recovery": -0.03
+      },
+      "best_CNNaffinity": {
+        "best_vina_affinity": -0.684,
+        "ligand_efficiency": -0.243,
+        "pignet2_best": -0.574,
+        "best_CNNscore": 0.254,
+        "best_CNNaffinity": 1.0,
+        "best_CNN_VS": 0.639,
+        "max_ifp_recovery": 0.292
+      },
+      "best_CNN_VS": {
+        "best_vina_affinity": -0.335,
+        "ligand_efficiency": 0.086,
+        "pignet2_best": -0.215,
+        "best_CNNscore": 0.874,
+        "best_CNNaffinity": 0.639,
+        "best_CNN_VS": 1.0,
+        "max_ifp_recovery": 0.119
+      },
+      "max_ifp_recovery": {
+        "best_vina_affinity": -0.341,
+        "ligand_efficiency": -0.004,
+        "pignet2_best": -0.358,
+        "best_CNNscore": -0.03,
+        "best_CNNaffinity": 0.292,
+        "best_CNN_VS": 0.119,
+        "max_ifp_recovery": 1.0
+      }
+    }
+  },
+  "agonist_pattern_flagged": 0,
+  "pareto_front_size": 113,
+  "anchor_hbond_hits_5NDD": 2660,
+  "both_anchors_5NDD": 5,
+  "profile_fit_median": {
+    "5NDD_orthosteric": 0.6931,
+    "5NDZ_allosteric": 0.8609
+  },
+  "caveat": "Ranking evidence only. Static docking cannot distinguish an antagonist from a biased agonist; agonist_pattern_flag marks poses whose contacts resemble the tethered-ligand trajectory and must be tested functionally."
+}

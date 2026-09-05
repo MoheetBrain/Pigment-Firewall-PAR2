@@ -1,0 +1,46 @@
+{
+  "generated_utc": "2026-09-05T19:47:21.726068+00:00",
+  "rows_considered": 16314,
+  "gates": {
+    "parseable": 16314,
+    "has_non_clashing_pose": 14217,
+    "real_negative_affinity": 14217,
+    "stereo_not_known_wrong": 13989
+  },
+  "panel_size": 20,
+  "unique_murcko_scaffolds": 20,
+  "unique_clusters": 19,
+  "interaction_archetypes": 6,
+  "archetype_counts": {
+    "crystal_contact_reproducer": 5,
+    "dual_anchor": 5,
+    "high_sp3_wedge": 4,
+    "reference_adjacent": 3,
+    "allosteric_hedge": 2,
+    "compact_efficient": 1
+  },
+  "by_pocket": {
+    "5NDD_orthosteric": 17,
+    "5NDZ_allosteric": 3
+  },
+  "by_evidence_level": {
+    "EX32": 20
+  },
+  "by_source_lane": {
+    "DE_NOVO_EX32_REFINED": 20
+  },
+  "stereo_flags": {
+    "OK": 12,
+    "AMBIGUOUS": 8
+  },
+  "requiring_synthesis": 20,
+  "sourceable_now": 0,
+  "ideal_top5": [
+    "DL13973",
+    "DL13271",
+    "DL13943",
+    "DL11368",
+    "DL11051"
+  ],
+  "caveat": "Computationally prioritised PAR2 candidates, not demonstrated antagonists. Static docking cannot separate an antagonist from a biased agonist; the decisive counter-screen is G12/13 -> RhoA."
+}

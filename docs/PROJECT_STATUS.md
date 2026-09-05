@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-09-05 (EX8 complete, EX32 done, autopilot running) · branch `yonsei-final10-v2`
+Last updated: 2026-09-05 (FINAL_TOP20 produced) · branch `yonsei-final10-v2`
 
 ## Project Objective
 
@@ -18,17 +18,17 @@ to bind or inhibit PAR2.
 
 ## Current Stage
 
-Stage 9: **the EX8 screen is complete at 16,314 of 16,314 routed jobs**, covering
-all 14,825 prepared molecules with nine poses each. EX32 precision docking has
-run on 535 jobs over 513 diverse molecules. The anchor definition, receptor
-protonation and stereochemistry defects are all corrected or scoped.
+Stage 10: **the final de novo panel exists.** `FINAL_TOP20_DIVERSE_PAR2_CANDIDATES.csv`
+and `IDEAL_DE_NOVO_TOP5.csv` are built from the complete 16,314-job EX8 universe
+with EX32 precision evidence on every selected molecule.
 
-An autopilot systemd service on h3 is now running the remaining work without
-needing this session: the real-compound EX8 lane (4,838 approved drugs, natural
-products and retrieved analogues), robust polar-anchor scoring, and consensus
-ranking. It powers h3 off when finished.
+All 20 candidates are de novo designs requiring synthesis. None is confirmed
+purchasable: live vendor lookups could not run, and no retrieved analogue
+exceeded Tanimoto 0.80 to any seed.
 
-The final diverse panel has not been produced yet.
+The real-compound lane (4,838 approved drugs, natural products and retrieved
+analogues) is docking under an autopilot service on h3 and will refresh the
+panel's repurposing lane when it completes.
 
 ## Current Branch
 
