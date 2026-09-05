@@ -483,3 +483,70 @@ evidence and a defensible ranked short list exists.
 **Next intended step**
 Finish the remaining 24%, add PIGNet2 for batch 2, then EX32 refinement of the
 top 500-1,000 and the functional-assay handover.
+
+---
+
+## 2026-09-05 · Worker data recovery and disposable-VM deletion
+
+**Branch:** `yonsei-final10-v2`
+**Project stage:** V2 campaign, stage 7 — infrastructure cleanup, no new compute.
+
+**Objective of the change**
+Recover every unique artifact from the disposable PAR2 worker VMs, verify the
+copies, then delete those VMs while preserving `a100`, `a100-40` and `h3`.
+
+**Files and systems changed**
+- Added `YONSEI_FINAL10_V2/RECOVERED_WORKERS/` with the four per-worker export
+  manifests, the 282 recovered shard sentinels and `PAR2_RECOVERY_COMPLETE.md`.
+- Updated `docs/PROJECT_STATUS.md`.
+- No script or analysis output was modified; no ranking was recomputed.
+
+**What was completed**
+Four workers frozen (dispatcher stopped, GNINA terminated, filesystem synced),
+inventoried, archived, pulled to the local Mac, verified, and deleted.
+
+**Decisions made and why**
+- Data was pulled to the Mac rather than to h3, on the user's explicit
+  instruction, so it survives independently of any VM.
+- Environments, virtualenvs, pip/conda caches and the 2 GB GNINA binary were
+  excluded from the archives; they are reproducible and carry no project data.
+- The 50 newly recovered pose shards were deliberately NOT merged into the
+  committed rankings. Doing so would change published numbers without the
+  ProLIF, clash-filter and consensus stages being rerun, and no compute was
+  permitted.
+- Raw archives (367 MB) are kept outside the repository; only manifests,
+  sentinels and the recovery report are committed.
+
+**Tests and verification actually executed**
+- SHA-256 computed on each worker and again on the Mac after transfer:
+  par2w3 89e7a578..., pw-c3a 49842974..., pw-h3b 33215d81..., pw-n2a 31b61931...
+  All four match, and byte counts match exactly (21,050,184 / 18,131,069 /
+  18,522,859 / 16,344,502).
+- Archives re-extracted; path counts reconciled with `tar tzf` entry counts
+  (475/381/331/435 entries).
+- Recovered content: 282 pose shards and 282 `.done` sentinels.
+- Overlap analysis against the 2026-09-04 merge: 50 pose shards were new.
+- Deletion guard self-tested: attempting to delete `h3`, `a100` and `a100-40`
+  each aborted on the allowlist check.
+- Final instance list verified: only `a100`, `a100-40`, `h3` remain, TERMINATED.
+- Origin verified to contain f342a8d, 7752707 and ca2f4a9.
+
+**Results**
+74,048,614 bytes recovered with full integrity; four VMs deleted; three
+preserved; zero running instances.
+
+**Failures or unresolved uncertainty**
+- `pw-n2b` had already been deleted with its auto-delete boot disk before this
+  cleanup started. Its output after the 14:45 pull on 2026-09-04 is
+  unrecoverable. The earlier partial export survives and is in the analysis.
+- The 50 recovered shards are not reflected in any committed ranking.
+- 24 snapshots (1,250 GB nominal) from a daily schedule on the retired
+  `moheetc4` continue to accrue storage cost.
+
+**Effect on the overall project**
+All worker-only data is preserved off-VM and billing from disposable workers has
+ended. The committed science is unchanged.
+
+**Next intended step**
+None scheduled. If the campaign resumes, merge the 50 recovered shards and rerun
+ProLIF, clash filtering and consensus before quoting new numbers.

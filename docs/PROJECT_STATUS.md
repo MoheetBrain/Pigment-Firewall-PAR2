@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-09-04 (full-library consensus, 11,485 designs) · branch `yonsei-final10-v2`
+Last updated: 2026-09-05 (worker cleanup complete) · branch `yonsei-final10-v2`
 
 ## Project Objective
 
@@ -187,7 +187,10 @@ rehearsal is randomly generated and carries no scientific meaning.
 
 ## Current Blockers
 
-None. Remote access was resolved: `abdulmoheetahmed@gmail.com` was granted
+None. All PAR2 compute is stopped. Four disposable workers were exported,
+verified and deleted on 2026-09-05; `a100`, `a100-40` and `h3` remain, all
+TERMINATED. 50 recovered pose shards (~1,250 ligand-pocket results) are held
+outside the repository and are NOT part of the committed rankings. Remote access was resolved: `abdulmoheetahmed@gmail.com` was granted
 `roles/compute.instanceAdmin.v1` and `roles/iam.serviceAccountUser`, and a named
 gcloud configuration `par2` now pins that account, the project and zone
 `europe-west4-b` so the failure cannot recur silently. `cloud@hamiltonianlabs.co`
