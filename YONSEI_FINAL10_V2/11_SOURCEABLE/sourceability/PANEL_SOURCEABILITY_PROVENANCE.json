@@ -1,0 +1,113 @@
+{
+  "tool": "YONSEI_FINAL10_V2/scripts/v2_sourceability.py",
+  "run_started_utc": "2026-09-06T15:05:32Z",
+  "run_finished_utc": "2026-09-06T15:05:44Z",
+  "elapsed_seconds": 11.7,
+  "inputs": [
+    "YONSEI_FINAL10_V2/10_FINAL/FINAL_TOP20_DIVERSE_PAR2_CANDIDATES.csv",
+    "YONSEI_FINAL10_V2/10_FINAL/IDEAL_DE_NOVO_TOP5.csv"
+  ],
+  "n_structures": 25,
+  "n_master_rows": 90,
+  "cache_location": "/Users/moheet/Documents/ChatGPT/PAR2/YONSEI_FINAL10_V2/11_SOURCEABLE/sourceability/cache",
+  "http_stats": {
+    "cache_hit": 433,
+    "network": 1,
+    "status_500": 1,
+    "uncached_transient_failure": 1
+  },
+  "endpoints_hit": {
+    "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/fastidentity/smiles/C%23C%2FC%3DC%5CCC%28Cl%29%5BC%40H%5D1C%5BC%40%40H%5D%28O%29%5BC%40H%5D%28OC%28C%29%3DO%29C%3DC%5BC%40%40H%5D%28CC%29O1/cids/TXT": 1
+  },
+  "arthor_databases_queried": [
+    {
+      "db": "MMcule-In-Stock-25Q3-6.5M",
+      "vendor": "Mcule",
+      "kind": "in_stock",
+      "snapshot": "2025-Q3"
+    },
+    {
+      "db": "ChemSpace-SC-Stock-Mar2022-346K",
+      "vendor": "Chemspace",
+      "kind": "in_stock",
+      "snapshot": "2022-03"
+    },
+    {
+      "db": "In-Stock-19Q4-14.1M",
+      "vendor": "ZINC in-stock aggregate (multi-vendor)",
+      "kind": "in_stock",
+      "snapshot": "2019-Q4"
+    },
+    {
+      "db": "REAL-Database-22Q1",
+      "vendor": "Enamine REAL",
+      "kind": "on_demand",
+      "snapshot": "2022-Q1"
+    },
+    {
+      "db": "ZINC-On-Demand-19Q4-311M",
+      "vendor": "ZINC on-demand aggregate",
+      "kind": "on_demand",
+      "snapshot": "2019-Q4"
+    },
+    {
+      "db": "Mcule-Ultimate-25Q3-111M",
+      "vendor": "Mcule Ultimate (virtual)",
+      "kind": "on_demand",
+      "snapshot": "2025-Q3"
+    },
+    {
+      "db": "ZINC20-ForSale-22Q1",
+      "vendor": "ZINC20 for-sale aggregate",
+      "kind": "for_sale",
+      "snapshot": "2022-Q1"
+    },
+    {
+      "db": "DB-world-approved-2506-2.6K",
+      "vendor": "DrugBank world-approved set",
+      "kind": "approved_drug",
+      "snapshot": "2025-06"
+    },
+    {
+      "db": "DB-US-approved-2506-1.9K",
+      "vendor": "DrugBank US-approved set",
+      "kind": "approved_drug",
+      "snapshot": "2025-06"
+    }
+  ],
+  "classification_counts": {
+    "NOT_SOURCEABLE": 22,
+    "REGISTERED_NOT_VERIFIED": 2,
+    "IN_STOCK": 1
+  },
+  "match_type_counts": {
+    "CONNECTIVITY_ONLY": 8,
+    "EXACT": 82
+  },
+  "resolver_counts": {
+    "pubchem_connectivity": 4,
+    "pubchem_exact": 3,
+    "chembl": 4,
+    "pubchem_vendor_annotation": 56,
+    "unichem_status": 10,
+    "unichem_vendor": 2,
+    "mcule_lookup": 6,
+    "arthor:MMcule-In-Stock-25Q3-6.5M": 2,
+    "arthor:ChemSpace-SC-Stock-Mar2022-346K": 1,
+    "arthor:In-Stock-19Q4-14.1M": 1,
+    "arthor:ZINC20-ForSale-22Q1": 1
+  },
+  "structures_with_errors": [],
+  "blocked_sources": {
+    "MolPort API": "api.molport.com/api/chemical-search/search returns Status 2 'Username or password is incorrect!' without credentials",
+    "Mcule prices/availability": "HTTP 401 'Authentication credentials were not provided.'",
+    "Enamine REAL API": "real.enamine.net requires an Enamine REAL Explorer account + X-API-KEY",
+    "Chemspace API": "api.chem-space.com requires an API key",
+    "ZINC web UI": "zinc20/zinc15.docking.org redirect to /captcha (not bypassed); reached via Arthor index instead",
+    "eMolecules": "no public unauthenticated search API located"
+  },
+  "outputs": {
+    "master": "/Users/moheet/Documents/ChatGPT/PAR2/YONSEI_FINAL10_V2/11_SOURCEABLE/sourceability/PANEL_SOURCEABILITY_MASTER.csv",
+    "summary": "/Users/moheet/Documents/ChatGPT/PAR2/YONSEI_FINAL10_V2/11_SOURCEABLE/sourceability/PANEL_SOURCEABILITY_SUMMARY.csv"
+  }
+}

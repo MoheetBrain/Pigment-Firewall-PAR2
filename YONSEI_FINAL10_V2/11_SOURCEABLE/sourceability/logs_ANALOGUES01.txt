@@ -1,0 +1,4 @@
+    [http 500] https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/fastidentity/smiles/C%2FC%3DC%2Fc1cc%28F%29ccc1C%28O%29c1ncc%5BnH%5D1 HTTPError 500
+    [http 500] https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/fastidentity/smiles/C%2FC%3DC%5Cc1cc%28F%29ccc1C%28O%29c1ncc%5BnH%5D1 HTTPError 500
+    [http 500] https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/fastidentity/smiles/COc1ccc%28%2FC%3DC%2Fc2ccc3ccccc3c2%29cc1O/cids/T HTTPError 500
+    [http 500] https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/fastidentity/smiles/COc1ccc%28%2FC%3DC%5Cc2ccc3ccccc3c2%29cc1O/cids/T HTTPError 500

@@ -1,0 +1,672 @@
+{
+  "generated_utc": "2026-09-06T14:59:26.771261+00:00",
+  "lane": "ACTIVE-STATE COUNTER-SCREEN (Agent 4)",
+  "repo_branch": "yonsei-final10-v2",
+  "repo_head": "7f84fc20f5b068c5b35f818aad9c14dbebf7c6af",
+  "output_directory": "YONSEI_FINAL10_V2/11_SOURCEABLE/activestate",
+  "disclaimer": "This lane produces a STRUCTURAL WARNING FLAG. No result here is evidence that a molecule is a PAR2 agonist or antagonist. Missing measurements are recorded as missing and are never written as zero.",
+  "software": {
+    "python": "3.14.7",
+    "local_interpreter": ".venv-v2/bin/python",
+    "gnina": {
+      "version": "v1.3.3 master:6fe1ce2",
+      "host": "h3 (h3-standard-88, europe-west4-b)",
+      "binary_sha256": "3340c1f49cd3c7c84d8699182a1c6af13c7fa2a22448d1204640446106f72172",
+      "matches_campaign_validated_hash": true
+    },
+    "openbabel": "Open Babel 3.2.0 -- May 26 2026 -- 17:11:26",
+    "rdkit": "2026.03.6",
+    "prolif": "2.2.1",
+    "gemmi": "0.7.5",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5"
+  },
+  "structures": {
+    "5NDD": {
+      "url": "https://files.rcsb.org/download/5NDD.cif",
+      "local": "structures/5NDD.cif",
+      "sha256": "859187a2a0e32e36dc1c9995e106bc9ecf26a45c580d780b147d91a8a5feda49",
+      "bytes": 531480,
+      "title": ";Crystal structure of a thermostabilised human protease-activated receptor-2 (PAR2) in complex with AZ8838 at 2.8 angstrom resolution\n;",
+      "method": "X-RAY DIFFRACTION",
+      "resolution_A": 2.801,
+      "resolution_source": "_refine.ls_d_res_high",
+      "deposited": "2017-03-08",
+      "uniprot": [
+        {
+          "id": "1",
+          "entity_id": "1",
+          "db_name": "UNP",
+          "db_code": "D9IEF7_BPT4",
+          "pdbx_db_accession": "D9IEF7"
+        },
+        {
+          "id": "2",
+          "entity_id": "1",
+          "db_name": "UNP",
+          "db_code": "PAR2_HUMAN",
+          "pdbx_db_accession": "P55085"
+        },
+        {
+          "id": "3",
+          "entity_id": "1",
+          "db_name": "UNP",
+          "db_code": "C562_ECOLX",
+          "pdbx_db_accession": "P0ABE7"
+        },
+        {
+          "id": "4",
+          "entity_id": "1",
+          "db_name": "UNP",
+          "db_code": "PAR2_HUMAN",
+          "pdbx_db_accession": "P55085"
+        }
+      ]
+    },
+    "5NDZ": {
+      "url": "https://files.rcsb.org/download/5NDZ.cif",
+      "local": "structures/5NDZ.cif",
+      "sha256": "6a3e95d07c554a4a9ad50dc385ab07a239998e49d4d5c59af655ed5bf7950216",
+      "bytes": 525061,
+      "title": ";Crystal structure of a thermostabilised human protease-activated receptor-2 (PAR2) in complex with AZ3451 at 3.6 angstrom resolution\n;",
+      "method": "X-RAY DIFFRACTION",
+      "resolution_A": 3.6,
+      "resolution_source": "_refine.ls_d_res_high",
+      "deposited": "2017-03-09",
+      "uniprot": [
+        {
+          "id": "1",
+          "entity_id": "1",
+          "db_name": "UNP",
+          "db_code": "D9IEF7_BPT4",
+          "pdbx_db_accession": "D9IEF7"
+        },
+        {
+          "id": "2",
+          "entity_id": "1",
+          "db_name": "UNP",
+          "db_code": "PAR2_HUMAN",
+          "pdbx_db_accession": "P55085"
+        },
+        {
+          "id": "3",
+          "entity_id": "1",
+          "db_name": "UNP",
+          "db_code": "C562_ECOLX",
+          "pdbx_db_accession": "P0ABE7"
+        },
+        {
+          "id": "4",
+          "entity_id": "1",
+          "db_name": "UNP",
+          "db_code": "PAR2_HUMAN",
+          "pdbx_db_accession": "P55085"
+        }
+      ]
+    },
+    "9D0A": {
+      "url": "https://files.rcsb.org/download/9D0A.cif",
+      "local": "structures/9D0A.cif",
+      "sha256": "40e0a4ddf3db6dd458dad4449c0152f59b7518e3f3660da17192721b58330750",
+      "bytes": 900040,
+      "title": "CryoEM structure of PAR2 with endogenous tethered ligand.",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution_A": 3.1,
+      "resolution_source": "_refine.ls_d_res_high",
+      "deposited": "2024-08-06",
+      "uniprot": [
+        {
+          "id": "1",
+          "entity_id": "1",
+          "db_name": "UNP",
+          "db_code": "GBB1_HUMAN",
+          "pdbx_db_accession": "P62873"
+        },
+        {
+          "id": "2",
+          "entity_id": "2",
+          "db_name": "UNP",
+          "db_code": "GBG2_HUMAN",
+          "pdbx_db_accession": "P59768"
+        },
+        {
+          "id": "4",
+          "entity_id": "4",
+          "db_name": "UNP",
+          "db_code": "PAR2_HUMAN",
+          "pdbx_db_accession": "P55085"
+        },
+        {
+          "id": "5",
+          "entity_id": "5",
+          "db_name": "UNP",
+          "db_code": "GNAQ_HUMAN",
+          "pdbx_db_accession": "P50148"
+        },
+        {
+          "id": "6",
+          "entity_id": "5",
+          "db_name": "UNP",
+          "db_code": "GNAS2_HUMAN",
+          "pdbx_db_accession": "P63092"
+        }
+      ]
+    },
+    "8ZMD": {
+      "url": "https://files.rcsb.org/download/8ZMD.cif",
+      "local": "structures/8ZMD.cif",
+      "sha256": "e759a943bda3e8cec7b45e68ec6e5beb7e3d048faf10b93d3789afba9ab6fb9c",
+      "bytes": 769220,
+      "title": "Protease-activated receptor-2 (PAR2)/Gq complex",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution_A": 3.25,
+      "resolution_source": "_em_3d_reconstruction.resolution",
+      "deposited": "2024-05-23",
+      "uniprot": [
+        {
+          "id": "2",
+          "entity_id": "2",
+          "db_name": "UNP",
+          "db_code": "GBB1_HUMAN",
+          "pdbx_db_accession": "P62873"
+        },
+        {
+          "id": "3",
+          "entity_id": "3",
+          "db_name": "UNP",
+          "db_code": "GBG2_HUMAN",
+          "pdbx_db_accession": "P59768"
+        },
+        {
+          "id": "4",
+          "entity_id": "4",
+          "db_name": "UNP",
+          "db_code": "PAR2_HUMAN",
+          "pdbx_db_accession": "P55085"
+        }
+      ]
+    },
+    "8ZME": {
+      "url": "https://files.rcsb.org/download/8ZME.cif",
+      "local": "structures/8ZME.cif",
+      "sha256": "4d8416d3e52949595f5ff8cd31f01412f9af10d80223afa414d416a339fb3443",
+      "bytes": 919846,
+      "title": "Protease-activated receptor-2 (PAR2)/miniG13 complex",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution_A": 3.2,
+      "resolution_source": "_em_3d_reconstruction.resolution",
+      "deposited": "2024-05-23",
+      "uniprot": [
+        {
+          "id": "2",
+          "entity_id": "2",
+          "db_name": "UNP",
+          "db_code": "GBB1_HUMAN",
+          "pdbx_db_accession": "P62873"
+        },
+        {
+          "id": "4",
+          "entity_id": "4",
+          "db_name": "UNP",
+          "db_code": "GBG2_HUMAN",
+          "pdbx_db_accession": "P59768"
+        },
+        {
+          "id": "5",
+          "entity_id": "5",
+          "db_name": "UNP",
+          "db_code": "PAR2_HUMAN",
+          "pdbx_db_accession": "P55085"
+        }
+      ]
+    },
+    "9E7R": {
+      "url": "https://files.rcsb.org/download/9E7R.cif",
+      "local": "structures/9E7R.cif",
+      "sha256": "3b718fc87ef25d8196d813c7958f39554489117fd6536d9e44782849b351806c",
+      "bytes": 923383,
+      "title": "CryoEM structure of PAR2 with GB88",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution_A": 3.18,
+      "resolution_source": "_refine.ls_d_res_high",
+      "deposited": "2024-11-04",
+      "uniprot": [
+        {
+          "id": "1",
+          "entity_id": "1",
+          "db_name": "UNP",
+          "db_code": "GBG2_HUMAN",
+          "pdbx_db_accession": "P59768"
+        },
+        {
+          "id": "2",
+          "entity_id": "2",
+          "db_name": "UNP",
+          "db_code": "PAR2_HUMAN",
+          "pdbx_db_accession": "P55085"
+        },
+        {
+          "id": "4",
+          "entity_id": "4",
+          "db_name": "UNP",
+          "db_code": "GBB1_HUMAN",
+          "pdbx_db_accession": "P62873"
+        }
+      ]
+    }
+  },
+  "receptor_preparation": {
+    "chain_extraction": "gemmi; chain R; protein residues; altlocs and hydrogens removed; ligands and waters removed",
+    "docking_receptor_variant": "*_PAR2_apo.pdb - tethered-ligand residues removed so the pocket is empty",
+    "protonation_command": "obabel <apo>.pdb -O <id>_p74_renumbered.pdb -p 7.4     # -h is NEVER passed",
+    "numbering_transplant": "YONSEI_FINAL10_V2/scripts/v2_fix_receptor_protonation.py --original <apo>.pdb --protonated <renumbered>.pdb --out <id>_receptor_pH74_FIXED.pdb",
+    "pdbqt_command": "obabel <apo>.pdb -O <id>_receptor.pdbqt -xr",
+    "note_on_campaign_defect": "scripts/v2_interactions.py still reads 02_REFERENCE_VALIDATION_REPAIRED/*_protonated_pH74.pdb, verified here to have 0/39 charged lysines and 17/29 protonated aspartates - the broken 'obabel -h -p 7.4' product. This lane uses the corrected *_pH74_FIXED.pdb receptors throughout.",
+    "files": {
+      "5NDD": {
+        "ifp_receptor": {
+          "file": "receptors/5NDD_receptor_pH74_FIXED.pdb",
+          "sha256": "9a3a498bb95170b67c30599feccf90a926549199b827d41863e37bfbdc9b752d"
+        },
+        "docking_receptor": {
+          "file": "receptors/5NDD_receptor.pdbqt",
+          "sha256": "3b47bd78a996e92d7f655f4a231d7f3207a49acd956500c092a06b37be2a5212"
+        },
+        "apo": {
+          "file": "receptors/5NDD_PAR2_apo.pdb",
+          "sha256": "68890d8b74b33f76816876b1a49750497f18a689af52439542f120be5195f5b2"
+        }
+      },
+      "5NDZ": {
+        "ifp_receptor": {
+          "file": "receptors/5NDZ_receptor_pH74_FIXED.pdb",
+          "sha256": "5b5a5cc10439b211380d731cd0f71acd1c7df4ed649a4396325239f4035986cb"
+        },
+        "docking_receptor": {
+          "file": "receptors/5NDZ_receptor.pdbqt",
+          "sha256": "b1a6733fd8da56f5c468ab9a4a7065fc70ead77d621d76218ffc7c87050fa17f"
+        },
+        "apo": {
+          "file": "receptors/5NDZ_PAR2_apo.pdb",
+          "sha256": "64159534d826c572215877770705479917722a9e4d96691843c32c84e363d155"
+        }
+      },
+      "9D0A": {
+        "ifp_receptor": {
+          "file": "receptors/9D0A_receptor_pH74_FIXED.pdb",
+          "sha256": "203cc8a22ec59c4f2f11c63597787ad01502ca2927583d934bd857442a6fa5ed"
+        },
+        "docking_receptor": {
+          "file": "receptors/9D0A_receptor.pdbqt",
+          "sha256": "9e8539e3583f8ba34b9f71bab620c79549d68dca74fa872a9adbbbf8b1cd31d7"
+        },
+        "apo": {
+          "file": "receptors/9D0A_PAR2_apo.pdb",
+          "sha256": "9b7d8a9fc6666314b05add01f0479397ad216c454d67e6e1ffc61d0448c3a067"
+        },
+        "holo": {
+          "file": "receptors/9D0A_PAR2_holo.pdb",
+          "sha256": "d288267de686597605a24b04407cb5d3861f118bd9d64813b380d0e7990a6715"
+        },
+        "tethered_ligand": {
+          "file": "receptors/9D0A_PAR2_tethered.pdb",
+          "sha256": "212033b6630bc7f16f90f0c884c3e4a704ab11270c5e1f6f885dd35f3112e299"
+        }
+      },
+      "8ZMD": {
+        "ifp_receptor": {
+          "file": "receptors/8ZMD_receptor_pH74_FIXED.pdb",
+          "sha256": "7c2c5945e157c0449ec56db791d4b81d28635696bc94b85d0c727162f34be8b7"
+        },
+        "docking_receptor": {
+          "file": "receptors/8ZMD_receptor.pdbqt",
+          "sha256": "d69dcede70e4f6cee30c9d103b846d73eaec1e924b7d9601eb445cf0e691e3cf"
+        },
+        "apo": {
+          "file": "receptors/8ZMD_PAR2_apo.pdb",
+          "sha256": "c1f1d3a722a082e0354e7dca03be9ac27c4682acc02467c9f0cb44559f739537"
+        },
+        "holo": {
+          "file": "receptors/8ZMD_PAR2_holo.pdb",
+          "sha256": "e94aaf5cbc9bd4d402e24786188c6fa3a66cd9e439a15903cdbfdefc0210b57d"
+        },
+        "tethered_ligand": {
+          "file": "receptors/8ZMD_PAR2_tethered.pdb",
+          "sha256": "f31de4e177046b7cf4f2b0878baa62e37ffb921d3fad3fa114fc52fbc436b7e4"
+        }
+      },
+      "8ZME": {
+        "ifp_receptor": {
+          "file": "receptors/8ZME_receptor_pH74_FIXED.pdb",
+          "sha256": "04af55a1e8cc4da615bc26f1e39ef5ec863db566799d5d5af9dbcb63bca9caea"
+        },
+        "docking_receptor": {
+          "file": "receptors/8ZME_receptor.pdbqt",
+          "sha256": "72634418bdd37b9d2d06797058dfa4283dd8ac3f7a5ac4a46fd084ca2697c41f"
+        },
+        "apo": {
+          "file": "receptors/8ZME_PAR2_apo.pdb",
+          "sha256": "e67039a64fde9378536e3b52e16809fe920df229b0fbc20fee62fcf5a2075c0c"
+        },
+        "holo": {
+          "file": "receptors/8ZME_PAR2_holo.pdb",
+          "sha256": "44d4f3ddf875732e91adfd9c620fab4d590c57cb650b44630e6e6b9725cead86"
+        },
+        "tethered_ligand": {
+          "file": "receptors/8ZME_PAR2_tethered.pdb",
+          "sha256": "ee411a282c42daae83ab0c80656bb5e7e8de66994917e0954b8df0edd60c7d5a"
+        }
+      },
+      "9E7R": {
+        "ifp_receptor": {
+          "file": "receptors/9E7R_receptor_pH74_FIXED.pdb",
+          "sha256": "e66afecc8d7225cd3620d8556640eb3daad474b110b110acb3b63da040d1b4e3"
+        },
+        "docking_receptor": {
+          "file": "receptors/9E7R_receptor.pdbqt",
+          "sha256": "7fcb999750a6b21ee708bd619d787800e3f347c52a819ab07ce3b322b569ae55"
+        },
+        "apo": {
+          "file": "receptors/9E7R_PAR2_apo.pdb",
+          "sha256": "1dc97d00241149ab2416862d5a6858bdc3443ff54f5862e865a60be0d5ddfa35"
+        },
+        "holo": {
+          "file": "receptors/9E7R_PAR2_holo.pdb",
+          "sha256": "1dc97d00241149ab2416862d5a6858bdc3443ff54f5862e865a60be0d5ddfa35"
+        }
+      }
+    }
+  },
+  "analysis_artifacts": {
+    "alignment": {
+      "file": "work/alignment.json",
+      "sha256": "595a8da4f12f0eed39fdef7540499b212ddc3627cbcc1b5545ddc1d3a8746f97"
+    },
+    "boxes": {
+      "file": "work/boxes.json",
+      "sha256": "c641568e0e2c66b816d7be25838df4bb8c509988b203063dd0ca254610f3b37c"
+    },
+    "box_validation": {
+      "file": "work/box_validation.json",
+      "sha256": "81d4de17dd9bbecb19ab283256e3d442f7849009d6e1bf40f8db050adc3eefe2"
+    },
+    "residue_correspondence": {
+      "file": "work/residue_correspondence.json",
+      "sha256": "0c1d2659f63f492d11b3cc4b607f64b86d62e69c038679129e10bbd97245f700"
+    },
+    "microswitch": {
+      "file": "work/microswitch.json",
+      "sha256": "6b66da0ba21616b51e20043b268404455468b16dc346489702f7da48f5863f0d"
+    },
+    "reference_ifp": {
+      "file": "work/reference_ifp.json",
+      "sha256": "57f8e532784e4afed4aa222e78669a6bccd179b61d7858929e5a8d2a22a66f01"
+    },
+    "site_geometry": {
+      "file": "work/site_geometry.json",
+      "sha256": "2370ed167be50f4d03fd7a91d211ccbf5192ba0c7309f2aaca59663294e03c94"
+    },
+    "receptor_extraction": {
+      "file": "work/receptor_extraction.json",
+      "sha256": "14a61bda05fd1e648d3feb7cf71d4097c99ef42046590edb59839e0e3d34c893"
+    }
+  },
+  "ligand_set": {
+    "generated_utc": "2026-09-06T14:49:19.460165+00:00",
+    "rdkit_version": "2026.03.6",
+    "seed": 20260904,
+    "n_confs": 8,
+    "inputs": {
+      "FINAL_TOP20": {
+        "path": "YONSEI_FINAL10_V2/10_FINAL/FINAL_TOP20_DIVERSE_PAR2_CANDIDATES.csv",
+        "rows": 20
+      },
+      "IDEAL_DE_NOVO_TOP5": {
+        "path": "YONSEI_FINAL10_V2/10_FINAL/IDEAL_DE_NOVO_TOP5.csv",
+        "rows": 5
+      },
+      "KNOWN_LIGANDS_CURATED": {
+        "path": "YONSEI_FINAL10_V2/11_SOURCEABLE/activestate/work/KNOWN_LIGANDS_CURATED.csv",
+        "rows_used": 9,
+        "note": "independently curated reference set; rows with an empty SMILES are skipped"
+      },
+      "PAR2_KNOWN_ACTIVES": {
+        "path": "YONSEI_FINAL10_V2/11_SOURCEABLE/benchmark/PAR2_KNOWN_ACTIVES.csv",
+        "rows_used": 115,
+        "note": "verification_status startswith VERIFIED, deduplicated on InChIKey"
+      }
+    },
+    "requested": 143,
+    "embedded": 142,
+    "failed": 1,
+    "inchikey_collapsed": 0,
+    "collapsed_ids": [],
+    "final_ligands": 142,
+    "by_set": {
+      "KNOWN_ACTIVE_BACKGROUND": 108,
+      "FINAL_TOP20": 20,
+      "REFERENCE": 9,
+      "IDEAL_DE_NOVO_TOP5": 5
+    },
+    "by_role": {
+      "KNOWN_ACTIVE_BACKGROUND": 108,
+      "CANDIDATE": 25,
+      "REF_ANTAGONIST": 2,
+      "REF_OTHER": 2,
+      "REF_ANTAGONIST_ORTHO_CRYSTAL": 1,
+      "REF_NAM_BIASED": 1,
+      "REF_NAM_ALLO_CRYSTAL": 1,
+      "REF_BIASED_AGONIST": 1,
+      "REF_AGONIST_PEPTIDE": 1
+    },
+    "sdf_sha256": "2cce27796e44ded9d2829a00bdb82ab4ad7f710d6e332df4d266b3e21d41927d",
+    "failures": [
+      {
+        "cand_id": "KA_CHEMBL5994547",
+        "set_name": "KNOWN_ACTIVE_BACKGROUND",
+        "reason": "UNSUPPORTED_ELEMENT"
+      }
+    ]
+  },
+  "docking": {
+    "host": "GCP h3 (h3-standard-88, 88 vCPU, europe-west4-b)",
+    "runner": "work/run_counterscreen.sh (uploaded to h3:~/activestate/run_counterscreen.sh)",
+    "command_template": "gnina -r <id>_receptor.pdbqt -l <shard>.sdf -o <out>.sdf.gz --center_{x,y,z} <box> --size_{x,y,z} <box> --exhaustiveness 8 --num_modes 9 --cnn_scoring rescore --no_gpu --cpu 4 --seed 20260904",
+    "settings": {
+      "exhaustiveness": 8,
+      "num_modes": 9,
+      "cnn_scoring": "rescore",
+      "device": "cpu",
+      "seed": 20260904,
+      "jobs": 22,
+      "cpu_per_job": 4
+    },
+    "matches_campaign_validated_protocol": true,
+    "shard_size": 10,
+    "note": "h3 was shared with other lanes of this campaign; wall-clock timings are not indicative.",
+    "boxes": {
+      "5NDD__ORTHO": {
+        "file": "configs/5NDD__ORTHO.conf",
+        "sha256": "402cb51de83104abec33d085d7c94a5b9e387361b7b63bf6a6c6e9269e9c703d",
+        "center_x": "16.974",
+        "center_y": "5.926",
+        "center_z": "55.826",
+        "size_x": "17.332",
+        "size_y": "17.672",
+        "size_z": "13.644",
+        "num_modes": "9",
+        "exhaustiveness": "8",
+        "cnn_scoring": "rescore"
+      },
+      "5NDZ__ALLO": {
+        "file": "configs/5NDZ__ALLO.conf",
+        "sha256": "09254247cc9b8b68a027b3ec87a72fce0bb0a90af978155535c9b7439fda0a10",
+        "center_x": "1.356",
+        "center_y": "12.419",
+        "center_z": "48.400",
+        "size_x": "20.702",
+        "size_y": "17.885",
+        "size_z": "25.525",
+        "num_modes": "9",
+        "exhaustiveness": "8",
+        "cnn_scoring": "rescore"
+      },
+      "8ZMD__ALLO": {
+        "file": "configs/8ZMD__ALLO.conf",
+        "sha256": "5372f607981b25bfd9f8af08fb55690c2fc27978382833a8518b675ca1b415aa",
+        "center_x": "135.855",
+        "center_y": "157.943",
+        "center_z": "122.228",
+        "size_x": "20.702",
+        "size_y": "17.885",
+        "size_z": "25.525",
+        "num_modes": "9",
+        "exhaustiveness": "8",
+        "cnn_scoring": "rescore"
+      },
+      "8ZMD__ORTHO": {
+        "file": "configs/8ZMD__ORTHO.conf",
+        "sha256": "c83e7ab348e044a6df60ab7be195bf9c24bad302e938dbc70e18af9bd9eb7ea1",
+        "center_x": "133.238",
+        "center_y": "146.463",
+        "center_z": "108.230",
+        "size_x": "17.332",
+        "size_y": "17.672",
+        "size_z": "13.644",
+        "num_modes": "9",
+        "exhaustiveness": "8",
+        "cnn_scoring": "rescore"
+      },
+      "8ZMD__TL": {
+        "file": "configs/8ZMD__TL.conf",
+        "sha256": "f7659b3dd6f0172c7b8f18eb3cb7d9215573ece2b7afa4a28eaf5bb3bcae2daa",
+        "center_x": "139.840",
+        "center_y": "152.433",
+        "center_z": "93.894",
+        "size_x": "18.383",
+        "size_y": "25.597",
+        "size_z": "26.657",
+        "num_modes": "9",
+        "exhaustiveness": "8",
+        "cnn_scoring": "rescore"
+      },
+      "8ZME__ALLO": {
+        "file": "configs/8ZME__ALLO.conf",
+        "sha256": "e9d773a945111fd850e7201f4aa38300bc48be984a3be0009fb721d2f3d0a46c",
+        "center_x": "148.006",
+        "center_y": "159.705",
+        "center_z": "156.173",
+        "size_x": "20.702",
+        "size_y": "17.885",
+        "size_z": "25.525",
+        "num_modes": "9",
+        "exhaustiveness": "8",
+        "cnn_scoring": "rescore"
+      },
+      "8ZME__ORTHO": {
+        "file": "configs/8ZME__ORTHO.conf",
+        "sha256": "03eda23634af35c171f37a51671dc60829fd278e09895dff8f2d6974e9cc8620",
+        "center_x": "148.210",
+        "center_y": "154.303",
+        "center_z": "173.592",
+        "size_x": "17.332",
+        "size_y": "17.672",
+        "size_z": "13.644",
+        "num_modes": "9",
+        "exhaustiveness": "8",
+        "cnn_scoring": "rescore"
+      },
+      "8ZME__TL": {
+        "file": "configs/8ZME__TL.conf",
+        "sha256": "9804e5c6810cda69b9783900cb43b6332c40b431b10310c23842299330e52bc2",
+        "center_x": "142.502",
+        "center_y": "166.064",
+        "center_z": "184.189",
+        "size_x": "17.432",
+        "size_y": "27.685",
+        "size_z": "21.621",
+        "num_modes": "9",
+        "exhaustiveness": "8",
+        "cnn_scoring": "rescore"
+      },
+      "9D0A__ALLO": {
+        "file": "configs/9D0A__ALLO.conf",
+        "sha256": "3ae8f9768586ce707b5d62162496d77dae33a3bc8acfdfd4cfcc7b5094319228",
+        "center_x": "115.734",
+        "center_y": "92.761",
+        "center_z": "102.466",
+        "size_x": "20.702",
+        "size_y": "17.885",
+        "size_z": "25.525",
+        "num_modes": "9",
+        "exhaustiveness": "8",
+        "cnn_scoring": "rescore"
+      },
+      "9D0A__ORTHO": {
+        "file": "configs/9D0A__ORTHO.conf",
+        "sha256": "ebd4376a46dfbf1bf264f6fe1a78dc62973fd6bd2f03771894cf46b24791804c",
+        "center_x": "117.582",
+        "center_y": "99.780",
+        "center_z": "86.380",
+        "size_x": "17.332",
+        "size_y": "17.672",
+        "size_z": "13.644",
+        "num_modes": "9",
+        "exhaustiveness": "8",
+        "cnn_scoring": "rescore"
+      },
+      "9D0A__TL": {
+        "file": "configs/9D0A__TL.conf",
+        "sha256": "1a7947873b4b1a686f3d3afb0a6f58d1656e89fcae763c258dfa0f7a80d4ee26",
+        "center_x": "111.842",
+        "center_y": "93.666",
+        "center_z": "76.939",
+        "size_x": "16.359",
+        "size_y": "17.653",
+        "size_z": "20.535",
+        "num_modes": "9",
+        "exhaustiveness": "8",
+        "cnn_scoring": "rescore"
+      },
+      "9E7R__ALLO": {
+        "file": "configs/9E7R__ALLO.conf",
+        "sha256": "0a060d2f8ec4975883a3978c6dd18029d566cfe105935b07defe016d1cabba91",
+        "center_x": "118.353",
+        "center_y": "107.802",
+        "center_z": "139.914",
+        "size_x": "20.702",
+        "size_y": "17.885",
+        "size_z": "25.525",
+        "num_modes": "9",
+        "exhaustiveness": "8",
+        "cnn_scoring": "rescore"
+      },
+      "9E7R__GB88": {
+        "file": "configs/9E7R__GB88.conf",
+        "sha256": "aeee7b551def609da27578c4b73168d274a6da93f5e24d6189f8923e2bb4c53a",
+        "center_x": "118.735",
+        "center_y": "106.509",
+        "center_z": "166.938",
+        "size_x": "20.233",
+        "size_y": "23.766",
+        "size_z": "19.819",
+        "num_modes": "9",
+        "exhaustiveness": "8",
+        "cnn_scoring": "rescore"
+      },
+      "9E7R__ORTHO": {
+        "file": "configs/9E7R__ORTHO.conf",
+        "sha256": "d1a9d5bd2fd8b609a19842349c2bf4d1e3dcb0a2d2392759ce76457308a99f1f",
+        "center_x": "114.887",
+        "center_y": "114.433",
+        "center_z": "156.072",
+        "size_x": "17.332",
+        "size_y": "17.672",
+        "size_z": "13.644",
+        "num_modes": "9",
+        "exhaustiveness": "8",
+        "cnn_scoring": "rescore"
+      }
+    }
+  }
+}

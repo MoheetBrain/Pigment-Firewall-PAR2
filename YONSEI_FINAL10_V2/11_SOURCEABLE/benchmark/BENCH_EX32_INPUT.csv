@@ -1,0 +1,361 @@
+cand_id,smiles,mol_class,label_name,source_ref,activity_nM,notes,pockets
+BA00001,CC(C)c1cc(-c2ccc(F)cc2)nn2cc(C(=O)N3CCN(C(=O)[C@H](O)CC(C)(C)C)[C@@H](C)C3)nc12,ACTIVE,CHEMBL5273903,CHEMBL5273903,0.7,,5NDD_orthosteric;5NDZ_allosteric
+BA00002,CC(C)c1cc(-c2ccc(F)cc2)nn2cc(C(=O)N3CCN(C(=O)Cc4ccsc4)[C@@H](C)C3)nc12,ACTIVE,CHEMBL3582250,CHEMBL3582250,2.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00003,CC(C)c1cc(-c2ccc(F)cc2)nn2cc(C(=O)N3CCN(C(=O)OC(C)(C)C)CC3(C)C)nc12,ACTIVE,CHEMBL3582248,CHEMBL3582248,2.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00004,CC(C)c1cc(-c2ccc(F)cc2)nn2cc(C(=O)N3CCN(C(=O)CCC(=O)O)CC3(C)C)nc12,ACTIVE,CHEMBL4470628,CHEMBL4470628,2.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00005,C[C@@H](C1CCCCC1)n1c(-c2cc3c(cc2Br)OCO3)nc2cc(C(=O)Nc3ccc(C#N)cc3)ccc21,ACTIVE,AZ3451,CHEMBL4128763,2.5,,5NDD_orthosteric;5NDZ_allosteric
+BA00006,CC(C)(C)OC(=O)N1CCN(C(=O)c2cn3nc(-c4ccc(F)cc4)cc(C(C)(C)C)c3n2)C(C)(C)C1,ACTIVE,CHEMBL3582251,CHEMBL3582251,4.2,,5NDD_orthosteric;5NDZ_allosteric
+BA00007,CCc1ccc2c(F)ccc(C(O)c3ncc[nH]3)n12,ACTIVE,CHEMBL6044556,CHEMBL6044556,200.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00008,CCc1ccc2c(F)ccc([C@@H](O)c3ncc[nH]3)n12,ACTIVE,CHEMBL5906323,CHEMBL5906323,200.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00009,CCc1coc2c(F)ccc([C@H](O)c3ncc[nH]3)c12,ACTIVE,CHEMBL5788897,CHEMBL5788897,330.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00010,CCc1csc2c(F)ccc([C@@H](O)c3ncc[nH]3)c12,ACTIVE,CHEMBL5931602,CHEMBL5931602,600.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00011,OC(c1ncc[nH]1)c1ccc(F)c2occ(C3CC3)c12,ACTIVE,CHEMBL5908081,CHEMBL5908081,630.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00012,O[C@H](c1ncc[nH]1)c1ccc(F)c2occ(C3CC3)c12,ACTIVE,CHEMBL5946397,CHEMBL5946397,630.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00013,CCCCCNc1nc(NCc2ccco2)c2cc(F)ccc2n1,ACTIVE,CHEMBL1684609,CHEMBL1684609,690.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00014,CCc1coc2c(F)ccc(C(O)c3ncc[nH]3)c12,ACTIVE,CHEMBL5993617,CHEMBL5993617,750.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00015,O[C@@H](c1ncc[nH]1)c1ccc(F)cc1N1CC=CC1,ACTIVE,CHEMBL5915179,CHEMBL5915179,900.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00016,Cc1cccc2c(F)ccc(C(O)c3ncc[nH]3)c12,ACTIVE,CHEMBL5813293,CHEMBL5813293,900.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00017,CCc1ccn2c(F)ccc(C(O)c3ncc[nH]3)c12,ACTIVE,CHEMBL5751707,CHEMBL5751707,900.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00018,OC(c1ncc[nH]1)c1ccc(F)cc1N1CCCC1,ACTIVE,CHEMBL6001703,CHEMBL6001703,960.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00019,O[C@H](c1ncc[nH]1)c1ccc(F)cc1N1CCCC1,ACTIVE,CHEMBL5980331,CHEMBL5980331,960.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00020,Cc1ccc2c(F)ccc(C(O)c3ncc[nH]3)n12,ACTIVE,CHEMBL6057099,CHEMBL6057099,970.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00021,CCc1csc2c(F)ccc([C@H](O)c3ncc[nH]3)c12,ACTIVE,CHEMBL6005797,CHEMBL6005797,970.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00022,Cc1coc2c(F)ccc(C(O)c3ncc[nH]3)c12,ACTIVE,CHEMBL5886939,CHEMBL5886939,970.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00023,COc1cc(Cl)c2nc(-c3cc(C)cc4c(=O)n(C)cnc34)sc2c1,ACTIVE,CHEMBL4860533,CHEMBL4860533,1000.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00024,COc1cc(OCc2nc(N3CCOCC3)sc2C)c2cc(-c3cn4nc(OC)sc4n3)oc2c1,ACTIVE,CHEMBL3716726,CHEMBL3716726,1000.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00025,COc1cc(F)c2nc(-c3cc(C)cc4c(=O)n(C)cnc34)sc2c1,ACTIVE,CHEMBL4871001,CHEMBL4871001,1000.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00026,Cc1cc(-c2nc3c(s2)CCCC3)c2ncn(C)c(=O)c2c1,ACTIVE,CHEMBL4866566,CHEMBL4866566,1000.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00027,CCc1cc(-c2nc3c(Cl)cc(OC)cc3s2)c2ncn(C)c(=O)c2c1,ACTIVE,CHEMBL4849569,CHEMBL4849569,1000.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00028,Cc1cc(-c2nc3c(Cl)cc(OCCNS(=O)(=O)c4ccc(C(F)(F)F)cc4)cc3s2)c2ncn(C)c(=O)c2c1,ACTIVE,CHEMBL4855875,CHEMBL4855875,1000.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00029,OC(c1ncc[nH]1)c1ccc(F)cc1N1CC=CC1,ACTIVE,CHEMBL6051085,CHEMBL6051085,1050.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00030,Cn1ncc2c(F)ccc(C(O)c3ncc[nH]3)c21,ACTIVE,CHEMBL5774506,CHEMBL5774506,1230.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00031,CCCc1cc(F)ccc1[C@H](O)c1ncc[nH]1,ACTIVE,AZ8838,CHEMBL4127372,1290.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00032,CCCc1cc(F)ccc1[C@@H](O)c1ncc[nH]1,ACTIVE,AZ8838,CHEMBL5883899,1290.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00033,Cn1ccc2c(F)ccc(C(O)c3ncc[nH]3)c21,ACTIVE,CHEMBL5849160,CHEMBL5849160,1390.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00034,OC(c1ncc[nH]1)c1ccc(F)c2oc3ccccc3c12,ACTIVE,CHEMBL5937575,CHEMBL5937575,1450.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00035,O=C(c1ncc[nH]1)c1ccc(F)c2oc3ccccc3c12,ACTIVE,CHEMBL5841639,CHEMBL5841639,1630.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00036,Cn1ccc2c(F)ccc([C@H](O)c3ncc[nH]3)c21,ACTIVE,CHEMBL6060374,CHEMBL6060374,1650.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00037,CCn1ccc2c(F)ccc(C(O)c3ncc[nH]3)c21,ACTIVE,CHEMBL5974632,CHEMBL5974632,1650.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00038,CCCc1c(C(O)c2ncc[nH]2)ccc(F)c1F,ACTIVE,CHEMBL5795821,CHEMBL5795821,1660.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00039,OC(c1ncc[nH]1)c1ccc(F)n2ccc(Cl)c12,ACTIVE,CHEMBL5825581,CHEMBL5825581,1900.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00040,CC(C)c1ccc2c(F)ccc(C(O)c3ncc[nH]3)n12,ACTIVE,CHEMBL6015822,CHEMBL6015822,1910.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00041,O[C@@H](c1ncc[nH]1)c1ccc(F)c2occ(CC(F)(F)F)c12,ACTIVE,CHEMBL5752106,CHEMBL5752106,2120.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00042,OC(c1ncc[nH]1)c1ccc(F)c2occ(CC(F)(F)F)c12,ACTIVE,CHEMBL5841272,CHEMBL5841272,2170.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00043,CCc1coc2c(F)ccc([C@@H](O)c3ncc[nH]3)c12,ACTIVE,CHEMBL5944203,CHEMBL5944203,2190.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00044,Cc1ccoc1CNc1nc(Oc2cc(Cl)cc(Cl)c2)nc2ccc(F)cc12,ACTIVE,CHEMBL3735493,CHEMBL3735493,2800.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00045,CCCc1cc(F)ccc1C(O)c1ncc[nH]1,ACTIVE,AZ8838,CHEMBL5961001,2930.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00046,CCOC(=O)[C@H]1CCCN(C(=O)c2cn3nc(-c4ccc(F)cc4)cc(C(F)(F)F)c3n2)[C@@H]1C,ACTIVE,CHEMBL3582249,CHEMBL3582249,3300.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00047,OC(c1ncc[nH]1)c1ccc(F)c2ccc(Cl)n12,ACTIVE,CHEMBL5756815,CHEMBL5756815,3380.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00048,OC(c1ncc[nH]1)c1ccc(F)cc1-c1cscn1,ACTIVE,CHEMBL6022431,CHEMBL6022431,3600.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00049,OC(c1ncc[nH]1)c1ccc(F)cc1N1CC[C@H](F)C1,ACTIVE,CHEMBL5967239,CHEMBL5967239,3870.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00050,CCCc1c([C@@H](O)c2ncc[nH]2)ccc(F)c1F,ACTIVE,CHEMBL5790400,CHEMBL5790400,4000.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00051,CCCc1c([C@H](O)c2ncc[nH]2)ccc(F)c1F,ACTIVE,CHEMBL5855327,CHEMBL5855327,4000.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00053,OC(c1ncc[nH]1)c1ccc(F)cc1C12CCCC1C2,ACTIVE,CHEMBL5917816,CHEMBL5917816,4320.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00054,OC(c1ncc[nH]1)c1ccc(F)cc1N1CCC1,ACTIVE,CHEMBL5857622,CHEMBL5857622,4500.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00055,OC(c1ncc[nH]1)c1ccc(F)c(F)c1-n1cccn1,ACTIVE,CHEMBL5767391,CHEMBL5767391,4600.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00056,OC(c1ncc[nH]1)c1ccc(F)cc1N1CC2CC2C1,ACTIVE,CHEMBL5848963,CHEMBL5848963,4670.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00057,OC(c1ncc[nH]1)c1ccc(F)cc1N1CCC(F)(F)C1,ACTIVE,CHEMBL5808143,CHEMBL5808143,4910.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00058,OC(c1ncc[nH]1)c1ccc(F)cc1C1CCCC1,ACTIVE,CHEMBL5752080,CHEMBL5752080,5000.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00059,C/C=C/c1cc(F)ccc1C(O)c1ncc[nH]1,ACTIVE,CHEMBL5772219,CHEMBL5772219,5100.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00060,OC(c1ncc[nH]1)c1ccc(F)cc1C1=CCCC1,ACTIVE,CHEMBL5896164,CHEMBL5896164,5180.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00061,CCCc1c(Cl)cccc1C(O)c1ncc[nH]1,ACTIVE,CHEMBL6023546,CHEMBL6023546,5450.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00062,CCCc1c(Cl)cccc1[C@H](O)c1ncc[nH]1,ACTIVE,CHEMBL5912955,CHEMBL5912955,5450.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00063,O[C@@H](CCc1ccc(F)cc1)C[C@H](O)c1cc(-c2ccccc2)on1,ACTIVE,CHEMBL4128225,CHEMBL4128225,6000.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00064,C/C=C\c1cc(F)ccc1C(O)c1ncc[nH]1,ACTIVE,CHEMBL5836987,CHEMBL5836987,6260.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00065,OC(c1ncc[nH]1)c1ccccc1C1=CCCC1,ACTIVE,CHEMBL5911569,CHEMBL5911569,6270.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00066,OC(c1ncc[nH]1)c1cccc(Cl)c1-n1cccn1,ACTIVE,CHEMBL5872446,CHEMBL5872446,6400.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00067,O[C@@H](c1ncc[nH]1)c1ccc(F)c2occ(C3CC3)c12,ACTIVE,CHEMBL5959498,CHEMBL5959498,6540.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00068,CC1(F)CN(c2cc(F)ccc2C(O)c2ncc[nH]2)C1,ACTIVE,CHEMBL5921196,CHEMBL5921196,6730.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00069,OC(c1ncc[nH]1)c1ccc(F)c2cc3n(c12)CCC3,ACTIVE,CHEMBL6000340,CHEMBL6000340,6730.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00070,CC1CN(c2cc(F)ccc2C(O)c2ncc[nH]2)C1,ACTIVE,CHEMBL5966150,CHEMBL5966150,6880.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00071,OC(c1ncc[nH]1)c1ccc(F)cc1N1CC[C@@H](F)C1,ACTIVE,CHEMBL5881336,CHEMBL5881336,6960.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00072,OC(c1ncc[nH]1)c1ccc(F)cc1-n1cccn1,ACTIVE,CHEMBL5861350,CHEMBL5861350,7210.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00073,OC(c1ncn[nH]1)c1ccc(F)cc1N1CCCC1,ACTIVE,CHEMBL6009789,CHEMBL6009789,7790.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00074,OC(c1ncc[nH]1)c1ccc(F)cc1-c1nccs1,ACTIVE,CHEMBL5759805,CHEMBL5759805,7790.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00075,OC(c1ncc[nH]1)c1ccc(F)cc1C1CCC1,ACTIVE,CHEMBL6037377,CHEMBL6037377,7850.0,,5NDD_orthosteric;5NDZ_allosteric
+BA00076,COc1ccc2nc(Oc3ccc(Cl)cc3Cl)nc(NCc3occc3C)c2c1,ACTIVE,CHEMBL3736126,CHEMBL3736126,10000.0,,5NDD_orthosteric;5NDZ_allosteric
+BX00001,CC(C)[C@]12O[C@H]1[C@@H]1O[C@]13[C@]1(O[C@H]1C[C@H]1C4=C(CC[C@@]13C)C(=O)OC4)[C@@H]2O,WEAK_ACTIVE,NSC-163062,CHEMBL463763,14.0,"supported only by a distal readout (transcription / cytokine / migration), which many non-PAR2 mechanisms can move",5NDD_orthosteric;5NDZ_allosteric
+BX00002,CC(C1CCCCC1)n1c(-c2cc3c(cc2Br)OCO3)nc2cc(C(=O)Nc3ccc(C#N)cc3)ccc21,WEAK_ACTIVE,AZ3451,CHEMBL5431335,23.0,"supported only by a distal readout (transcription / cytokine / migration), which many non-PAR2 mechanisms can move",5NDD_orthosteric;5NDZ_allosteric
+BX00003,C[C@@H](c1ccccc1)n1c(-c2cc3c(cc2Br)OCO3)nc2cc(C(=O)Nc3ccccc3)ccc21,WEAK_ACTIVE,CHEMBL5404935,CHEMBL5404935,90.0,"supported only by a distal readout (transcription / cytokine / migration), which many non-PAR2 mechanisms can move",5NDD_orthosteric;5NDZ_allosteric
+BX00004,CC[C@H](C)[C@H](NC(=O)[C@H](CC1CCCCC1)NC(=O)c1ccno1)C(=O)N1CCC(c2ccccc2)CC1,COUNTER_CONTROL,CHEMBL2431716,CHEMBL2431716,100.0,peptide/peptidomimetic backbone (>=2 consecutive amide-linked residues); also carries a PAR2 agonist EC50/Emax annotation,5NDD_orthosteric;5NDZ_allosteric
+BX00005,CC[C@H](C)[C@H](NC(=O)[C@H](CC1CCCCC1)NC(=O)c1ccno1)C(=O)NCc1ccccc1OC,COUNTER_CONTROL,CHEMBL2431717,CHEMBL2431717,400.0,peptide/peptidomimetic backbone (>=2 consecutive amide-linked residues),5NDD_orthosteric;5NDZ_allosteric
+BX00006,CC[C@H](C)[C@H](NC(=O)[C@H](CC1CCCCC1)NC(=O)c1ccno1)C(=O)N1CCC2(C=Cc3ccccc32)CC1,COUNTER_CONTROL,GB88,CHEMBL2431617,1000.0,peptide/peptidomimetic backbone (>=2 consecutive amide-linked residues),5NDD_orthosteric;5NDZ_allosteric
+BX00007,CCC(C)Oc1ccccc1CNC(=O)[C@@H](NC(=O)[C@H](CC1CCCCC1)NC(=O)c1ccno1)[C@@H](C)CC,COUNTER_CONTROL,CHEMBL3752235,CHEMBL3752235,1000.0,peptide/peptidomimetic backbone (>=2 consecutive amide-linked residues),5NDD_orthosteric;5NDZ_allosteric
+BX00008,CC[C@H](C)[C@H](NC(=O)[C@H](CC1CCCCC1)NC(=O)c1cc(N)no1)C(=O)N1CCC2(C=Cc3ccccc32)CC1,COUNTER_CONTROL,CHEMBL3902670,CHEMBL3902670,1200.0,peptide/peptidomimetic backbone (>=2 consecutive amide-linked residues),5NDD_orthosteric;5NDZ_allosteric
+BX00009,CC[C@H](C)[C@H](NC(=O)[C@H](CC1CCCCC1)NC(=O)c1ccno1)C(=O)N1CCC2(CCc3ccccc3O2)CC1,COUNTER_CONTROL,CHEMBL3959120,CHEMBL3959120,1900.0,peptide/peptidomimetic backbone (>=2 consecutive amide-linked residues),5NDD_orthosteric;5NDZ_allosteric
+BX00010,CC[C@H](C)[C@H](NC(=O)[C@H](CC1CCCCC1)NC(=O)c1ccno1)C(=O)N1CCC2(CCc3ccccc32)CC1,COUNTER_CONTROL,CHEMBL1270720,CHEMBL1270720,2000.0,peptide/peptidomimetic backbone (>=2 consecutive amide-linked residues),5NDD_orthosteric;5NDZ_allosteric
+BX00011,CC[C@H](C)[C@H](NC(=O)[C@H](CC1CCCCC1)NC(=O)c1c[nH]cn1)C(=O)N1CCC2(C=Cc3ccccc32)CC1,COUNTER_CONTROL,CHEMBL3916411,CHEMBL3916411,3100.0,peptide/peptidomimetic backbone (>=2 consecutive amide-linked residues),5NDD_orthosteric;5NDZ_allosteric
+BX00012,CC[C@H](C)[C@H](NC(=O)[C@H](CC1CCCCC1)NC(=O)c1ccno1)C(=O)N1CCCC[C@H]1C(=O)NC(C)(C)C,COUNTER_CONTROL,CHEMBL3914547,CHEMBL3914547,7943.28,peptide/peptidomimetic backbone (>=2 consecutive amide-linked residues),5NDD_orthosteric;5NDZ_allosteric
+BX00013,CC[C@H](C)[C@H](NC(=O)[C@H](CC1CCCCC1)NC(=O)c1cc(CN)no1)C(=O)N1CCC2(C=Cc3ccccc32)CC1,COUNTER_CONTROL,CHEMBL3930659,CHEMBL3930659,8900.0,peptide/peptidomimetic backbone (>=2 consecutive amide-linked residues),5NDD_orthosteric;5NDZ_allosteric
+BX00014,C[C@@H]1CCN(c2cc(F)ccc2C(O)c2ncc[nH]2)C1,WEAK_ACTIVE,CHEMBL5844620,CHEMBL5844620,13100.0,best potency 1.31e+04 nM (IC50 13100 nM) is weaker than the 10000 nM inclusion cutoff,5NDD_orthosteric;5NDZ_allosteric
+BX00015,OC(c1ncc[nH]1)c1ccc(F)c2ccc(C3CC3)n12,WEAK_ACTIVE,CHEMBL5810389,CHEMBL5810389,13200.0,best potency 1.32e+04 nM (IC50 13200 nM) is weaker than the 10000 nM inclusion cutoff,5NDD_orthosteric;5NDZ_allosteric
+BX00016,OC(c1ncc[nH]1)c1ccc(F)cc1-c1cocn1,WEAK_ACTIVE,CHEMBL5947333,CHEMBL5947333,14300.0,best potency 1.43e+04 nM (IC50 14300 nM) is weaker than the 10000 nM inclusion cutoff,5NDD_orthosteric;5NDZ_allosteric
+BX00017,O[C@H](c1ncc[nH]1)c1ccc(F)c2occ(CC(F)(F)F)c12,WEAK_ACTIVE,CHEMBL6041410,CHEMBL6041410,33300.0,best potency 3.33e+04 nM (IC50 33300 nM) is weaker than the 10000 nM inclusion cutoff,5NDD_orthosteric;5NDZ_allosteric
+BX00018,CCc1csc2c(F)ccc(C(O)c3ncc[nH]3)c12,WEAK_ACTIVE,CHEMBL6000715,CHEMBL6000715,33300.0,best potency 3.33e+04 nM (IC50 33300 nM) is weaker than the 10000 nM inclusion cutoff,5NDD_orthosteric;5NDZ_allosteric
+BX00019,COc1ccc(Br)c(C(=O)Nn2c(-c3ccc(F)cc3)nc3ccccc3c2=O)c1,WEAK_ACTIVE,CHEMBL2431619,CHEMBL2431619,34000.0,best potency 3.4e+04 nM (IC50 34000 nM) is weaker than the 10000 nM inclusion cutoff,5NDD_orthosteric;5NDZ_allosteric
+BX00020,O=C(/C=C/c1ccccc1Cl)N1CCN(Cc2ccc(F)cc2)CC1,WEAK_ACTIVE,CHEMBL559808,CHEMBL559808,35481.3389,best potency 3.548e+04 nM (pKb 4.45 ) is weaker than the 10000 nM inclusion cutoff,5NDD_orthosteric;5NDZ_allosteric
+BX00021,N#Cc1ccccc1/C=C/C=C/C(=O)N1CCN(c2ccccn2)CC1,WEAK_ACTIVE,CHEMBL561338,CHEMBL561338,40738.0278,best potency 4.074e+04 nM (pKb 4.39 ) is weaker than the 10000 nM inclusion cutoff,5NDD_orthosteric;5NDZ_allosteric
+BX00022,O[C@@H](c1ncc[nH]1)c1ccc(F)cc1N1CCCC1,WEAK_ACTIVE,CHEMBL5927011,CHEMBL5927011,41000.0,best potency 4.1e+04 nM (IC50 41000 nM) is weaker than the 10000 nM inclusion cutoff,5NDD_orthosteric;5NDZ_allosteric
+BX00023,CCc1ccc2c(F)ccc([C@H](O)c3ncc[nH]3)n12,WEAK_ACTIVE,CHEMBL5775836,CHEMBL5775836,41000.0,best potency 4.1e+04 nM (IC50 41000 nM) is weaker than the 10000 nM inclusion cutoff,5NDD_orthosteric;5NDZ_allosteric
+BX00024,Cn1ccc2c(F)ccc([C@@H](O)c3ncc[nH]3)c21,WEAK_ACTIVE,CHEMBL5988264,CHEMBL5988264,41600.0,best potency 4.16e+04 nM (IC50 41600 nM) is weaker than the 10000 nM inclusion cutoff,5NDD_orthosteric;5NDZ_allosteric
+BX00025,CC[C@H](C)[C@H](NC(=O)[C@H](CC1CCCCC1)NC(=O)c1ccno1)C(=O)Nc1ccc(CC(=O)N2CCOCC2)cc1,COUNTER_CONTROL,CHEMBL1269143,CHEMBL1269143,57000.0,peptide/peptidomimetic backbone (>=2 consecutive amide-linked residues); best potency 5.7e+04 nM (IC50 57000 nM) is weaker than the 10000 nM inclusion cutoff,5NDD_orthosteric;5NDZ_allosteric
+BX00026,COc1ccc(CCC(=O)CC(=O)CCc2ccc(OC)cc2)cc1,WEAK_ACTIVE,CHEMBL4126288,CHEMBL4126288,67800.0,best potency 6.78e+04 nM (IC50 67800 nM) is weaker than the 10000 nM inclusion cutoff,5NDD_orthosteric;5NDZ_allosteric
+BX00027,Cc1nc2ccc(C(=O)N3CCN(C(=O)C4CCCCC4)CC3)cn2c1-c1ccccc1,WEAK_ACTIVE,CHEMBL2431715,CHEMBL2431715,77000.0,best potency 7.7e+04 nM (IC50 77000 nM) is weaker than the 10000 nM inclusion cutoff,5NDD_orthosteric;5NDZ_allosteric
+BX00028,O[C@H](c1ncc[nH]1)c1ccc(F)cc1N1CC=CC1,WEAK_ACTIVE,CHEMBL6049939,CHEMBL6049939,93000.0,best potency 9.3e+04 nM (IC50 93000 nM) is weaker than the 10000 nM inclusion cutoff,5NDD_orthosteric;5NDZ_allosteric
+BX00029,Cc1cccc(Cn2c(C)nc3cc(C(=O)N4CCCCC4)ccc32)c1,WEAK_ACTIVE,CHEMBL2431620,CHEMBL2431620,243000.0,best potency 2.43e+05 nM (IC50 243000 nM) is weaker than the 10000 nM inclusion cutoff,5NDD_orthosteric;5NDZ_allosteric
+BX00030,CC(C)CC(=O)N1CCN(C(=O)CCCCCN)CC1,WEAK_ACTIVE,ENMD-1068,CHEMBL3734977,5000000.0,"best potency 5e+06 nM (IC50 5e+06 nM) is weaker than the 10000 nM inclusion cutoff; supported only by a distal readout (transcription / cytokine / migration), which many non-PAR2 m",5NDD_orthosteric;5NDZ_allosteric
+BRAZ8838,CCCc1cc(F)ccc1[C@H](O)c1[nH]ccn1,REFERENCE,AZ8838_crystal_S,"v2_consensus_rank.py POCKET_REFERENCE_SMILES (wwPDB 8TZ, 5NDD)",,"crystallographic reference ligand, redocked as a positive control",5NDD_orthosteric;5NDZ_allosteric
+BRAZ3451,C[C@@H](C1CCCCC1)n1c(-c2cc3c(cc2Br)OCO3)nc2cc(C(=O)Nc3ccc(C#N)cc3)ccc21,REFERENCE,AZ3451_crystal,v2_consensus_rank.py POCKET_REFERENCE_SMILES (5NDZ),,"crystallographic reference ligand, redocked as a positive control",5NDD_orthosteric;5NDZ_allosteric
+BS00001,CC1(C(=O)NCCN1C(=O)C2=CN3C(=N2)C(=CC(=N3)C4=CC=C(C=C4)F)C(C)(C)C)C,ACTIVE,I-191,PubChem CID 117977934 (SMILES field) cross-confirmed against,79.4328,"supplementary active, PubChem+GtoPdb verified, no matched decoys",5NDD_orthosteric;5NDZ_allosteric
+BS00002,CC1(CN(CCN1C(=O)C2=CC3=C(O2)C(=CC(=N3)C4=CC(=C(C=C4)Cl)F)C(C)(C)C)C5=NC=C(C=C5)C(=O)O)C,ACTIVE,I-287,PubChem CID 134296695 (SMILES field) cross-confirmed against,79.4328,"supplementary active, PubChem+GtoPdb verified, no matched decoys",5NDD_orthosteric;5NDZ_allosteric
+BS00003,C1C(N(C2=CC=CC=C21)C=O)C3=CNC4=CC=CC=C43,ACTIVE,AZ7188,PubChem CID 129320516 (SMILES field) cross-confirmed against,6309.5734,"supplementary active, PubChem+GtoPdb verified, no matched decoys",5NDD_orthosteric;5NDZ_allosteric
+BD01051,C[C@@H]1CCN(C(=O)CC#N)C[C@@H]1N(C)c1ncnc2[nH]ccc12,DECOY,TOFACITINIB,FDA_DRUGS|UJLAWZDWDVHWOW-YPMHNXCESA-N,,matched_to=CHEMBL5944203;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00070,COC(=O)CC[C@@H]1N=C(c2ccccn2)c2cc(Br)ccc2-n2c(C)cnc21.O=S(=O)(O)c1ccccc1,DECOY,REMIMAZOLAM BESYLATE,FDA_DRUGS|QMTKNJZIWGTNTE-LMOVPXPDSA-N,,matched_to=CHEMBL3582248;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01348,CC(=O)O[C@@H](c1ccccc1)[C@@H](O)[C@@H]1OC(=O)C=C[C@H]1O,DECOY,"(1r,2r)-2-hydroxy-2-[(2r,3s)-3-hydroxy-6-oxo-2,3-dihydropyran-2-yl]-1-phenylethyl acetate",LOTUS_3D|BWDGXQDVXMUNDT-REBRKWNGSA-N,,matched_to=CHEMBL5857622;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD01645,COc1c(N2C[C@@H](C)C[C@H](N)C2)ccc2c(=O)c(C(=O)O)cn(C3CC3)c12,DECOY,NEMONOXACIN,FDA_DRUGS|AVPQPGFLVZTJOR-RYUDHWBXSA-N,,matched_to=CHEMBL5921196;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD01659,CN(C)/N=N/c1[nH]cnc1C(N)=O,DECOY,DACARBAZINE,FDA_DRUGS|FDKXTQMXEQVLRF-ZHACJKMWSA-N,,matched_to=CHEMBL6000340;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD00321,C=C(C)[C@@H](O)Cc1c(OC)ccc(C(=O)/C=C/c2ccc(O)cc2)c1O,DECOY,(2e)-1-{2-hydroxy-3-[(2r)-2-hydroxy-3-methylbut-3-en-1-yl]-4-methoxyphenyl}-3-(4-hydroxyphenyl)prop-2-en-1-one,LOTUS_3D|YSOKENZJQWPLRA-IUYMFKLXSA-N,,matched_to=CHEMBL1684609;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00512,CC[C@H](CO)COc1cc2c(C)cc(=O)oc2cc1O,DECOY,6-[(2s)-2-ethyl-3-hydroxypropoxy]-7-hydroxy-4-methylchromen-2-one,LOTUS_3D|TWRDEZTXYNRWDN-SNVBAGLBSA-N,,matched_to=CHEMBL6005797;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00309,COc1cc(C(OC)C(C)C(C)Cc2ccc3c(c2)OCO3)ccc1O,DECOY,"4-[4-(1,3-Benzodioxol-5-yl)-1-methoxy-2,3-dimethylbutyl]-2-methoxyphenol",PubChem|CID44447178,,matched_to=CHEMBL1684609;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD00152,O=C1NC(=O)C(c2ccccc2)(c2ccccc2)N1,DECOY,PHENYTOIN,FDA_DRUGS|CXOFVDLJLONNDW-UHFFFAOYSA-N,,matched_to=CHEMBL6044556;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD00463,NC(=O)OC[C@@H](O)c1ccccc1Cl,DECOY,CARISBAMATE,FDA_DRUGS|OLBWFRRUHYQABZ-MRVPVSSYSA-N,,matched_to=CHEMBL5980331;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01639,Clc1cc(Cl)c(OCC#CI)cc1Cl,DECOY,HALOPROGIN,FDA_DRUGS|CTETYYAZBPJBHE-UHFFFAOYSA-N,,matched_to=CHEMBL5921196;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD01631,C=C1CCCC(C)(C)[C@H]1CC/C(C)=C/Cc1cc(O)ccc1O,DECOY,"2-[(E)-5-[(1R)-2,2-dimethyl-6-methylidenecyclohexyl]-3-methylpent-2-enyl]benzene-1,4-diol",PubChem|CID163194305,,matched_to=CHEMBL5959498;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD01653,C[C@H]1COc2c(C3(N)CC3)c(F)cc3c(=O)c(C(=O)O)cn1c23,DECOY,PAZUFLOXACIN,FDA_DRUGS|XAGMUUZPGZWTRP-ZETCQYMHSA-N,,matched_to=CHEMBL5921196;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD00045,CCOC(=O)O[C@]1(C(=O)OCCl)CC[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@H]3[C@@H](O)C[C@@]21C,DECOY,LOTEPREDNOL ETABONATE,FDA_DRUGS|DMKSVUSAATWOCU-HROMYWEYSA-N,,matched_to=CHEMBL3582250;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01286,COCCCOc1cccc(C[S+]([O-])c2nc3cc4c(cc3[nH]2)OCC4)c1C,DECOY,ANAPRAZOLE,FDA_DRUGS|JYSIFLQJDVIWKM-UHFFFAOYSA-N,,matched_to=CHEMBL5994547;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD01058,Oc1ccc2c(c1O)OC[C@@H]1c3cc4c(cc3O[C@H]21)OCO4,DECOY,"(1r,12r)-5,7,11,19-tetraoxapentacyclo[10.8.0.0²,¹⁰.0⁴,⁸.0¹³,¹⁸]icosa-2,4(8),9,13,15,17-hexaene-16,17-diol",LOTUS_3D|GGIPOZCJJKKBBV-RFAUZJTJSA-N,,matched_to=CHEMBL5944203;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD00393,CCc1cc2cc(C(O)C3CCCCC3)ccc2nc1OC,DECOY,Cyclohexyl-(3-ethyl-2-methoxyquinolin-6-yl)methanol,PubChem|CID57576142,,matched_to=CHEMBL5813293;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01593,NC(=O)N/N=C/c1ccc([N+](=O)[O-])o1,DECOY,NITROFURAZONE,FDA_DRUGS|IAIWVQXQOWNYOU-FPYGCLRLSA-N,,matched_to=CHEMBL5872446;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD00491,CCC(C)C1(CC)C(=O)NC(=O)NC1=O,DECOY,BUTABARBITAL,FDA_DRUGS|ZRIHAIZYIMGOAB-UHFFFAOYSA-N,,matched_to=CHEMBL6057099;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01096,COC(=O)C(CCC=C(C)C)C1CCC2(C)C3=CCC4C(C)(CCC(O)C4(C)C)C3=CCC12C,DECOY,"methyl 2-{7-hydroxy-3a,6,6,9a,11a-pentamethyl-1h,2h,3h,5h,5ah,7h,8h,9h,11h-cyclopenta[a]phenanthren-1-yl}-6-methylhept-5-enoate",LOTUS_3D|UQOCMINLUDKRLJ-UHFFFAOYSA-N,,matched_to=CHEMBL3735493;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01628,N#C/C(=C1/SC[C@@H](c2ccc(Cl)cc2Cl)S1)n1ccnc1,DECOY,LULICONAZOLE,FDA_DRUGS|YTAOBBFIOAEMLL-REQDGWNSSA-N,,matched_to=CHEMBL5959498;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD00948,CCCCOCCOC(=O)c1cccnc1,DECOY,NICOBOXIL,FDA_DRUGS|IZJRISIINLJVBU-UHFFFAOYSA-N,,matched_to=CHEMBL5795821;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD01139,Cc1nc(NC(=O)N2CCC(C)(C)C2=O)ccc1Oc1ccnc(-c2cnn(C)c2)c1,DECOY,PIMICOTINIB,FDA_DRUGS|NXFPMDWYDKHFMM-UHFFFAOYSA-N,,matched_to=CHEMBL3582249;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00739,C=C1C(=O)OC2CC(C)C3(O)CCC(C)(CC(O)C12)O3,DECOY,"1,9-dihydroxy-2,11-dimethyl-7-methylidene-5,14-dioxatricyclo[9.2.1.0⁴,⁸]tetradecan-6-one",LOTUS_3D|FWQMCNGLNQMJOO-UHFFFAOYSA-N,,matched_to=CHEMBL5774506;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01325,CCC(=O)O[C@H]1CC[C@H]2[C@@H]3CCC4=CC(=O)CC[C@]4(C)[C@H]3CC[C@]12C,DECOY,TESTOSTERONE PROPIONATE,FDA_DRUGS|PDMMFKSKQVNJMI-BLQWBTBKSA-N,,matched_to=CHEMBL5917816;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD01486,CC1=CC[C@H]2C(C)(C)CCC[C@@]2(C)[C@H]1Cc1cc(O)ccc1O,DECOY,"2-[[(1S,4aS,8aR)-2,5,5,8a-tetramethyl-1,4,4a,6,7,8-hexahydronaphthalen-1-yl]methyl]benzene-1,4-diol",PubChem|CID162960120,,matched_to=CHEMBL5896164;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD00737,C[C@H]1[C@@H](O)O[C@@H]2O[C@@]3(C)CC[C@H]4[C@H](C)CC[C@@H]1[C@@]24OO3,DECOY,ARTENIMOL,FDA_DRUGS|BJDCWCLMFKKGEE-ISOSDAIHSA-N,,matched_to=CHEMBL5774506;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00920,CC1=CC(=O)C=C2CC[C@@H]3[C@H](CC[C@]4(C)C(=O)CC[C@@H]34)[C@@]12C,DECOY,ATAMESTANE,FDA_DRUGS|PEPMWUSGRKINHX-TXTPUJOMSA-N,,matched_to=CHEMBL5974632;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD01364,Nc1nc(NC2CC2)c2ncn([C@H]3C=C[C@@H](CO)C3)c2n1.Nc1nc(NC2CC2)c2ncn([C@H]3C=C[C@@H](CO)C3)c2n1.O=S(=O)(O)O,DECOY,ABACAVIR SULFATE,FDA_DRUGS|WMHSRBZIJNQHKT-FFKFEZPRSA-N,,matched_to=CHEMBL5767391;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD00847,C[C@]12CCC(=O)C=C1CC[C@@H]1[C@@H]2CC[C@@]2(C)[C@H]1CC[C@]2(C)O,DECOY,METHYLTESTOSTERONE,FDA_DRUGS|GCKMFJBGXUYNAG-HLXURNFRSA-N,,matched_to=CHEMBL5937575;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00838,Cc1c(O)cc(O)c2c1[C@H](C)[C@H](C)O[C@@H]2CC(=O)CC(C)(C)O,DECOY,"1-[(1r,3r,4s)-6,8-dihydroxy-3,4,5-trimethyl-3,4-dihydro-1h-2-benzopyran-1-yl]-4-hydroxy-4-methylpentan-2-one",LOTUS_3D|AUMRYRUPFUTXDO-BPYAMOTFSA-N,,matched_to=CHEMBL5937575;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00008,C[C@H]1C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@]2(C)[C@@]1(OC(=O)c1ccccc1)C(=O)CO,DECOY,BETAMETHASONE BENZOATE,FDA_DRUGS|SOQJPQZCPBDOMF-YCUXZELOSA-N,,matched_to=CHEMBL5273903;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD00474,COc1cc2c(cc1O)N=C[C@@H]1CC[C@H](O)N1C2=O,DECOY,Neothramycin A,NPATLAS_3D|FXMOIYLVKOALHC-MADCSZMMSA-N,,matched_to=CHEMBL5980331;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00519,CCCCC1C(=O)N(c2ccccc2)N(c2ccc(O)cc2)C1=O.O,DECOY,OXYPHENBUTAZONE,FDA_DRUGS|CNDQSXOVEQXJOE-UHFFFAOYSA-N,,matched_to=CHEMBL6005797;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00626,C[C@@H]1CC[C@H]2[C@@H](C)C(=O)O[C@@H]3O[C@@]4(C)CC[C@@H]1[C@]32OO4,DECOY,ARTEMISININ,FDA_DRUGS|BLUAFEHZUWYNDE-NNWCWBAJSA-N,,matched_to=CHEMBL4866566;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD01594,CC(C)[C@]12O[C@H]1[C@@H]1O[C@]13[C@]1(O[C@H]1C[C@H]1C4=C(CC[C@@]13C)C(=O)OC4)[C@@H]2O,DECOY,TRIPTOLIDE,FDA_DRUGS|DFBIRQPKNDILPW-CIVMWXNOSA-N,,matched_to=CHEMBL5872446;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD00218,Cc1c(C(=O)CC(C)C)oc2c1CC[C@](C)(O)[C@@H]2O,DECOY,"1-[(6s,7s)-6,7-dihydroxy-3,6-dimethyl-5,7-dihydro-4h-1-benzofuran-2-yl]-3-methylbutan-1-one",LOTUS_3D|GYHLSYICWPZCBR-CABCVRRESA-N,,matched_to=CHEMBL5788897;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD00063,C=C1C(=O)O[C@H]2C[C@@]3(C)CCCC(=C)[C@]3(OC(=O)/N=C(\O)C(Cl)(Cl)Cl)C[C@@H]12,DECOY,"8a-methyl-3,5-dimethylidene-2-oxo-hexahydro-3ah-naphtho[2,3-b]furan-4a-yl n-(2,2,2-trichloro-1-hydroxyethylidene)carbamate",LOTUS_3D|CQYDQPXPXYCQAX-IYVPYFHTSA-N,,matched_to=CHEMBL3582248;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01168,CCN(CC)C(=O)c1cccc(C)c1,DECOY,DIETHYLTOLUAMIDE,FDA_DRUGS|MMOXZBCLCQITDF-UHFFFAOYSA-N,,matched_to=CHEMBL5756815;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD00843,CC1(C)C=Cc2c(cc(O)c3c2O[C@H](c2ccc(O)cc2)CC3=O)O1,DECOY,"(2r)-5-hydroxy-2-(4-hydroxyphenyl)-8,8-dimethyl-2h,3h-pyrano[2,3-f]chromen-4-one",LOTUS_3D|JTJIFFUHXHGAOQ-INIZCTEOSA-N,,matched_to=CHEMBL5937575;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01428,c1ccc(-c2ccc(C(c3ccccc3)n3ccnc3)cc2)cc1,DECOY,BIFONAZOLE,FDA_DRUGS|OCAPBUJLXMYKEJ-UHFFFAOYSA-N,,matched_to=CHEMBL5752080;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD00403,COc1cc(C(C)O)c2ccccc2n1,DECOY,1-(2-Methoxyquinolin-4-yl)ethanol,PubChem|CID57054903,,matched_to=CHEMBL5751707;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01511,CC1=CC[C@@H]2C(C)(C)CCC[C@@]2(C)[C@@H]1Cc1cc(O)ccc1O,DECOY,"2-[[(1R,4aR,8aR)-2,5,5,8a-tetramethyl-1,4,4a,6,7,8-hexahydronaphthalen-1-yl]methyl]benzene-1,4-diol",PubChem|CID11483854,,matched_to=CHEMBL6023546;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD01609,C[C@]12C=CC(=O)C=C1CC[C@@H]1[C@@H]2[C@@H](O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(=O)CO,DECOY,PREDNISOLONE,FDA_DRUGS|OIGNJSKKLXVSLS-VWUMJDOOSA-N,,matched_to=CHEMBL5959498;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD01700,NC(=O)NS(=O)(=O)c1ccc(N)cc1,DECOY,SULFACARBAMIDE,FDA_DRUGS|WVAKABMNNSMCDK-UHFFFAOYSA-N,,matched_to=CHEMBL5861350;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD00545,NC(=O)c1ccc(I)c([N+](=O)[O-])c1,DECOY,INIPARIB,FDA_DRUGS|MDOJTZQKHMAPBK-UHFFFAOYSA-N,,matched_to=CHEMBL5886939;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01741,COc1ccc(-c2cncc(N[C@@H](C)c3cccc(NC(=O)c4cncc(C)c4)c3)n2)cc1OC,DECOY,SERALUTINIB,FDA_DRUGS|JHJNPOSPVGRIAN-SFHVURJKSA-N,,matched_to=CHEMBL3736126;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01133,CC(=O)OCC(=O)[C@@]12OC(C)(C)O[C@@H]1C[C@H]1[C@@H]3C[C@H](F)C4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]12C,DECOY,FLUOCINONIDE,FDA_DRUGS|WJOHZNCJWYWUJD-IUGZLZTKSA-N,,matched_to=CHEMBL3582249;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00779,CCC(O)COc1ccccc1O,DECOY,2-(2-Hydroxybutoxy)phenol,PubChem|CID58593134,,matched_to=AZ8838;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01702,O=C(CBr)N1CC([N+](=O)[O-])([N+](=O)[O-])C1,DECOY,NIBROZETONE,FDA_DRUGS|JODKFOVZURLVTG-UHFFFAOYSA-N,,matched_to=CHEMBL5861350;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD00157,CC(O)C(=O)c1ccccc1C1CCCCC1,DECOY,1-(2-Cyclohexylphenyl)-2-hydroxypropan-1-one,PubChem|CID157249411,,matched_to=CHEMBL6044556;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD01477,Cc1nc([N+](=O)[O-])cn1-c1ccc([N+](=O)[O-])cc1,DECOY,NITREFAZOLE,FDA_DRUGS|NMTBSNPBIGRZBL-UHFFFAOYSA-N,,matched_to=CHEMBL5896164;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD00010,C[C@@H]1C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(Cl)[C@@H](O)C[C@]2(C)[C@@]1(OC(=O)c1ccco1)C(=O)CCl,DECOY,MOMETASONE FUROATE,FDA_DRUGS|WOFMFGQZHJDGCX-ZULDAHANSA-N,,matched_to=CHEMBL5273903;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD00505,CCc1c(C)ccc2c1CC[C@@H]1C(C)(C)[C@H](O)CC[C@@]21C,DECOY,"(2s,4as,10ar)-8-ethyl-1,1,4a,7-tetramethyl-2,3,4,9,10,10a-hexahydrophenanthren-2-ol",LOTUS_3D|NUHBHAAXQHHOMG-GGPKGHCWSA-N,,matched_to=CHEMBL6005797;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00760,CCCCOc1ccc(CC(=O)NO)cc1,DECOY,BUFEXAMAC,FDA_DRUGS|MXJWRABVEGLYDG-UHFFFAOYSA-N,,matched_to=AZ8838;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01624,Cc1cc(N2CCc3cc(F)ccc3C2)cc(C)c1NC(=O)CC(C)(C)C,DECOY,AZETUKALNER,FDA_DRUGS|FJNPZKZPWVVSON-UHFFFAOYSA-N,,matched_to=CHEMBL5959498;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD00490,Cc1cc(Br)c(O)c2ncccc12,DECOY,TILBROQUINOL,FDA_DRUGS|JMOVFFLYGIQXMM-UHFFFAOYSA-N,,matched_to=CHEMBL6057099;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01499,C[C@H]1CNC(=O)c2cnn3ccc(nc23)N[C@H](C)c2cc(F)ccc2O1,DECOY,REPOTRECTINIB,FDA_DRUGS|FIKPXCOQUIZNHB-WDEREUQCSA-N,,matched_to=CHEMBL5896164;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD00990,O=C1NC(c2cccc([N+](=O)[O-])c2)=CCN1c1ccccc1O,DECOY,ICILLIN,FDA_DRUGS|RCEFMOGVOYEGJN-UHFFFAOYSA-N,,matched_to=CHEMBL6015822;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD01434,FC(F)(F)Oc1ccc(Nc2ccc3cccc(Cl)c3n2)cc1,DECOY,OBEFAZIMOD,FDA_DRUGS|OZOGDCZJYVSUBR-UHFFFAOYSA-N,,matched_to=CHEMBL5752080;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD01538,COCCCOc1ccnc(C[S+]([O-])c2nc3ccccc3[nH]2)c1C,DECOY,RABEPRAZOLE,FDA_DRUGS|YREYEVIYCVEVJK-UHFFFAOYSA-N,,matched_to=CHEMBL4128225;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD00616,CC(=O)OCC(=O)[C@@]1(O)CC[C@H]2[C@@H]3CCC4=CC(=O)CC[C@]4(C)C3=CC[C@@]21C,DECOY,ANECORTAVE ACETATE,FDA_DRUGS|YUWPMEXLKGOSBF-GACAOOTBSA-N,,matched_to=CHEMBL4871001;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD00340,Nc1ccc(S(=O)(=O)Nc2nccs2)cc1,DECOY,SULFATHIAZOLE,FDA_DRUGS|JNMRHUJNCSQMMB-UHFFFAOYSA-N,,matched_to=CHEMBL5993617;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00151,Cl.Cn1cc(C(=O)[C@@H]2CCc3[nH]cnc3C2)c2ccccc21,DECOY,RAMOSETRON HYDROCHLORIDE,FDA_DRUGS|XIXYTCLDXQRHJO-RFVHGSKJSA-N,,matched_to=CHEMBL6044556;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD00770,C[C@H](O)Cc1ccc2c(c1)OCO2,DECOY,"(2S)-1-(1,3-dioxaindan-5-yl)propan-2-ol",PubChem|CID10986874,,matched_to=AZ8838;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01468,CC.Cc1cc(=O)c2c(C)cccc2o1,DECOY,"2,5-Dimethylchromen-4-one;ethane",PubChem|CID142554594,,matched_to=CHEMBL5772219;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD01717,C#C[C@]1(CO)O[C@@H](n2cnc3c(N)nc(F)nc32)C[C@@H]1O,DECOY,ISLATRAVIR,FDA_DRUGS|IKKXOSBHLYMWAE-QRPMWFLTSA-N,,matched_to=CHEMBL6009789;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD00496,CC1(C)CCC[C@]2(C)[C@@H]3C(=CC[C@H]12)CO[C@H]3O,DECOY,"(1r,5as,9as,9br)-6,6,9a-trimethyl-1h,3h,5h,5ah,7h,8h,9h,9bh-naphtho[1,2-c]furan-1-ol",LOTUS_3D|FCSNZJLUQLZSBW-BHPKHCPMSA-N,,matched_to=CHEMBL6057099;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01185,OC1C=CC(O)C2C1C(O)CCC21Oc2cccc3cccc(c23)O1,DECOY,NPA010096,NPATLAS_3D|MTHUNPKHURTKGB-UHFFFAOYSA-N,,matched_to=CHEMBL6022431;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD01619,CC(=O)C[C@@]1(O)CC(=O)c2c(Cc3cc(O)cc(=O)o3)cccc2O1,DECOY,Huanglongmycin C,NPATLAS_3D|FRDPSBQWNGPHFD-SFHVURJKSA-N,,matched_to=CHEMBL5959498;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD01379,C[C@@H]1C[C@@H](O)[C@H](O)/C=C\C=C/C(=O)O1,DECOY,"(3z,5e,7r,8s,10s)-7,8-dihydroxy-10-methyl-7,8,9,10-tetrahydrooxecin-2-one",LOTUS_3D|SAZJFRBQDIBJEF-WFCXIUBDSA-N,,matched_to=CHEMBL5848963;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD01127,C/C=C(\C)C(=O)O[C@H]1CC(C)=C2C(=O)C=C(C)[C@@H]2[C@@H]2OC(=O)[C@](C)(OC(=O)[C@H](C)CC)[C@H]21,DECOY,"(3s,3ar,4s,9ar,9bs)-3,6,9-trimethyl-3-[(2-methylbutanoyl)oxy]-2,7-dioxo-3ah,4h,5h,9ah,9bh-azuleno[4,5-b]furan-4-yl (2z)-2-methylbut-2-enoate",LOTUS_3D|RXFAXIWBBJZHSB-ACKOIZQASA-N,,matched_to=CHEMBL3582249;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00499,C=C1[C@H](O)C[C@]2(C)C[C@H]1[C@]1(C)C[C@@H](O)C[C@]21C,DECOY,"Gymnomitr-3(15)-en-4β,9β-diol",NPATLAS_3D|NLHHDISSBXZPDC-PMXAPFLYSA-N,,matched_to=CHEMBL6057099;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01674,C[C@@H]1C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@]2(C)[C@H]1C(=O)CO,DECOY,DESOXIMETASONE,FDA_DRUGS|VWVSBHGCDBMOOT-IIEHVVJPSA-N,,matched_to=CHEMBL5881336;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD00580,C/C=C(/C)C(=O)O[C@H]1c2cc(OC)c(OC)c(OC)c2-c2c(cc3c(c2OC)OCO3)[C@@H](OC(=O)CC)[C@H](C)[C@H]1C,DECOY,"3,4,5,19-tetramethoxy-9,10-dimethyl-11-(propanoyloxy)-15,17-dioxatetracyclo[10.7.0.0²,⁷.0¹⁴,¹⁸]nonadeca-1(12),2,4,6,13,18-hexaen-8-yl 2-methylbut-2-enoate",LOTUS_3D|BTKZCBGTFRTOHM-TXZUNQSMSA-N,,matched_to=CHEMBL3716726;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD00904,CC(O)CCc1ccc(Oc2ccnc3ccccc23)cc1,DECOY,4-(4-Quinolin-4-yloxyphenyl)butan-2-ol,PubChem|CID53970979,,matched_to=CHEMBL5974632;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD01556,COc1cc(OC)c(C[C@H](O)Cc2ccc(OC)c(OC)c2)c(OC)c1,DECOY,hypophaol,LOTUS_3D|UYGPHIAWXUWOFJ-CQSZACIVSA-N,,matched_to=CHEMBL4128225;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00786,CC(O)Cc1ccc2c(c1)OCO2,DECOY,"1,3-Benzodioxole-5-ethanol, alpha-methyl-",PubChem|CID95505,,matched_to=AZ8838;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01207,C=C1C[C@@H]2[C@H](CC[C@]3(C)C(=O)CC[C@@H]23)[C@@]2(C)C=CC(=O)C=C12,DECOY,EXEMESTANE,FDA_DRUGS|BFYIZQONLCFLEV-DAELLWKTSA-N,,matched_to=CHEMBL5967239;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD01373,CCC(C)C(C)(COC(N)=O)COC(N)=O,DECOY,MEBUTAMATE,FDA_DRUGS|LEROTMJVBFSIMP-UHFFFAOYSA-N,,matched_to=CHEMBL5767391;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD01512,CCCCO[C@@H](OCC(C)C)C(C)(C)O,DECOY,[1-(2′-methylpropoxy)-2-hydroxy-2-methylpropoxy]butane,NPATLAS_3D|XDNTYWKFQWLSGQ-NSHDSACASA-N,,matched_to=CHEMBL6023546;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD00176,COc1ccc2cccc(CCNC(C)=O)c2c1,DECOY,AGOMELATINE,FDA_DRUGS|YJYPHIXNFHFHND-UHFFFAOYSA-N,,matched_to=CHEMBL5906323;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD01193,C/C(=C/COc1ccc2ccc(=O)oc2c1)C[C@@H]1C[C@@](C)(O)C(=O)O1,DECOY,7-{[4-(4-hydroxy-4-methyl-5-oxooxolan-2-yl)-3-methylbut-2-en-1-yl]oxy}chromen-2-one,LOTUS_3D|QEUOCUPPPSPUBH-PUSPLNOVSA-N,,matched_to=CHEMBL6022431;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD00434,COc1cc(CCC(O)=C2CCC(=O)C=C2O)ccc1O,DECOY,3-Hydroxy-4-[1-hydroxy-3-(4-hydroxy-3-methoxyphenyl)propylidene]cyclohex-2-en-1-one,PubChem|CID69777115,,matched_to=CHEMBL6001703;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00677,CC1(C)C[C@@H]2CCCNc3cccc(n3)S(=O)(=O)NC(=O)c3ccc(-n4ccc(OCCC5C6(CC6)C56CC6)n4)nc3N1C2,DECOY,VANZACAFTOR,FDA_DRUGS|VCSUIBJKYCVWNF-NRFANRHFSA-N,,matched_to=CHEMBL4855875;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01075,COc1cc(C=Cc2ccccc2)nc2ccccc12,DECOY,4-Methoxy-2-(2-phenylethenyl)quinoline,PubChem|CID70569961,,matched_to=CHEMBL5944203;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD00339,Cl.Nc1ccc(/N=N/c2ccccc2)c(N)n1,DECOY,PHENAZOPYRIDINE HYDROCHLORIDE,FDA_DRUGS|QQBPIHBUCMDKFG-GEEYTBSJSA-N,,matched_to=CHEMBL5993617;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00900,CCOC(=O)[C@H]1COC(=O)[C@@H]1C(=O)c1ccc(F)cc1,DECOY,"ethyl (3R,4S)-4-(4-fluorobenzoyl)-5-oxooxolane-3-carboxylate",PubChem|CID46919444,,matched_to=CHEMBL6060374;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD00819,O=C1NC(=O)[C@@]2(CCOc3ccc(F)cc32)N1,DECOY,SORBINIL,FDA_DRUGS|LXANPKRCLVQAOG-NSHDSACASA-N,,matched_to=CHEMBL5849160;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00877,C[C@@H]1NC(=O)[C@@H](c2ccccc2)NC1=O,DECOY,cyclo-L-alanyl-D-phenylglycine,PubChem|CID853066,,matched_to=CHEMBL6060374;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD00584,COC(=O)C[C@@H]1C(C)(C)C(=O)C=C[C@@]1(C)[C@@H]1CC[C@@]2(C)[C@H](c3ccoc3)OC(=O)C[C@@]2(O)[C@]1(C)O,DECOY,"methyl 2-[(1s,2r)-2-[(1s,4ar,5r,6r,8as)-1-(furan-3-yl)-4a,5-dihydroxy-5,8a-dimethyl-3-oxo-tetrahydro-1h-2-benzopyran-6-yl]-2,6,6-trimethyl-5-oxocyclohex-3-en-1-yl]acetate",LOTUS_3D|LPQDGMKHPLSVAB-RLQACFJBSA-N,,matched_to=CHEMBL3716726;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD00395,CC(=O)O[C@H]1CC[C@@]2(C)CC(=O)C(=C(C)C)C[C@@H]2[C@]1(C)O,DECOY,"(1s,2r,4ar,8ar)-1-hydroxy-1,4a-dimethyl-6-oxo-7-(propan-2-ylidene)-hexahydronaphthalen-2-yl acetate",LOTUS_3D|GKCUTERFTPOUJM-QAETUUGQSA-N,,matched_to=CHEMBL5813293;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01579,NNCCc1ccccc1,DECOY,PHENELZINE,FDA_DRUGS|RMUCZJUITONUFY-UHFFFAOYSA-N,,matched_to=CHEMBL5836987;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD01529,O=C(O)CCCCCCNC1c2ccccc2CCc2ccccc21,DECOY,AMINEPTINE,FDA_DRUGS|ONNOFKFOZAJDHT-UHFFFAOYSA-N,,matched_to=CHEMBL5912955;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD01199,C[C@@H]1CCC(=O)C2=C3O[C@]4(C)[C@H](C)C[C@@]3(OC2=O)[C@H](/C=C/[C@@H]1O)[C@H]4O,DECOY,"(1s,2r,4e,6s,7r,14r,16r)-2,6-dihydroxy-1,7,16-trimethyl-13,17-dioxatetracyclo[9.5.2.0³,¹⁴.0¹⁴,¹⁸]octadeca-4,11(18)-diene-10,12-dione",LOTUS_3D|CDXKGPDOCVNEGD-XLVOYIPMSA-N,,matched_to=CHEMBL6022431;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD00224,O=c1cc(CCc2ccccc2O)oc2ccc(O)cc12,DECOY,6-Hydroxy-2-[2-(2-hydroxyphenyl) ethyl]chromone,PubChem|CID11076893,,matched_to=CHEMBL5788897;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD01352,COc1c2c(c3oc4c(O)cccc4c(=O)c3c1O)C=CC(C)(C)O2,DECOY,"6,11-dihydroxy-12-methoxy-2,2-dimethyl-1,5-dioxatetraphen-10-one",LOTUS_3D|ZIEUXPKJRAAADX-UHFFFAOYSA-N,,matched_to=CHEMBL5767391;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD00782,CC(C)CCc1cc(O)ccc1O,DECOY,"2-(3-Methylbutyl)benzene-1,4-diol",PubChem|CID331346,,matched_to=AZ8838;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00946,CCC/C=C1/OC(=O)C2=C1CCC=C2,DECOY,z-ligustilide,LOTUS_3D|IQVQXVFMNOFTMU-DHZHZOJOSA-N,,matched_to=CHEMBL5795821;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD00528,C=C1C(O)C2C(=CCC3C(C)CC(O)C32)C1(C)O,DECOY,"3,6-dimethyl-2-methylidene-1,5,5a,6,7,8,8a,8b-octahydroas-indacene-1,3,8-triol",LOTUS_3D|PYQVJGJRCRIBAC-UHFFFAOYSA-N,,matched_to=CHEMBL5886939;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00883,CCCc1ccc(O)c(OC)c1,DECOY,4-Propylguaiacol,PubChem|CID17739,,matched_to=CHEMBL6060374;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD01564,Cc1c(O)c(=O)ccn1C,DECOY,DEFERIPRONE,FDA_DRUGS|TZXKOCQBRNJULO-UHFFFAOYSA-N,,matched_to=CHEMBL5836987;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD01611,Cc1nsc(-c2nnc3n2CCN(C(=O)c2ccc(F)cc2)[C@@H]3C)n1,DECOY,FEZOLINETANT,FDA_DRUGS|PPSNFPASKFYPMN-SECBINFHSA-N,,matched_to=CHEMBL5959498;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD01732,Cc1ncc(CSSCc2cnc(C)c(O)c2CO)c(CO)c1O,DECOY,PYRITINOL,FDA_DRUGS|SIXLXDIJGIWWFU-UHFFFAOYSA-N,,matched_to=CHEMBL5759805;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD00253,C=C[C@@H]1C[C@@H](Cc2ccc(OC)c(O)c2)[C@H]2C(=O)C=CC(=C)[C@H]21,DECOY,ottelione A,PubChem|CID10946837,,matched_to=CHEMBL5908081;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD01163,CN(C)CC/C=C1/c2ccccc2COc2ccc(CC(=O)O)cc21.Cl,DECOY,OLOPATADINE HYDROCHLORIDE,FDA_DRUGS|HVRLZEKDTUEKQH-NOILCQHBSA-N,,matched_to=CHEMBL5756815;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD01065,O=C(CN1CCCCC1=O)c1ccco1,DECOY,1-[2-(furan-2-yl)-2-oxoethyl]piperidin-2-one,NPATLAS_3D|IWYJHWSXBCBFEF-UHFFFAOYSA-N,,matched_to=CHEMBL5944203;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD00310,COc1cc(/C=C/C=C/C(=O)CCc2ccc(O)c(OC)c2)ccc1O,DECOY,"1,7-Bis(4-hydroxy-3-methoxyphenyl)hepta-4,6-dien-3-one",PubChem|CID46881044,,matched_to=CHEMBL1684609;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD01723,O=c1[nH]c(=O)n([C@H]2C[C@H](O)[C@@H](CO)O2)cc1C(F)(F)F,DECOY,TRIFLURIDINE,FDA_DRUGS|VSQQQLOSPVPRAZ-RRKCRQDMSA-N,,matched_to=CHEMBL6009789;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD01721,COc1cc(O)c2c(c1O)[C@H](O)[C@@H]1C[C@@](C)(O)OC[C@@H]1C2=O,DECOY,"(3r,4as,5r,10as)-3,5,6,9-tetrahydroxy-7-methoxy-3-methyl-1h,4h,4ah,5h,10ah-naphtho[2,3-c]pyran-10-one",LOTUS_3D|UHLYLCLJRKLDOP-QYTZWGGGSA-N,,matched_to=CHEMBL6009789;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD00862,Cc1ccc(-c2nc3ccc(C)cn3c2CC(=O)N(C)C)cc1.Cc1ccc(-c2nc3ccc(C)cn3c2CC(=O)N(C)C)cc1.O=C(O)C(O)C(O)C(=O)O,DECOY,ZOLPIDEM TARTRATE,FDA_DRUGS|VXRDAMSNTXUHFX-UHFFFAOYSA-N,,matched_to=CHEMBL5841639;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD01130,CCC(=O)N1CC[C@H](Nc2ncnc3c2CN(c2cnc(OC)c(C(F)(F)F)c2)CC3)C1,DECOY,LENIOLISIB,FDA_DRUGS|MWKYMZXCGYXLPL-ZDUSSCGKSA-N,,matched_to=CHEMBL3582249;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01094,CC[C@H](C[C@@H](O)[C@@H](C)[C@H]1CC[C@H]2[C@@H]3CCC4=CC(=O)C[C@H](O)[C@]4(C)C3=CC[C@@]21C)C(C)C,DECOY,"(1r,3as,3bs,9s,9as,11as)-1-[(2s,3r,5r)-5-ethyl-3-hydroxy-6-methylheptan-2-yl]-9-hydroxy-9a,11a-dimethyl-1h,2h,3h,3ah,3bh,4h,5h,8h,9h,11h-cyclopenta[a]phenanthren-7-one",LOTUS_3D|WYYJPXGEABMVGW-CDZAHOLJSA-N,,matched_to=CHEMBL3735493;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00517,NC(=O)C(c1ccccc1)(c1ccc(F)cc1)c1ccc(F)cc1,DECOY,SENICAPOC,FDA_DRUGS|SCTZUZTYRMOMKT-UHFFFAOYSA-N,,matched_to=CHEMBL6005797;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00713,c1ccc2[nH]c(-c3cscn3)nc2c1,DECOY,THIABENDAZOLE,FDA_DRUGS|WJCNZQLZVWNLKY-UHFFFAOYSA-N,,matched_to=CHEMBL6051085;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00993,COc1cc(/C=C/c2ccccc2)nc2ccccc12,DECOY,4-methoxy-2-[(E)-2-phenylethenyl]quinoline,PubChem|CID23457959,,matched_to=CHEMBL6015822;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD00691,CC(=O)OC[C@H](Br)[C@]1(C)CC=C2[C@H](C1)[C@@H](O)C[C@H]1[C@@]3(COC(C)=O)C[C@@H]3[C@H](OC(C)=O)C[C@@]21C,DECOY,"2-[9-(acetyloxy)-1a-[(acetyloxy)methyl]-3-hydroxy-5,7b-dimethyl-1h,1bh,2h,3h,3ah,4h,6h,8h,9h,9ah-cyclopropa[a]phenanthren-5-yl]-2-bromoethyl acetate",LOTUS_3D|NVKPDTRBPDKUME-FIEOYLMHSA-N,,matched_to=CHEMBL4855875;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD00826,c1ccc2c(C3=NCCc4c3[nH]c3ccccc43)ccnc2c1,DECOY,"4-{3h,4h,9h-pyrido[3,4-b]indol-1-yl}quinoline",LOTUS_3D|BXNFINCMLGWIEY-UHFFFAOYSA-N,,matched_to=CHEMBL5937575;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD01043,C[C@@H]([C@H](C)Cc1ccc2c(c1)OCO2)[C@@H](O)c1ccc2c(c1)OCO2,DECOY,oleiferin C,PubChem|CID9974649,,matched_to=CHEMBL5841272;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01689,CC(C)=CC(=O)/C=C(\C)CCO[C@@H]1O[C@H](CO)[C@@H](O)[C@H](O)[C@H]1O,DECOY,"(5e)-2,6-dimethyl-8-{[(2r,3r,4s,5s,6r)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}octa-2,5-dien-4-one",LOTUS_3D|OGCTZYQISGLJOL-HKJZBFBISA-N,,matched_to=CHEMBL5861350;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD00038,COc1ccc(-n2nccn2)c(C(=O)N2CCC[C@@]2(C)c2nc3c(C)c(Cl)ccc3[nH]2)c1,DECOY,DARIDOREXANT,FDA_DRUGS|NBGABHGMJVIVBW-QHCPKHFHSA-N,,matched_to=CHEMBL3582250;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00821,O=[N+]([O-])c1ccc(O)c2ncccc12,DECOY,NITROXOLINE,FDA_DRUGS|RJIWZDNTCBHXAL-UHFFFAOYSA-N,,matched_to=CHEMBL5849160;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00659,CCC(=O)O[C@]1(C(=O)CO)CC[C@H]2[C@@H]3CCC4=CC(=O)CC[C@]4(C)[C@H]3CC[C@@]21C,DECOY,CLASCOTERONE,FDA_DRUGS|GPNHMOZDMYNCPO-PDUMRIMRSA-N,,matched_to=CHEMBL4849569;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD01389,OCC(Cc1ccc2c(c1)OCO2)C(CO)Cc1ccc2c(c1)OCO2,DECOY,"2,3-Bis(1,3-benzodioxol-5-ylmethyl)butane-1,4-diol",PubChem|CID4485343,,matched_to=CHEMBL5848963;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD00422,C#C[C@]1(O)C=C[C@H]2[C@@H]3CCC4=CC(=O)CC[C@@H]4[C@H]3CC[C@@]21CC,DECOY,GESTODENE,FDA_DRUGS|SIGSPDASOTUPFS-XUDSTZEESA-N,,matched_to=CHEMBL5751707;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01374,Nc1cccc2c1CN(C1CCC(=O)NC1=O)C2=O,DECOY,LENALIDOMIDE,FDA_DRUGS|GOTYRUGSSMKFNF-UHFFFAOYSA-N,,matched_to=CHEMBL5767391;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD01275,Cc1c(O)cc2oc(=O)c(C3=CC(=O)C[C@@H](C)O3)cc2c1CO,DECOY,Aspyranochromenone B,NPATLAS_3D|PTHVOVGQHPNRST-MRVPVSSYSA-N,,matched_to=CHEMBL5855327;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD00765,C/C=C/CCCC(C)C(=O)C1=C(O)/C(=C\C)N(C)C1=O,DECOY,NPA014216,NPATLAS_3D|MOKIQVYWTLVJCE-YTEPGLGFSA-N,,matched_to=AZ8838;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01669,C[C@@H]1C=CC(=O)[C@H](O)[C@@]12C(=O)O[C@H](C)C2=O,DECOY,Verruculinone,NPATLAS_3D|VBOXLOPSWCNKSQ-GMVJNNPSSA-N,,matched_to=CHEMBL5966150;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD01647,[H]/N=C1\N(C)C(=O)[C@@](Cc2c[nH]c3cc(Br)ccc23)(OCC)N1C,DECOY,"(5r)-5-[(6-bromo-1h-indol-3-yl)methyl]-5-ethoxy-2-imino-1,3-dimethylimidazolidin-4-one",LOTUS_3D|RNZDQSFDNPIZJE-YWJBVVMDSA-N,,matched_to=CHEMBL5921196;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD01100,CC[C@@H](C[C@@H](O)[C@@H](C)[C@H]1CC[C@H]2[C@H]3CCC4=CC(=O)C[C@@H](O)[C@]4(C)C3=CC[C@]12C)C(C)C,DECOY,"(1r,3as,3bs,9s,9as,11as)-1-[(2s,3r,5r)-5-ethyl-3-hydroxy-6-methylheptan-2-yl]-9-hydroxy-9a,11a-dimethyl-1h,2h,3h,3ah,3bh,4h,5h,8h,9h,11h-cyclopenta[a]phenanthren-7-one",LOTUS_3D|WYYJPXGEABMVGW-KBWDKYOXSA-N,,matched_to=CHEMBL3735493;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00548,Cc1cccc([C@H](C)c2c[nH]cn2)c1C.Cl,DECOY,DEXMEDETOMIDINE HYDROCHLORIDE,FDA_DRUGS|VPNGEIHDPSLNMU-MERQFXBCSA-N,,matched_to=CHEMBL5886939;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01028,Cc1cc(C)c(Nc2ccnc(Nc3ccc(C#N)cc3)n2)c(C)c1,DECOY,DAPIVIRINE,FDA_DRUGS|ILAYIAGXTHKHNT-UHFFFAOYSA-N,,matched_to=CHEMBL5841272;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00105,Cc1ccc(NC(=O)[C@H]2CCCN(C(=O)c3c(C)cccc3F)[C@H]2c2ccc(NC3CCCC3)cc2)cc1C(F)(F)F,DECOY,AVACOPAN,FDA_DRUGS|PUKBOVABABRILL-YZNIXAGQSA-N,,matched_to=AZ3451;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01033,COc1ccnc(C[S+]([O-])c2nc3cc(-n4cccc4)ccc3[nH]2)c1C,DECOY,ILAPRAZOLE,FDA_DRUGS|HRRXCXABAPSOCP-UHFFFAOYSA-N,,matched_to=CHEMBL5841272;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00595,C=CC(=O)NC1CCN(c2ncc3ncnc(Nc4ccc(Oc5ccc6c(c5)ncn6C)c(C)c4)c3n2)CC1,DECOY,ZONGERTINIB,FDA_DRUGS|YSGNGFPNTLERCR-UHFFFAOYSA-N,,matched_to=CHEMBL3716726;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD01685,Cc1c(O)c(O)c2oc(=O)c(C3=CC(=O)C[C@@H](C)O3)cc2c1CO,DECOY,Aspyranochromenone A,NPATLAS_3D|IMQJGYWONLMSLT-SSDOTTSWSA-N,,matched_to=CHEMBL5861350;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD01573,CCC(C)C(CC)C(N)=O,DECOY,VALNOCTAMIDE,FDA_DRUGS|QRCJOCOSPZMDJY-UHFFFAOYSA-N,,matched_to=CHEMBL5836987;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD00361,N#Cc1ccc(Oc2ccc3c(c2)COB3O)cc1,DECOY,CRISABOROLE,FDA_DRUGS|USZAGAREISWJDP-UHFFFAOYSA-N,,matched_to=CHEMBL5915179;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD00720,COc1c(C)c2c(c(O)c1CO)C(=O)C[C@@H](c1ccccc1)O2,DECOY,leridol,LOTUS_3D|NYMCJKZZZIZEPS-AWEZNQCLSA-N,,matched_to=CHEMBL6051085;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00051,CC1=CC[C@@H]([C@H](C)[C@@H]2CC[C@@]3(C)[C@H]4C[C@@H](O)[C@@H]5C(C)(C)OC(=O)C=C[C@]56C[C@]46CC[C@]23C)OC1=O,DECOY,"10-hydroxy-8,8,13,17-tetramethyl-16-[1-(5-methyl-6-oxo-2,3-dihydropyran-2-yl)ethyl]-7-oxapentacyclo[10.7.0.0¹,³.0³,⁹.0¹³,¹⁷]nonadec-4-en-6-one",LOTUS_3D|APOPUTYAPYVYFW-XWAVSRKMSA-N,,matched_to=CHEMBL3582248;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD00792,C/C=C\C=C/C[C@](O)(/C=C/C)CO,DECOY,"(4e,6z)-2-[(1e)-prop-1-en-1-yl]octa-4,6-diene-1,2-diol",LOTUS_3D|OXRRGRAFJNBWTL-WMDSULTOSA-N,,matched_to=AZ8838;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00465,OC(Cn1cncn1)(Cn1cncn1)c1ccc(F)cc1F,DECOY,FLUCONAZOLE,FDA_DRUGS|RFHAOTPXVQNOHP-UHFFFAOYSA-N,,matched_to=CHEMBL5980331;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00202,[H]/N=c1\nc2c3c([nH]1)CC[C@@H]3C[C@@H](C)[C@@H]2C/C=C\CCC,DECOY,"(1s,9s,10r)-9-[(2z)-hex-2-en-1-yl]-10-methyl-5,7-diazatricyclo[6.3.1.0⁴,¹²]dodeca-4(12),7-dien-6-imine",LOTUS_3D|AWFWPFGDVJWGBN-RCAPSXEPSA-N,,matched_to=CHEMBL5788897;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD01744,CC(C)/N=c1\cc2n(-c3ccc(Cl)cc3)c3ccccc3nc-2cc1Nc1ccc(Cl)cc1,DECOY,CLOFAZIMINE,FDA_DRUGS|WDQPAMHFFCXSNU-BGABXYSRSA-N,,matched_to=CHEMBL3736126;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD01618,CC[C@@]1(O)C(=O)OCc2c1cc1n(c2=O)Cc2cc3cc(O)ccc3nc2-1,DECOY,HYDROXYCAMPTOTHECIN,FDA_DRUGS|HAWSQZCWOQZXHI-FQEVSTJZSA-N,,matched_to=CHEMBL5959498;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD00417,CC(=O)O[C@H]1Cc2ccccc2N(C(N)=O)c2ccccc21,DECOY,ESLICARBAZEPINE ACETATE,FDA_DRUGS|QIALRBLEEWJACW-INIZCTEOSA-N,,matched_to=CHEMBL5751707;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00747,O=C1CC[C@H](NC(=O)Cc2ccccc2)C(=O)N1,DECOY,ANTINEOPLASTON A10,FDA_DRUGS|OQGRFQCUGLKSAV-JTQLQIEISA-N,,matched_to=CHEMBL5774506;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00775,C=CC(O)c1ccc2c(c1)OCO2,DECOY,"alpha-Ethenyl-1,3-benzodioxole-5-methanol",PubChem|CID21268,,matched_to=AZ8838;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00708,Nc1ccc(S(=O)(=O)Nc2ccccn2)cc1,DECOY,SULFAPYRIDINE,FDA_DRUGS|GECHUMIMRBOMGK-UHFFFAOYSA-N,,matched_to=CHEMBL6051085;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01225,Cc1ccc(/C(=C\CN2CCCC2)c2cccc(/C=C/C(=O)O)n2)cc1,DECOY,ACRIVASTINE,FDA_DRUGS|PWACSDKDOHSSQD-IUTFFREVSA-N,,matched_to=CHEMBL5967239;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD00543,CC1=C2CCC34CC(C)(CCC3C2(C)C=C(O)C1=O)C1OC14,DECOY,"7-hydroxy-5,9,13-trimethyl-15-oxapentacyclo[11.3.1.0¹,¹⁰.0⁴,⁹.0¹⁴,¹⁶]heptadeca-4,7-dien-6-one",LOTUS_3D|AWRVRRYXPDHNKT-UHFFFAOYSA-N,,matched_to=CHEMBL5886939;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00725,COc1cc(=O)oc([C@H](C)[C@H](C)O)c1CO,DECOY,6-(3-hydroxybutan-2-yl)-5-(hydroxymethyl)-4-methoxypyran-2-one,LOTUS_3D|BSXCHPRMOOSCRM-RQJHMYQMSA-N,,matched_to=CHEMBL6051085;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00307,C/C=C/c1ccc(O[C@H](C)[C@@H](O)c2ccc(OC)c(OC)c2)c(OC)c1,DECOY,"1-(3,4-dimethoxyphenyl)-2-[2-methoxy-4-(prop-1-en-1-yl)phenoxy]propan-1-ol",LOTUS_3D|NUDWCJJMQATDKB-MWSVELABSA-N,,matched_to=CHEMBL1684609;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD00088,COc1cc(F)c(-n2c(=O)[nH]c3csc(C(=O)[O-])c3c2=O)cc1OCc1c(OC)ccc(F)c1F.C[N+](C)(C)CCO,DECOY,LINZAGOLIX CHOLINE,FDA_DRUGS|IAIVRTFCYOGNBW-UHFFFAOYSA-M,,matched_to=CHEMBL4470628;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00387,C=C1CC[C@H](O)[C@]2(C)CC[C@H](C(C)C)[C@H](O)[C@@H]12,DECOY,"(1s,2r,4ar,5s,8as)-2-isopropyl-4a-methyl-8-methylidene-octahydronaphthalene-1,5-diol",LOTUS_3D|WKKJGHCXVKEJNU-SEBNEYGDSA-N,,matched_to=CHEMBL5813293;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD00091,C=C(CC[C@@H](C)[C@H]1CC[C@@]2(O)C3=C(C(=O)C[C@]12C)[C@@]1(C)CCC(=O)[C@@H](C)[C@@H]1C[C@@H]3O)[C@@H](C)C(=O)O,DECOY,"(2r,6r)-6-[(1r,3as,4s,5as,6s,9as,11ar)-3a,4-dihydroxy-6,9a,11a-trimethyl-7,10-dioxo-1h,2h,3h,4h,5h,5ah,6h,8h,9h,11h-cyclopenta[a]phenanthren-1-yl]-2-methyl-3-methylideneheptanoic acid",LOTUS_3D|FPSUTNLGRMMQOR-LSMYXWCSSA-N,,matched_to=CHEMBL4470628;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD01710,C=C(O[C@@H]1C=C(C(=O)OC)C[C@H](O)[C@H]1O)C(=O)OC,DECOY,"methyl (3r,4r,5r)-4,5-dihydroxy-3-[(3-methoxy-3-oxoprop-1-en-2-yl)oxy]cyclohex-1-ene-1-carboxylate",LOTUS_3D|LXXNOOUDPRVEFK-IVZWLZJFSA-N,,matched_to=CHEMBL6009789;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD00143,O=C(/C=C\n1cnc(-c2cc(C(F)(F)F)cc(C(F)(F)F)c2)n1)NNc1cnccn1,DECOY,SELINEXOR,FDA_DRUGS|DEVSOMFAQLZNKR-RJRFIUFISA-N,,matched_to=CHEMBL3582251;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD01314,CC(=O)OC[C@@]1(O)CC[C@]23C[C@H]1C[C@@H]2CC[C@@H]1C(C)(C)CCC[C@]13C,DECOY,"[(1r,2s,7s,10s,12s,13s)-13-hydroxy-2,6,6-trimethyltetracyclo[10.3.1.0¹,¹⁰.0²,⁷]hexadecan-13-yl]methyl acetate",LOTUS_3D|DDKAEQWOGQNVRK-WQMAJOMYSA-N,,matched_to=CHEMBL5917816;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD01476,COc1nccnc1NS(=O)(=O)c1ccc(N)cc1,DECOY,SULFALENE,FDA_DRUGS|KXRZBTAEDBELFD-UHFFFAOYSA-N,,matched_to=CHEMBL5896164;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD00237,CC(=O)C[C@]1(O)C(O)=Nc2ccc(CC=C(C)C)cc21,DECOY,"1-[(3r)-2,3-dihydroxy-5-(3-methylbut-2-en-1-yl)indol-3-yl]propan-2-one",LOTUS_3D|PQHFUZFYWCTBML-MRXNPFEDSA-N,,matched_to=CHEMBL5931602;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD00755,C/C=C/CCC[C@@H](C)C(=O)C1=C(O)/C(=C\C)N(C)C1=O,DECOY,Penicillenol D2,NPATLAS_3D|MOKIQVYWTLVJCE-UXAJVCOCSA-N,,matched_to=AZ8838;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00246,CC(C)c1c(O)cc(/C=C/c2ccccc2)cc1O,DECOY,TAPINAROF,FDA_DRUGS|ZISJNXNHJRQYJO-CMDGGOBGSA-N,,matched_to=CHEMBL5931602;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD01365,NC(=O)c1cnc2[nH]ccc2c1N[C@@H]1[C@@H]2CC3C[C@H]1C[C@@](O)(C3)C2,DECOY,PEFICITINIB,FDA_DRUGS|DREIJXJRTLTGJC-ZLBJMMTISA-N,,matched_to=CHEMBL5767391;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD00172,CC(=O)C[C@@]1(O)C(O)=Nc2ccc(CC=C(C)C)cc21,DECOY,"1-[(3r)-2,3-dihydroxy-5-(3-methylbut-2-en-1-yl)indol-3-yl]propan-2-one",LOTUS_3D|PQHFUZFYWCTBML-INIZCTEOSA-N,,matched_to=CHEMBL6044556;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD00861,Cc1ccccc1-n1c(C)nc2ccccc2c1=O.Cl,DECOY,METHAQUALONE HYDROCHLORIDE,FDA_DRUGS|KJUHIXIWKSVBKB-UHFFFAOYSA-N,,matched_to=CHEMBL5841639;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD01651,C=C(C)C(=O)O[C@H]1C[C@H]2O[C@@H]2C[C@H](OC(C)=O)/C(C)=C\[C@@H]2OC(=O)C(=C)[C@@H]21,DECOY,"8-(acetyloxy)-9-methyl-14-methylidene-13-oxo-5,12-dioxatricyclo[9.3.0.0⁴,⁶]tetradec-9-en-2-yl 2-methylprop-2-enoate",LOTUS_3D|XRKMMPREXILBRY-SWPMUDGDSA-N,,matched_to=CHEMBL5921196;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD01589,O=C1NC(=O)[C@@H](c2cn3c4c(cccc24)CCC3)[C@@H]1c1c[nH]c2ccccc12,DECOY,TIVANTINIB,FDA_DRUGS|UCEQXRCJXIVODC-PMACEKPBSA-N,,matched_to=CHEMBL5872446;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD01235,CC(C)OP(=O)(F)OC(C)C,DECOY,ISOFLUROPHATE,FDA_DRUGS|MUCZHBLJLSDCSD-UHFFFAOYSA-N,,matched_to=CHEMBL5790400;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD00399,C#C[C@]1(O)CC[C@H]2[C@@H]3CCC4=CC(=O)CC[C@@H]4[C@H]3CC[C@@]21C,DECOY,NORETHINDRONE,FDA_DRUGS|VIKNJXKGJWUCNN-XGXHKTLJSA-N,,matched_to=CHEMBL5813293;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01188,C[C@]12Cc3c[nH]nc3C[C@@H]1CC[C@@H]1[C@@H]2CC[C@@]2(C)[C@H]1CC[C@]2(C)O,DECOY,STANOZOLOL,FDA_DRUGS|LKAJKIOFIWVMDJ-IYRCEVNGSA-N,,matched_to=CHEMBL6022431;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD00007,C[C@@H]1[C@H](c2ccccc2)C[C@H](NC(=O)c2cnc3c(c2)C[C@@]2(C3)C(=O)Nc3ncccc32)C(=O)N1CC(F)(F)F,DECOY,UBROGEPANT,FDA_DRUGS|DDOOFTLHJSMHLN-ZQHRPCGSSA-N,,matched_to=CHEMBL5273903;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD00748,Cc1cc(C)nc(NS(=O)(=O)c2ccc(N)cc2)n1,DECOY,SULFAMETHAZINE,FDA_DRUGS|ASWVTGNCAZCNNR-UHFFFAOYSA-N,,matched_to=CHEMBL5774506;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00168,C[C@H]1CCC[C@]2(C)CC=C([C@](C)(O)CO)C[C@H]12,DECOY,mol_280200,COCONUT_3D|RDBMSERFRDSITF-ZGKBOVNRSA-N,,matched_to=CHEMBL6044556;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD01204,CC1=C[C@H]2CCC3=C(O)[C@H](C)[C@H](OC3=O)/C(C)=C/C/C=C/C(=O)C2=C1O,DECOY,"(4r,10e,13e,15s,19r)-7,18-dihydroxy-6,14,19-trimethyl-16-oxatricyclo[13.2.2.0⁴,⁸]nonadeca-1(18),5,7,10,13-pentaene-9,17-dione",LOTUS_3D|DYZFANQRHBSDBT-AZXXQGMOSA-N,,matched_to=CHEMBL5967239;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD00076,CCOc1nc2cccc(C(=O)O)c2n1Cc1ccc(-c2ccccc2-c2noc(=O)[nH]2)cc1,DECOY,AZILSARTAN,FDA_DRUGS|KGSXMPPBFPAXLY-UHFFFAOYSA-N,,matched_to=CHEMBL4470628;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD00329,C/C=C\C(=O)c1c(O)cc(OC)cc1OC,DECOY,"1-(2-hydroxy-4,6-dimethoxyphenyl)but-2-en-1-one",LOTUS_3D|ZKVIBKWHKHBWPT-PLNGDYQASA-N,,matched_to=CHEMBL5993617;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD01162,Cc1ncc2n1-c1ccc(Cl)cc1C(c1ccccc1F)=NC2,DECOY,MIDAZOLAM,FDA_DRUGS|DDLIGBOFAVUZHB-UHFFFAOYSA-N,,matched_to=CHEMBL5756815;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD01169,COC(=O)Cc1cccc2oc(C)cc(=O)c12,DECOY,Methyl 2-(2-methyl-4-oxochromen-5-yl)acetate,PubChem|CID21585560,,matched_to=CHEMBL5756815;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD00880,COC(=O)c1ccc2c(c1)CCC(C)(C)O2,DECOY,"methyl 2,2-dimethyl-3,4-dihydro-1-benzopyran-6-carboxylate",LOTUS_3D|QOOSUIFPCJRCCM-UHFFFAOYSA-N,,matched_to=CHEMBL6060374;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD00044,C[C@@H]1C[C@H]2[C@@H]3C[C@H](F)C4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@]2(C)[C@@]1(OC(=O)c1ccco1)C(=O)SCF,DECOY,FLUTICASONE FUROATE,FDA_DRUGS|XTULMSXFIHGYFS-VLSRWLAYSA-N,,matched_to=CHEMBL3582250;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01435,Cc1cc2c(o1)C(=O)C1=C(C(=O)C(O)=C3C(C)(C)C(=O)CCC13C)C2=O,DECOY,"5-hydroxy-4,4,9,11b-tetramethyl-1h,2h-phenanthro[3,2-b]furan-3,6,7,11-tetrone",LOTUS_3D|ROKKWWWUAUNDCB-UHFFFAOYSA-N,,matched_to=CHEMBL5752080;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD00850,CC1(C)C=Cc2c(cc(O)c3c2O[C@@H](c2ccc(O)cc2)CC3=O)O1,DECOY,"(2r)-5-hydroxy-2-(4-hydroxyphenyl)-8,8-dimethyl-2h,3h-pyrano[2,3-f]chromen-4-one",LOTUS_3D|JTJIFFUHXHGAOQ-MRXNPFEDSA-N,,matched_to=CHEMBL5937575;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00679,C[C@@H]1CN(c2nc(-n3ccc(OCCC4(C(F)(F)F)CC4)n3)ccc2C(=O)NS(=O)(=O)c2ccccc2)C(C)(C)C1,DECOY,BAMOCAFTOR,FDA_DRUGS|IGEOJNMYRZUKIK-IBGZPJMESA-N,,matched_to=CHEMBL4855875;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00715,CC1(C)CC(=O)C2=C(O1)[C@@]1(C[C@@H]1C(C)(C)O)[C@H](O)[C@@H](O)C2,DECOY,"(2'r,6s,7r,8s)-6,7-dihydroxy-2'-(2-hydroxypropan-2-yl)-2,2-dimethyl-3,5,6,7-tetrahydrospiro[1-benzopyran-8,1'-cyclopropan]-4-one",LOTUS_3D|UBYATBJSFPEGMT-OBOQGBEESA-N,,matched_to=CHEMBL6051085;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01703,O=C1CN(/N=C/c2ccc([N+](=O)[O-])o2)C(=O)N1,DECOY,NITROFURANTOIN,FDA_DRUGS|NXFQHRVNIOXGAQ-YCRREMRBSA-N,,matched_to=CHEMBL5861350;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD00460,COc1ccc([C@@H]2CC(=O)c3c(O)cc(O)cc3O2)cc1,DECOY,isosakuranetin,LOTUS_3D|HMUJXQRRKBLVOO-AWEZNQCLSA-N,,matched_to=CHEMBL5980331;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01354,CC(=O)CC(c1ccc([N+](=O)[O-])cc1)c1c(O)c2ccccc2oc1=O,DECOY,ACENOCOUMAROL,FDA_DRUGS|VABCILAOYCMVPS-UHFFFAOYSA-N,,matched_to=CHEMBL5767391;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD00667,O=c1oc2cc(Sc3ccc(O)cc3)cccc-2c1-c1ccccc1,DECOY,7-[(4-hydroxyphenyl)sulfanyl]-3-phenylcyclohepta[b]furan-2-one,LOTUS_3D|RYRPTUOWESQQKQ-UHFFFAOYSA-N,,matched_to=CHEMBL4849569;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD01173,CC(=O)[C@@H]1[C@H]2CC(=O)C[C@@]2(C)CCCC1(C)C,DECOY,"(3ar,8r,8ar)-8-acetyl-3a,7,7-trimethyl-hexahydro-1h-azulen-2-one",LOTUS_3D|MMKGCZLPPJRCFV-UMVBOHGHSA-N,,matched_to=CHEMBL5756815;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD01569,CC(NN)c1ccccc1,DECOY,MEBANAZINE,FDA_DRUGS|HHRZAEJMHSGZNP-UHFFFAOYSA-N,,matched_to=CHEMBL5836987;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD00639,CO[C@H]1O[C@@H]2O[C@@]3(C)CC[C@H]4[C@H](C)CC[C@@H]([C@H]1C)[C@@]24OO3,DECOY,ARTEMETHER,FDA_DRUGS|SXYIRMFQILZOAM-HVNFFKDJSA-N,,matched_to=CHEMBL4866566;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD00931,CC(C)c1ncc2n(c1=O)CCC2,DECOY,Le-pyrrolopyrazine A,NPATLAS_3D|QLJHYDBCMGWVJF-UHFFFAOYSA-N,,matched_to=CHEMBL5795821;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD00960,c1ccc2c(Cc3c[nH]c4ccccc34)c[nH]c2c1,DECOY,ARUNDINE,FDA_DRUGS|VFTRKSBEFQDZKX-UHFFFAOYSA-N,,matched_to=CHEMBL5825581;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD01262,COC(=O)CCCc1cc(F)ccc1C(C)=O,DECOY,Methyl 4-(2-acetyl-5-fluorophenyl)butanoate,PubChem|CID23521231,,matched_to=CHEMBL5855327;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD00868,O=C1OCC(Cc2ccccc2)=C1c1ccccc1,DECOY,NPA014215,NPATLAS_3D|RTTHRDSFKNSBAG-UHFFFAOYSA-N,,matched_to=CHEMBL5841639;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00424,C[C@@]12OC(=O)[C@]1([C@@H](O)[C@@H]1C=CCCC1)NC(=O)[C@@H]2CCCl,DECOY,MARIZOMIB,FDA_DRUGS|NGWSFRIPKNWYAO-SHTIJGAHSA-N,,matched_to=CHEMBL5751707;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01059,COc1cc(O)c2c(c1)cc1c3c(cc(=O)oc32)O[C@](C)(O)C1,DECOY,"3,11-dihydroxy-5-methoxy-11-methyl-12,16-dioxatetracyclo[7.7.1.0²,⁷.0¹³,¹⁷]heptadeca-1(17),2(7),3,5,8,13-hexaen-15-one",LOTUS_3D|OGUHVFHECGLHRF-KRWDZBQOSA-N,,matched_to=CHEMBL5944203;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD00418,CC(O)C(=O)O.Cc1[nH]c(=O)c(C#N)cc1-c1ccncc1,DECOY,MILRINONE LACTATE,FDA_DRUGS|VWUPWEAFIOQCGF-UHFFFAOYSA-N,,matched_to=CHEMBL5751707;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01151,C[C@H](O)CC(=O)Cc1cccc2oc(CO)cc(=O)c12,DECOY,5-((S)-2'-Oxo-4'-hydroxypentyl)-2-methoxychromone,PubChem|CID163098150,,matched_to=CHEMBL5756815;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD00012,CC1(C)C(=O)N(c2ccc(C#N)c(C(F)(F)F)c2)C(=S)N1c1ccc(OC[C@@H](O)CO)cc1,DECOY,REZVILUTAMIDE,FDA_DRUGS|KRBMOYIWQCZVHA-INIZCTEOSA-N,,matched_to=CHEMBL5273903;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD00353,C=C(C)C(=O)OCCc1cc(O)ccc1O,DECOY,"2-(2,5-Dihydroxyphenyl)ethyl 2-methylprop-2-enoate",PubChem|CID151278358,,matched_to=CHEMBL5915179;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD00729,O=C1CCC(N2C(=O)c3ccccc3C2=O)C(=O)N1,DECOY,THALIDOMIDE,FDA_DRUGS|UEJJHQNACJXSKW-UHFFFAOYSA-N,,matched_to=CHEMBL5774506;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01475,COc1cnc(NS(=O)(=O)c2ccc(N)cc2)nc1,DECOY,SULFAMETER,FDA_DRUGS|GPTONYMQFTZPKC-UHFFFAOYSA-N,,matched_to=CHEMBL5772219;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD01575,C#CC(O)(/C=C/Cl)CC,DECOY,ETHCHLORVYNOL,FDA_DRUGS|ZEHYJZXQEQOSON-AATRIKPKSA-N,,matched_to=CHEMBL5836987;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD00391,CC1=C2CC[C@H](C)[C@H]2C[C@H](C(C)(C)O)CC1,DECOY,"2-(3,8-dimethyl-1,2,3,3a,4,5,6,7-octahydroazulen-5-yl)propan-2-ol",LOTUS_3D|LGOFSGDSFQNIAT-OUCADQQQSA-N,,matched_to=CHEMBL5813293;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01549,COc1cc(CCC(=O)CCCCc2ccccc2)ccc1O,DECOY,Yakuchinone A,PubChem|CID133145,,matched_to=CHEMBL4128225;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00260,CC1=C[C@@H]2[C@@H]([C@@H](C)CO)CC=C(C)[C@@H]2C[C@@H]1O,DECOY,"(2r,4as,5s,8ar)-5-[(2r)-1-hydroxypropan-2-yl]-3,8-dimethyl-1,2,4a,5,6,8a-hexahydronaphthalen-2-ol",LOTUS_3D|KOEIHUNMBSXMQT-ZQNQSHIBSA-N,,matched_to=CHEMBL5908081;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD00641,CC1=C2CC[C@@]34C[C@@](C)(CC[C@H]3[C@]2(C)C=C(O)C1=O)[C@@H]1O[C@@H]14,DECOY,"7-hydroxy-5,9,13-trimethyl-15-oxapentacyclo[11.3.1.0¹,¹⁰.0⁴,⁹.0¹⁴,¹⁶]heptadeca-4,7-dien-6-one",LOTUS_3D|AWRVRRYXPDHNKT-RJBYQVBTSA-N,,matched_to=CHEMBL4866566;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD01062,CN1C(=O)CN=C(c2ccccc2)c2cc(Cl)ccc21,DECOY,DIAZEPAM,FDA_DRUGS|AAOVKJBEBIDNHE-UHFFFAOYSA-N,,matched_to=CHEMBL5944203;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD01132,CCC(C)(C)C(=O)O[C@H]1C[C@@H](C)C=C2C=C[C@H](C)[C@H](CC[C@@H]3C[C@@H](O)CC(=O)O3)[C@H]21,DECOY,SIMVASTATIN,FDA_DRUGS|RYMZZMVNJRMUDD-HGQWONQESA-N,,matched_to=CHEMBL3582249;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01672,Cc1ncc([N+](=O)[O-])n1CCO,DECOY,METRONIDAZOLE,FDA_DRUGS|VAOCPAMSLUNLGC-UHFFFAOYSA-N,,matched_to=CHEMBL5966150;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD01706,CCC[C@@H](C)C[C@H](N)CC(=O)O,DECOY,IMAGABALIN,FDA_DRUGS|JXEHXYFSIOYTAH-SFYZADRCSA-N,,matched_to=CHEMBL5861350;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD00872,Cc1cccc2oc(CCc3ccccc3)cc(=O)c12,DECOY,5-Methyl-2-(2-phenylethyl)chromen-4-one,PubChem|CID172063635,,matched_to=CHEMBL5841639;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01626,Cn1cnc([N+](=O)[O-])c1Sc1ncnc2[nH]cnc12,DECOY,AZATHIOPRINE,FDA_DRUGS|LMEKQMALGUDUQG-UHFFFAOYSA-N,,matched_to=CHEMBL5959498;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD00718,CC[C@@H](C(N)=O)N1C[C@H](C=C(F)F)CC1=O,DECOY,SELETRACETAM,FDA_DRUGS|ANWPENAPCIFDSZ-RQJHMYQMSA-N,,matched_to=CHEMBL6051085;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01668,Nc1cccc2c1C(=O)N(C1CCC(=O)NC1=O)C2=O,DECOY,POMALIDOMIDE,FDA_DRUGS|UVSMNLNDYGZFPF-UHFFFAOYSA-N,,matched_to=CHEMBL5966150;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD00480,CCC1(c2ccccc2)C(=O)NC(=O)NC1=O,DECOY,PHENOBARBITAL,FDA_DRUGS|DDBREPKUVSBGFI-UHFFFAOYSA-N,,matched_to=CHEMBL6057099;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01664,Cc1ncc(CO)c(CO)c1O,DECOY,PYRIDOXINE,FDA_DRUGS|LXNHXLLTXMVWPM-UHFFFAOYSA-N,,matched_to=CHEMBL5966150;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD01142,CCCC(=O)O[C@]1(C(=O)COC(C)=O)CC[C@H]2[C@@H]3C[C@H](F)C4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]21C,DECOY,DIFLUPREDNATE,FDA_DRUGS|WYQPLTPSGFELIB-JTQPXKBDSA-N,,matched_to=CHEMBL3582249;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00475,Cc1onc(-c2ccccc2)c1-c1ccc(S(N)(=O)=O)cc1,DECOY,VALDECOXIB,FDA_DRUGS|LNPDTQAFDNKSHK-UHFFFAOYSA-N,,matched_to=CHEMBL5980331;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01400,COc1cc2c(c3oc(=O)c4c(c13)CCC4=O)[C@]1(O)CCO[C@@H]1O2,DECOY,aflatoxin m2,LOTUS_3D|OQLKWHFMUPJCJY-IAGOWNOFSA-N,,matched_to=CHEMBL5848963;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD00015,COC1=C[C@@H](C)O[C@H](O[C@H]2CC[C@]3(C)C(=CC[C@H]4[C@H]5CC[C@@](O)([C@H](C)O)[C@@]5(C)CC[C@H]43)C2)C1=O,DECOY,"(2s,6r)-2-{[(1r,3as,3br,7s,9ar,9bs,11as)-1-hydroxy-1-[(1s)-1-hydroxyethyl]-9a,11a-dimethyl-2h,3h,3ah,3bh,4h,6h,7h,8h,9h,9bh,10h,11h-cyclopenta[a]phenanthren-7-yl]oxy}-4-methoxy-6-methyl-2,6-dihydropyran-3-one",LOTUS_3D|BKSQGHJUZLOGBO-GCWZPCRLSA-N,,matched_to=CHEMBL5273903;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD00244,CCNC1=Nc2ccc(Cl)cc2C(C)(c2ccccc2)O1,DECOY,ETIFOXINE,FDA_DRUGS|IBYCYJFUEJQSMK-UHFFFAOYSA-N,,matched_to=CHEMBL5931602;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD01567,CC1=C(C)[C@H]2C[C@@H]1C[C@H]2O,DECOY,"(1s,2r,4s)-5,6-dimethylbicyclo[2.2.1]hept-5-en-2-ol",LOTUS_3D|BRMSNMZILBBMIX-IWSPIJDZSA-N,,matched_to=CHEMBL5836987;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD01064,COCCOc1ccnc2ccccc12,DECOY,4-(2-Methoxyethoxy)quinoline,PubChem|CID57575728,,matched_to=CHEMBL5944203;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD00754,OCCCc1ccc2c(c1)OCO2,DECOY,"1,3-Benzodioxole-5-propanol",PubChem|CID11030414,,matched_to=AZ8838;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00985,C=C[C@@](C)(/C=C/c1ccc(O)cc1)C/C=C/C(C)(C)O,DECOY,"4-[(1e,3s,5e)-3-ethenyl-7-hydroxy-3,7-dimethylocta-1,5-dien-1-yl]phenol",LOTUS_3D|KGYDEXUROYEYFL-CEAFDCLWSA-N,,matched_to=CHEMBL6015822;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD00716,COC(=O)[C@@H]1CCc2c1oc1ccc(O)cc1c2=O,DECOY,"methyl 7-hydroxy-9-oxo-1h,2h,3h-cyclopenta[b]chromene-3-carboxylate",LOTUS_3D|BZWPDDPIFDNFIU-SECBINFHSA-N,,matched_to=CHEMBL6051085;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01125,CCC(C)Oc1ccccc1O,DECOY,2-Butan-2-yloxyphenol,PubChem|CID14815829,,matched_to=AZ8838;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD00776,CCCCC/C=C/c1c(O)ccc(O)c1CO,DECOY,"2-(hept-1-en-1-yl)-3-(hydroxymethyl)benzene-1,4-diol",LOTUS_3D|PTXOZTNDVQYKHC-VOTSOKGWSA-N,,matched_to=AZ8838;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00429,OC(/C=C\c1ccc(O)cc1)=N\CCc1ccc(O)cc1,DECOY,3-(4-hydroxyphenyl)-n-[2-(4-hydroxyphenyl)ethyl]prop-2-enimidic acid,LOTUS_3D|RXGUTQNKCXHALN-YHYXMXQVSA-N,,matched_to=CHEMBL6001703;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01694,NCC1(CC(=O)O)CCCCC1,DECOY,GABAPENTIN,FDA_DRUGS|UGJMXCAKCUNAIE-UHFFFAOYSA-N,,matched_to=CHEMBL5861350;tier=4,5NDD_orthosteric;5NDZ_allosteric
+BD00054,Cn1c(=O)n(-c2ccc(C(C)(C)C#N)cc2)c2c3cc(-c4cnc5ccccc5c4)ccc3ncc21,DECOY,DACTOLISIB,FDA_DRUGS|JOGKUKXHTYWRGZ-UHFFFAOYSA-N,,matched_to=CHEMBL3582248;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD01402,COc1ccc(Cc2ccccc2O[C@@H]2O[C@H](C)[C@@H](O)[C@H](O)[C@H]2O)cc1,DECOY,"(2S,3R,4S,5S,6R)-2-[2-[(4-methoxyphenyl)methyl]phenoxy]-6-methyloxane-3,4,5-triol",PubChem|CID127048094,,matched_to=CHEMBL5808143;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD00034,CO[C@@H]1[C@H](N(C)OCOC(C)=O)C[C@H]2O[C@]1(C)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)NC4,DECOY,NPA007853,NPATLAS_3D|BFRBLQYPYHCFPY-BJZBFFFZSA-N,,matched_to=CHEMBL3582250;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00766,CCC1(CC)C(=O)NCC(C)C1=O,DECOY,METHYPRYLON,FDA_DRUGS|SIDLZWOQUZRBRU-UHFFFAOYSA-N,,matched_to=AZ8838;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01554,Cc1c(F)cc(C(=O)NC2CC2)cc1-c1ccc(C(=O)NCC(C)(C)C)cn1,DECOY,LOSMAPIMOD,FDA_DRUGS|KKYABQBFGDZVNQ-UHFFFAOYSA-N,,matched_to=CHEMBL4128225;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00254,[H]/N=C1\N(C)C(=O)/C(=C/c2cn(C(=O)CC)c3ccccc23)N1C,DECOY,"(5e)-2-imino-1,3-dimethyl-5-[(1-propanoylindol-3-yl)methylidene]imidazolidin-4-one",LOTUS_3D|KEQDLRHDLIFHQI-OHBFYCIKSA-N,,matched_to=CHEMBL5908081;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD01358,O=C(CCBr)N1CCN(C(=O)CCBr)CC1,DECOY,PIPOBROMAN,FDA_DRUGS|NJBFOOCLYDNZJN-UHFFFAOYSA-N,,matched_to=CHEMBL5767391;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD00374,COC(=O)C1CCc2c1oc1ccc(O)cc1c2=O,DECOY,"methyl 7-hydroxy-9-oxo-1h,2h,3h-cyclopenta[b]chromene-3-carboxylate",LOTUS_3D|BZWPDDPIFDNFIU-UHFFFAOYSA-N,,matched_to=CHEMBL5915179;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01408,O=C(OCC(O)CO)c1ccccc1Nc1ccnc2cc(Cl)ccc12,DECOY,GLAFENINE,FDA_DRUGS|GWOFUCIGLDBNKM-UHFFFAOYSA-N,,matched_to=CHEMBL5808143;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD00569,COc1ccc(C#Cc2c(O)c(C)c(C)c3c2CCC(C)(C)O3)cc1OC,DECOY,"5-[2-(3,4-Dimethoxyphenyl)ethynyl]-2,2,7,8-tetramethyl-3,4-dihydrochromen-6-ol",PubChem|CID11617563,,matched_to=CHEMBL4860533;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD01049,CCCN1C(=O)Cc2ccccc2C1C(=O)NCc1cc(F)ccc1F,DECOY,"N-[(2,5-Difluorophenyl)methyl]-3-oxo-2-propyl-1,2,3,4-tetrahydroisoquinoline-1-carboxamide",PubChem|CID53147554,,matched_to=CHEMBL5841272;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00793,CCCc1cc(C(N)=S)ccn1,DECOY,PROTIONAMIDE,FDA_DRUGS|VRDIULHPQTYCLN-UHFFFAOYSA-N,,matched_to=AZ8838;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD00477,NC(=S)N/N=C1/c2ccccc2-c2ncccc21,DECOY,mol_263970,COCONUT_3D|VYGCRIOBUYWZCC-VBKFSLOCSA-N,,matched_to=CHEMBL6057099;tier=1,5NDD_orthosteric;5NDZ_allosteric
+BD01755,C[C@H]([C@H](O)/C=C\C(C)(C)O)[C@H]1CC[C@@]2(C)C3=CC[C@@H]4C(C)(C)[C@@H](O)CC[C@]4(C)C3=CC[C@]12C,DECOY,"(3e,5r,6s)-6-[(1r,3ar,5ar,7s,9as,11ar)-7-hydroxy-3a,6,6,9a,11a-pentamethyl-1h,2h,3h,5h,5ah,7h,8h,9h,11h-cyclopenta[a]phenanthren-1-yl]-2-methylhept-3-ene-2,5-diol",LOTUS_3D|ODDPCFPKYKNPDA-XAWSUSEMSA-N,,matched_to=CHEMBL3736126;tier=3,5NDD_orthosteric;5NDZ_allosteric
+BD00874,O=C(Nc1ccc([N+](=O)[O-])cc1Cl)c1cc(Cl)ccc1O,DECOY,NICLOSAMIDE,FDA_DRUGS|RJMUSRYZPJIFPJ-UHFFFAOYSA-N,,matched_to=CHEMBL5841639;tier=2,5NDD_orthosteric;5NDZ_allosteric
+BD01211,CCN(C(C)=O)c1cccc(-c2ccnc3c(C#N)cnn23)c1,DECOY,ZALEPLON,FDA_DRUGS|HUNXMJYCHXQEGX-UHFFFAOYSA-N,,matched_to=CHEMBL5967239;tier=3,5NDD_orthosteric;5NDZ_allosteric

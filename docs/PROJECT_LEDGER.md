@@ -1508,3 +1508,67 @@ Complete finalist EX32, fingerprint the poses, resolve vendor status, co-fold
 **Next** Pull co-folding, resume the benchmark and counter-screen on h3,
 re-rank with the active-state gate and decoy-calibrated IFP weight, and fold in
 the 1,043 retrieved analogues.
+
+---
+
+## 2026-09-06 19:30 UTC — sprint closed, all compute stopped, master findings written
+
+**Branch:** `yonsei-final10-v2` · **Stage:** sourceable-hit sprint closed.
+
+**Objective** Close the sprint cleanly: stop all billing, preserve every
+result, and record every finding in one authoritative document.
+
+**What was completed**
+- Wrote `YONSEI_FINAL10_V2/MASTER_FINDINGS_2026-09-06.md` (374 lines): the
+  headline panel, the validated negative result, all ten defects found this
+  sprint, the co-folding validation and control analysis, the weak-5NDZ
+  finding, the discarded cavity-volume channel, the Wan-specific findings, a
+  full build/run inventory, what is missing and why, and how to finish.
+- Archived all h3 lane state to
+  `../PAR2_LANE_RESULTS_2026-09-06/H3_LANES_FINAL.tgz` (19.7 MB, 1,181 entries)
+  covering BENCH, activestate, FINALISTS/ex32 and the ZINC search outputs.
+- **Stopped every VM.** `h3`, `a100`, `a100-40` all TERMINATED and verified.
+
+**Decisions made and why**
+- Closed the sprint rather than restarting agents: the session rate limit
+  terminated all four lanes at once, and restarting them would have burned
+  compute without an orchestrator able to consume the results.
+- `a100-40` was left TERMINATED rather than restarted to retrieve the partial
+  co-folding: it had reached only ~6 of 98 jobs, the data persists on its boot
+  disk, and the instruction was to turn compute off.
+
+**Tests and verification actually executed**
+- `gcloud compute instances list`: all three instances TERMINATED, confirmed
+  after the final stop.
+- Archive integrity: `tar tzf H3_LANES_FINAL.tgz` lists 1,181 entries.
+- Panel facts recomputed directly from the committed CSVs before writing the
+  master file: 20 candidates / 20 scaffolds / 16 5NDD / 4 5NDZ; source lanes
+  19 APPROVED_REPURPOSING + 1 ZINC_IN_STOCK_UNSEEN; seed Tanimoto 0.154-0.397;
+  vendor count median 36.5 (range 5-96); IFP recovery 0.583-0.875; vendor
+  classes 43/34/3; match types 72 EXACT / 5 connectivity-only / 3 no-match;
+  Agent 2 dedup file 1,043 rows; benchmark 124 actives + 1,757 decoys.
+
+**Results**
+The sprint is closed with a real, fully-sourced deliverable and a complete,
+honest record.
+
+**Failures or unresolved uncertainty**
+- Co-folding, active-vs-decoy enrichment, the IFP null and the active-state
+  gate are all absent from the panel. Two of those three were lost to a
+  shutdown I armed myself.
+- 19 of 20 panel members are approved drugs at Tanimoto 0.154-0.397 to the de
+  novo seeds; the brief's similarity requirement is not met by them.
+- The 5NDZ lane is weakly supported and should probably be cut to 0-2 slots.
+- Price, quantity, purity and lead time are UNKNOWN for every compound.
+- The project's founding premise remains unverified: the "~80% melanin-uptake
+  reduction" attributed to RWJ-50353 could not be located in any accessible
+  source, and RWJ-50353 is a selective thrombin inhibitor rather than the broad
+  serine-protease inhibitor the earlier handoff described.
+
+**Effect on the overall project**
+The campaign has a defensible, orderable candidate list and a complete account
+of its own limits. The next session can resume every unfinished lane from disk.
+
+**Next intended step**
+Restart `a100-40` for co-folding, resume the h3 lanes, fold in the 1,043
+analogues, re-rank with the active-state gate and decoy-calibrated IFP weight.

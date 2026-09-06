@@ -1,0 +1,2 @@
+cand_id,smiles,set_name,role,already_prepared,ref_name,ref_chembl_id,ref_is_peptide,ref_activity,ref_has_agonist_annotation,campaign_inchikey,reason
+KA_CHEMBL5994547,CCc1coc2c(F)ccc(C(O)c3ncnn3COCC[Si](C)(C)C)c12,KNOWN_ACTIVE_BACKGROUND,KNOWN_ACTIVE_BACKGROUND,False,CHEMBL5994547,CHEMBL5994547,False,IC50=4060.0nM,False,GYUAWXVDPHITEY-UHFFFAOYSA-N,UNSUPPORTED_ELEMENT

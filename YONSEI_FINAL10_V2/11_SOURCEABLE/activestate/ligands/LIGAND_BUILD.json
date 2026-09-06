@@ -1,0 +1,57 @@
+{
+  "generated_utc": "2026-09-06T14:49:19.460165+00:00",
+  "rdkit_version": "2026.03.6",
+  "seed": 20260904,
+  "n_confs": 8,
+  "inputs": {
+    "FINAL_TOP20": {
+      "path": "YONSEI_FINAL10_V2/10_FINAL/FINAL_TOP20_DIVERSE_PAR2_CANDIDATES.csv",
+      "rows": 20
+    },
+    "IDEAL_DE_NOVO_TOP5": {
+      "path": "YONSEI_FINAL10_V2/10_FINAL/IDEAL_DE_NOVO_TOP5.csv",
+      "rows": 5
+    },
+    "KNOWN_LIGANDS_CURATED": {
+      "path": "YONSEI_FINAL10_V2/11_SOURCEABLE/activestate/work/KNOWN_LIGANDS_CURATED.csv",
+      "rows_used": 9,
+      "note": "independently curated reference set; rows with an empty SMILES are skipped"
+    },
+    "PAR2_KNOWN_ACTIVES": {
+      "path": "YONSEI_FINAL10_V2/11_SOURCEABLE/benchmark/PAR2_KNOWN_ACTIVES.csv",
+      "rows_used": 115,
+      "note": "verification_status startswith VERIFIED, deduplicated on InChIKey"
+    }
+  },
+  "requested": 143,
+  "embedded": 142,
+  "failed": 1,
+  "inchikey_collapsed": 0,
+  "collapsed_ids": [],
+  "final_ligands": 142,
+  "by_set": {
+    "KNOWN_ACTIVE_BACKGROUND": 108,
+    "FINAL_TOP20": 20,
+    "REFERENCE": 9,
+    "IDEAL_DE_NOVO_TOP5": 5
+  },
+  "by_role": {
+    "KNOWN_ACTIVE_BACKGROUND": 108,
+    "CANDIDATE": 25,
+    "REF_ANTAGONIST": 2,
+    "REF_OTHER": 2,
+    "REF_ANTAGONIST_ORTHO_CRYSTAL": 1,
+    "REF_NAM_BIASED": 1,
+    "REF_NAM_ALLO_CRYSTAL": 1,
+    "REF_BIASED_AGONIST": 1,
+    "REF_AGONIST_PEPTIDE": 1
+  },
+  "sdf_sha256": "2cce27796e44ded9d2829a00bdb82ab4ad7f710d6e332df4d266b3e21d41927d",
+  "failures": [
+    {
+      "cand_id": "KA_CHEMBL5994547",
+      "set_name": "KNOWN_ACTIVE_BACKGROUND",
+      "reason": "UNSUPPORTED_ELEMENT"
+    }
+  ]
+}

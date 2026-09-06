@@ -32,9 +32,11 @@ real**. Section 6 answers that field by field.
 | `build_reference_panel.py`, `merge_outputs.py` | Panel assembly and run consolidation. |
 | `YONSEI_FINAL10_V2/scripts/v2_sourceability.py` | The reusable resolver. |
 
-Across all 985 master rows: **935 `EXACT` matches, 50 `CONNECTIVITY_ONLY`**; every row
-retrieved on 2026-09-06; `price`, `quantity`, `purity` and `lead_time` are `UNKNOWN` in
-100% of rows (see Section 5.2).
+Across all 985 master rows: **935 `EXACT` matches, 50 `CONNECTIVITY_ONLY`**;
+**81 distinct named vendors** and **670 distinct catalogue identifiers** retrieved; every
+row carries a `source_endpoint`, a `source_url` and a `retrieved_date` (100% complete,
+all 2026-09-06); `price`, `quantity`, `purity` and `lead_time` are `UNKNOWN` in 100% of
+rows (see Section 5.2). One resolver failure in the whole run, recorded (Section 5.6).
 
 ---
 
@@ -145,6 +147,7 @@ These are recorded, not silently dropped. Each was probed on 2026-09-06.
 |---|---|---|
 | **MolPort API** | `POST api.molport.com/api/chemical-search/search` returns HTTP 200 with body `{"Result":{"Status":2,"Message":"Username or password is incorrect!"}}` | Live stock, price and lead time from MolPort are unavailable. MolPort **catalogue IDs** are still obtained, via UniChem source 28. |
 | **Mcule prices / availability** | `/api/v1/compound/{id}/prices/` and `/availability/` return HTTP 401 `{"detail":"Authentication credentials were not provided."}` | Mcule catalogue IDs obtained; **no price, no stock, no lead time**. |
+| **Mcule rate limiting** | The anonymous `search/lookup/` endpoint starts returning HTTP **429** under sustained use, and by the end of this session was returning 429 to *every* request including trivial ones — i.e. a sustained quota, not a per-request throttle. | Handled: 429 is retried with `Retry-After` honoured, the per-host interval was raised to 1.5 s, 429 is **never cached**, and a **circuit breaker** opens after 5 consecutive throttling responses so a large input list degrades into an explicitly-recorded coverage gap (`hosts_rate_limited_circuit_open` in the provenance JSON, `resolvers_failed = mcule:429` per molecule) instead of hours of retry backoff. Mcule catalogue IDs obtained before the limit hit are in the data and are real. |
 | **Enamine REAL API** | `real.enamine.net` requires an Enamine REAL Explorer account and an `X-API-KEY` header. The REAL bulk download is ~13.6 billion molecules — not tractable here. | REAL membership established instead via the Arthor `REAL-Database-22Q1` index. Note this is a **2022-Q1** REAL snapshot; current REAL is far larger (SmallWorld indexes a 2025-Q3 REAL at ~10.1 B), so **REAL non-membership in our data is a weak negative**. |
 | **Chemspace API** | `api.chem-space.com` requires an API key. | Chemspace reached only via the Arthor `ChemSpace-SC-Stock-Mar2022-346K` index. |
 | **ZINC web UI** | `zinc20.docking.org` / `zinc15.docking.org` redirect to `/captcha`. **Not bypassed** — bypassing bot-detection is out of bounds. | ZINC content reached instead through Arthor and SmallWorld, which are not captcha-gated. |
@@ -188,6 +191,31 @@ information was gathered.
    specific quote.
 8. **Salt and formulation forms are not resolved.** A vendor may stock the TFA salt or the
    hydrochloride rather than the free base recorded here.
+9. **A caching bug was found and fixed mid-run — disclosed because it affected real
+   results.** The cache originally treated any status below 500 as a definitive answer.
+   Mcule returns HTTP **429** when rate-limited, and 429 < 500, so **seven rate-limit
+   responses were cached as if they were genuine "not found" results**. That silently
+   converted a throttling blip into a permanent negative for those lookups. The fix:
+   408/425/429 are now retried with `Retry-After` honoured and are never cached, and the
+   Mcule per-host interval was raised to 1.5 s. The affected cache entries were purged and
+   **both sets were fully re-run**; the classifications did not change, but they are now
+   backed by real responses rather than cached throttling. The general lesson is baked
+   into the tool: *only a definitive answer may be cached*.
+10. **Mcule's anonymous quota is exhausted for this session.** By the end of the run
+    `mcule.com` was returning HTTP 429 to every request. The Mcule catalogue IDs already in
+    the data were retrieved before that and are real; but **any future run — including the
+    Agent 2 analogue set — should expect Mcule coverage to be partial or absent** until the
+    quota resets. Those gaps appear as `resolvers_failed = mcule:429` per molecule and as
+    `hosts_rate_limited_circuit_open` in the provenance JSON. They are recorded, not
+    hidden. Mcule is a secondary source here — PubChem vendor annotations, UniChem/MolPort
+    and Arthor are unaffected — so this degrades coverage rather than invalidating it.
+    **The data shipped here is not affected**: both the candidate set and the reference
+    panel were resolved *before* the quota was exhausted, and both carry **zero
+    Mcule-related resolver failures** (78 of 90 cached Mcule responses are HTTP 200; the
+    remainder are legitimate 404 "not in Mcule" answers). A later reference-panel re-run
+    was deliberately abandoned rather than allowed to overwrite that complete data with a
+    rate-limited, partial version — re-running into a closed quota would have made the
+    deliverable *worse*, not fresher.
 
 ---
 
@@ -219,6 +247,11 @@ Structures were taken from the PDB chemical component dictionary where a co-crys
 (AZ8838 = ligand `8TZ` in 5NDD; AZ3451 = ligand `8UN` in 5NDZ — the very structures this
 project docks against), otherwise from PubChem with the identity confirmed against the
 compound's synonym list.
+
+**Structure-integrity check:** all 11 seed SMILES in `REFERENCE_PANEL_SEED.csv` were
+round-tripped through RDKit and their recomputed InChIKeys compared to the recorded ones —
+**11/11 match, 0 mismatches**, and the AZ8838 key reproduces the PDB `8TZ` descriptor
+exactly. So no transcription error was introduced between the API responses and the panel.
 
 Four findings that change how the panel should be used:
 
@@ -337,14 +370,37 @@ Vendors" category, so the negative is genuine and not a parsing artefact.
 | `IN_STOCK` | **7** | AZ8838, AZ3451, GB88 (2S,3S), I-287, propranolol, SLIGKV-NH₂, SLIGRL-NH₂ |
 | `REGISTERED_NOT_VERIFIED` | **5** | GB88 (2S,3R), C391, RWJ-50353, 2-furoyl-LIGRLO-NH₂, P2L-003 |
 
-Both AZ compounds — the actual co-crystal ligands of the two receptor models this project
-docks against — are readily orderable. That matters: the panel can be anchored on the
-reference antagonist the whole ranking was built around.
+Catalogue identifiers actually retrieved (all `EXACT` matches; the Mcule 2025-Q3 in-stock
+snapshot is the freshest stock signal available to this pipeline):
 
-The peptide caveat from Section 5.7 applies to `2-furoyl-LIGRLO-NH₂`: it has 35 PubChem
-vendor leads and is trivially obtainable by custom synthesis, but no in-stock catalogue
-membership was found, so it is honestly classified `REGISTERED_NOT_VERIFIED` rather than
-being promoted on the basis of an assumption.
+| Compound | MolPort | Mcule (2025-Q3 in-stock unless noted) | Other | PubChem vendor leads |
+|---|---|---|---|---|
+| AZ8838 | `Molport-051-516-363` | `MCULE-4401006455`, `MCULE-3230952760` | ZINC in-stock `ZINC000914431265` | 22 |
+| AZ3451 | `Molport-046-683-290` | `MCULE-6778184595`, `MCULE-3081646873` | Chemspace `CSSS00134616029`; ZINC in-stock `ZINC000914431341` | 48 |
+| GB88 (2S,3S) | `Molport-046-925-938` | `MCULE-3630518373`, `MCULE-6246414487` | Chemspace `CSSS00161188992`; ZINC in-stock | 30 |
+| I-287 | `Molport-051-906-774` | `MCULE-9742074451` | — | 12 |
+| SLIGKV-NH₂ | `Molport-023-276-631` | `MCULE-6308066722`, `MCULE-6067917481` | Chemspace `CSSS00132303451`; ZINC in-stock | 40 |
+| 2-furoyl-LIGRLO-NH₂ | `Molport-023-276-635` | `MCULE-2721031012`, `MCULE-4017210905` (listed, **not** in-stock) | — | 35 |
+| GB88 (2S,3R) | — | — | — | 1 |
+| C391 | — | — | — | **0** |
+| RWJ-50353 | — | — | — | **0** |
+
+**Both AZ compounds — the actual co-crystal ligands of the two receptor models this project
+docks against — are readily orderable**, with 2025-Q3 in-stock catalogue membership. That
+matters: the panel can be anchored on the reference antagonist the whole ranking was built
+around.
+
+**`2-furoyl-LIGRLO-NH₂` is better than its label suggests.** It has a MolPort catalogue ID,
+two Mcule IDs and 35 PubChem vendor leads — it is definitely *listed* — but no in-stock
+catalogue membership was retrieved, so under the stated definitions it is
+`REGISTERED_NOT_VERIFIED` rather than `IN_STOCK`. Combined with the peptide caveat in
+Section 5.7 (any custom-synthesis house will make a hexapeptide amide to order), treat this
+as "obtainable, confirm lead time" rather than "hard to get".
+
+**`C391` and `RWJ-50353` are the genuinely hard ones**: zero vendor annotations, zero
+catalogue IDs, zero in-stock membership across every index queried. C391 is a research
+peptidomimetic and RWJ-50353 is a discontinued 2000-era J&J compound; both would likely need
+custom synthesis or an author request. Budget time for them, or drop them.
 
 ---
 
@@ -402,6 +458,54 @@ results.
 ```
 
 The cache is keyed by the exact request, so re-running on an overlapping list costs
-nothing for molecules already seen. Transport failures and 5xx responses are deliberately
-**not** cached, so a rerun retries them rather than inheriting a transient blip as a
-permanent negative. `--refresh` forces a full re-fetch.
+nothing for molecules already seen. Transport failures, 5xx responses **and throttling
+responses (408/425/429)** are deliberately **not** cached, so a rerun retries them rather
+than inheriting a transient blip as a permanent negative. `--refresh` forces a full
+re-fetch.
+
+### The Agent 2 analogue set
+
+`11_SOURCEABLE/analogues/SOURCEABLE_ANALOGUES_DEDUP.csv` (**1043 analogues**) arrived at
+17:47 on 2026-09-06 and is being resolved by this lane. Because a single 1043-molecule pass
+would take several hours and the tool only writes its CSVs at the end of a run, the input is
+**split into seven chunks of ~150** (`chunks/analogues_chunk01..07.csv`) and driven by
+`run_analogues.sh`, so partial results always survive on disk and the job is resumable — the
+driver skips any chunk whose summary already exists.
+
+```bash
+OUT=YONSEI_FINAL10_V2/11_SOURCEABLE/sourceability
+sh $OUT/run_analogues.sh          # resumable; skips completed chunks
+.venv-v2/bin/python $OUT/merge_outputs.py    # folds all chunks into the canonical files
+```
+
+Column mapping: Agent 2 uses `analogue_id` / `canonical_smiles` / `inchikey`, passed via
+`--id-col analogue_id --smiles-col canonical_smiles`. `merge_outputs.py` maps every
+`ANALOGUES**` chunk tag to the single panel label `AGENT2_SOURCEABLE_ANALOGUES`.
+
+Two expectations to set. First, **this is complementary to Agent 2's own retrieval, not a
+duplicate of it**: their `source_databases` column shows the analogues came from ChEMBL and
+PubChem *registry* searches and their `catalogues` column is largely empty — this lane adds
+the vendor/catalogue layer on top. Second, **Mcule coverage will be partial or absent**
+because its anonymous quota was exhausted earlier in the session (Section 5.10); the circuit
+breaker records those gaps explicitly per molecule rather than hiding them, and the other
+four resolvers are unaffected.
+
+### Options that matter for large lists
+
+The nine Arthor catalogue queries are the throughput bottleneck. They are issued
+concurrently (3 simultaneous connections — measured as the most `arthor.docking.org`
+serves reliably; it drops connections at 5), which is roughly a 10× speed-up over serial.
+For very large inputs the catalogue set can also be narrowed:
+
+```bash
+# see what is configured
+.venv-v2/bin/python YONSEI_FINAL10_V2/scripts/v2_sourceability.py --list-arthor-dbs --input x --outdir x
+
+# fast mode: the three catalogues that carry most of the decision weight
+--arthor-dbs In-Stock-19Q4-14.1M,REAL-Database-22Q1,MMcule-In-Stock-25Q3-6.5M
+```
+
+Whatever subset is used is written into `SOURCEABILITY_PROVENANCE.json`
+(`arthor_databases_queried`), so a narrowed run can never be mistaken for full coverage.
+Other useful flags: `--skip pubchem,unichem,chembl,mcule,arthor` to disable resolvers,
+`--min-interval` for global politeness, `--limit N` for a debug subset.

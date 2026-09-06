@@ -1,0 +1,4 @@
+cand_id,smiles,mol_class,label_name,source_ref,activity_nM,notes,pockets
+BS00001,CC1(C(=O)NCCN1C(=O)C2=CN3C(=N2)C(=CC(=N3)C4=CC=C(C=C4)F)C(C)(C)C)C,ACTIVE,I-191,PubChem CID 117977934 (SMILES field) cross-confirmed against,79.4328,"supplementary active, PubChem+GtoPdb verified, no matched decoys",5NDD_orthosteric;5NDZ_allosteric
+BS00002,CC1(CN(CCN1C(=O)C2=CC3=C(O2)C(=CC(=N3)C4=CC(=C(C=C4)Cl)F)C(C)(C)C)C5=NC=C(C=C5)C(=O)O)C,ACTIVE,I-287,PubChem CID 134296695 (SMILES field) cross-confirmed against,79.4328,"supplementary active, PubChem+GtoPdb verified, no matched decoys",5NDD_orthosteric;5NDZ_allosteric
+BS00003,C1C(N(C2=CC=CC=C21)C=O)C3=CNC4=CC=CC=C43,ACTIVE,AZ7188,PubChem CID 129320516 (SMILES field) cross-confirmed against,6309.5734,"supplementary active, PubChem+GtoPdb verified, no matched decoys",5NDD_orthosteric;5NDZ_allosteric

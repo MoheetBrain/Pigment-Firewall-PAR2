@@ -1,0 +1,88 @@
+# Commands actually executed by AGENT 3 (known-active vs decoy benchmark), 2026-09-06.
+# LOCAL = /Users/moheet/Documents/ChatGPT/PAR2, PY = ./.venv-v2/bin/python
+# REMOTE = h3 (europe-west4-b, h3-standard-88), RPY = /home/moheet/PAR2/.venv/bin/python
+
+## --- 0. environment verification ---
+gcloud compute instances list
+gcloud compute ssh h3 --zone europe-west4-b --command='export LD_LIBRARY_PATH=$(find $HOME/gnina-cuda-libs -type d -name lib | paste -sd: -); ~/bin/gnina --version; sha256sum ~/bin/gnina'
+#   -> gnina v1.3.3 master:6fe1ce2, built Jun 30 2026
+#   -> 3340c1f49cd3c7c84d8699182a1c6af13c7fa2a22448d1204640446106f72172  (MATCHES the validated hash)
+PY scratchpad/prot_census.py YONSEI_FINAL10_V2/02_REFERENCE_VALIDATION_REPAIRED/*.pdb YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/receptors/*.pdb
+#   -> *_pH74_FIXED.pdb        : 39/39 LYS NZ with 3 H (charged), 0/29 ASP and 0/23 GLU protonated  = CORRECT at pH 7.4
+#   -> *_protonated_pH74.pdb   : 0/39 LYS charged, 29/29 ASP and 23/23 GLU protonated               = DEFECTIVE (handoff defect 2)
+#   -> docking *.pdbqt         : 0 hydrogens present at all
+shasum -a 256 YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/receptors/*.pdbqt   # hashes recorded in BENCHMARK_PROVENANCE.json
+gcloud compute ssh h3 --zone europe-west4-b --command='sha256sum ~/PAR2/YONSEI_FINAL10_V2/01_REFERENCE_POCKETS/receptors/*.pdbqt'
+#   -> identical to local, so the benchmark docked against the same receptor files as the campaign
+
+## --- 1. actives curation (STEP A) ---
+curl 'https://www.ebi.ac.uk/chembl/api/data/target/search?q=F2RL1&format=json&limit=10'
+#   -> human PAR2 = CHEMBL5963.  NOTE: CHEMBL3974 is PAR1, not PAR2.
+# paged pull of every activity for CHEMBL5963 -> chembl5963_activities.json
+#   -> 1454 activity records over 411 distinct molecules
+# bulk molecule fetch for antagonist-annotated ids -> chembl_par2_antagonists.json  (115 structures)
+# document metadata fetch -> chembl_docs.json (32 documents)
+PY bench_build_actives.py --activities chembl5963_activities.json --molecules chembl_par2_antagonists.json --documents chembl_docs.json --out PAR2_KNOWN_ACTIVES.csv
+PY bench_supplement_actives.py --actives PAR2_KNOWN_ACTIVES.csv --out PAR2_KNOWN_ACTIVES.csv
+curl 'https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/{117977934,134296695,129320516,126961334}/property/...'
+curl 'https://www.guidetopharmacology.org/services/ligands/{10268,12491,9586,9585}'
+#   -> I-191, I-287, AZ7188 and AZ8838-(S) each confirmed by identical InChIKey in PubChem and GtoPdb
+
+## --- 2. decoy selection (STEP B) ---
+PY bench_select_decoys.py --actives PAR2_KNOWN_ACTIVES.csv \
+   --pool YONSEI_FINAL10_V2/10_FINAL/REAL_COMPOUND_DOCKING_QUEUE.csv \
+   --out BENCH_DECOYS.csv --per-active 25 --max-tanimoto 0.35
+PY (property-match QC, Mann-Whitney actives vs decoys) -> BENCH_PROPERTY_MATCH_QC.json
+
+## --- 3. ligand preparation (campaign prepare_one, imported verbatim) ---
+PY bench_prepare.py --input BENCH_DOCKING_INPUT.csv      --out prep_campaign --mode campaign --shard-size 25 --workers 8
+PY bench_prepare.py --input BENCH_DOCKING_INPUT_SUPP.csv --out prep_supp     --mode campaign --shard-size 25 --workers 4
+COPYFILE_DISABLE=1 tar czf /tmp/bench_shards.tgz shards
+gcloud compute scp /tmp/bench_shards.tgz h3:/home/moheet/BENCH/ --zone europe-west4-b
+gcloud compute ssh h3 --command='cd ~/BENCH && tar xzf bench_shards.tgz && find . -name "._*" -delete'
+
+## --- 4. docking (STEP C) - campaign script, unmodified ---
+# EX8, both pockets, all 1859 prepared molecules:
+bash YONSEI_FINAL10_V2/scripts/v2_run_screen.sh --shards $HOME/BENCH/shards --out $HOME/BENCH/ex8 \
+     --gnina $HOME/bin/gnina --stage fast --device cpu --jobs 22 --cpu-per-job 4 --seed 20260904
+#   -> exhaustiveness 8, num_modes 9, cnn_scoring rescore, --no_gpu, --cpu 4, seed 20260904
+# EX32, precision subset (360 molecules: all non-decoys + 250 randomly sampled decoys):
+bash YONSEI_FINAL10_V2/scripts/v2_run_screen.sh --shards $HOME/BENCH/ex32_shards --out $HOME/BENCH/ex32 \
+     --gnina $HOME/bin/gnina --stage refine --device cpu --jobs 22 --cpu-per-job 4 --seed 20260904
+# NOTE: h3 was SHARED with another agent's ~/activestate counterscreen throughout
+# (PGID 6639, 22 further gnina processes). That job was left untouched. It affects
+# wall-clock only: GNINA with a fixed seed and fixed --cpu is deterministic under load.
+
+## --- 5. post-docking analysis (STEP C) - all campaign scripts ---
+bash bench_postdock.sh $HOME/BENCH/ex8  <ligand_table> ex8
+bash bench_postdock.sh $HOME/BENCH/ex32 <ligand_table> ex32
+#   v2_collect_scores.py -> v2_interactions.py (--pose all --max-pose 9)
+#   -> v2_pose_evidence.py (clash filter: minimizedAffinity < 0) -> v2_robust_anchors.py
+RPY YONSEI_FINAL10_V2/scripts/v2_consensus_rank.py --evidence EVIDENCE_ex8.csv --out CONSENSUS_ex8
+
+## --- 6. merge, enrichment, null and report (STEPS D, E) ---
+PY bench_merge.py --consensus ... --anchors ... --input ... --actives ... --decoys ... --out PAR2_ACTIVE_DECOY_BENCHMARK.csv
+PY bench_enrichment.py --benchmark PAR2_ACTIVE_DECOY_BENCHMARK.csv --pocket 5NDD_orthosteric --clash-filter --out ENRICHMENT_5NDD_clashfiltered.json
+PY bench_enrichment.py --benchmark PAR2_ACTIVE_DECOY_BENCHMARK.csv --pocket 5NDD_orthosteric               --out ENRICHMENT_5NDD_all.json
+PY bench_enrichment.py --benchmark PAR2_ACTIVE_DECOY_BENCHMARK.csv --pocket 5NDZ_allosteric  --clash-filter --out ENRICHMENT_5NDZ_clashfiltered.json
+PY bench_report.py     --enrichment ENRICHMENT_*.json --benchmark ... --out PAR2_ENRICHMENT_METRICS.md
+PY bench_provenance.py --root . --bench . --commands COMMANDS_RUN.txt --out BENCHMARK_PROVENANCE.json
+
+## --- INCIDENT: h3 rebooted mid-run, 2026-09-06 16:45:32 UTC ---
+# Detected by "uptime" reporting "up 0 min" while 0 gnina processes were alive
+# and the EX8 screen had stopped at 30/152 shards. The reboot killed every job
+# on the host, including another agent's ~/activestate counterscreen (which that
+# agent restarted at 16:46:13; it was left untouched throughout).
+#
+# Integrity check before resuming - all 30 completed pose files were verified to
+# be readable, non-empty, properly terminated gzipped SDFs:
+for f in ~/BENCH/ex8/poses/*_out.sdf.gz; do gzip -cd "$f" | tail -3 | grep -q '\$\$\$\$' || echo "BAD: $f"; done
+#   -> corrupt pose files: 0.  22 stale *.partial.sdf.gz from interrupted jobs were removed.
+#
+# Resumed with run_all.sh, which re-runs v2_run_screen.sh (shards carrying a
+# .done sentinel are skipped) and retries a stage up to 3 times before reporting
+# it INCOMPLETE rather than continuing on partial data:
+bash ~/BENCH/run_all.sh    # EX8 -> EX8 postdock -> EX32 -> EX32 postdock
+# No result is affected: GNINA at a fixed seed and fixed --cpu is deterministic,
+# and every completed shard was hash-recorded in its .done sentinel before the
+# reboot. Only wall-clock was lost.

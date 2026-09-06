@@ -1,0 +1,25 @@
+{
+  "generated_utc": "2026-09-06T14:50:25.148597+00:00",
+  "mode": "campaign",
+  "seed": 20260904,
+  "n_confs": 8,
+  "max_heavy": 60,
+  "shard_size": 25,
+  "rdkit_version": "2026.03.6",
+  "input_rows": 3,
+  "prepared": 3,
+  "failed": 0,
+  "failure_reasons": {},
+  "constitution_changed": 0,
+  "stereo_changed": 1,
+  "duplicate_prepared_inchikeys": 0,
+  "docking_jobs": 6,
+  "jobs_by_pocket": {
+    "5NDD_orthosteric": 3,
+    "5NDZ_allosteric": 3
+  },
+  "shard_sha256": {
+    "5NDD_orthosteric_shard0000.sdf": "f7c28abcbbc5f2ba76bf5af2242d7e2eddb3432bca3ebb4bf9a85e1676bffe5d",
+    "5NDZ_allosteric_shard0000.sdf": "f7c28abcbbc5f2ba76bf5af2242d7e2eddb3432bca3ebb4bf9a85e1676bffe5d"
+  }
+}

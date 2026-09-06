@@ -1,0 +1,33 @@
+    [http 500] https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/fastidentity/smiles/C%23C%2FC%3DC%5CCC%28Cl%29%5BC%40H%5D1C%5BC%40%40 HTTPError 500
+[sourceability] 25 structures from 2 file(s); cache=YONSEI_FINAL10_V2/11_SOURCEABLE/sourceability/cache
+  [1/25] RX05505      NOT_SOURCEABLE           exact=  0 conn=  1 leads=  0
+  [2/25] RX00387      NOT_SOURCEABLE           exact=  0 conn=  1 leads=  0
+  [3/25] RX02990      REGISTERED_NOT_VERIFIED  exact=  3 conn=  1 leads=  0
+  [4/25] RX01677      REGISTERED_NOT_VERIFIED  exact=  1 conn=  0 leads=  0
+  [5/25] RX02731      IN_STOCK                 exact= 78 conn=  5 leads= 56
+  [6/25] DN00100      NOT_SOURCEABLE           exact=  0 conn=  0 leads=  0
+  [7/25] DL13598      NOT_SOURCEABLE           exact=  0 conn=  0 leads=  0
+  [8/25] DL10170      NOT_SOURCEABLE           exact=  0 conn=  0 leads=  0
+  [9/25] DN00464      NOT_SOURCEABLE           exact=  0 conn=  0 leads=  0
+  [10/25] DN00375      NOT_SOURCEABLE           exact=  0 conn=  0 leads=  0
+  [11/25] DN01763      NOT_SOURCEABLE           exact=  0 conn=  0 leads=  0
+  [12/25] DL08960      NOT_SOURCEABLE           exact=  0 conn=  0 leads=  0
+  [13/25] DL12771      NOT_SOURCEABLE           exact=  0 conn=  0 leads=  0
+  [14/25] DN01005      NOT_SOURCEABLE           exact=  0 conn=  0 leads=  0
+  [15/25] DL11846      NOT_SOURCEABLE           exact=  0 conn=  0 leads=  0
+  [16/25] DL08779      NOT_SOURCEABLE           exact=  0 conn=  0 leads=  0
+  [17/25] DL12464      NOT_SOURCEABLE           exact=  0 conn=  0 leads=  0
+  [18/25] DN01388      NOT_SOURCEABLE           exact=  0 conn=  0 leads=  0
+  [19/25] DN00079      NOT_SOURCEABLE           exact=  0 conn=  0 leads=  0
+  [20/25] DN00058      NOT_SOURCEABLE           exact=  0 conn=  0 leads=  0
+  [21/25] DL13973      NOT_SOURCEABLE           exact=  0 conn=  0 leads=  0
+  [22/25] DL13271      NOT_SOURCEABLE           exact=  0 conn=  0 leads=  0
+  [23/25] DL13943      NOT_SOURCEABLE           exact=  0 conn=  0 leads=  0
+  [24/25] DL11368      NOT_SOURCEABLE           exact=  0 conn=  0 leads=  0
+  [25/25] DL11051      NOT_SOURCEABLE           exact=  0 conn=  0 leads=  0
+
+[sourceability] wrote:
+  YONSEI_FINAL10_V2/11_SOURCEABLE/sourceability/PANEL_SOURCEABILITY_MASTER.csv
+  YONSEI_FINAL10_V2/11_SOURCEABLE/sourceability/PANEL_SOURCEABILITY_SUMMARY.csv
+  YONSEI_FINAL10_V2/11_SOURCEABLE/sourceability/PANEL_SOURCEABILITY_PROVENANCE.json
+[sourceability] classification counts: {'NOT_SOURCEABLE': 22, 'REGISTERED_NOT_VERIFIED': 2, 'IN_STOCK': 1}
