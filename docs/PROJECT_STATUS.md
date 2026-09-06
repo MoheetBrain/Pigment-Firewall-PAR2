@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-09-06 (vendor data resolved; co-folding validated) · branch `yonsei-final10-v2` · **sourceable-hit sprint in progress**
+Last updated: 2026-09-06 (in-stock catalogue searched; retrieval returned a negative result) · branch `yonsei-final10-v2` · **sourceable-hit sprint in progress**
 
 ## Project Objective
 
@@ -242,8 +242,19 @@ box 5NDZ centre `1.356 12.419 48.400` size `20.702 17.885 25.525`.
 
 ## Current Blockers
 
-None blocking. All three VMs (`h3`, `a100`, `a100-40`) are RUNNING and must be
-stopped at the end of the sprint.
+None mechanical. One **scientific** blocker shapes the deliverable:
+
+**Close purchasable analogues of our de novo chemistry do not exist.** A local
+ECFP4 search of 3,971,098 in-stock molecules returned 7 hits at >= 0.50
+Tanimoto, all in the weakest band, best 0.556, from 2 of 32 seeds. A positive
+control over the same catalogue returned 362 hits including exact matches, so
+the search is sound and the result is real. Consequently the sourceable panel
+must be built from real compounds that preserve the *interaction solution*
+at moderate 2D similarity, not from close structural analogues.
+
+Compute state: `a100` and `a100-40` are TERMINATED. `h3` is running the
+active-vs-decoy benchmark, the active-state counter-screen and the wide
+similarity search.
 
 ## Exact Next Actions
 

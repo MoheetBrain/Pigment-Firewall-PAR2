@@ -99,7 +99,9 @@ DATA SOURCES ACTUALLY USED (all public, no credentials)
   Mcule              https://mcule.com/api/v1/search/lookup/?query={smiles}
       - anonymous; returns MCULE-xxxxxxxxxx id + product URL.
         /api/v1/compound/{id}/ returns the InChIKey for exact verification.
-        NOTE: /prices/ and /availability/ require credentials (HTTP 401).
+        NOTE: /prices/ and /availability/ require credentials (HTTP 401), and
+        the anonymous lookup endpoint returns HTTP 429 under sustained use --
+        429 is retried (honouring Retry-After) and is NEVER cached.
   Arthor             https://arthor.docking.org/dt/{db}/search?query=&type=Substructure
       - UCSF Shoichet-lab public catalogue index.  Substructure search with the
         whole molecule as query returns supersets; the exact molecule is always
@@ -116,6 +118,9 @@ SOURCES INVESTIGATED AND BLOCKED (recorded, not silently dropped)
   Mcule pricing mcule.com/api/v1/compound/{id}/prices/ and /availability/
                 -> HTTP 401 {"detail":"Authentication credentials were not
                 provided."}.  Requires an API token we do not have.
+                The anonymous search/lookup endpoint also rate-limits with
+                HTTP 429; that is throttling, NOT a negative result, so it is
+                retried and never cached (see _write_cache guard).
   Enamine REAL  real.enamine.net API requires an Enamine REAL Explorer account
                 and an X-API-KEY.  The REAL database bulk download is ~13.6
                 billion molecules and is not tractable here.  Enamine REAL
@@ -126,6 +131,9 @@ SOURCES INVESTIGATED AND BLOCKED (recorded, not silently dropped)
                 Deliberately NOT bypassed.  ZINC content is reached instead via
                 the Arthor and SmallWorld indexes, which are not captcha-gated.
   eMolecules    no public unauthenticated search API found.
+  MedChemExpress
+                medchemexpress.com returns HTTP 403 to programmatic access, so
+                any MCE catalogue number reported elsewhere is UNVERIFIED here.
 
 NO VALUE IS EVER INVENTED.  Fields that could not be retrieved are the literal
 string ``UNKNOWN`` (not 0, not a plausible placeholder).  ``price``,
@@ -295,7 +303,7 @@ class HttpClient:
         "arthor.docking.org": 0.15,
         "pubchem.ncbi.nlm.nih.gov": 0.34,
         "www.ebi.ac.uk": 0.34,
-        "mcule.com": 0.5,
+        "mcule.com": 1.5,
     }
 
     def __init__(self, cache_dir: str, min_interval: float = 0.34,
@@ -312,6 +320,13 @@ class HttpClient:
         self._lock = threading.Lock()
         self._sems: Dict[str, threading.Semaphore] = {
             h: threading.Semaphore(n) for h, n in self.HOST_CONCURRENCY.items()}
+        # Circuit breaker: after this many consecutive throttling responses a
+        # host is considered rate-limited for the rest of the run.  Further
+        # requests to it return immediately with status 429 and error
+        # "circuit_open", so a large input list degrades to an honest,
+        # explicitly-recorded coverage gap instead of hours of retry backoff.
+        self.throttle_streak: Dict[str, int] = Counter()
+        self.circuit_open: Dict[str, str] = {}
         self.stats = Counter()
         self.endpoints_hit: Dict[str, int] = Counter()
 
@@ -364,6 +379,14 @@ class HttpClient:
             cached["from_cache"] = True
             return cached
 
+        host = urllib.parse.urlparse(url).netloc
+        if host in self.circuit_open:
+            self.stats["circuit_open_skipped"] += 1
+            return {"status": 429, "text": "", "url": url, "method": method,
+                    "body": body, "retrieved_utc": utc_now(),
+                    "from_cache": False,
+                    "error": f"circuit_open: {self.circuit_open[host]}"}
+
         hdrs = {"User-Agent": USER_AGENT, "Accept": "*/*"}
         if headers:
             hdrs.update(headers)
@@ -396,11 +419,20 @@ class HttpClient:
                 except Exception:
                     rec["text"] = ""
                 rec["retrieved_utc"] = utc_now()
-                # 404 from PubChem/ChEMBL is a legitimate "not found" answer.
+                # 404 from PubChem/ChEMBL is a legitimate "not found" answer;
+                # 401/403 mean credentials are required.  Those are final.
                 if e.code in (400, 404, 401, 403):
                     break
                 if attempt == self.max_retries:
                     rec["error"] = f"HTTPError {e.code}"
+                elif e.code in (408, 425, 429):
+                    # Throttled.  Honour Retry-After when the server sends one,
+                    # otherwise back off hard -- this is not a miss.
+                    try:
+                        wait = float(e.headers.get("Retry-After") or 0)
+                    except (TypeError, ValueError):
+                        wait = 0.0
+                    time.sleep(max(wait, 5.0 * attempt))
                 else:
                     time.sleep(1.5 * attempt)
             except Exception as e:
@@ -413,16 +445,35 @@ class HttpClient:
                 if sem is not None:
                     sem.release()
 
+        with self._lock:
+            if rec["status"] in (408, 425, 429):
+                self.throttle_streak[host] += 1
+                if (self.throttle_streak[host] >= 5
+                        and host not in self.circuit_open):
+                    self.circuit_open[host] = (
+                        f"{self.throttle_streak[host]} consecutive throttling "
+                        f"responses; host rate-limited, stopped querying it at "
+                        f"{utc_now()}")
+                    print(f"    [circuit-open] {host} is rate-limiting; "
+                          f"remaining requests to it will be recorded as "
+                          f"coverage gaps rather than retried",
+                          file=sys.stderr)
+            elif 200 <= rec["status"] < 400:
+                self.throttle_streak[host] = 0
+
         self.stats["network"] += 1
         self.stats[f"status_{rec['status']}"] += 1
         base = url.split("?")[0]
         self.endpoints_hit[base] += 1
-        # Only cache DEFINITIVE answers.  A transport failure (status 0) or a
-        # 5xx is not an answer -- caching it would make a transient network
-        # blip permanently indistinguishable from a real negative result, and
-        # a rerun would silently inherit the gap.  Those are left uncached so
-        # the next run retries them.
-        if 200 <= rec["status"] < 500:
+        # Only cache DEFINITIVE answers.  A transport failure (status 0), a
+        # 5xx, or a throttling response (408/425/429) is not an answer --
+        # caching it would make a transient blip permanently indistinguishable
+        # from a real negative result, and a rerun would silently inherit the
+        # gap.  Those are left uncached so the next run retries them.
+        # (Learned the hard way: Mcule's anonymous API starts returning 429
+        # under sustained use, and 429 < 500, so an earlier version of this
+        # check cached seven rate-limit responses as if they were real misses.)
+        if 200 <= rec["status"] < 500 and rec["status"] not in (408, 425, 429):
             self._write_cache(key, rec)
         else:
             self.stats["uncached_transient_failure"] += 1
@@ -1144,10 +1195,24 @@ def main(argv: Optional[List[str]] = None) -> int:
                     help="comma-separated resolvers to skip "
                          "(pubchem,unichem,chembl,mcule,arthor)")
     ap.add_argument("--arthor-limit", type=int, default=200)
+    ap.add_argument("--arthor-dbs", default="",
+                    help="comma-separated Arthor database names to query "
+                         "(default: all of ARTHOR_DATABASES). Use to keep large "
+                         "lists tractable, e.g. "
+                         "--arthor-dbs In-Stock-19Q4-14.1M,REAL-Database-22Q1,"
+                         "MMcule-In-Stock-25Q3-6.5M . Whatever subset is used is "
+                         "recorded in the provenance JSON so coverage stays honest.")
+    ap.add_argument("--list-arthor-dbs", action="store_true",
+                    help="print the configured Arthor databases and exit")
     ap.add_argument("--min-interval", type=float, default=0.34,
                     help="minimum seconds between calls to the same host")
     ap.add_argument("--limit", type=int, default=0, help="debug: first N only")
     args = ap.parse_args(argv)
+
+    if args.list_arthor_dbs:
+        for d in ARTHOR_DATABASES:
+            print(f"{d['db']:<36} {d['kind']:<14} {d['snapshot']:<10} {d['vendor']}")
+        return 0
 
     if not _HAVE_RDKIT:
         print(f"FATAL: rdkit unavailable ({_RDKIT_ERR}). Structure "
@@ -1159,7 +1224,18 @@ def main(argv: Optional[List[str]] = None) -> int:
     cache_dir = args.cache_dir or os.path.join(args.outdir, "cache")
     http = HttpClient(cache_dir, min_interval=args.min_interval,
                       refresh=args.refresh)
-    res = Resolver(http, skip={x.strip() for x in args.skip.split(",") if x.strip()},
+    adbs = None
+    if args.arthor_dbs.strip():
+        want = {x.strip() for x in args.arthor_dbs.split(",") if x.strip()}
+        adbs = [d for d in ARTHOR_DATABASES if d["db"] in want]
+        missing = want - {d["db"] for d in adbs}
+        if missing:
+            raise SystemExit(f"unknown Arthor database(s): {sorted(missing)}. "
+                             f"Run --list-arthor-dbs to see valid names.")
+        print(f"[sourceability] Arthor restricted to {len(adbs)} of "
+              f"{len(ARTHOR_DATABASES)} databases: {sorted(want)}")
+    res = Resolver(http, arthor_dbs=adbs,
+                   skip={x.strip() for x in args.skip.split(",") if x.strip()},
                    arthor_limit=args.arthor_limit)
 
     structs: List[Structure] = []
@@ -1204,6 +1280,7 @@ def main(argv: Optional[List[str]] = None) -> int:
         "n_master_rows": len(master),
         "cache_location": os.path.abspath(cache_dir),
         "http_stats": dict(http.stats),
+        "hosts_rate_limited_circuit_open": dict(http.circuit_open),
         "endpoints_hit": dict(http.endpoints_hit),
         "arthor_databases_queried": res.arthor_dbs,
         "classification_counts": dict(Counter(

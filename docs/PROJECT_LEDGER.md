@@ -1279,3 +1279,103 @@ path is analogue retrieval and its redocking.
 **Next intended step**
 Complete the analogue lane, co-fold the top sourceable molecules, then build
 FINAL_SOURCEABLE_PAR2_TOP20.
+
+---
+
+## 2026-09-06 16:30 UTC — in-stock catalogue searched; retrieval returns a negative result
+
+**Branch:** `yonsei-final10-v2`
+**Project stage:** Sourceable-hit sprint; ENAMINE_IN_STOCK lane complete.
+
+**Objective of the change**
+Search a real, local, in-stock catalogue with proper ECFP4/Tanimoto against the
+32 frozen seeds, rather than relying only on SmallWorld's graph-edit-distance
+search, and enforce compute discipline across the three VMs.
+
+**Files and systems changed**
+- Added `11_SOURCEABLE/analogues/ENAMINE_IN_STOCK_LANE.md`,
+  `ZINC_INSTOCK_HITS.csv`, `POSCONTROL_HITS.csv` and their summaries.
+- Reweighted the co-folding evidence family in `v3_final_sourceable_panel.py`
+  and removed every path that could impute a missing value.
+- Stopped `a100` and `a100-40`.
+
+**What was completed**
+- Downloaded 430 ZINC20 in-stock tranche files (258 MB, **3,971,098 molecules**)
+  to `h3` and ran a streaming ECFP4 r=2 2048-bit Tanimoto search against all 32
+  seeds, excluding the 22,028 InChIKeys the campaign has already screened.
+- Ran a positive control over the same catalogue.
+- Compute audit and enforcement (see below).
+
+**Decisions made and why**
+- **The official Enamine SDFs could not be used: they are behind a login wall.**
+  Every `/component/download/?view=file&f=<id>` link returns an HTML
+  "Login - Enamine" page. No account was created and no credentials entered.
+  `zinc20.docking.org` additionally now serves a "Verify you're human"
+  challenge, which was **not** bypassed. `files.docking.org/2D/` — the plain
+  file server, no login, no challenge — was used as the substitute, and is
+  labelled as a substitute rather than presented as the Enamine collection.
+- The purchasability tier was resolved **empirically**, not assumed: tiers D and
+  E hold 8.8M and 18M molecules in a *single* MW/logP bin, which is
+  make-on-demand scale, so only tiers A/B/C/F were downloaded. The
+  ENAMINE_IN_STOCK lane is therefore kept strictly separate from
+  ENAMINE_REAL_MAKE_ON_DEMAND.
+- Boltz affinity was demoted to 10% of the co-folding family (~2% of the final
+  score). Pocket occupancy, GNINA/co-fold convergence and sample consistency
+  carry 75% of that family, because pose recovery is what the AZ8838 validation
+  actually demonstrated the model can do, whereas its affinity head scores
+  several de novo designs above a genuine crystallographic binder.
+
+**Tests and verification actually executed**
+- Catalogue search: 3,971,098 molecules read, 3,448,188 within the 200-600 Da
+  envelope, **7 hits** at >= 0.50, all in the 0.50-0.60 band, best **0.556**,
+  from 2 of 32 seeds. 0 errors across 430 files.
+- **Positive control on the identical catalogue: 362 hits** - propranolol 128,
+  ibuprofen 124, imatinib 84, GB88 26, AZ8838 0; 6 at >= 0.80, 36 at 0.70-0.80,
+  80 at 0.60-0.70; best Tanimoto 1.00 (exact match retrieved). The pipeline
+  finds neighbours when they exist.
+- Fail-closed hash check on `h3` before trusting any docking: 5NDD receptor
+  `c2411d4d...09c4e`, 5NDZ `af9f9eec...220b92`, GNINA
+  `3340c1f4...6f72172` - all three match the values recorded in
+  `EX32_RUN_PROVENANCE.json` exactly.
+- Pre-fix co-fold consistency values audited: only two files carry the column
+  and both are post-fix (max 1.698 A). No contaminated value survives anywhere.
+
+**Results**
+The negative result is genuine and is the single most consequential finding of
+this sprint.
+
+**Failures or unresolved uncertainty**
+- **Close purchasable analogues of our de novo chemistry do not exist.** The
+  seeds are high-Fsp3 sugar/terpenoid-like BRICS constructions; in-stock
+  catalogues are dominated by flat aromatic amide chemistry. A TOP20 of close
+  analogues is not achievable from in-stock space, and claiming one would be
+  false.
+- The official Enamine collection was not searched; a ZINC substitute was.
+- Only ECFP4 was applied in this lane; a pharmacophore-preserving hop below
+  0.50 would not appear. A wider 0.35-floor pass is running to address this.
+- The RX-fallback vendor run died on Mcule HTTP 429 quota exhaustion and was
+  restarted with Mcule skipped. Some PubChem `fastidentity` calls return
+  HTTP 500 for individual structures; those are recorded as failures.
+- No price, quantity, purity or lead time has been retrieved for ANY compound
+  in the project. Every route carrying them is credential-gated.
+
+**Effect on the overall project**
+The deliverable changes shape: the panel will be built from real compounds that
+preserve the PAR2 interaction solution at moderate similarity, and the
+connection to the de novo chemistry must be described honestly as archetype- and
+pharmacophore-level, not close analogy.
+
+**Compute discipline enacted**
+- `a100`: was running a co-fold of an EX8-selected set that the corrected plan
+  supersedes. Killed and the instance STOPPED.
+- `a100-40`: finished the 18 control co-folds; results pulled to the Mac; then
+  idle, so the instance was STOPPED.
+- `h3`: genuinely busy - benchmark EX8, active-state counter-screen and the
+  similarity search. KEPT.
+- Both A100s are TERMINATED; one will be restarted only when there is a real
+  finalist co-folding batch to run.
+
+**Next intended step**
+Select ~40-60 diverse, verified-sourceable real compounds, run EX32 + ProLIF on
+them, co-fold the survivors on one A100, then build
+`FINAL_SOURCEABLE_PAR2_TOP20.{csv,md}`.

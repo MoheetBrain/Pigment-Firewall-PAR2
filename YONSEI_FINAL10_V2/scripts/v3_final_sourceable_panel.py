@@ -258,13 +258,37 @@ def main() -> int:
         sub["_cnn_block"] = nanmean(
             sub.assign(_a=z(sub.CNNscore), _b=z(sub.CNNaffinity)), ["_a", "_b"])
         sub["F2_pose_physics"] = nanmean(sub, ["_vina_block", "_cnn_block"])
-        # co-folding
-        conf = first_present(sub, ["cofold_confidence"])
-        occ = first_present(sub, ["pocket_occupancy"])
-        cons = first_present(sub, ["cofold_consistency_rmsd"])
-        rms = first_present(sub, ["cofold_GNINA_pose_RMSD", "cofold_gnina_rmsd"])
-        sub["F3_cofolding"] = nanmean(sub.assign(
-            _a=z(conf), _b=z(occ), _c=z(-cons), _d=z(-rms)), ["_a", "_b", "_c", "_d"])
+        # ---- F3 CO-FOLDING -------------------------------------------------
+        # Deliberately weighted AWAY from the Boltz affinity head. That head is
+        # a demonstrably weak discriminator on this target: it assigns the
+        # crystallographic binder AZ8838 a binder probability of only 0.583 and
+        # ranks several de novo designs above it, which is not credible.
+        # Structural evidence - does it land in the pocket, does it agree with
+        # the docked pose, do independent diffusion samples agree - is what the
+        # AZ8838 validation actually demonstrated the model can do
+        # (ligand RMSD 1.22 A, centroid displacement 0.69 A).
+        cofold_terms = {
+            "pocket_occupancy":  (z(first_present(sub, ["pocket_occupancy"])),        0.30),
+            "gnina_convergence": (z(-first_present(sub, ["cofold_GNINA_pose_RMSD",
+                                                         "cofold_gnina_rmsd"])),      0.25),
+            "sample_consistency": (z(-first_present(sub, ["cofold_consistency_rmsd"])), 0.20),
+            "confidence":        (z(first_present(sub, ["cofold_confidence"])),       0.15),
+            "binder_probability": (z(first_present(sub, ["cofold_binder_probability"])), 0.07),
+            "affinity":          (z(-first_present(sub, ["cofold_affinity_pred_value"])), 0.03),
+        }
+        # Renormalise over the terms actually measured. A missing term
+        # contributes NOTHING - it is never imputed to zero, which would
+        # silently score an unmeasured molecule as merely average.
+        num = pd.Series(0.0, index=sub.index)
+        den = pd.Series(0.0, index=sub.index)
+        for _name, (vals, wt) in cofold_terms.items():
+            ok = vals.notna()
+            num = num.add((vals.where(ok, 0.0) * wt), fill_value=0.0)
+            den = den.add(pd.Series(np.where(ok, wt, 0.0), index=sub.index),
+                          fill_value=0.0)
+        sub["F3_cofolding"] = np.where(den > 0, num / den.replace(0, np.nan), np.nan)
+        sub["n_cofold_terms"] = sum(v.notna().astype(int)
+                                    for v, _w in cofold_terms.values())
         # chemistry envelope
         env = pd.DataFrame(index=sub.index)
         mw = first_present(sub, ["mw", "MW"]); env["mw"] = np.clip(1 - (mw - 350).abs() / 250, 0, 1)
@@ -294,12 +318,19 @@ def main() -> int:
 
     # ---- combine families, renormalising over those actually present -------
     fams = list(FAMILY_WEIGHTS)
+    # A family that was not measured contributes neither numerator nor
+    # denominator. Nothing is imputed: a missing measurement never becomes 0,
+    # and a molecule is never credited for evidence that does not exist.
     W = pd.DataFrame({f: np.where(df[f].notna(), FAMILY_WEIGHTS[f], 0.0)
                       for f in fams}, index=df.index)
     contrib = W.sum(axis=1)
-    num = sum(df[f].fillna(0.0) * W[f] for f in fams)
+    num = sum(df[f].where(df[f].notna(), 0.0) * W[f] for f in fams)
     df["PANEL_SCORE"] = np.where(contrib > 0, num / contrib.replace(0, np.nan), np.nan)
     df["n_evidence_families"] = (W > 0).sum(axis=1)
+    df["evidence_weight_covered"] = contrib / sum(FAMILY_WEIGHTS.values())
+    # A molecule scored on very little evidence is flagged, not silently ranked
+    # alongside a fully-evidenced one.
+    df["thin_evidence"] = df["evidence_weight_covered"] < 0.60
 
     # ---- DIVERSITY-CONSTRAINED SELECTION -----------------------------------
     df = df.sort_values("PANEL_SCORE", ascending=False).reset_index(drop=True)
