@@ -115,13 +115,26 @@ def main() -> int:
         seed = parts[2].lstrip("s") if len(parts) > 2 else ""
 
         models = sorted(pd_dir.glob("*model_*.pdb"))
-        lig_sets, rec = [], None
+        # Each diffusion sample is produced in its OWN global frame, so ligand
+        # coordinates are not comparable until the receptors are superposed.
+        # Align every model's CA trace onto model 0 and carry the ligand along.
+        lig_sets, rec, ref_ca = [], None, None
         for mp in models:
             prot, lig = parse_pdb(mp)
-            if rec is None and prot:
-                rec = prot
-            if lig:
-                lig_sets.append(np.array([a["xyz"] for a in lig]))
+            if not lig:
+                continue
+            ca = {a["resi"]: a["xyz"] for a in prot if a["name"] == "CA"}
+            L = np.array([a["xyz"] for a in lig])
+            if rec is None:
+                rec, ref_ca = prot, ca
+            elif ref_ca:
+                common = sorted(set(ca) & set(ref_ca))
+                if len(common) >= 3:
+                    P = np.array([ca[r] for r in common])
+                    Q = np.array([ref_ca[r] for r in common])
+                    R, t = kabsch(P, Q)
+                    L = (R @ L.T).T + t
+            lig_sets.append(L)
 
         # confidence + affinity JSONs
         conf, aff = {}, {}

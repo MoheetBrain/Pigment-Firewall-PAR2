@@ -58,3 +58,15 @@ YONSEI_FINAL10_V2/10_FINAL/CONSENSUS_FINAL/
 YONSEI_FINAL10_V2/10_FINAL/EVIDENCE_real.csv
 YONSEI_FINAL10_V2/10_FINAL/LIGAND_TABLE_COMBINED.csv
 YONSEI_FINAL10_V2/10_FINAL/ROBUST_ANCHORS.csv
+
+# Sourceable-hit sprint: raw co-folding poses and bulk retrieval records.
+# Summaries are committed; raw structures are reproducible and live outside git.
+YONSEI_FINAL10_V2/11_SOURCEABLE/cofold/*_results/
+YONSEI_FINAL10_V2/11_SOURCEABLE/cofold/*.tgz
+YONSEI_FINAL10_V2/11_SOURCEABLE/cofold/*_yaml/
+YONSEI_FINAL10_V2/11_SOURCEABLE/cofold/validation/
+YONSEI_FINAL10_V2/11_SOURCEABLE/analogues/work/
+YONSEI_FINAL10_V2/11_SOURCEABLE/sourceability/cache/
+YONSEI_FINAL10_V2/11_SOURCEABLE/activestate/work/
+YONSEI_FINAL10_V2/11_SOURCEABLE/benchmark/prep_campaign/
+YONSEI_FINAL10_V2/11_SOURCEABLE/analogues/REAL_COMPOUNDS_WITH_SEED_SIMILARITY.csv

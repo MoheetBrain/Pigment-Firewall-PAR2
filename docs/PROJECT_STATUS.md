@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-09-06 · branch `yonsei-final10-v2` · **sourceable-hit sprint in progress**
+Last updated: 2026-09-06 (vendor data resolved; co-folding validated) · branch `yonsei-final10-v2` · **sourceable-hit sprint in progress**
 
 ## Project Objective
 
@@ -30,18 +30,23 @@ Completed this session:
 - **STEP 1 — de novo seed set frozen.** 32 seeds selected diversity-aware from
   the 16,314-row de novo universe (26 × 5NDD orthosteric, 6 × 5NDZ allosteric),
   30 EX32-supported, 30 unique Murcko scaffolds, spanning three novelty bands.
-- **Co-folding target defined and verified.** Wild-type human PAR2 residues
-  59–370, no BRIL/T4L fusion, no thermostabilising mutations, N-terminal
-  tethered-ligand region deliberately excluded.
-- **Compute restored.** All three preserved VMs started; Boltz-2.2.1 installed
-  and CUDA-verified on both A100s.
-- **Network access confirmed working** (PubChem, ChEMBL, Enamine, MolPort) —
-  this is the constraint that blocked the previous sprint entirely.
+- **Co-folding validated.** Boltz-2 reproduces the AZ8838 crystal binding mode
+  blind — ligand RMSD 1.22 Å, centroid displacement 0.69 Å, backbone 1.16 Å
+  over 295 Cα, consistent across all 5 diffusion samples.
+- **The vendor gap is closed for the reference panel.** Real catalogue IDs now
+  exist for AZ8838, AZ3451, both GB88 stereoisomers, I-287, propranolol and the
+  agonist controls, each with a source URL and retrieval date.
+- **Sourceability of the existing panel measured: 22 of 25 are NOT_SOURCEABLE.**
+  The de novo designs cannot be bought. This is the empirical justification for
+  the whole sprint.
+- Co-folding batch 1 complete (references + IDEAL_DE_NOVO_TOP5, 21 jobs);
+  control panel (18 jobs) and real-compound fallback (88 jobs) running.
+- Fallback pool built: 3,095 already-docked real compounds scored for
+  similarity to the frozen seeds (225 at Tanimoto ≥ 0.30, max 0.615).
 
-In flight (five parallel lanes): real-analogue retrieval and redocking;
+In flight: real-analogue retrieval and redocking (the critical path);
 active-vs-decoy benchmark and IFP null calibration; active-state
-counter-screen; vendor/sourceability resolution and reference control panel;
-and co-folding on the A100s.
+counter-screen; sourceability of the retrieved analogues.
 
 ## Current Branch
 
@@ -175,17 +180,37 @@ box 5NDZ centre `1.356 12.419 48.400` size `20.702 17.885 25.525`.
   bare request.
 - Boltz-2.2.1 installed on `a100` and `a100-40`; `torch.cuda.is_available()`
   True on both, A100-SXM4-80GB and A100-SXM4-40GB respectively.
-- **Not yet run:** the AZ8838 co-folding validation job was launched and was
-  still downloading CCD data at the time of this commit. Its result is NOT
-  recorded here and must not be assumed.
+- **Co-folding reference validation PASSED.** AZ8838 co-folded blind into
+  wild-type PAR2 recovers its crystal pose: over 295 common Cα, backbone RMSD
+  0.98–1.16 Å, ligand RMSD 1.22–1.27 Å, centroid displacement 0.69–0.89 Å,
+  across all five diffusion samples; confidence 0.953–0.960.
+- Batch-1 co-folding: 21/21 jobs, 0 failures, confidence 0.92–0.96, pocket
+  occupancy 0.82–1.00, 0–1 clashes. Sample consistency after receptor
+  superposition: AZ8838 0.74 Å, AZ3451 0.82 Å, de novo 1.16–1.70 Å.
+- Control structures independently verified by recomputing InChIKeys from
+  SMILES: GB88 (2S,3S), GB88 allo-Ile, GB110, GB83, K-14585 — all five matched
+  their claimed keys exactly. Propranolol corrected to (S) after CIP check.
+- Sourceability of the existing panel: 22/25 NOT_SOURCEABLE, 1 IN_STOCK,
+  2 REGISTERED_NOT_VERIFIED.
 - `python -c "import ast; ast.parse(...)"` on `v3_freeze_denovo_seeds.py`:
   passed.
 
 ## Known Failures and Limitations
 
-- Every vendor, catalogue ID, price and stock field in the existing
-  `FINAL_TOP20_DIVERSE_PAR2_CANDIDATES.csv` is still the literal string
-  `PENDING`. Resolving this is an active lane, not a finished result.
+- **The existing de novo panel is essentially unbuyable**: 22 of 25 members
+  resolve to NOT_SOURCEABLE against PubChem, ChEMBL, Mcule and Arthor. Prices
+  and lead times remain UNKNOWN even for the molecules that were found.
+- MolPort, the Enamine store API, eMolecules and Chemspace REST all require
+  credentials or API keys this session does not hold; no query was completed
+  against them. Enamine chemistry was reached through SmallWorld's
+  Enamine-SC-Stock and REAL maps instead.
+- The Boltz affinity module is a weak discriminator: it gives the
+  crystallographic binder AZ8838 a binder probability of only 0.583 and scores
+  several de novo designs above it. Used only as a low-weight relative signal.
+- A frame-alignment defect in `v3_analyse_cofold.py` initially reported 13–17 Å
+  sample consistency because diffusion samples are produced in independent
+  global frames. Fixed by superposing receptors first; the bad values were
+  never used downstream.
 - 207 ranked finalists were docked as the wrong stereoisomer and 439 are
   stereochemically ambiguous; they are excluded from seeding but the affected
   panel rows have not yet been re-docked.

@@ -1,0 +1,7 @@
+cofold_id,smiles,pocket,role,note
+CTRL_GB88,CC[C@H](C)[C@@H](C(=O)N1CCC2(CC1)C=CC3=CC=CC=C23)NC(=O)[C@H](CC4CCCCC4)NC(=O)C5=CC=NO5,5NDD_orthosteric,biased_ligand_counter_control,"Gq antagonist / Gi-ERK-Rho AGONIST; verified (2S,3S) CID 57330164"
+CTRL_GB88_alloIle,CC[C@@H](C)[C@@H](C(=O)N1CCC2(CC1)C=CC3=CC=CC=C23)NC(=O)[C@H](CC4CCCCC4)NC(=O)C5=CC=NO5,5NDD_orthosteric,wrong_stereoisomer_negative_control,allo-Ile record CID 73755230 that a PubChem name search returns; included to test whether co-folding can tell the two apart
+CTRL_GB110,CC[C@H](C)[C@@H](C(=O)NCC1=CC(=CC=C1)C(=O)N2CCC(CC2)CN)NC(=O)[C@H](CC3CCCCC3)NC(=O)C4=CC=NO4,5NDD_orthosteric,agonist_control,"PAR2 AGONIST, EC50 0.28 uM; CID 49788311"
+CTRL_GB83,CC[C@H](C)[C@@H](C(=O)N1CCC2(CCC3=CC=CC=C32)CC1)NC(=O)[C@H](CC4CCCCC4)NC(=O)C5=CC=NO5,5NDD_orthosteric,antagonist_contested,IC50 ~2 uM; functional label contested (reported as agonist by Heo 2022); CID 49788574
+CTRL_K14585,C1CCN(C1)CC2=CN(C3=C2C=C(C=C3)NC(=O)NCC(=O)N[C@@H](CCCCN)C(=O)N[C@@H](CC4=CC=CC=C4)C(=O)NC(C5=CC=CC=C5)C6=CC=CC=C6)CC7=C(C=CC=C7Cl)Cl,5NDD_orthosteric,peptidomimetic_antagonist,"Ki 0.627 uM; partial/biased agonist at high conc; CID 11557006 (L-Phe, matches primary lit)"
+CTRL_PROPRANOLOL,CC(C)NC[C@H](O)COc1cccc2ccccc12,5NDD_orthosteric,repurposing_probe,"(S)-propranolol; approved, cheap, topically formulated; kept in the reference panel only"

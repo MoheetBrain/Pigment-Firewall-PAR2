@@ -1193,3 +1193,89 @@ underperforms.
 **Next intended step**
 Complete batch 1, then co-fold the top 40–60 sourceable analogues once the
 retrieval lane reports.
+
+---
+
+## 2026-09-06 15:10 UTC — vendor data resolved; co-folding batches 1 and controls
+
+**Branch:** `yonsei-final10-v2`
+**Project stage:** Sourceable-hit sprint; five lanes running in parallel.
+
+**Objective of the change**
+Record the first hard vendor data the project has ever had, the completed
+co-folding of the reference and IDEAL_DE_NOVO_TOP5 molecules, and the
+real-compound fallback lane.
+
+**Files and systems changed**
+- `11_SOURCEABLE/cofold/`: batch-1 results and summary, control-panel inputs,
+  real-compound fallback inputs and evidence.
+- `11_SOURCEABLE/analogues/`: `REAL_COMPOUNDS_WITH_SEED_SIMILARITY.csv`,
+  `RX_FALLBACK_TOP400.csv`.
+- Fixed a frame-alignment defect in `v3_analyse_cofold.py`.
+
+**What was completed**
+- **The vendor gap is closed for the reference panel.** Real catalogue IDs were
+  retrieved for AZ8838, AZ3451, both GB88 stereoisomers, I-287, propranolol and
+  the agonist controls. Every field carries its source URL and retrieval date.
+- **Sourceability of the existing panel measured: 22 of 25 are NOT_SOURCEABLE**,
+  1 IN_STOCK, 2 REGISTERED_NOT_VERIFIED. The de novo designs cannot be bought.
+  This is the empirical justification for the whole sprint.
+- Co-folding batch 1 complete (7 molecules x 3 seeds = 21 jobs) with affinity.
+- Control co-folding launched (6 molecules x 3 seeds = 18 jobs) and
+  real-compound fallback co-folding launched (44 molecules x 2 seeds = 88 jobs).
+- Fallback pool built: 3,095 already-docked real compounds scored for similarity
+  to the frozen seeds; 225 at Tanimoto >= 0.30, 77 at >= 0.40, max 0.615.
+
+**Decisions made and why**
+- A real-compound fallback lane was built in parallel with analogue retrieval so
+  that the deliverable does not depend on a single lane succeeding. These are
+  molecules that already carry EX8 evidence from the completed campaign.
+- Both GB88 stereoisomers are co-folded. A literature check found that a PubChem
+  name search for GB88 returns the allo-Ile record (CID 73755230), not the
+  published (2S,3S) compound (CID 57330164). Both were verified by recomputing
+  InChIKeys from SMILES. Including both tests whether our pipeline can tell them
+  apart, and prevents the project from ordering the wrong isomer.
+- The control panel is kept strictly separate from the candidate panel and will
+  not be used to fill the TOP20 quota.
+
+**Tests and verification actually executed**
+- Batch-1 co-folding, 21/21 jobs, 0 failures. Confidence 0.92-0.96 across all
+  seven molecules; pocket occupancy 0.82-1.00; 0-1 clashes.
+- Sample-to-sample consistency, computed after receptor superposition:
+  AZ8838 0.74 A, AZ3451 0.82 A, de novo designs 1.16-1.70 A. The two
+  crystallographic references are the most self-consistent, which is the
+  expected ordering and a genuine discriminating signal.
+- Independent structure verification: recomputed InChIKeys from SMILES for
+  GB88 (2S,3S), GB88 allo-Ile, GB110, GB83, K-14585 — all five matched their
+  claimed keys exactly.
+- Propranolol: the enantiomer was checked by RDKit CIP assignment and corrected
+  to (S) after an initial (R) SMILES was written.
+
+**Results**
+Vendor data is real for the first time in this project. Co-folding evidence
+exists for the references and the five IDEAL de novo designs.
+
+**Failures or unresolved uncertainty**
+- **A frame-alignment defect was found and fixed in `v3_analyse_cofold.py`.**
+  Sample-to-sample consistency was being computed on raw coordinates, but each
+  diffusion sample is generated in its own global frame, so the first run
+  reported nonsensical 13-17 A "consistency". Receptors are now superposed
+  before ligand poses are compared. The earlier numbers were never used.
+- MolPort, the Enamine store API, eMolecules and Chemspace REST all require
+  credentials or keys this session does not hold; no query was completed
+  against them. Enamine chemistry was reached instead through SmallWorld's
+  Enamine-SC-Stock and REAL maps. Recorded, not worked around.
+- No bulk catalogue SDF was downloadable without registration, so the planned
+  local-fingerprinting route on h3 was unavailable.
+- The Boltz affinity module remains a weak discriminator: it scores several de
+  novo designs as better binders than AZ8838, which is not credible. Used only
+  as a relative signal at low weight.
+- Analogue retrieval and the benchmark, counter-screen lanes have not reported.
+
+**Effect on the overall project**
+The deliverable is no longer blocked on vendor data. The remaining critical
+path is analogue retrieval and its redocking.
+
+**Next intended step**
+Complete the analogue lane, co-fold the top sourceable molecules, then build
+FINAL_SOURCEABLE_PAR2_TOP20.
