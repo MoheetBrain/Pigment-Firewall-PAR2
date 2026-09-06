@@ -1117,3 +1117,79 @@ Complete and record the co-folding reference validation; retrieve real
 analogues across Enamine/Chemspace/MolPort/Mcule/eMolecules/PubChem/ChEMBL;
 redock them EX8 → EX32; finish the benchmark, counter-screen and vendor lanes;
 then build `FINAL_SOURCEABLE_PAR2_TOP20.{csv,md}`.
+
+---
+
+## 2026-09-06 14:46 UTC — co-folding reference validation passes
+
+**Branch:** `yonsei-final10-v2`
+**Project stage:** Sourceable-hit sprint; co-folding lane validated and running.
+
+**Objective of the change**
+Establish whether Boltz-2 can reproduce a known PAR2 binding mode *without
+being given the answer*, before spending GPU time on candidates. If the
+reference cannot recover its own pocket, no candidate co-fold is worth
+anything.
+
+**Files and systems changed**
+- Added `YONSEI_FINAL10_V2/scripts/v3_build_cofold_inputs.py`,
+  `v3_analyse_cofold.py` and `v3_final_sourceable_panel.py`.
+- Added `YONSEI_FINAL10_V2/11_SOURCEABLE/cofold/COFOLD_VALIDATION.md` and the
+  batch-1 molecule list and job manifest.
+
+**What was completed**
+- Boltz-2.2.1 deployed on `a100`; the PAR2 MSA (6,463 sequences, ColabFold
+  MMseqs2) computed once and cached for reuse across all ligands.
+- The AZ8838 / 5NDD reference co-fold ran and **recovered the crystal binding
+  mode**. Over 295 common Cα atoms: backbone RMSD 0.98–1.16 Å, ligand RMSD
+  1.22–1.27 Å, ligand centroid displacement **0.69–0.89 Å**, across all five
+  diffusion samples. Confidence 0.953–0.960, ligand ipTM 0.974–0.980.
+- Batch 1 launched: 7 molecules (AZ8838, AZ3451, IDEAL_DE_NOVO_TOP5) × 3 seeds
+  = 21 jobs.
+
+**Decisions made and why**
+- The GNINA pose is never supplied to the model. The only spatial information
+  is the identity of the 17 crystallographic contact residues with a 6 Å
+  `max_distance`. This is what makes co-folding an INDEPENDENT structural
+  hypothesis rather than a restatement of the docking result.
+- Ligand agreement is reported as a symmetry-free nearest-neighbour RMSD, which
+  slightly under-estimates a true atom-correspondence RMSD. It is therefore
+  used only to separate "same site and orientation" from "different", and the
+  centroid displacement — which carries no such caveat — is reported alongside
+  it.
+- `--no_kernels` was required: the first run crashed on
+  `ModuleNotFoundError: cuequivariance_torch`. Recorded rather than hidden.
+
+**Tests and verification actually executed**
+- `ast.parse` on all three new scripts: PASSED.
+- AZ8838 co-fold vs crystal, computed from the structures: best ligand RMSD
+  1.22 Å, best centroid displacement 0.69 Å. PASSED.
+- Boltz affinity module output for AZ8838: `affinity_pred_value` 0.686,
+  `affinity_probability_binary` 0.583.
+
+**Results**
+Co-folding is validated as an orthogonal structural filter for this target.
+
+**Failures or unresolved uncertainty**
+- **The Boltz affinity module is a weak discriminator here.** It gives a
+  genuine crystallographic binder a binder probability of only 0.583, and its
+  predicted affinity corresponds to a considerably weaker figure than AZ8838's
+  real ~0.4 µM potency. The absolute value is therefore NOT trustworthy and is
+  retained only as a relative anchor. Candidate binder probabilities must be
+  read against 0.583, not against 1.0.
+- Co-folding predicts structure, not function. It cannot separate an antagonist
+  from a biased agonist.
+- The first co-folding attempt crashed on a missing CUDA kernel package; the
+  successful run used `--no_kernels` and is therefore slower than optimal.
+- `a100` boot disk is at 90% (11 GB free), which caps retained output.
+
+**Effect on the overall project**
+Evidence family 3 (co-folding) is now trustworthy enough to carry weight in the
+final ranking. Its weight is set at 0.20, below interaction geometry (0.30),
+because a validated pose-recovery capability is not the same as a validated
+affinity capability — and the affinity half of this model demonstrably
+underperforms.
+
+**Next intended step**
+Complete batch 1, then co-fold the top 40–60 sourceable analogues once the
+retrieval lane reports.
