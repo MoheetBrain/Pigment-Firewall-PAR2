@@ -1,0 +1,60 @@
+{
+  "inputs": {
+    "consensus_rows": 21149,
+    "ex32_rows": 535,
+    "robust_anchor_rows": 5370
+  },
+  "generated_utc": "2026-09-06T14:30:04.719587+00:00",
+  "denovo_ligand_pocket_rows": 16314,
+  "denovo_unique_molecules": 14825,
+  "gates": {
+    "start": 16314,
+    "has_prepared_smiles": 16314,
+    "not_all_poses_clashing": 14336,
+    "negative_vina_affinity": 14217,
+    "stereo_not_known_wrong": 13989
+  },
+  "seeds_selected": 32,
+  "by_pocket": {
+    "5NDD_orthosteric": 26,
+    "5NDZ_allosteric": 6
+  },
+  "by_evidence_level": {
+    "EX32": 30,
+    "EX8": 2
+  },
+  "by_novelty_band": {
+    "novel_chemotype": 16,
+    "moderate_scaffold_hop": 10,
+    "reference_adjacent": 6
+  },
+  "by_stereo_flag": {
+    "OK": 25,
+    "AMBIGUOUS": 7
+  },
+  "unique_murcko_scaffolds": 30,
+  "forced_carried_forward": [
+    "DL08779",
+    "DL08960",
+    "DL10170",
+    "DL11051",
+    "DL11368",
+    "DL11846",
+    "DL12464",
+    "DL12771",
+    "DL13271",
+    "DL13598",
+    "DL13943",
+    "DL13973",
+    "DN00058",
+    "DN00079",
+    "DN00100",
+    "DN00375",
+    "DN00464",
+    "DN01005",
+    "DN01388",
+    "DN01763"
+  ],
+  "forced_not_available": [],
+  "hotspot_definition": "0.60*polar_anchor_fraction + 0.40*contact_fraction; geometric only"
+}

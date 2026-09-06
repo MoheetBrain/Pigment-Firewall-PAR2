@@ -1,0 +1,80 @@
+{
+  "uniprot": "P55085",
+  "gene": "F2RL1",
+  "construct": "wildtype residues 59-370",
+  "note": "no BRIL/T4L fusion, no thermostabilising mutations, N-terminal tethered ligand (1-58) deliberately excluded so it cannot compete for the orthosteric site",
+  "offset_uniprot_to_boltz_index": -58,
+  "pocket_residues_uniprot": {
+    "5NDD_orthosteric": [
+      78,
+      82,
+      131,
+      134,
+      135,
+      141,
+      151,
+      152,
+      155,
+      156,
+      226,
+      227,
+      228,
+      326,
+      327,
+      330,
+      331
+    ],
+    "5NDZ_allosteric": [
+      119,
+      120,
+      123,
+      124,
+      154,
+      157,
+      158,
+      161,
+      199,
+      202,
+      203,
+      210,
+      211
+    ]
+  },
+  "pocket_residues_boltz_index": {
+    "5NDD_orthosteric": [
+      20,
+      24,
+      73,
+      76,
+      77,
+      83,
+      93,
+      94,
+      97,
+      98,
+      168,
+      169,
+      170,
+      268,
+      269,
+      272,
+      273
+    ],
+    "5NDZ_allosteric": [
+      61,
+      62,
+      65,
+      66,
+      96,
+      99,
+      100,
+      103,
+      141,
+      144,
+      145,
+      152,
+      153
+    ]
+  },
+  "sequence": "FSVDEFSASVLTGKLTTVFLPIVYTIVFVVGLPSNGMALWVFLFRTKKKHPAVIYMANLALADLLSVIWFPLKIAYHIHGNNWIYGEALCNVLIGFFYGNMYCSILFMTCLSVQRYWVIVNPMGHSRKKANIAIGISLAIWLLILLVTIPLYVVKQTIFIPALNITTCHDVLPEQLLVGDMFNYFLSLAIGVFLFPAFLTASAYVLMIRMLRSSAMDENSEKKRKRAIKLIVTVLAMYLICFTPSNLLLVVHYFLIKSQGQSHVYALYIVALCLSTLNSCIDPFVYYFVSHDFRDHAKNALLCRSVRTVKQM"
+}

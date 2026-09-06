@@ -1015,3 +1015,105 @@ context from commit archaeology.
 
 **Next intended step**
 Source and test the PAR2 reference panel to settle target validity.
+
+---
+
+## 2026-09-06 14:38 UTC — freeze the de novo similarity seeds and stand up co-folding
+
+**Branch:** `yonsei-final10-v2`
+**Project stage:** Sourceable-hit selection sprint, STEP 1 complete.
+
+**Objective of the change**
+Convert the campaign from "computationally prioritised de novo designs with
+`PENDING` vendor fields" into a search for REAL, ORDERABLE molecules that
+preserve the same PAR2 binding solution. This entry covers STEP 1 (freezing the
+de novo seed set) and the co-folding infrastructure.
+
+**Files and systems changed**
+- Added `YONSEI_FINAL10_V2/scripts/v3_freeze_denovo_seeds.py`.
+- Added `YONSEI_FINAL10_V2/11_SOURCEABLE/seeds/FINAL_DE_NOVO_SIMILARITY_SEEDS.csv`
+  and `SEED_SELECTION_PROVENANCE.json`.
+- Added `YONSEI_FINAL10_V2/11_SOURCEABLE/cofold/PAR2_COFOLD_TARGET.json`,
+  `PAR2_59_370.fasta` and the two validation YAMLs.
+- Rewrote `docs/PROJECT_STATUS.md` as a current whole-project snapshot. The
+  previous revision was internally inconsistent: its "Current Stage" section
+  described a completed 16,314-job screen while its "Verification" section still
+  asserted "No GNINA docking of any de novo design has been executed", which was
+  left over from the pre-screen rehearsal. Corrected as a factual error.
+- Infrastructure: started `h3`, `a100` and `a100-40`; installed Boltz-2.2.1
+  on both A100s.
+
+**What was completed**
+- 32 de novo similarity seeds frozen: 26 × 5NDD orthosteric, 6 × 5NDZ
+  allosteric; 30 EX32-supported, 2 EX8-only; 30 unique Murcko scaffolds;
+  novelty bands 16 novel / 10 moderate scaffold hop / 6 reference-adjacent;
+  stereo flags 25 OK / 7 AMBIGUOUS, 0 known-wrong.
+- All 20 prior finalists (IDEAL_DE_NOVO_TOP5 plus the de novo members of
+  FINAL_TOP20) were force-carried into the seed set; `forced_not_available`
+  is empty, so nothing previously nominated was silently dropped.
+- Co-folding target verified: wild-type human PAR2 (UniProt P55085) residues
+  59–370, excluding the BRIL/T4L fusions, the seven thermostabilising
+  mutations, and the N-terminal tethered-ligand region.
+- Crystal pocket residues recomputed at 5.0 Å: 5NDD 17 residues, 5NDZ 13.
+
+**Decisions made and why**
+- `DESIGN_HOTSPOT_SCORE` is now defined explicitly as
+  `0.60 × polar_anchor_fraction + 0.40 × contact_fraction`, built on the
+  preparation-independent anchor geometry so it survives protomer and
+  histidine-tautomer changes. It is geometric, not a hydrogen-bond claim.
+- Correlated scores are compressed into evidence families rather than summed.
+  Vina ↔ ligand efficiency −0.958 and CNNscore ↔ CNN_VS 0.988 mean the naive
+  sum would trip- and double-count the same measurement.
+- The 207 designs docked as the wrong stereoisomer are excluded from seeding:
+  their docking evidence describes a different molecule.
+- Co-folding uses wild-type PAR2 rather than the crystallography construct,
+  because we want a prediction about the real receptor. All 5NDD pocket
+  residues are wild-type; the 5NDZ pocket carries one construct mutation
+  (G157A), which is recorded rather than silently accepted.
+- The GNINA pose is deliberately NOT given to the co-folding model. The pocket
+  is constrained by residue identity only, so co-folding produces an
+  independent structural hypothesis instead of being handed the answer.
+
+**Tests and verification actually executed**
+- `python -c "import ast; ast.parse(...)"` on `v3_freeze_denovo_seeds.py`:
+  PASSED.
+- `v3_freeze_denovo_seeds.py --n-seeds 32 --n-5ndz 6`: RAN. Gate counts
+  16,314 → 14,336 (not all-poses-clashing) → 14,217 (negative Vina affinity)
+  → 13,989 (stereo not known-wrong) → 32 seeds.
+- Residue-numbering check against UniProt P55085: all eight of Y82, H135,
+  D228, Y210, N158, C161, H227, G157 land on the expected amino acid after the
+  −58 offset. PASSED.
+- Network reachability: PubChem REST 200 (returned CID 2244 for aspirin),
+  ChEMBL API 200, enamine.net 200, api.molport.com 200, mcule.com 403.
+- `torch.cuda.is_available()`: True on `a100` (A100-SXM4-80GB) and
+  `a100-40` (A100-SXM4-40GB). Boltz-2.2.1 imports on both.
+
+**Results**
+STEP 1 is complete and the seed set is frozen. Co-folding infrastructure is
+deployed but has produced no scientific result yet.
+
+**Failures or unresolved uncertainty**
+- **The AZ8838 and AZ3451 co-folding validation jobs were launched but had NOT
+  completed at the time of this commit** — both were still downloading CCD data
+  and Boltz-2 weights. No co-folding result of any kind is claimed here. The
+  reference must recover its own pocket before any candidate co-fold is
+  trusted.
+- Vendor, catalogue, price and stock remain unresolved at this commit; that
+  lane is running but has not reported.
+- Whether high CRYSTAL_IFP_RECOVERY values are genuinely unusual is still
+  unmeasured. 66% of 5NDD pairs already satisfy all three polar anchors, so the
+  active-vs-decoy null distribution is needed before IFP weighting can be
+  justified.
+- Two seeds (SEED026, SEED032) carry no DESIGN_HOTSPOT_SCORE because they are
+  EX8-only rows without robust-anchor coverage. Left missing, not imputed.
+
+**Effect on the overall project**
+The theoretical de novo ranking is now frozen and will not be re-litigated.
+Everything downstream — retrieval, redocking, calibration, counter-screening,
+co-folding and the final panel — hangs off these 32 seeds.
+
+**Next intended step**
+Complete and record the co-folding reference validation; retrieve real
+analogues across Enamine/Chemspace/MolPort/Mcule/eMolecules/PubChem/ChEMBL;
+redock them EX8 → EX32; finish the benchmark, counter-screen and vendor lanes;
+then build `FINAL_SOURCEABLE_PAR2_TOP20.{csv,md}`.
