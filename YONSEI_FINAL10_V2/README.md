@@ -1,5 +1,10 @@
 # Yonsei final-10 V2 work products
 
+> **START HERE (2026-09-05):** read `HANDOFF_2026-09-05.md`. It supersedes
+> `HANDOFF_TO_CLAUDE.md`, which predates every correction made since 12 Aug.
+> Final deliverables are in `10_FINAL/`. All cloud instances are stopped.
+
+
 Branch: `yonsei-final10-v2`
 
 This directory contains a non-destructive audit, corrected reference-pocket artifacts, ProLIF crystal fingerprints, fresh forced-CPU GNINA reference redocking, sourceability triage, and a completed 15,000-molecule CPU de novo generation campaign for the existing PAR2 V1 project. Historical V1 data under `GNINA_SCREEN_EX32/`, `RESULTS/`, `PROTEINS/`, `BENCHMARK_LIGS/`, and `SCREENING/` is preserved.

@@ -960,3 +960,58 @@ number traceable to a verified artefact.
 **Next intended step**
 Source and test the PAR2 reference panel to settle target validity before
 committing to synthesis of any de novo design.
+
+---
+
+## 2026-09-05 · Handoff written for session transfer
+
+**Branch:** `yonsei-final10-v2`
+**Project stage:** V2 completion sprint closed; project handed over.
+
+**Objective of the change**
+Write a complete, current handoff so the next session can continue without
+re-deriving context, and mark the older handoff as superseded.
+
+**Files and systems changed**
+- Added `YONSEI_FINAL10_V2/HANDOFF_2026-09-05.md`.
+- Added a pointer banner to `YONSEI_FINAL10_V2/README.md`.
+- Updated `docs/PROJECT_STATUS.md`.
+
+**What was completed**
+A 264-line handoff covering the target-validity gap, the deliverables, exactly
+what was screened, all ten defects found (with which are fixed and which are
+deliberately not), the measured metric correlations, infrastructure state,
+prioritised next actions, reproduction commands, the join and tooling traps, and
+the standing scientific guardrails.
+
+**Decisions made and why**
+- The handoff leads with the target-validity gap rather than the candidate list,
+  because that gap outweighs any ranking difference within the panel.
+- The de-duplication defect is documented as deliberately unfixed, with the
+  correct remedy stated, because fixing it now would invalidate every committed
+  identifier.
+- `HANDOFF_TO_CLAUDE.md` is marked superseded rather than deleted, so the
+  historical record of the generation phase survives.
+
+**Tests and verification actually executed**
+- `git log` confirms the eight-commit sprint lineage ending at `2c5a8f0`.
+- Working tree clean before writing; all deliverables present under `10_FINAL/`.
+- All three instances confirmed TERMINATED, running instance count 0.
+- No new computation was performed for this entry.
+
+**Results**
+The project is fully documented and transferable.
+
+**Failures or unresolved uncertainty**
+- Vendor, catalogue, price and stock data are still absent for every candidate.
+- Target validity remains unestablished.
+- 207 finalists are still docked as the wrong stereoisomer and need redocking
+  before any synthesis decision.
+- Boltz-2 and MD were never run.
+
+**Effect on the overall project**
+The next session can resume from a written record instead of reconstructing
+context from commit archaeology.
+
+**Next intended step**
+Source and test the PAR2 reference panel to settle target validity.

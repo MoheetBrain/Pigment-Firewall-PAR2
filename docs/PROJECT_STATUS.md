@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-09-05 (sprint complete, all compute off) · branch `yonsei-final10-v2`
+Last updated: 2026-09-05 (sprint complete, handoff written, all compute off) · branch `yonsei-final10-v2`
 
 ## Project Objective
 
@@ -99,6 +99,9 @@ selection and belongs to the later analogue-nomination gate, not to this one.
   EX8 screen was launched.
 
 ## Important Files and Artifacts
+
+- `YONSEI_FINAL10_V2/HANDOFF_2026-09-05.md` — **the current handoff. Read first.**
+  Supersedes `HANDOFF_TO_CLAUDE.md`.
 
 - `YONSEI_FINAL10_V2/04_V2_SCREEN/V2_LIGAND_TABLE.csv` — 7,324 prepared ligands.
 - `YONSEI_FINAL10_V2/04_V2_SCREEN/V2_PREP_MANIFEST.json` — preparation
