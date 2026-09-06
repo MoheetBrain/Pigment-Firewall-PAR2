@@ -1457,3 +1457,54 @@ The critical path is now EX32 -> ProLIF -> vendor resolution -> co-fold -> TOP20
 **Next intended step**
 Complete finalist EX32, fingerprint the poses, resolve vendor status, co-fold
 ~40-60 on one A100, then build `FINAL_SOURCEABLE_PAR2_TOP20.{csv,md}`.
+
+---
+
+## 2026-09-06 18:05 UTC — FINAL_SOURCEABLE_PAR2_TOP20 delivered
+
+**Branch:** `yonsei-final10-v2` · **Stage:** deliverable produced; co-folding running.
+
+**Objective** Complete the sourceable-hit campaign and produce the panel.
+
+**What was completed**
+- Finalist EX32 finished **16/16 shards**; the h3 watchdog collected results and
+  powered the VM off unattended, exactly as armed.
+- Parsed **1,440 poses** (80 molecules x 2 pockets x 9 poses).
+- ProLIF: 160 ligand-pocket pairs, **0 failures**. 5NDD median IFP recovery
+  0.75 (max 0.875); 5NDZ median 0.42.
+- Robust anchors: 5NDD **67/80 hit all three** polar anchors; 5NDZ maximum 1.
+- Vendor resolution of all 80 finalists: **43 IN_STOCK_VENDOR_LISTED**,
+  34 REGISTERED_NOT_VERIFIED, 3 NOT_SOURCEABLE; 72 EXACT InChIKey matches.
+- Built `FINAL_SOURCEABLE_PAR2_TOP20.{csv,md}`: 20 candidates, 20 scaffolds,
+  16 5NDD / 4 5NDZ, **20/20 vendor-listed**.
+- Launched co-folding of 49 sourceable finalists (98 jobs) on `a100-40` with a
+  self-contained collect-then-poweroff watchdog.
+
+**Verification actually executed**
+- Fail-closed hash gate passed before docking (5NDD `c2411d4d...`, 5NDZ
+  `af9f9eec...`, GNINA `3340c1f4...`).
+- Preparation: 80/80, 0 failures, **0 stereocentres lost**.
+- Panel gates: 160 rows -> 86 sourceable -> 20 selected. Median evidence
+  breadth 4 of 6 families.
+
+**Failures / unresolved**
+- **19 of 20 panel members are approved drugs at Tanimoto 0.15-0.23 to the de
+  novo seeds** - the brief's similarity requirement is not met by them. Stated
+  openly in `READ_THIS_FIRST.md` rather than glossed.
+- **The 5NDZ lane is weakly supported** and should probably be cut.
+- **My own EX32 watchdog powered h3 off at 16:45 UTC while the active-vs-decoy
+  benchmark was at 30/152 shards**, killing that lane and the counter-screen.
+  Both are resumable (`.done` sentinels intact, 0 corrupt pose files verified
+  by that lane) but neither produced its deliverable. This was a real
+  self-inflicted cost of the auto-shutdown I armed.
+- Benchmark finding that must temper the panel: **only 2 of 16 crystal
+  reference keys in 5NDD are hydrogen bonds**, so 0.875 IFP recovery is
+  reachable by pocket-filling alone.
+- Agent 2's `SOURCEABLE_ANALOGUES_DEDUP.csv` (1,043 analogues) landed at 17:47,
+  after the finalist queue was frozen. It is NOT in this panel and is the
+  highest-value input for the next pass.
+- Price, quantity, purity and lead time remain UNKNOWN for every compound.
+
+**Next** Pull co-folding, resume the benchmark and counter-screen on h3,
+re-rank with the active-state gate and decoy-calibrated IFP weight, and fold in
+the 1,043 retrieved analogues.

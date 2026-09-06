@@ -74,3 +74,74 @@ pose has independent structural support beyond GNINA.
 It does **not** license any claim about antagonism. Co-folding predicts a
 structure, not a function, and cannot separate an antagonist from a biased
 agonist. That distinction needs the G12/13→RhoA counter-screen in the wet lab.
+
+---
+
+# Control panel result — co-fold consistency is a real discriminator
+
+Run on `a100-40`, 6 controls × 3 seeds × 5 diffusion samples, identical
+settings. Combined with batch 1:
+
+| molecule | role | confidence | ligand ipTM | binder prob | pocket occ. | **sample consistency (Å)** |
+|---|---|---:|---:|---:|---:|---:|
+| AZ8838 | 5NDD crystal antagonist | 0.956 | 0.979 | 0.591 | 0.94 | **0.74** |
+| propranolol | repurposing probe | 0.954 | 0.984 | 0.663 | 0.76 | **0.70** |
+| AZ3451 | 5NDZ crystal NAM | 0.951 | 0.967 | 0.654 | 0.85 | **0.82** |
+| DL13973 | de novo | 0.948 | 0.962 | 0.533 | 0.94 | 1.22 |
+| DL11051 | de novo | 0.941 | 0.971 | 0.631 | 0.94 | 1.44 |
+| DL13943 | de novo | 0.940 | 0.964 | 0.551 | 0.82 | 1.22 |
+| DL13271 | de novo | 0.939 | 0.964 | 0.375 | 1.00 | 1.16 |
+| **GB83** | contested antagonist | 0.938 | 0.943 | 0.481 | 1.00 | **3.20** |
+| **GB110** | **agonist** | 0.926 | 0.967 | 0.331 | 1.00 | **3.21** |
+| DL11368 | de novo | 0.923 | 0.972 | 0.468 | 1.00 | 1.70 |
+| **GB88** | **biased agonist** | 0.918 | 0.942 | 0.346 | 1.00 | **2.65** |
+| **GB88 allo-Ile** | wrong-stereoisomer control | 0.914 | 0.907 | 0.328 | 1.00 | **2.38** |
+| K-14585 | peptidomimetic, MW 916 | 0.870 | 0.871 | 0.268 | 1.00 | 1.65 |
+
+## What separates the classes
+
+**Confidence does not separate them.** Every molecule scores 0.87–0.96, and
+GB110 — a confirmed *agonist* — scores 0.926, above two de novo designs. Nor
+does pocket occupancy: the GB-series all reach 1.00 simply by being large
+enough to touch every constrained residue. **Neither should be used alone.**
+
+**Sample-to-sample consistency does separate them**, cleanly:
+
+- crystallographic orthosteric binders and propranolol: **0.70–0.82 Å**
+- de novo designs: **1.16–1.70 Å**
+- the GB-series peptidomimetics: **2.38–3.21 Å**
+
+The GB-series does not settle into a reproducible pose in this pocket. Across
+independent seeds and diffusion samples it lands differently every time.
+
+## Why that is the expected answer, from independent evidence
+
+The active-state lane established crystallographically (PDB **9E7R**, PAR2/GB88)
+that **GB88 binds at the tethered-ligand site, ~17 Å from the AZ8838 pocket,
+overlapping the tethered ligand at 80% of its heavy atoms and the AZ8838 pocket
+at 0%.** GB88 has no business in the orthosteric pocket, and when the constraint
+forces it there it cannot converge.
+
+Two independent methods — a crystal structure and a co-folding consistency
+measurement — agree. That is the strongest internal validation this lane has.
+
+## Consequences for the ranking
+
+1. **Sample consistency is weighted, confidence is not trusted alone.** In the
+   final ranking the co-folding family gives 30% to pocket occupancy, 25% to
+   GNINA/co-fold pose convergence, 20% to sample consistency and only 15% to
+   confidence.
+2. **The Boltz affinity head is demoted to 10% of that family** (~2% of the
+   final score). It ranks GB88 (`-0.935`) and GB110 (`-0.655`) as *better*
+   binders than AZ8838 (`+0.789`) — i.e. it scores a confirmed agonist above the
+   crystallographic antagonist. It cannot be trusted for direction.
+3. **The two GB88 stereoisomers are nearly indistinguishable here** (2.65 vs
+   2.38 Å, confidence 0.918 vs 0.914). Co-folding does **not** resolve which
+   stereoisomer to buy. That has to come from the literature and the vendor
+   record, where the published (2S,3S) L-Ile form is the one with 30 vendor
+   leads.
+4. **Propranolol co-folds as well as the crystal ligand** — the best ligand ipTM
+   in the whole set (0.984), consistency 0.70 Å, binder probability above
+   AZ8838's. This is consistent with its previously noted crystal-IFP recovery
+   of 0.938, and supports keeping it in the reference panel as a cheap,
+   already-approved probe. It is **not** evidence that it antagonises PAR2.

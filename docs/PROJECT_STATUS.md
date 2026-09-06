@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-09-06 (in-stock catalogue searched; retrieval returned a negative result) · branch `yonsei-final10-v2` · **sourceable-hit sprint in progress**
+Last updated: 2026-09-06 (FINAL_SOURCEABLE_PAR2_TOP20 delivered; co-folding still running) · branch `yonsei-final10-v2` · **sourceable-hit sprint in progress**
 
 ## Project Objective
 
@@ -21,32 +21,29 @@ demonstrated to bind or inhibit PAR2.**
 
 ## Current Stage
 
-**Sourceable-hit selection sprint, in progress.** The prior sprint produced a
-computationally prioritised panel whose vendor fields were all `PENDING`
-because web access was blocked. This sprint converts that into a panel of
-REAL, ORDERABLE molecules with co-folding evidence.
+**FINAL_SOURCEABLE_PAR2_TOP20.{csv,md} EXISTS.** 20 candidates, 20 unique
+Murcko scaffolds, **100% vendor-listed with exact InChIKey matches and named
+suppliers** (median 33 vendors). Every row carries fresh EX32 evidence produced
+under a passing fail-closed hash gate, ProLIF crystal-IFP recovery, and
+preparation-independent anchor geometry.
 
-Completed this session:
-- **STEP 1 — de novo seed set frozen.** 32 seeds selected diversity-aware from
-  the 16,314-row de novo universe (26 × 5NDD orthosteric, 6 × 5NDZ allosteric),
-  30 EX32-supported, 30 unique Murcko scaffolds, spanning three novelty bands.
-- **Co-folding validated.** Boltz-2 reproduces the AZ8838 crystal binding mode
-  blind — ligand RMSD 1.22 Å, centroid displacement 0.69 Å, backbone 1.16 Å
-  over 295 Cα, consistent across all 5 diffusion samples.
-- **The vendor gap is closed for the reference panel.** Real catalogue IDs now
-  exist for AZ8838, AZ3451, both GB88 stereoisomers, I-287, propranolol and the
-  agonist controls, each with a source URL and retrieval date.
-- **Sourceability of the existing panel measured: 22 of 25 are NOT_SOURCEABLE.**
-  The de novo designs cannot be bought. This is the empirical justification for
-  the whole sprint.
-- Co-folding batch 1 complete (references + IDEAL_DE_NOVO_TOP5, 21 jobs);
-  control panel (18 jobs) and real-compound fallback (88 jobs) running.
-- Fallback pool built: 3,095 already-docked real compounds scored for
-  similarity to the frozen seeds (225 at Tanimoto ≥ 0.30, max 0.615).
+**Read `11_SOURCEABLE/final/READ_THIS_FIRST.md` before using the panel.** Two
+caveats are material:
 
-In flight: real-analogue retrieval and redocking (the critical path);
-active-vs-decoy benchmark and IFP null calibration; active-state
-counter-screen; sourceability of the retrieved analogues.
+1. **It is a repurposing panel, not a de novo analogue panel.** 19 of 20 are
+   approved/clinical drugs at Tanimoto 0.15-0.23 to our seeds. The brief's
+   requirement of meaningful similarity to a de novo design is NOT met by
+   those 19. This follows from a validated negative: 3,971,098 in-stock
+   molecules searched, 7 hits >= 0.50, while a positive control on the same
+   catalogue returned 362 hits including exact matches.
+2. **The four 5NDZ candidates are weakly supported** (hotspot 0.32-0.37 vs
+   0.88-0.95 orthosteric; no 5NDZ finalist exceeded 1 of 3 anchors). Recommend
+   cutting to 0-2 slots.
+
+Still outstanding: co-folding columns (running on `a100-40`, self-collecting
+and self-powering-off), the active-vs-decoy enrichment and IFP null, and the
+active-state warning column. Price and lead time are UNKNOWN everywhere and
+every route carrying them is credential-gated.
 
 ## Current Branch
 

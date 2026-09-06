@@ -1,0 +1,23 @@
+{
+  "prolif_version": "2.2.1",
+  "pose_files": 16,
+  "rows": 480,
+  "ligand_pocket_pairs": 160,
+  "failures": 0,
+  "recovery_by_pocket": {
+    "5NDD_orthosteric": {
+      "median": 0.75,
+      "max": 0.875,
+      "mean_hbonds": 0.6,
+      "poses_with_hbond": 37
+    },
+    "5NDZ_allosteric": {
+      "median": 0.4166666666666667,
+      "max": 0.75,
+      "mean_hbonds": 0.2375,
+      "poses_with_hbond": 18
+    }
+  },
+  "reference_source": "02_REFERENCE_VALIDATION_REPAIRED (protonated, corrected tautomer)",
+  "note": "Fingerprint recovery is geometric similarity to the crystal antagonist, not activity."
+}

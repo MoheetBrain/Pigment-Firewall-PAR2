@@ -1,0 +1,50 @@
+{
+  "generated_utc": "2026-09-06T16:47:24.165713+00:00",
+  "rdkit_version": "2026.03.6",
+  "input_record_files": {
+    "PUBCHEM_CHEMBL_RAW_RECORDS.csv": 266059,
+    "SMALLWORLD_RAW_RECORDS.csv": 266,
+    "EXTRA_RAW_RECORDS.csv": 194848
+  },
+  "raw_source_records": 461173,
+  "unique_structures_parsed": 259353,
+  "unparsable_structures": 14,
+  "seed_hit_pairs_written": 11719,
+  "pairs_below_raw_floor_0_30_not_written": 8287577,
+  "retained_pairs": 2953,
+  "excluded_pairs": {
+    "not_excluded": 10399,
+    "MW_outside_200_600": 1320
+  },
+  "retained_and_not_excluded_pairs": 2623,
+  "retention_lane_counts": {
+    "scaffold_hop": 1844,
+    "best_available_neighbour": 652,
+    "close_analogue_2D": 127
+  },
+  "band_counts_all_retained_incl_hops": {
+    "below_0.50": 2496,
+    "T0.50-0.60": 110,
+    "T0.60-0.70": 13,
+    "T0.70-0.80": 4
+  },
+  "band_counts": {
+    "below_0.50": 2799,
+    "T0.50-0.60": 134,
+    "T0.60-0.70": 16,
+    "T0.70-0.80": 4
+  },
+  "unique_molecules_after_stereo_dedup": 1043,
+  "connectivity_collision_groups": 456,
+  "seeds_with_zero_retained": [],
+  "max_per_seed": 100,
+  "thresholds": {
+    "raw_floor": 0.3,
+    "keep_2d": 0.5,
+    "hop_min_2d": 0.3,
+    "mw_window": [
+      200.0,
+      600.0
+    ]
+  }
+}

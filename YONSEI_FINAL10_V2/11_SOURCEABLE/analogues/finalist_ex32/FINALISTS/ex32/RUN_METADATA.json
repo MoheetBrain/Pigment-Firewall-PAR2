@@ -1,0 +1,14 @@
+{
+  "started_utc": "2026-09-06T15:30:17Z",
+  "host": "h3",
+  "gnina_version": "gnina v1.3.3 master:6fe1ce2   Built Jun 30 2026.",
+  "stage": "refine",
+  "exhaustiveness": 32,
+  "num_modes": 9,
+  "cnn_scoring": "rescore",
+  "device": "cpu",
+  "jobs": 10,
+  "cpu_per_job": 4,
+  "seed": 20260904,
+  "gpu": ""
+}

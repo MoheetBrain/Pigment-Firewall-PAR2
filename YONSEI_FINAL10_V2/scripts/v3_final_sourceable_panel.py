@@ -57,7 +57,7 @@ FAMILY_WEIGHTS = {
     "F6_actionability": 0.15,
 }
 
-SOURCEABLE_OK = {"IN_STOCK", "MAKE_ON_DEMAND"}
+SOURCEABLE_OK = {"IN_STOCK", "IN_STOCK_VENDOR_LISTED", "MAKE_ON_DEMAND"}
 
 
 def z(s: pd.Series) -> pd.Series:
@@ -197,8 +197,9 @@ def main() -> int:
     df["CNNscore"] = first_present(df, ["best_CNNscore", "CNNscore"])
     df["CNNaffinity"] = first_present(df, ["best_CNNaffinity", "CNNaffinity"])
     df["ligand_efficiency"] = first_present(df, ["ligand_efficiency"])
-    df["stock_status"] = first_present(df, ["stock_status", "sourceability_class"],
-                                       default="REGISTERED_NOT_VERIFIED")
+    df["stock_status"] = first_present(
+        df, ["stock_status", "sourceability_class", "classification"],
+        default="REGISTERED_NOT_VERIFIED")
     df["active_state_warning"] = first_present(
         df, ["active_state_class", "active_state_warning", "classification"],
         default="INCONCLUSIVE")
@@ -308,8 +309,12 @@ def main() -> int:
         # actionability
         act_s = pd.Series(0.0, index=sub.index)
         st = sub.stock_status.astype(str).str.upper()
-        act_s = act_s.mask(st.eq("IN_STOCK"), 1.0).mask(st.eq("MAKE_ON_DEMAND"), 0.6) \
-                     .mask(st.eq("REGISTERED_NOT_VERIFIED"), 0.2)
+        act_s = (act_s.mask(st.isin(["IN_STOCK", "IN_STOCK_VENDOR_LISTED"]), 1.0)
+                      .mask(st.eq("MAKE_ON_DEMAND"), 0.6)
+                      .mask(st.eq("REGISTERED_NOT_VERIFIED"), 0.2))
+        # a molecule listed by many independent suppliers is more actionable
+        nv = first_present(sub, ["n_vendors"])
+        act_s = act_s + 0.25 * np.clip(np.log10(nv.fillna(0) + 1) / 2.0, 0, 1)
         he = first_present(sub, ["human_exposure_note", "human_exposure"], default="")
         approved = he.astype(str).str.contains("approved|clinical", case=False, na=False)
         sub["F6_actionability"] = z(act_s + 0.35 * approved.astype(float))

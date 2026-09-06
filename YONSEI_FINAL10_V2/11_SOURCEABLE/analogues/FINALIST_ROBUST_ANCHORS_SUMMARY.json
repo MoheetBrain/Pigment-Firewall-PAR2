@@ -1,0 +1,29 @@
+{
+  "poses_scored": 1440,
+  "ligand_pocket_pairs": 160,
+  "polar_cutoff_A": 3.5,
+  "anchors": {
+    "5NDD_orthosteric": {
+      "TYR82": 2.475,
+      "HIS135": 2.63,
+      "ASP228": 2.929
+    },
+    "5NDZ_allosteric": {
+      "TYR210": 3.393,
+      "ASN158": 3.515,
+      "CYS161": 3.773
+    }
+  },
+  "anchor_count_distribution": {
+    "5NDD_orthosteric": {
+      "1": 2,
+      "2": 11,
+      "3": 67
+    },
+    "5NDZ_allosteric": {
+      "0": 14,
+      "1": 66
+    }
+  },
+  "note": "Heavy-atom polar proximity, independent of ligand protomer and receptor histidine tautomer. Not a claim that a hydrogen bond exists."
+}

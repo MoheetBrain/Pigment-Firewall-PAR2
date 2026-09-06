@@ -823,6 +823,15 @@ class Resolver:
             mid = r.get("mcule_id") or UNKNOWN
             hit_smi = r.get("smiles") or ""
             match, hitkey = s.match_smiles(hit_smi)
+            # Mcule's lookup returns similar compounds, most of which are not
+            # ours.  Only spend a second network call confirming the ones that
+            # could still match: if RDKit already derived a key from Mcule's own
+            # SMILES and its skeleton block differs from the query's, the
+            # compounds are constitutionally different and no InChIKey nuance
+            # will change that.  If RDKit could NOT derive a key (empty hitkey),
+            # fall through and ask Mcule -- never skip on a parse failure.
+            if match == "NO_MATCH" and hitkey:
+                continue
             # Confirm with mcule's own InChIKey where available.
             if mid != UNKNOWN:
                 d2, r2 = self.http.json(f"{self.MCULE}/compound/{mid}/",
