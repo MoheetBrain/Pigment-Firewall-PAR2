@@ -1379,3 +1379,81 @@ pharmacophore-level, not close analogy.
 Select ~40-60 diverse, verified-sourceable real compounds, run EX32 + ProLIF on
 them, co-fold the survivors on one A100, then build
 `FINAL_SOURCEABLE_PAR2_TOP20.{csv,md}`.
+
+---
+
+## 2026-09-06 17:35 UTC — corrected finalist preparation; EX32 launched on 80 sourceable candidates
+
+**Branch:** `yonsei-final10-v2`
+**Project stage:** Sourceable-hit sprint; finalist EX32 running on `h3`.
+
+**Objective of the change**
+Assemble the sourceable finalist pool and refine it at EX32, having established
+that close purchasable analogues of the de novo chemistry do not exist.
+
+**Files and systems changed**
+- Added `YONSEI_FINAL10_V2/scripts/v3_prepare_finalists.py`.
+- Added `11_SOURCEABLE/analogues/EX32_FINALIST_QUEUE.csv` and `finalist_prep/`.
+- Added `ZINC_INSTOCK_HITS_WIDE.csv` (0.35-floor scaffold-hop pass).
+
+**What was completed**
+- Wide similarity pass at a 0.35 ECFP4 floor: **672 hits across 17 of 32 seeds**
+  (median Tanimoto 0.368, max 0.556), versus 7 hits at the 0.50 floor.
+- Built an 80-molecule EX32 queue over **74 unique Murcko scaffolds**: 50
+  already-screened real compounds (33 approved/clinical) plus 30 genuinely
+  unseen in-stock molecules never previously docked.
+- Prepared all 80: **80 prepared, 0 failed, 0 stereocentres lost.**
+- Launched EX32 (exhaustiveness 32, 9 poses) over 16 shards covering both
+  pockets, giving the allosteric hedge a real evidence base.
+
+**Decisions made and why**
+- **A corrected preparation script was written rather than reusing
+  `v2_prepare_ligands.py`**, which still calls
+  `TautomerEnumerator().Canonicalize()` at line 132 - the defect the handoff
+  documents as having caused 207 finalists to be docked as the wrong
+  stereoisomer. These 80 molecules are ones we intend to ORDER; buying the
+  wrong stereoisomer wastes an assay slot while the purchase order looks
+  correct. The pH 7.4 protonation function is imported unchanged so ionisation
+  is identical.
+- Pool A is a refinement of already-screened molecules from EX8 to EX32, not a
+  rerun of the completed 4,835-compound screen; pool B has never been screened.
+  Neither duplicates finished work.
+- The same prepared ligands were duplicated into a 5NDZ arm rather than
+  re-prepared, so orthosteric and allosteric evidence differ only by box.
+
+**Tests and verification actually executed**
+- **Fail-closed hash gate executed on `h3` before any docking**, exiting
+  non-zero on mismatch: 5NDD `c2411d4d...09c4e`, 5NDZ `af9f9eec...220b92`,
+  GNINA `3340c1f4...6f72172`. All three matched; reported "HASH GATE PASSED".
+- GNINA banner at launch: `v1.3.3 master:6fe1ce2`, stage refine,
+  exhaustiveness 32, num_modes 9, cnn_scoring rescore, seed 20260904, CPU.
+- Preparation: 80/80 prepared, 0 failures, **0 stereocentres lost**, verified
+  per molecule by CIP stereocentre count before versus after.
+- Structure spot check of 400 approved rows against recorded InChIKeys: 278
+  skeleton-match; the 122 that differ are predominantly salt-versus-free-base
+  (penbutolol sulfate, doxepin hydrochloride, clidinium bromide, trimeprazine
+  tartrate).
+
+**Results**
+The finalist pool exists, is stereochemically sound, and is being refined.
+
+**Failures or unresolved uncertainty**
+- `v2_prepare_ligands.py` remains defective in the repository; deliberately not
+  patched mid-campaign, and now recorded in PROJECT_STATUS.
+- Finalist EX32 values are not byte-comparable to campaign EX8 values for the
+  same molecule.
+- All 4,835 real-compound rows are mislabelled `source=DENOVO`.
+- `v2_interactions.py` reads the defective `*_protonated_pH74.pdb`, so every
+  campaign `max_ifp_recovery` was computed on a receptor that cannot detect a
+  salt bridge.
+- The RX vendor resolution stalled twice (Mcule HTTP 429, then a hanging
+  request) and was killed; finalist vendor status is unresolved.
+- `h3` is oversubscribed (load ~260 on 88 cores) running three lanes; the
+  active-vs-decoy benchmark is at 25 of 152 shards and may not finish.
+
+**Effect on the overall project**
+The critical path is now EX32 -> ProLIF -> vendor resolution -> co-fold -> TOP20.
+
+**Next intended step**
+Complete finalist EX32, fingerprint the poses, resolve vendor status, co-fold
+~40-60 on one A100, then build `FINAL_SOURCEABLE_PAR2_TOP20.{csv,md}`.

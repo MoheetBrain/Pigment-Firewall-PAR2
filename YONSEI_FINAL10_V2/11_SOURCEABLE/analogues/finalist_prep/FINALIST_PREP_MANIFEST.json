@@ -1,0 +1,18 @@
+{
+  "queue": "YONSEI_FINAL10_V2/11_SOURCEABLE/analogues/EX32_FINALIST_QUEUE.csv",
+  "seed": 20260904,
+  "prepared": 80,
+  "failed": 0,
+  "stereo_lost": 0,
+  "tautomer_canonicalisation": "DISABLED (see docstring)",
+  "shards": {
+    "5NDD_orthosteric_shard0000.sdf": 10,
+    "5NDD_orthosteric_shard0001.sdf": 10,
+    "5NDD_orthosteric_shard0002.sdf": 10,
+    "5NDD_orthosteric_shard0003.sdf": 10,
+    "5NDD_orthosteric_shard0004.sdf": 10,
+    "5NDD_orthosteric_shard0005.sdf": 10,
+    "5NDD_orthosteric_shard0006.sdf": 10,
+    "5NDD_orthosteric_shard0007.sdf": 10
+  }
+}

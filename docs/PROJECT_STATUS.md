@@ -226,6 +226,24 @@ box 5NDZ centre `1.356 12.419 48.400` size `20.702 17.885 25.525`.
 
 ## Risks and Technical Debt
 
+- **`v2_prepare_ligands.py:132` still calls
+  `rdMolStandardize.TautomerEnumerator().Canonicalize()`.** This is the defect
+  recorded in handoff section 4.7 that destroyed stereochemistry in 2,534
+  designs, changed the constitution of 1,199 and invented unassigned
+  stereocentres in 2,241. It was never removed from the script. The sourceable
+  finalists are therefore prepared with `v3_prepare_finalists.py`, which omits
+  that call; their EX32 values are internally consistent across the 80
+  finalists but are NOT byte-comparable to campaign EX8 numbers.
+- **All 4,835 real-compound rows carry `source=DENOVO` and
+  `library=DE_NOVO_BRICS`** in the consensus table. Those columns are inherited
+  and wrong; real provenance must be read from `REAL_COMPOUND_PROVENANCE.csv`.
+- **`v2_interactions.py` reads the defective `*_protonated_pH74.pdb`** (0/39
+  charged lysines, the broken `obabel -h -p 7.4` product). Every campaign
+  `max_ifp_recovery` was computed on a receptor that cannot detect a salt
+  bridge. Internally consistent, so rankings are not invalidated, but the
+  absolute IFP values understate ionic interactions.
+
+
 - Interaction-fingerprint recovery is geometric similarity to a crystal pose,
   not evidence of binding. Whether high IFP values are genuinely unusual is
   exactly what the active-vs-decoy null distribution is being computed to
